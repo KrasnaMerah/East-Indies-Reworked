@@ -475,8 +475,23 @@ on_actions = {
 						TAG = CZE
 						SLO = { exists = yes }
 					}
+					NOT = {
+						AND = {
+							OR = {
+								has_cosmetic_tag = CZE_union
+								has_cosmetic_tag = CZE_second_republic
+								has_cosmetic_tag = CZE_union_expanded
+								has_cosmetic_tag = CZE_fall_of_the_republic
+								has_cosmetic_tag = CZE_CEF
+							}
+							SLO = {
+								is_subject_of = ROOT
+							}
+						}
+					}
 				}
 				CZE = { set_cosmetic_tag = CZE_ONLY } #cosmetic tag for CZE if Slovakia exists
+				CZE = { CZE_get_rid_of_the_auto_blok = yes } #get's rid of SLO related political party name
 			}
 			if = {
 				limit = {
@@ -690,8 +705,23 @@ on_actions = {
 						TAG = CZE
 						SLO = { exists = yes }
 					}
+					NOT = {
+						AND = {
+							OR = {
+								has_cosmetic_tag = CZE_union
+								has_cosmetic_tag = CZE_second_republic
+								has_cosmetic_tag = CZE_union_expanded
+								has_cosmetic_tag = CZE_fall_of_the_republic
+								has_cosmetic_tag = CZE_CEF
+							}
+							SLO = {
+								is_subject_of = ROOT
+							}
+						}
+					}
 				}
 				CZE = { set_cosmetic_tag = CZE_ONLY } #cosmetic tag for CZE if Slovakia exists
+				CZE = { CZE_get_rid_of_the_auto_blok = yes } #get's rid of SLO related political party name
 			}
 			if = {
 				limit = {
@@ -752,8 +782,23 @@ on_actions = {
 						TAG = CZE
 						SLO = { exists = yes }
 					}
+					NOT = {
+						AND = {
+							OR = {
+								has_cosmetic_tag = CZE_union
+								has_cosmetic_tag = CZE_second_republic
+								has_cosmetic_tag = CZE_union_expanded
+								has_cosmetic_tag = CZE_fall_of_the_republic
+								has_cosmetic_tag = CZE_CEF
+							}
+							SLO = {
+								is_subject_of = ROOT
+							}
+						}
+					}
 				}
 				CZE = { set_cosmetic_tag = CZE_ONLY } #cosmetic tag for CZE if Slovakia exists
+				CZE = { CZE_get_rid_of_the_auto_blok = yes } #get's rid of SLO related political party name
 			}
 			if = {
 				limit = {

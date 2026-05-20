@@ -4310,19 +4310,9 @@ on_actions = {
 						}
 					}
 					set_party_name = { 
-						ideology = neutrality
-						long_name = MAL_neutrality_party_independent
-						name = MAL_neutrality_party_independent
-					}
-					set_party_name = { 
 						ideology = democratic
-						long_name = INS_democratic_party_united_front_long 
-						name = INS_democratic_party_united_front
-					}
-					set_party_name = { 
-						ideology = communism
-						long_name = KLM_communism_party_long 
-						name = KLM_communism_party
+						long_name = INS_pni_long 
+						name = INS_pni
 					}
 				}
 				KUT = {
@@ -4359,11 +4349,6 @@ on_actions = {
 							division = "name = \"Kalimantan 2nd Division\" division_template = \"Bornean Jungle Division\" start_experience_factor = 0.5" 
 							owner = PREV
 						}
-					}
-					set_party_name = { 
-						ideology = communism
-						long_name = KUT_communism_party_long 
-						name = KUT_communism_party
 					}
 				}
 				MLK = {
