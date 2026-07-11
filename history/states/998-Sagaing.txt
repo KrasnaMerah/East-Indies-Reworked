@@ -12,12 +12,13 @@ state={
 			12335 1 
 		}
 	}
+
 	provinces={
 		4087 4588 10386 10486 12335 12464 12492 
 	}
-
-	manpower = 845376
-	buildings_max_level_factor = 1.000
-	state_category = pastoral
-	local_supplies = 0.000
+	
+	manpower=845376
+	buildings_max_level_factor=1
+	state_category=pastoral
+	local_supplies=1
 }

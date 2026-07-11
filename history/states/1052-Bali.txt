@@ -1,0 +1,31 @@
+state={
+	id=1052
+	name="STATE_1052"
+
+	history={
+		owner = INS
+		add_core_of = INS
+		add_core_of = BLI
+		add_core_of = EIS
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			13385 2 # Singaraja
+		}
+
+		victory_points = {
+			7293 1 # Mataram
+		}
+	}
+	
+	provinces={
+		4273 7293 13385 13386 13387 
+	}
+	manpower = 1918202
+	buildings_max_level_factor = 1
+	state_category = small_island
+	local_supplies = 1
+}

@@ -1,4 +1,4 @@
-capital = 335 #Jakarta
+capital = 1058 #Jakarta
 
 oob = "INS_1936"
 
@@ -17,9 +17,11 @@ set_war_support = 0.42
 # clone of Holland
 set_technology = {
 	infantry_weapons = 1
+	infantry_weapons1 = 1
 	tech_support = 1
 	tech_recon = 1
 	tech_trucks = 1
+	gw_artillery = 1
 	fuel_silos = 1
 }
 
@@ -77,8 +79,17 @@ recruit_character = INS_bonifacius_de_jonge
 recruit_character = INS_a_t_van_starkenborgh_stachouwer
 recruit_character = INS_anton_van_der_laaken
 recruit_character = INS_cc_pki
-recruit_character = INS_sutomo
+recruit_character = INS_dr_sutomo
 recruit_character = INS_meyer_ranneft
+
+if = {
+	limit = {
+		has_dlc = "Thunder at Our Gates"
+	}
+	recruit_character = INS_harry_kuneman
+	recruit_character = INS_national_committee
+	recruit_character = INS_sutomo
+}
 
 if = {
 	limit = {
@@ -96,7 +107,6 @@ recruit_character = INS_group_partai_nasional
 recruit_character = INS_sukarno
 recruit_character = INS_mohammad_hatta
 recruit_character = INS_sutan_syahrir
-recruit_character = INS_hamengkubuwono_ninth
 recruit_character = INS_tan_malaka
 recruit_character = INS_muso_munawar
 recruit_character = INS_amir_syarifuddin
@@ -143,9 +153,6 @@ recruit_character = INS_governor_van_der_plas
 recruit_character = INS_nicolaas_blom
 recruit_character = INS_peter_idenburg
 
-recruit_character = INS_hamengkubuwono_eighth
-recruit_character = INS_mangkunegara_seventh
-
 recruit_character = INS_wesseling
 recruit_character = INS_murk_boerstra
 recruit_character = INS_tjalling
@@ -176,12 +183,12 @@ recruit_character = INS_hendrik_uhl
 recruit_character = INS_jacob_zomer
 recruit_character = INS_ilgen
 recruit_character = INS_pieter_koenraad
-recruit_character = INS_suharto
 recruit_character = INS_gatot_subroto
-recruit_character = INS_group_partai_sarekat_islam
 
+recruit_character = INS_group_partai_sarekat_islam
 recruit_character = INS_abikusno_cokrosuyoso
 recruit_character = INS_sukiman_wiryosanjoyo
+recruit_character = INS_mohammad_natsir
 
 recruit_character = INS_agus_salim
 recruit_character = INS_sekarmaji_marijan
@@ -207,7 +214,6 @@ recruit_character = INS_achmad_subarjo
 recruit_character = INS_adnan_gani
 recruit_character = INS_syafruddin_prawiranegara
 recruit_character = INS_ferdinand_lumbantobing
-recruit_character = INS_bernard_lapian
 recruit_character = INS_iwa_kusumasumantri
 recruit_character = INS_ida_anak_agung
 
@@ -315,9 +321,6 @@ INS_jan_jonkman = {
 INS_charles_van_der_plas = {
 	set_character_flag = INS_stuwgroep_member_flag
 }
-INS_governor_van_der_plas ={
-	set_character_flag = INS_stuwgroep_member_flag
-}
 
 #PNI members
 INS_group_partai_nasional = {
@@ -337,7 +340,7 @@ INS_iwa_kusumasumantri = {
 }
 
 #Parindra members
-INS_sutomo = {
+INS_dr_sutomo = {
 	set_character_flag = INS_parindra_member_flag
 }
 INS_mohammad_husni_thamrin = {
@@ -358,6 +361,9 @@ INS_abikusno_cokrosuyoso = {
 	set_character_flag = INS_psii_member_flag
 }
 INS_agus_salim = {
+	set_character_flag = INS_psii_member_flag
+}
+INS_mohammad_natsir = {
 	set_character_flag = INS_psii_member_flag
 }
 INS_sukiman_wiryosanjoyo = {
@@ -416,9 +422,6 @@ INS_sudirman = {
 INS_abdul_haris_nasution = {
 	set_character_flag = INS_indonesian_officer_flag
 }
-INS_suharto = {
-	set_character_flag = INS_indonesian_officer_flag
-}
 INS_mas_pardi = {
 	set_character_flag = INS_indonesian_officer_flag
 }
@@ -437,6 +440,9 @@ INS_maurer = {
 	set_character_flag = INS_dutch_officer_flag
 }
 INS_berenschot = {
+	set_character_flag = INS_dutch_officer_flag
+}
+INS_wesseling = {
 	set_character_flag = INS_dutch_officer_flag
 }
 INS_hein_ter_poorten = {
@@ -485,7 +491,7 @@ INS_jacob_zomer = {
 	set_character_flag = INS_dutch_officer_flag
 }
 
-1047 = { #Aceh
+1050 = { #Aceh
 	start_resistance = yes
 	set_compliance = 32
 	set_resistance = 30
@@ -503,7 +509,7 @@ INS_jacob_zomer = {
 	set_resistance = 15
 	set_garrison_strength = 0.75
 }
-1056 = { #Volgekop
+1073 = { #Volgekop
 	start_resistance = yes
 	set_compliance = 10
 	set_resistance = 25
@@ -530,21 +536,25 @@ create_dynamic_country = {
 
 set_cosmetic_tag = INS_HOL # Netherlands East Indies
 
-672 = { #Northern Sumatra (anything outside Medan)
+1049 = { #Northern Sumatra (anything outside Medan)
 	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
 }
 
-1051 = { #Western Java
+335 = { #Western Java
 	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
 }
 
-1052 = { #East Java (pretty much everything outside Surabaja)
+1051 = { #East Java (pretty much everything outside Surabaya)
 	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
 }
 
 673 = { #Southern Sulawesi
 	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
 }
+
+#TAOG Additions
+# Bangka-Belitung Bauxite Export
+set_variable = { INS_bangka_bauxite_export_consumer_goods_factor = -0.05 }
 
 # Submarines #
 create_equipment_variant = {
@@ -661,10 +671,9 @@ create_equipment_variant = {
 	retire_character = INS_beumer
 	retire_character = INS_murk_boerstra
 	retire_character = INS_maarten_van_dulm
-	retire_character = INS_hamengkubuwono_eighth
 	retire_character = INS_meyer_ranneft
 	retire_character = INS_george_hart
-	retire_character = INS_sutomo
+	retire_character = INS_dr_sutomo
 	retire_character = INS_frederik_de_hoog
 
 	INS = {
@@ -678,9 +687,6 @@ create_equipment_variant = {
 				trait = german_planter
 			}
 			set_nationality = GER
-		}
-		HOL_conrad_helfrich = {
-			set_nationality = HOL
 		}
 	}
 	INS_elshout = {
@@ -725,7 +731,6 @@ create_equipment_variant = {
 		INS_agrarian_society_1
 		INS_japanese_investment_1
 		INS_dutch_nationalism
-		INS_revolution_at_home_0
 	}
 
 	add_ideas = {
@@ -737,13 +742,7 @@ create_equipment_variant = {
 		INS_paul_alex_blaauw
 	}
 
-	set_country_flag = INS_needs_governor
 	set_country_flag = INS_de_jonge_resigned
-	set_country_flag = INS_raad_member_kuneman
-	set_country_flag = INS_raad_member_visman
-	set_country_flag = INS_raad_member_spit
-	set_country_flag = INS_raad_vp_bussche
-	set_country_flag = INS_covdp_east_java_gov_flag
 	set_country_flag = INS_against_sutarjo_flag
 	set_country_flag = INS_education_1_done_flag
 	set_country_flag = INS_agriculture_1_done_flag
@@ -751,10 +750,9 @@ create_equipment_variant = {
 	set_country_flag = INS_agrarian_reforms_1_flag
 	set_country_flag = INSJAP_trade_agreement_1
 	set_country_flag = INSJAP_trade_agreement_2
-	set_country_flag = INS_sutomo_passed
+	set_country_flag = INS_dr_sutomo_passed
 	set_country_flag = INS_hoog_death_flag
 	set_country_flag = INS_wesseling_retired_flag
-	set_country_flag = INS_commander_berenschot
 	set_country_flag = INS_gerindo_allowed_flag
 	set_country_flag = INS_merbabu_quits_flag
 
@@ -784,7 +782,7 @@ create_equipment_variant = {
 	complete_national_focus = INS_reform_the_knil
 	complete_national_focus = INS_pave_the_way_for_a_navy
 	complete_national_focus = INS_expand_the_airforce
-	complete_national_focus = INS_improve_dutch_relations
+	complete_national_focus = INS_jewel_of_the_crown
 	complete_national_focus = INS_reinstate_ethical_policies
 	complete_national_focus = INS_upheld_status_quo
 	complete_national_focus = INS_dutch_engineers

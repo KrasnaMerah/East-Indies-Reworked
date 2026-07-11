@@ -258,7 +258,6 @@ INS_gm_java_organization = {
 	available = {
 		owner = {
 			controls_state = 335
-			has_completed_focus = INS_invite_foreign_investors
 			NOT = {
 				has_war_with = USA
 			}
@@ -268,6 +267,14 @@ INS_gm_java_organization = {
 					has_war_with = INS
 					has_opinion = { target = INS value < -10 }
 				}
+			}
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = INS_invite_foreign_investors
+			NOT = {
+				has_war_with = USA
 			}
 		}
 	}
@@ -333,6 +340,27 @@ INS_artillerie_inrichtingen_organization = {
 	}
 }
 
+INS_artillerie_inrichtingen_pyrotechnische_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_INS_ai_pyrotechnische
+	allowed = {	
+		original_tag = INS
+		has_dlc = "Arms Against Tyranny"
+	}
+
+} 
+
+INS_bio_pharma_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_INS_bio_pharma
+	allowed = {	
+		original_tag = INS
+		has_dlc = "Arms Against Tyranny"
+		has_dlc = "Thunder at Our Gates"
+	}
+
+}
+
 INS_staatspoor_en_tramwegen_organization = {
 	include = generic_train_organization
 	icon = GFX_idea_INS_sstw
@@ -344,6 +372,9 @@ INS_staatspoor_en_tramwegen_organization = {
 		owner = {
 			has_completed_focus = INS_expand_javan_railroads
 			controls_state = 1051
+			NOT = {
+				has_idea = INS_sstw
+			}
 		}
 	}
 	visible = {
@@ -360,4 +391,14 @@ INS_staatspoor_en_tramwegen_organization = {
 			}
 		}
 	}
+}
+
+INS_machinefabriek_braat_organization = {
+	include = generic_infantry_tank_organization
+	allowed = {
+		original_tag = INS
+		has_dlc = "Arms Against Tyranny"
+		has_dlc = "Thunder at Our Gates"
+	}
+
 }

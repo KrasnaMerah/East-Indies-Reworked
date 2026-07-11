@@ -857,7 +857,7 @@
  #DUTCH EAST INDIES - Indonesia
  INS_hein_ter_poorten:0 "Hein Ter Poorten" #1887, 48 yo in 1936, KNIL
  INS_bonifacius_de_jonge:0 "Bonifacius Cornelis de Jonge" #1875, 60 yo in 1936
- INS_a_t_van_starkenborgh_stachouwer:0 "Tjarda van Starkenborgh" #1888, 48 yo in 1936
+ #INS_a_t_van_starkenborgh_stachouwer:0 "Tjarda van Starkenborgh" #1888, 48 yo in 1936
  INS_hubertus_van_mook:0 "Hubertus van Mook" #1894, 42 yo in 1936, Economic Minister
  INS_anton_van_der_laaken:0 "Anton van der Laaken" #1890, 46 yo in 1936, NSB-OI Leader
  INS_rhemrev:0 "Willem Vermehr-Rhemrev" #1878, 58 yo in 1936, KNIL Veteran
@@ -872,7 +872,7 @@
  INS_maurer:0 "Henri Louis Maurer" #1887, 49 yo in 1936, KNIL
  INS_overakker:0 "Roelof Theodorus Overakker" #1890, 46 yo in 1936, KNIL
  INS_pesman:0 "Jacob Jan Pesman" #1888, 48 yo in 1936, KNIL
- INS_simon_spoor:0 "Simon Hendrik Spoor" #1902, 34 yo in 1936, army theorist and head of NEFIS in the Brisbane Government, leading the KNIL in the Indonesian National Revolution
+ #INS_simon_spoor:0 "Simon Hendrik Spoor" #1902, 34 yo in 1936, army theorist and head of NEFIS in the Brisbane Government, leading the KNIL in the Indonesian National Revolution
  INS_statius_muller:0 "Gustave Statius Muller" #1889, 47 yo in 1936, KNIL
  INS_tjalling:0 "Tjalling Bakker" #1885, 50 yo in 1936, KNIL
  INS_hendrik_uhl:0 "Johan Hendrik Uhl" #1889, 46 yo in 1936, KNIL
@@ -910,11 +910,9 @@
  INS_paul_alex_blaauw:0 "Paul Alex Blaauw" #1891, 45 yo in 1936, member of Indo-Europeesch Verbond
  INS_peter_idenburg:0 "Peter Johannes Idenburg" #1896, 39 yo in 1936, Education and Religious Minister
  INS_william_mansvelt:0 "William Mansvelt" #Maurits Frederik, 1891, 45 yo in 1936, Underdirector at Departement of Economic Affairs
- INS_sukarno:0 "Sukarno" #1901, 34 yo in 1936, exiled in Ende (near Maumere), father's name is Sosrodiharjo
- INS_tan_malaka:0 "Tan Malaka" #1897, 38 yo in 1936, exiled in East Asia (God knows where!)
+ #INS_sukarno:0 "Sukarno" #1901, 34 yo in 1936, exiled in Ende (near Maumere), father's name is Sosrodiharjo
+ #INS_tan_malaka:0 "Tan Malaka" #1897, 38 yo in 1936, exiled in East Asia (God knows where!)
  INS_muso_munawar:0 "Muso Munawar" #1897, 38 yo in 1936, exiled in Soviet Union
- INS_hamengkubuwono_eighth:0 "Hamengkubuwono VIII" #1880, 56 yo in 1936, Royal KNIL
- INS_hamengkubuwono_ninth:0 "Hamengkubuwono IX" #1912, 24 yo in 1936, Royal TNI
  INS_abdul_haris_nasution:0 "Abdul Haris Nasution" #1918, 17 yo in 1936, KNIL soldier
  INS_abdulkadir_wijoyoatmojo:0 "Abdulkadir Wijoyoatmojo" #1904, 32 yo in 1936, wartime in KNIL
  INS_abdul_wachid_hasyim:0 "Abdul Wachid Hasyim" #1914, 22 yo in 1936, first Indonesian Religious Minister
@@ -938,19 +936,17 @@
  INS_iwa_kusumasumantri:0 "Iwa Kusumasumantri" #1899, 37 yo in 1936, first Indonesian Social Minister
  INS_kh_dewantara:0 "Ki Hajar Dewantara" #1889, 47 yo in 1936, first Indonesian Education Minister
  INS_kusumo_utoyo:0 "Kusumo Utoyo" #1871, 65 yo in 1936, Volksraad Deputy since 1935
- INS_mas_pardi:0 "Mas Pardi" #1901, 34 yo in 1936, Koninklijke Marine, 1st CoS of ALRI
- INS_mangkunegara_seventh:0 "Mangkunegara VII" #1855, 51 yo in 1936, 7th Duke of Mangkunegaran Duchy
- INS_mangkunegara_eighth:0 "Mangkunegara VIII" #1920, 16 yo in 1936, 8th Duke of Mangkunegaran Duchy
+ #INS_mas_pardi:0 "Mas Pardi" #1901, 34 yo in 1936, Koninklijke Marine, 1st CoS of ALRI
  INS_margono_joyohadikusumo:0 "Margono Joyohadikusumo" #1894, 41 yo in 1936, banker
- INS_mohammad_jamin:0 "Mohammad Jamin" #1903, 32 yo in 1936, a law official in Gerindo, known to be crafty
- INS_mohammad_hatta:0 "Mohammad Hatta" #1902, 33 yo in 1936, leader of New PNI, imprisoned
+ INS_mohammad_yamin:0 "Mohammad Yamin" #1903, 32 yo in 1936, a law official in Gerindo, known to be crafty
+ #INS_mohammad_hatta:0 "Mohammad Hatta" #1902, 33 yo in 1936, leader of New PNI, imprisoned
  INS_mohammad_husni_thamrin:0 "Mohammad Husni Thamrin" #1894, 42 yo in 1936, member of Volksraad representing Parindra
  INS_mohammad_mangundiprojo:0 "Mohammad Mangundiprojo" #1905, 31 yo in 1936, PETA
- INS_mohammad_natsir:0 "Mohammad Natsir" #1908, 27 yo in 1936, PSII
  INS_mohammad_nazir:0 "Mohammad Nazir" #1910, 15 yo in 1936, ALRI
+ INS_mohamamd_natsir:0 "Mohammad Natsir" #1908, 27yo in 1936, PSII
  INS_mohammad_tabrani:0 "Mohammad Tabrani Surjowicirto" #1904, 31 yo in 1936
  INS_urip_sumoharjo:0 "Urip Sumoharjo" #1893, 43 yo in 1936, KNIL
- INS_oto_iskandar_di_nata:0 "Oto Iskandar Di Nata" #1897, 39 yo in 1936, leader of Paguyuban Pasundan, a Sundanese civil organization
+ #INS_oto_iskandar_di_nata:0 "Oto Iskandar Di Nata" #1897, 39 yo in 1936, leader of Paguyuban Pasundan, a Sundanese civil organization
  INS_ruhana_kuddus:0 "Ruhana Kuddus" #1884, 52 yo in 1936, first Indonesian female journalist
  INS_sarjono:0 "Sarjono" #1897, 38 yo in 1936, a member of PKI
  INS_sekarmaji_marijan:0 "Sekarmaji Marijan Kartosuwirjo" #1905, 31yo in 1936, PSII
@@ -958,9 +954,8 @@
  INS_syafruddin_prawiranegara:0 "Syafruddin Prawiranegara" #1911, 25 yo in 1936, fifth Indonesian Finance Minister
  INS_sk_trimurti:0 "Surastri Karma Trimurti" #1912, 24 yo in 1936
  INS_subijakto:0 "Raden Subiyakto" #1917, 18 yo in 1936, 3rd CoS of ALRI
- INS_suharto:0 "Suharto Prawiroharjo" #1921, 15 yo in 1936, KNIL soldier, his father's name is Prawiroharjo
- INS_sudirman:0 "Sudirman Kartawiraji" #1916, 20 yo in 1936, PETA
- INS_sukarjo_wirjopranoto:0 "Sukarjo Wirjopranoto" #1903, 32 yo in 1936, Parindra member
+ #INS_sudirman:0 "Sudirman Kartawiraji" #1916, 20 yo in 1936, PETA
+ INS_sukarjo_wiryopranoto:0 "Sukarjo Wiryopranoto" #1903, 32 yo in 1936, Parindra member
  INS_suryadarma:0 "Suryadi Suryadarma" #1912, 23 yo in 1936, first CoS of AURI
  INS_susalit_joyohadiningrat:0 "Susalit Joyohadiningrat" #1904, 31 yo in 1936, PETA, Kartini's only children
  INS_sutan_syahrir:0 "Sutan Syahrir" #1909, 27 yo in 1936, Exiled at Boven Digul
@@ -968,8 +963,8 @@
  INS_sukawati:0 "Cokorda Gede Raka Sukawati" #1899, 37 yo in 1936, Volksraad
  INS_sukiman_wiryosanjoyo:0 "Sukiman Wiryosanjoyo" #1898, 37 yo in 1936, PSII member
  INS_sujono:0 "Raden Mas Sujono" #1905, 30 yo in 1936, Serikat Indonesia member in Japan
- INS_supomo:0 "Supomo Wignyodipuro" #1903, 32 yo in 1936, father's name is Wignyodipuro, first Indonesian Justice Minister
- INS_sutomo:0 "Sutomo" #1888, 47 yo in 1936, the leader of Budi utomo and Parindra
+ #INS_supomo:0 "Supomo Wignyodipuro" #1903, 32 yo in 1936, father's name is Wignyodipuro, first Indonesian Justice Minister
+ INS_dr_sutomo:0 "Sutomo" #1888, 47 yo in 1936, the leader of Budi utomo and Parindra
  INS_tb_simatupang:0 "Tahi Bonar Simatupang" #1920, 16 yo in 1936, KNIL soldier
  INS_cipto_mangunkusumo:0 "Cipto Mangunkusumo" #1886, 50 yo in 1936, early nationalist figure, dealing with the Malang Plague in 1910s
  INS_wardiman:0 "Wardiman Wiryosaputro" #KNIL, first Bumiputra navigator
@@ -990,12 +985,22 @@
  ATJ_natar_zainuddin:0 "Natar Zainuddin" #1890, 45 yo in 1936, communist activist
  ATJ_tuanku_raja_ibrahim:0 "Tuanku Raja Ibrahim" #1893, 43 yo in 1936, last Prince of Aceh
 
+ #Java
+ INS_hamengkubuwono_eighth:0 "Hamengkubuwono VIII" #1880, 56 yo in 1936, Royal KNIL
+ INS_hamengkubuwono_ninth:0 "Hamengkubuwono IX" #1912, 24 yo in 1936, Royal TNI
+ INS_mangkunegara_seventh:0 "Mangkunegara VII" #1855, 51 yo in 1936, 7th Duke of Mangkunegaran Duchy
+ INS_mangkunegara_eighth:0 "Mangkunegara VIII" #1920, 16 yo in 1936, 8th Duke of Mangkunegaran Duchy
+ JVA_suharto:0 "Suharto Prawiroharjo" #1921, 15 yo in 1936, KNIL soldier, his father's name is Prawiroharjo
+ JVA_pakubuwono_x:0 "Pakubuwono X"
+ JVA_pakubuwono_xi:0 "Pakubuwono XI"
+ JVA_pakubuwono_xii:0 "Pakubuwono XII"
+
  #Sulawesi
  INS_nicodemus_palar:0 "Nicodemus Palar" #1900, 36 yo in 1936, Member of Tweede Kamer
  INS_alexander_maramis:0 "Alexander Maramis" #1897, 39 yo in 1936, Indonesian first actual finance minister
  INS_samuel_ratulangi:0 "Samuel Ratulangie" #1890, 45 yo in 1936, Indonesian nationalist
  INS_karel_supit:0 "Karel Supit" #1905, 31 yo in 1936, PKI member from Manado
- INS_thomas_najoan:0 "Thomas Najoan" #1893, 42/43 yo in 1936, PKI member from Manado
+ INS_thomas_nayoan:0 "Thomas Najoan" #1893, 42/43 yo in 1936, PKI member from Manado
  INS_bernard_lapian:0 "Bernard Wilhelm Lapian" #1892, 44 yo in 1936, Volksraad member from Manado
 
  #Maluku
@@ -1005,6 +1010,7 @@
  MLK_ekhjopas_uktolseja:0 "Ekhjopas Uktolseja" #1905, 31 yo in 1936, PKI member from the Moluccas
  MLK_vence_sumual:0 "Vence Sumual" #1923, 13 yo in 1936, military leader in Permesta Rebellion
  MLK_johannes_latuharhary:0 "Johannes Latuharhary" #1900, 35 yo in 1936, a member of the Volksraad
+ MLK_jansen:0 "Herman van Jansen"
 
  #Papua
  WPG_machmud_rumagesan:0 "Machmud Singgirei Rumagesan" #1885, 50 yo in 1936, Monarch of Sekar Kingdom
@@ -1017,6 +1023,7 @@
  INS_hamid_mohammad_alqadri:0 "Syarif Hamid II Alkadrie"  #1913, 23 yo in 1936, Pontianak Royal KNIL
  KUT_mohammad_noor:0 "Pangeran Mohammad Noor" #1901, 35 yo in 1936, Banjar Prince
  BRN_ahmad_tajuddin_waddien:0 "Ahmad Tajuddin Waddien" #1913, 23 yo in 1936, Brunei Sultan since 1924
+ KUT_ali_muhammad_parikesit:0 "Ali Muhammad Parikesit"
  KUT_fachrul_baraqbah:0 "Fachrul Baraqbah" #1925, 11 yo in 1936, PKI leader in East Kalimantan since 1945
  INA_cc_pki:0 "Central Committee"
 
@@ -1030,9 +1037,9 @@
  #MALAYSIA
  MAL_tuanku_abdul_rahman:0 "Tuanku Abdul Rahman"
  MAL_ibrahim_yaacob:0 "Ibrahim Yaacob"
- MAL_lai_teck:0 "Lai Teck"
- MAL_onn_jaafar:0 "Onn Jaafar"
- MAL_shenton_thomas:0 "Shenton Thomas"
+ #MAL_lai_teck:0 "Lai Teck"
+ #MAL_onn_jaafar:0 "Onn Jaafar"
+ #MAL_shenton_thomas:0 "Shenton Thomas"
  MAL_charles_brooke:0 "Charles Vyner Brooke"
 
  #PHILIPPINES
@@ -1057,11 +1064,11 @@
  SIA_borophan_yuthakit:0 "Powpianlert Borophan Yuthakit"
  SIA_chalermkiat_wattanangkul:0 "Chalermkiat Wattanangkul"
  SIA_khuang_aphaiwongse:0 "Khuang Aphaiwongse"
- SIA_mangkorn_phromyothi:0 "Mangkorn Phromyothi"
+ #SIA_mangkorn_phromyothi:0 "Mangkorn Phromyothi"
  SIA_pianlert_boripanyutthakit:0 "Pianlert Boripanyutthakit" #Minister of Commerce
  SIA_phraya_phahon:0 "Phraya Phahon"
- SIA_plaek_phibunsongkhram:0 "Plaek Phibunsongkhram"
- SIA_pridi_banomyong:0 "Pridi Banomyong"
+ #SIA_plaek_phibunsongkhram:0 "Plaek Phibunsongkhram"
+ #SIA_pridi_banomyong:0 "Pridi Banomyong"
  SIA_rama_viii:0 "Rama VIII"
  SIA_rama_viii_civil:0 "Ananda Mahidol"
  SIA_rama_vii:0 "Rama VII"

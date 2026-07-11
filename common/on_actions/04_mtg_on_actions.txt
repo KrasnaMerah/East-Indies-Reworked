@@ -747,14 +747,6 @@ on_actions = {
 					remove_core_of = INJ
 				}
 			}
-			EIS = { #Holhis setup
-				every_state = {
-					limit = {
-						is_core_of = INS
-					}
-					remove_core_of = SLW
-				}
-			}
 			#Mexican oil concessions
 			if = {
 				limit = {
@@ -1037,7 +1029,7 @@ on_actions = {
 					add_victory_points = {
 						province = 2077
 						value = 2
-					}	
+					}
 					set_province_name = {
 					    id = 2077
 					    name = 2077_indigenous_city_name
@@ -3396,56 +3388,49 @@ on_actions = {
 				}
 				set_province_name = {
 					id = 7381
-					name = "Jayakarta"
+					name = JVA_VICTORY_POINTS_7381
 				}
 				set_province_name = {
 					id = 12299
 					name = "Singapura"
 				}
 				1021 = { set_state_name = "Singapura" }
-				335 = { set_state_name = "Jayakarta" }
-				1053 = { set_state_name = "West Timor" }
-				721 = { set_state_name = "East Timor" }
 				set_province_name = {
 					id = 7387
-					name = "Bandar Seri Begawan"
+					name = BRN_VICTORY_POINTS_7387
 				}
 				set_province_name = {
 					id = 10212
-					name = "Kota Kinabalu"
+					name = BRN_VICTORY_POINTS_10212
 				}
 				set_province_name = {
-					id = 12371
-					name = "Numbay"
-				}
-				set_province_name = {
-					id = 10153
-					name = "Manado"
+					id = 1602
+					name = WPG_VICTORY_POINTS_1602
 				}
 				724 = { add_claim_by = MAL }
 				711 = { add_core_of = MAL }
 				712 = { add_core_of = MAL }
 				333 = { add_core_of = MAL }
-				1024 = { add_core_of = MAL }
+				1083 = { add_core_of = MAL }
 				669 = { add_core_of = INS }
 				1047 = { add_core_of = INS }
-				1056 = { add_core_of = INS }
 				1057 = { add_core_of = INS }
 				741 = { add_core_of = VIN }
-				1066 = { add_core_of = VIN }
 				1067 = { add_core_of = VIN }
-				1071 = { add_core_of = VIN }
-				1072 = { add_core_of = VIN }
-				1073 = { add_core_of = VIN }
-				1074 = { add_core_of = VIN }
-				1075 = { add_core_of = VIN }
+				1068 = { add_core_of = VIN }
+				1069 = { add_core_of = VIN }
 				670 = { add_core_of = VIN }
-				1065 = { add_claim_by = VIN }
 				868 = { add_claim_by = VIN }
 				ENG = {
 					delete_unit = { state = 1021 }
-					set_autonomy = { target = BRM autonomy_state = autonomy_free }
-					set_autonomy = { target = MAL autonomy_state = autonomy_free }
+					set_autonomy = {
+						target = BRM
+						autonomy_state = autonomy_free
+					}
+					set_autonomy = {
+						target = MAL
+						autonomy_state = autonomy_free
+					}
 					release = MAL
 				}
 				MAL = {
@@ -3472,7 +3457,7 @@ on_actions = {
 				}
 				TML = {
 					transfer_state = 721
-					transfer_state = 1053
+					transfer_state = 1054
 					division_template = {
 						name = "Timorese Division"
 						priority = 1
@@ -3480,11 +3465,9 @@ on_actions = {
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
 
 							infantry = { x = 1 y = 0 }
 							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
 					
 							infantry = { x = 2 y = 0 }
 							infantry = { x = 2 y = 1 }
@@ -3502,23 +3485,8 @@ on_actions = {
 					}
 					set_party_name = { 
 						ideology = neutrality 
-						long_name = neutrality 
-						name = neutrality 
-					}
-					set_party_name = { 
-						ideology = fascism 
-						long_name = fascism 
-						name = fascism 
-						}
-					set_party_name = { 
-						ideology = democratic 
-						long_name = democratic 
-						name = democratic 
-					}
-					set_party_name = { 
-						ideology = communism 
-						long_name = communism 
-						name = communism 
+						long_name = TML_neutrality_party_independent 
+						name = TML_neutrality_party_independent 
 					}
 				}
 				FRA = {
@@ -3561,7 +3529,7 @@ on_actions = {
 				}
 				VIN = {
 					set_cosmetic_tag = IDC
-					set_capital = { state = 286 }
+					set_capital = { state = 1066 }
 					set_popularities = {
 						democratic = 10
 						fascism = 25
@@ -3591,6 +3559,7 @@ on_actions = {
 						option = ASEAN_FRAGMENTED
 					}
 				}
+				set_global_flag = INS_has_balkanized_flag
 				BRM = {
 					if = {
 						limit = {
@@ -3608,7 +3577,7 @@ on_actions = {
 							}
 						}
 						abandon_colony_tag = yes
-						retire_character = BRM_cochrane
+						retire_character = BRM_archibald_cochrane
 						set_politics = {
 							ruling_party = democratic
 						}
@@ -3628,47 +3597,55 @@ on_actions = {
 					name = "Jayakarta"
 				}
 				set_province_name = {
+					id = 1386
+					name = "Cirebon"
+				}
+				set_province_name = {
 					id = 12299
 					name = "Singapura"
 				}
+				1058 = { set_state_name = "Jayakarta" }
 				1021 = { set_state_name = "Singapura" }
-				335 = { set_state_name = "Jayakarta" }
-				1053 = { set_state_name = "West Timor" }
 				721 = { set_state_name = "East Timor" }
 				set_province_name = {
 					id = 7387
-					name = "Bandar Seri Begawan"
+					name = INS_VICTORY_POINTS_7387
 				}
 				set_province_name = {
 					id = 10212
-					name = "Kota Kinabalu"
-				}
-				set_province_name = {
-					id = 12371
-					name = "Numbay"
-				}
-				set_province_name = {
-					id = 10153
-					name = "Manado"
+					name = BRN_VICTORY_POINTS_10212
 				}
 				set_global_flag = form_sumatra_flag
 				711 = { add_core_of = INS }
-				712 = { add_core_of = ATJ }
-				1059 = { add_claim_by = SIA }
-				724 = { add_claim_by = MAL }
-				672 = { add_core_of = ATJ }
-				1048 = { add_core_of = ATJ }
-				667 = { add_core_of = EIS }
-				1053 = { add_core_of = EIS }
-				673 = { add_core_of = SLW }
-				1054 = { add_core_of = SLW }
-				1024 = { add_claim_by = PHI }
+				712 = { add_core_of = SSI }
+				724 = { add_core_of = MAL }
+				1083 = { add_claim_by = MAL }
+				1047 = { add_core_of = SSI }
+				1048 = { add_core_of = SSI }
+				672 = { add_core_of = SSI }
+				1051 = { add_core_of = JVA }
+				721 = { add_core_of = EIS }
+				1053 = { add_core_of = MNH }
+				1024 = { add_claim_by = SLU }
+				SIA = {
+					delete_unit = { state = 724 }
+					release = MAL
+				}
+				724 = { add_claim_by = SIA }
 				ENG = {
 					delete_unit = { state = 1021 }
-					set_autonomy = { target = MAL autonomy_state = autonomy_free }
+					set_autonomy = {
+						target = MAL
+						autonomy_state = autonomy_free
+					}
+					set_autonomy = {
+						target = BRM
+						autonomy_state = autonomy_free
+					}
 					release = INS
-					release = ATJ
 					release = SNG
+					release = MAL
+					release = SSI
 				}
 				MAL = {
 					abandon_colony_tag = yes
@@ -3693,6 +3670,37 @@ on_actions = {
 					}
 					delete_unit = { state = 1023 }
 				}
+				SNG = {
+					swap_ideas = {
+						remove_idea = ASEAN_agrarian_society_1
+						add_idea = ASEAN_agrarian_society_3
+					}
+					division_template = {
+						name = "Singaporean Division"
+						priority = 1
+						division_names_group = INS_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+					
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { PREV = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "name = \"1st Singaporean Division\" division_template = \"Singaporean Division\" start_experience_factor = 0.3" 
+							owner = PREV
+						}
+					}
+				}
 				FRA = {
 					delete_unit = { state = 741 }
 					delete_unit = { state = 286 }
@@ -3706,19 +3714,64 @@ on_actions = {
 					delete_unit = { state = 327 }
 					set_autonomy = { target = PHI autonomy_state = autonomy_free }
 				}
+				PHI = {
+					release = SLU
+				}
 				HOL = {
 					set_country_flag = INS_de_jonge_resigned
 					set_autonomy = { target = INS autonomy_state = autonomy_free }
 					INS_nicodemus_palar = {
-						set_nationality = SLW
+						set_nationality = MNH
+					}
+				}
+				SSI = {
+					every_character = {
+						limit = {
+							has_trait = fascist_demagogue
+						}
+						retire = yes
+					}
+					every_character = {
+						limit = {
+							has_trait = democratic_reformer
+						}
+						retire = yes
+					}
+					every_character = {
+						limit = {
+							has_trait = communist_revolutionary
+						}
+						retire = yes
+					}
+				}
+				JVA = {
+					every_character = {
+						limit = {
+							has_trait = fascist_demagogue
+						}
+						retire = yes
+					}
+					every_character = {
+						limit = {
+							has_trait = democratic_reformer
+						}
+						retire = yes
+					}
+					every_character = {
+						limit = {
+							has_trait = communist_revolutionary
+						}
+						retire = yes
 					}
 				}
 				INS = {
 					set_country_flag = INS_de_jonge_resigned
-					abandon_colony_tag = yes
-					set_cosmetic_tag = INS_JVA
-					remove_ideas = INS_agrarian_society_1
-					add_ideas = INS_agrarian_society_3
+					load_focus_tree = { tree = generic_focus keep_completed = no }
+					drop_cosmetic_tag = yes
+					swap_ideas = {
+						remove_idea = INS_agrarian_society_1
+						add_idea = INS_agrarian_society_3
+					}
 					retire_country_leader = yes
 					set_popularities = {
 						democratic = 50
@@ -3739,8 +3792,8 @@ on_actions = {
 					}
 					set_party_name = {
 						ideology = neutrality
-						long_name = MAL_neutrality_party_independent
-						name = MAL_neutrality_party_independent
+						long_name = INS_neutrality_party_islam_long
+						name = INS_neutrality_party_islam
 					}
 					set_party_name = { 
 						ideology = communism 
@@ -3752,17 +3805,23 @@ on_actions = {
 						long_name = JVA_fascism_party
 						name = JVA_fascism_party
 					}
-					delete_unit = { state = 334 }
-					delete_unit = { state = 673 }
-					delete_unit = { state = 672 }
-					delete_unit = { state = 1048 }
 					release = WPG
+					release = TNE
 					release = MLK
 					release = TML
+					release = JVA
 					release = EIS
-					release = SLW
+					release = GOW
+					release = MNH
 					release = ATJ
-					retire_character = INS_rosenow
+					release = SSI
+					release = KUT
+					release = POK
+					remove_ideas = INS_dutch_nationalism
+					remove_ideas = INS_princely_states_normal
+					remove_ideas = INS_reforms
+					remove_ideas = INS_nationalism_suppressed
+					remove_ideas = INS_imperial_burden_1
 					INS_tan_malaka = { 
 						clr_character_flag = INS_exiled_flag
 					}
@@ -3788,21 +3847,27 @@ on_actions = {
 							}
 						}
 					}
+					INS_iwa_kusumasumantri = {
+						clr_character_flag = INS_imprisoned_flag
+						set_portraits = {
+							army = {
+								small = GFX_idea_indonesia_iwa_kusumasumantri
+							}
+						}
+					}
+					INS_sarjono = {
+						clr_character_flag = INS_imprisoned_flag
+						set_portraits = {
+							army = {
+								small = GFX_idea_indonesia_sarjono
+							}
+						}
+					}
 					INS_sukarno = {
 						clr_character_flag = INS_imprisoned_flag
 						set_portraits = {
 							army = {
 								small = GFX_idea_indonesia_sukarno
-							}
-						}
-					}
-					add_country_leader_role = {
-						character = INS_sukarno
-						country_leader = {
-							ideology = socialism
-							expire = "1965.1.1"
-							traits = {
-								national_integralist
 							}
 						}
 					}
@@ -3820,7 +3885,16 @@ on_actions = {
 						}
 						set_nationality = HOL
 					}
-					INS_hubertus_van_mook = {
+					INS_a_t_van_starkenborgh_stachouwer = {
+						set_nationality = HOL
+					}
+					INS_aleid_van_tricht = {
+						set_nationality = HOL
+					}
+					INS_anton_van_der_laaken = {
+						set_nationality = HOL
+					}
+					INS_elshout = {
 						set_nationality = HOL
 					}
 					INS_frederik_de_hoog = {
@@ -3829,50 +3903,182 @@ on_actions = {
 					INS_george_hart = {
 						set_nationality = HOL
 					}
-					INS_meyer_ranneft = {
+					INS_harry_kuneman = {
 						set_nationality = HOL
 					}
-					INS_anton_van_der_laaken = {
+					INS_henri_zentgraaff = {
+						set_nationality = HOL
+					}
+					INS_hubertus_van_mook = {
 						set_nationality = HOL
 					}
 					INS_jan_jonkman = {
 						set_nationality = HOL
 					}
-					INS_a_t_van_starkenborgh_stachouwer = {
+					INS_meyer_ranneft = {
 						set_nationality = HOL
 					}
-					INS_tan_malaka = {
+					INS_murk_boerstra = {
+						set_nationality = HOL
+					}
+					INS_nicolaas_blom = {
+						set_nationality = HOL
+					}
+					INS_peter_idenburg = {
+						set_nationality = HOL
+					}
+					INS_group_stuwgroep = {
+						set_nationality = HOL
+					}
+					INS_achmad_subarjo = {
 						set_nationality = ATJ
+					}
+					INS_tan_malaka = {
+						set_nationality = SSI
 					}
 					INS_mohammad_hatta = {
-						set_nationality = ATJ
+						add_trait = {
+							slot = political_advisor
+							trait = democratic_reformer
+						}
+						set_nationality = SSI
+					}
+					INS_mohammad_natsir = {
+						add_trait = {
+							slot = political_advisor
+							trait = fascist_demagogue
+						}
+						set_nationality = SSI
+					}
+					INS_ferdinand_lumbantobing = {
+						set_nationality = SSI
 					}
 					INS_amir_syarifuddin = {
-						set_nationality = ATJ
+						set_nationality = SSI
 					}
 					INS_adnan_gani = {
-						set_nationality = ATJ
+						set_nationality = SSI
 					}
 					INS_agus_salim = {
-						set_nationality = ATJ
+						set_nationality = SSI
 					}
 					INS_mohammad_yamin = {
-						set_nationality = ATJ
+						set_nationality = SSI
 					}
 					INS_mohammad_nazir = {
-						set_nationality = ATJ
+						set_nationality = SSI
+					}
+					INS_ruhana_kuddus = {
+						set_nationality = SSI
 					}
 					INS_sutan_syahrir = {
-						set_nationality = ATJ
+						set_nationality = SSI
 					}
-					INS_bernard_lapian = {
-						set_nationality = SLW
+					INS_abdulkadir_wijoyoatmojo = {
+						set_nationality = JVA
+					}
+					INS_beumer = {
+						set_nationality = JVA
+					}
+					INS_charles_van_der_plas = {
+						set_nationality = JVA
+					}
+					INS_governor_van_der_plas = {
+						set_nationality = JVA
+					}
+					INS_cipto_mangunkusumo = {
+						clr_character_flag = INS_imprisoned_flag
+						set_portraits = {
+							army = {
+								small = GFX_idea_indonesia_cipto_mangunkusumo
+							}
+						}
+						set_nationality = JVA
+					}
+					INS_dr_sutomo = {
+						set_nationality = JVA
+					}
+					INS_ernest_douwes_dekker = {
+						add_trait = {
+							slot = political_advisor
+							trait = fascist_demagogue
+						}
+						remove_trait = {
+							slot = political_advisor
+							trait = indies_nationalist
+						}
+						set_nationality = JVA
+					}
+					INS_ignatius_kasimo = {
+						add_trait = {
+							slot = political_advisor
+							trait = captain_of_industry
+						}
+						remove_trait = {
+							slot = political_advisor
+							trait = lieutenant_of_industry
+						}
+						set_nationality = JVA
+					}
+					INS_kh_dewantara = {
+						add_trait = {
+							slot = political_advisor
+							trait = democratic_reformer
+						}
+						set_nationality = JVA
+					}
+					INS_margono_joyohadikusumo = {
+						set_nationality = JVA
+					}
+					INS_muso_munawar = {
+						set_nationality = JVA
+					}
+					INS_semaun = {
+						add_trait = {
+							slot = political_advisor
+							trait = communist_revolutionary
+						}
+						remove_trait = {
+							slot = political_advisor
+							trait = former_railroad_union_leader
+						}
+						set_nationality = JVA
+					}
+					INS_subijakto = {
+						set_nationality = JVA
+					}
+					INS_sukarjo_wiryopranoto = {
+						set_nationality = JVA
+					}
+					INS_supomo = {
+						set_nationality = JVA
+					}
+					INS_sutarjo_kartohadikusumo = {
+						set_nationality = JVA
+					}
+					INS_sutomo = {
+						set_nationality = JVA
+					}
+					INS_wardiman = {
+						set_nationality = JVA
+					}
+					INS_group_indische_partij = {
+						set_nationality = JVA
 					}
 					INS_samuel_ratulangi = {
-						set_nationality = SLW
+						set_nationality = MNH
 					}
 					INS_thomas_nayoan = {
-						set_nationality = SLW
+						set_nationality = MNH
+					}
+					INS_hermann_rosenow = {
+						set_nationality = MLK
+					}
+					INS_johannes_latuharhary = {
+						set_nationality = MLK
+					}
+					INS_simon_spoor = {
+						set_nationality = MNH
 					}
 					INS_ida_anak_agung = {
 						set_nationality = EIS
@@ -3880,24 +4086,61 @@ on_actions = {
 					INS_sukawati = {
 						set_nationality = EIS
 					}
-					INS_johannes_latuharhary = {
-						set_nationality = MLK
+					GER_walther_hewel = {
+						add_trait = {
+							slot = political_advisor
+							trait = GER_diplomat
+						}
+						remove_trait = {
+							slot = political_advisor
+							trait = german_planter
+						}
+						set_nationality = GER
+					}
+					add_country_leader_role = {
+						character = INS_sukarno
+						country_leader = {
+							ideology = socialism
+							expire = "1965.1.1"
+							traits = {
+								national_integralist
+							}
+						}
 					}
 					promote_character = {
 						character = INS_sukarno
 						ideology = socialism
 					}
-					promote_character = {
-						character = INS_supomo
-						ideology = fascism_ideology
+					add_country_leader_role = {
+						character = INS_mohammad_husni_thamrin
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1"
+							traits = { devoted_corporatist }
+						}
+						promote_leader = yes
 					}
-					promote_character = {
-						character = INS_muso_munawar
-						ideology = stalinism
+					add_country_leader_role = {
+						character = INS_alimin
+						country_leader = {
+							ideology = leninism
+							expire = "1965.1.1"
+							traits = { SWI_trade_unionist }
+						}
+						promote_leader = yes
 					}
-					promote_character = {
-						character = INS_hamengkubuwono_ninth
-						ideology = centrism
+					promote_character = INS_mohammad_husni_thamrin
+					retire_ideology_leader = neutrality
+					add_country_leader_role = {
+						character = INS_abikusno_cokrosuyoso
+						promote_leader = yes
+						country_leader = {
+							ideology = moderatism
+							expire = "1965.1.1"
+							traits = {
+								shadow_of_cokroaminoto_n
+							}
+						}
 					}
 					add_field_marshal_role = {
 						character = INS_urip_sumoharjo
@@ -3928,6 +4171,18 @@ on_actions = {
 						legacy_id = -1
 					}
 					add_advisor_role = {
+						character = INS_sudirman
+						advisor = {
+							slot = army_chief
+							idea_token = INS_sudirman_chief
+							ledger = army
+							traits = {
+								army_chief_offensive_1
+							}
+							cost = 100
+						}
+					}
+					add_advisor_role = {
 						character = INS_mas_pardi
 						advisor = {
 							slot = navy_chief
@@ -3939,11 +4194,294 @@ on_actions = {
 							cost = 75
 						}
 					}
+					add_advisor_role = {
+						character = INS_urip_sumoharjo
+						advisor = {
+							slot = theorist
+							idea_token = INS_urip_sumoharjo
+							traits = {
+								military_theorist
+							}
+							cost = 100
+						}
+					}
+					add_advisor_role = {
+						character = INS_jan_hilgers
+						advisor = {
+							slot = theorist
+							idea_token = INS_jan_hilgers
+							traits = {
+								air_warfare_theorist
+							}
+							cost = 100
+						}
+					}
+					add_advisor_role = {
+						character = INS_mas_pardi
+						advisor = {
+							slot = theorist
+							idea_token = INS_mas_pardi
+							traits = {
+								naval_theorist
+							}
+							cost = 100
+						}
+					}
+					delete_unit_template_and_units = {
+						division_template = "KNIL Garrison Division"
+					}
+					transfer_units_fraction = {
+						target = JVA
+						size = 1
+					}
+				}
+				JVA = {
+					transfer_units_fraction = {
+						target = INS
+						size = 1
+					}
+					set_country_flag = INS_de_jonge_resigned
+					set_party_name = {
+						ideology = democratic
+						long_name = INS_pni_long
+						name = INS_pni
+					}
+					retire_ideology_leader = neutrality
+					add_country_leader_role = {
+						character = JVA_pakubuwono_x
+						promote_leader = yes
+						country_leader = {
+							ideology = despotism
+							expire = "1965.1.1"
+							traits = {
+								modernist_and_reformer
+							}
+						}
+					}
+					retire_ideology_leader = democratic
+					add_country_leader_role = {
+						character = INS_cipto_mangunkusumo
+						promote_leader = yes
+						country_leader = {
+							ideology = socialism
+							expire = "1965.1.1"
+							traits = {
+								progressive_doctor
+							}
+						}
+					}
+					retire_ideology_leader = fascism
+					add_country_leader_role = {
+						character = INS_dr_sutomo
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1"
+							traits = {
+								conservative_amongst_radicals_f
+							}
+						}
+					}
+					promote_character = JVA_pakubuwono_x
+					add_corps_commander_role = {
+						character = JVA_suharto
+						traits = { }
+						skill = 1
+						attack_skill = 1
+						defense_skill = 1
+						planning_skill = 1
+						logistics_skill = 1
+					}
+					if = {
+						limit = {
+							has_dlc = "Thunder at Our Gates"
+						}
+						add_corps_commander_role = {
+							character = INS_sutomo
+							traits = { INS_loyalty_to_indonesia militias_officer }
+							skill = 1
+							attack_skill = 1
+							defense_skill = 1
+							planning_skill = 1
+							logistics_skill = 1
+						}
+						add_corps_commander_role = {
+							character = INS_djatikoesoemo
+							traits = { INS_loyalty_to_indonesia }
+							skill = 1
+							attack_skill = 1
+							defense_skill = 1
+							planning_skill = 1
+							logistics_skill = 1
+						}
+						add_corps_commander_role = {
+							character = INS_moestopo
+							traits = { INS_loyalty_to_indonesia militias_officer }
+							skill = 1
+							attack_skill = 1
+							defense_skill = 1
+							planning_skill = 1
+							logistics_skill = 1
+						}
+						add_corps_commander_role = {
+							character = INS_soengkono
+							traits = { INS_loyalty_to_indonesia }
+							skill = 1
+							attack_skill = 1
+							defense_skill = 1
+							planning_skill = 1
+							logistics_skill = 1
+						}
+					}
+					promote_character = INS_muso_munawar
+					add_naval_commander_role = {
+						character = INS_subijakto
+						traits = { bold }
+						skill = 1
+						attack_skill = 2
+						defense_skill = 1
+						maneuvering_skill = 1
+						coordination_skill = 1
+						legacy_id = -1
+					}
+					add_advisor_role = {
+						character = INS_subijakto
+						advisor = {
+							slot = navy_chief
+							idea_token = INS_subijakto
+							ledger = navy
+							traits = {
+								navy_chief_maneuver_1
+							}
+							cost = 75
+						}
+					}
+					add_advisor_role = {
+						character = INS_subijakto
+						advisor = {
+							slot = theorist
+							idea_token = INS_subijakto
+							traits = {
+								naval_theorist
+							}
+							cost = 100
+						}
+					}
+					add_advisor_role = {
+						character = INS_wardiman
+						advisor = {
+							slot = air_chief
+							idea_token = INS_wardiman
+							ledger = air
+							traits = {
+								air_chief_reform_2
+							}
+							cost = 100
+						}
+					}
+					add_advisor_role = {
+						character = INS_wardiman
+						advisor = {
+							slot = theorist
+							idea_token = INS_wardiman
+							traits = {
+								air_warfare_theorist
+							}
+							cost = 100
+						}
+					}
+					division_template = {
+						name = "Javanese Division"
+						priority = 1
+						division_names_group = INS_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+					
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { PREV = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "name = \"Javanese 1st Division\" division_template = \"Javanese Division\" start_experience_factor = 0.5" 
+							owner = PREV
+						}
+					}
 				}
 				ATJ = {
-					add_ideas = INS_agrarian_society_3
+					swap_ideas = {
+						remove_idea = ASEAN_agrarian_society_1
+						add_idea = ASEAN_agrarian_society_3
+					}
 					set_country_flag = INS_de_jonge_resigned
-					set_capital = { state = 672 }
+					division_template = {
+						name = "Aceh Division"
+						priority = 1
+						division_names_group = INS_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+					
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { PREV = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "name = \"Aceh 1st Division\" division_template = \"Aceh Division\" start_experience_factor = 0.5" 
+							owner = PREV
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { PREV = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "name = \"Aceh 2nd Division\" division_template = \"Aceh Division\" start_experience_factor = 0.5" 
+							owner = PREV
+						}
+					}
+					set_party_name = { #PKI
+						ideology = communism 
+						long_name = INS_communism_party_long
+						name = INS_communism_party
+					}
+					set_party_name = { #PNI
+						ideology = democratic 
+						long_name = INS_pni_long
+						name = INS_pni
+					}
+					add_corps_commander_role = {
+						character = ATJ_daud_beureuh
+						traits = { scavenger jungle_rat }
+						skill = 1
+						attack_skill = 1
+						defense_skill = 1
+						planning_skill = 1
+						logistics_skill = 2
+					}
+				}
+				SSI = {
+					swap_ideas = {
+						remove_idea = ASEAN_agrarian_society_1
+						add_idea = ASEAN_agrarian_society_3
+					}
+					set_country_flag = INS_de_jonge_resigned
 					set_cosmetic_tag = SMT
 					division_template = {
 						name = "Sumatran Division"
@@ -3979,25 +4517,40 @@ on_actions = {
 							owner = PREV
 						}
 					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.39
+					}
 					set_party_name = { #PKI
 						ideology = communism 
 						long_name = INS_communism_party_long
 						name = INS_communism_party
 					}
-					set_party_name = { #Parindra
+					set_party_name = { #PNI
 						ideology = democratic 
-						long_name = INS_democratic_party_long
-						name = INS_democratic_party
-					}
-					set_party_name = { #Gerindo
-						ideology = fascism 
-						long_name = INS_democratic_party_united_front_long
-						name = INS_democratic_party_united_front
+						long_name = INS_pni_long
+						name = INS_pni
 					}
 					set_party_name = { #PSII
-						ideology = neutrality 
+						ideology = fascism 
 						long_name = INS_neutrality_party_islam_long
 						name = INS_neutrality_party_islam
+					}
+					retire_ideology_leader = fascism
+					add_country_leader_role = {
+						character = INS_mohammad_natsir
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1"
+							traits = {
+								national_integralist
+							}
+						}
 					}
 					retire_ideology_leader = democratic
 					add_country_leader_role = {
@@ -4012,14 +4565,8 @@ on_actions = {
 						}
 					}
 					retire_ideology_leader = communism
-					add_country_leader_role = {
+					promote_character = {
 						character = INS_tan_malaka
-						country_leader = {
-							ideology = leninism
-							expire = "1965.1.1"
-							traits = { marxist_academic }
-						}
-						promote_leader = yes
 					}
 					add_field_marshal_role = {
 						character = INS_tan_malaka
@@ -4029,15 +4576,6 @@ on_actions = {
 						defense_skill = 2
 						planning_skill = 2
 						logistics_skill = 3
-					}
-					add_corps_commander_role = {
-						character = ATJ_daud_beureuh
-						traits = { scavenger jungle_rat }
-						skill = 1
-						attack_skill = 1
-						defense_skill = 1
-						planning_skill = 1
-						logistics_skill = 2
 					}
 					add_naval_commander_role = {
 						character = INS_mohammad_nazir
@@ -4061,8 +4599,16 @@ on_actions = {
 						}
 					}
 				}
+				add_victory_points = {
+					province = 1277
+					value = 8
+				}
+				set_victory_points = {
+					province = 4652
+					value = 5
+				}
 				EIS = {
-					add_ideas = INS_agrarian_society_3
+					add_ideas = ASEAN_agrarian_society_3
 					set_country_flag = INS_de_jonge_resigned
 					set_party_name = { 
 						ideology = neutrality
@@ -4079,6 +4625,10 @@ on_actions = {
 						long_name = DFS_democratic_party_long
 						name = DFS_democratic_party
 					}
+				}
+				set_victory_points = {
+					province = 12151
+					value = 5
 				}
 				POR = {
 					release = TML
@@ -4131,11 +4681,9 @@ on_actions = {
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
 
 							infantry = { x = 1 y = 0 }
 							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
 					
 							infantry = { x = 2 y = 0 }
 							infantry = { x = 2 y = 1 }
@@ -4153,28 +4701,16 @@ on_actions = {
 					}
 					set_party_name = { 
 						ideology = neutrality 
-						long_name = neutrality 
-						name = neutrality 
-					}
-					set_party_name = { 
-						ideology = fascism 
-						long_name = fascism 
-						name = fascism 
-						}
-					set_party_name = { 
-						ideology = democratic 
-						long_name = DFS_democratic_party_long 
-						name = DFS_democratic_party 
-					}
-					set_party_name = { 
-						ideology = communism 
-						long_name = EIS_communism_party_long 
-						name = EIS_communism_party 
+						long_name = TML_neutrality_party_independent 
+						name = TML_neutrality_party_independent 
 					}
 				}
 				WPG = {
-					set_capital = { state = 1056 }
-					add_ideas = INS_agrarian_society_2
+					set_capital = { state = 1073 }
+					swap_ideas = {
+						remove_idea = ASEAN_agrarian_society_1
+						add_idea = ASEAN_agrarian_society_2
+					}
 					set_country_flag = INS_de_jonge_resigned
 					division_template = {
 						name = "Papuan Division"
@@ -4183,11 +4719,9 @@ on_actions = {
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
 
 							infantry = { x = 1 y = 0 }
 							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
 					
 							infantry = { x = 2 y = 0 }
 							infantry = { x = 2 y = 1 }
@@ -4202,6 +4736,12 @@ on_actions = {
 							division = "name = \"Papuan Division\" division_template = \"Papuan Division\" start_experience_factor = 0.3" 
 							owner = PREV
 						}
+					}
+					set_politics = {
+						ruling_party = neutrality
+						last_election = "1936.01.01"
+						election_frequency = 48
+						elections_allowed = no
 					}
 				}
 				add_victory_points = {
@@ -4232,14 +4772,32 @@ on_actions = {
 						instant_build = yes
 					}
 				}
-				KLM = {
+				POK = {
 					set_country_flag = INS_de_jonge_resigned
 					1022 = { add_core_of = PREV }
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.35
+					}
 				}
 				MAL = {
 					release = BRN
 					release = SAB
 					release = SAR
+					MAL_charles_brooke = {
+						set_nationality = SAR
+					}
+				}
+				SAR = {
+					add_country_leader_role = {
+						character = MAL_charles_brooke
+						country_leader = {
+							ideology = despotism
+							expire = "1965.1.1"
+							traits = { regional_autonomist }
+						}
+						promote_leader = yes
+					}
 				}
 				BRN = {
 					division_template = {
@@ -4270,11 +4828,7 @@ on_actions = {
 						}
 					}
 				}
-				INS = {
-					release = KUT
-					release = KLM
-				}
-				KLM = {
+				POK = {
 					division_template = {
 						name = "Bornean Jungle Division"
 						priority = 1
@@ -4282,11 +4836,9 @@ on_actions = {
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
 
 							infantry = { x = 1 y = 0 }
 							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
 					
 							infantry = { x = 2 y = 0 }
 							infantry = { x = 2 y = 1 }
@@ -4296,14 +4848,20 @@ on_actions = {
 						}
 					}
 					random_owned_controlled_state = {
-						limit = { PREV = { has_full_control_of_state = PREV } }
+						limit = {
+							PREV = { has_full_control_of_state = PREV }
+							impassable = no
+						}
 						create_unit = {
 							division = "name = \"Kalimantan 1st Division\" division_template = \"Bornean Jungle Division\" start_experience_factor = 0.5" 
 							owner = PREV
 						}
 					}
 					random_owned_controlled_state = {
-						limit = { PREV = { has_full_control_of_state = PREV } }
+						limit = {
+							PREV = { has_full_control_of_state = PREV }
+							impassable = no
+						}
 						create_unit = {
 							division = "name = \"Kalimantan 2nd Division\" division_template = \"Bornean Jungle Division\" start_experience_factor = 0.5" 
 							owner = PREV
@@ -4323,11 +4881,9 @@ on_actions = {
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
 
 							infantry = { x = 1 y = 0 }
 							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
 					
 							infantry = { x = 2 y = 0 }
 							infantry = { x = 2 y = 1 }
@@ -4350,9 +4906,38 @@ on_actions = {
 							owner = PREV
 						}
 					}
+					set_party_name = { #PNI
+						ideology = democratic
+						long_name = INS_neutrality_party_islam_long
+						name = INS_neutrality_party_islam
+					}
+					set_party_name = { #Parindra
+						ideology = fascism
+						long_name = INS_democratic_party
+						name = INS_democratic_party
+					}
 				}
-				MLK = {
-					add_ideas = INS_agrarian_society_3
+				add_victory_points = {
+					province = 4323
+					value = 5
+				}
+				set_victory_points = {
+					province = 7296
+					value = 2
+				}
+				set_victory_points = {
+					province = 12196
+					value = 2
+				}
+				set_province_name = {
+					id = 4323
+					name = "Tenggarong"
+				}
+				TNE = {
+					swap_ideas = {
+						remove_idea = ASEAN_agrarian_society_1
+						add_idea = ASEAN_agrarian_society_2
+					}
 					set_country_flag = INS_de_jonge_resigned
 					division_template = {
 						name = "Mollucan Division"
@@ -4361,11 +4946,9 @@ on_actions = {
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
 
 							infantry = { x = 1 y = 0 }
 							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
 					
 							infantry = { x = 2 y = 0 }
 							infantry = { x = 2 y = 1 }
@@ -4381,6 +4964,62 @@ on_actions = {
 							owner = PREV
 						}
 					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.35
+					}
+				}
+				MLK = {
+					MLK_jansen = {
+						set_nationality = HOL
+					}
+					swap_ideas = {
+						remove_idea = ASEAN_agrarian_society_2
+						add_idea = ASEAN_agrarian_society_3
+					}
+					set_country_flag = INS_de_jonge_resigned
+					division_template = {
+						name = "Mollucan Division"
+						priority = 1
+						division_names_group = INS_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+					
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { PREV = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "name = \"Mollucan 1st Division\" division_template = \"Mollucan Division\" start_experience_factor = 0.5" 
+							owner = PREV
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { PREV = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "name = \"Mollucan 1st Division\" division_template = \"Mollucan Division\" start_experience_factor = 0.5" 
+							owner = PREV
+						}
+					}
+					retire_ideology_leader = neutrality
+					add_country_leader_role = {
+						character = INS_johannes_latuharhary
+						country_leader = {
+							ideology = moderatism
+							expire = "1965.1.1"
+							traits = { regional_autonomist }
+						}
+						promote_leader = yes
+					}
 					add_advisor_role = {
 						character = INS_johannes_latuharhary
 						advisor = {
@@ -4392,9 +5031,62 @@ on_actions = {
 							cost = 125
 						}
 					}
+					set_party_name = {
+						ideology = fascism
+						long_name = INS_fascism_party_long
+						name = INS_fascism_party
+					}
+					set_politics = {
+						ruling_party = fascism
+						last_election = "1935.01.01"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = -0.35
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.35
+					}
+					add_corps_commander_role = {
+						character = MLK_soumokil
+						traits = { organizer }
+						skill = 1
+						attack_skill = 1
+						defense_skill = 2
+						planning_skill = 1
+						logistics_skill = 1
+					}
+					add_naval_commander_role = {
+						character = INS_hermann_rosenow
+						traits = { fleet_protector }
+						skill = 1
+						attack_skill = 1
+						defense_skill = 2
+						maneuvering_skill = 1
+						coordination_skill = 1
+						legacy_id = -1
+					}
+					add_advisor_role = {
+						character = INS_hermann_rosenow
+						advisor = {
+							slot = navy_chief
+							idea_token = INS_hermann_rosenow
+							ledger = navy
+							traits = {
+								navy_chief_decisive_battle_1
+							}
+							cost = 75
+						}
+					}
 				}
-				SLW = {
-					set_capital = { state = 673 }
+				MNH = {
+					swap_ideas = {
+						remove_idea = ASEAN_agrarian_society_1
+						add_idea = ASEAN_agrarian_society_3
+					}
 					division_template = {
 						name = "Celebes Division"
 						priority = 1
@@ -4402,11 +5094,9 @@ on_actions = {
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
 
 							infantry = { x = 1 y = 0 }
 							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
 					
 							infantry = { x = 2 y = 0 }
 							infantry = { x = 2 y = 1 }
@@ -4422,7 +5112,6 @@ on_actions = {
 							owner = PREV
 						}
 					}
-					add_ideas = INS_agrarian_society_3
 					retire_ideology_leader = democratic
 					add_country_leader_role = {
 						character = INS_nicodemus_palar
@@ -4443,35 +5132,19 @@ on_actions = {
 						}
 						promote_leader = yes
 					}
-					retire_ideology_leader = communism
+					retire_ideology_leader = fascism
 					add_country_leader_role = {
-						character = INS_thomas_nayoan
+						character = INS_samuel_ratulangi
 						country_leader = {
-							ideology = marxism
+							ideology = fascism_ideology
 							expire = "1965.1.1"
-							traits = { freedom_fighter }
+							traits = { national_determinist }
 						}
 						promote_leader = yes
 					}
-					set_party_name = {
-						ideology = democratic
-						long_name = INS_pni_long
-						name = INS_pni
-					}
-					set_party_name = {
-						ideology = neutrality
-						long_name = SLW_democratic_party
-						name = SLW_democratic_party
-					}
-					set_party_name = {
-						ideology = fascism
-						long_name = INS_fascism_party_islam_long
-						name = INS_fascism_party_islam
-					}
-					set_party_name = {
-						ideology = communism
-						long_name = SLW_communism_party_long
-						name = SLW_communism_party
+					retire_ideology_leader = communism
+					promote_character = {
+						character = INS_thomas_nayoan
 					}
 					add_corps_commander_role = {
 						character = INS_samuel_ratulangi
@@ -4482,18 +5155,44 @@ on_actions = {
 						planning_skill = 2
 						logistics_skill = 1
 					}
-					add_advisor_role = {
-						character = INS_bernard_lapian
-						advisor = {
-							slot = political_advisor
-							idea_token = INS_bernard_lapian
-							traits = {
-								silent_workhorse
-							}
+				}
+				GOW = {
+					division_template = {
+						name = "Celebes Division"
+						priority = 1
+						division_names_group = INS_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+					
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
 						}
 					}
+					random_owned_controlled_state = {
+						limit = { PREV = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "name = \"Celebes 1st Division\" division_template = \"Celebes Division\" start_experience_factor = 0.5" 
+							owner = PREV
+						}
+					}
+					set_party_name = { 
+						ideology = communism 
+						long_name = MNH_communism_party_long
+						name = MNH_communism_party
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.35
+					}
 				}
-				1051 = {
+				1049 = { #E Sumatra
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -4501,7 +5200,7 @@ on_actions = {
 						instant_build = yes
 					}
 				}
-				1023 = {
+				1048 = { #W Sumatra
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -4509,7 +5208,7 @@ on_actions = {
 						instant_build = yes
 					}
 				}
-				334 = {
+				1050 = { #Aceh
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -4517,7 +5216,15 @@ on_actions = {
 						instant_build = yes
 					}
 				}
-				669 = {
+				1051 = { #West Java
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				1086 = { #Mataram
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -4525,10 +5232,7 @@ on_actions = {
 						instant_build = yes
 					}
 				}
-				1055 = {
-					add_extra_state_shared_building_slots = 1
-				}
-				668 = {
+				1023 = { #Brunei
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -4536,7 +5240,7 @@ on_actions = {
 						instant_build = yes
 					}
 				}
-				673 = {
+				334 = { #E Kalimantan
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -4544,7 +5248,79 @@ on_actions = {
 						instant_build = yes
 					}
 				}
-				721 = {
+				669 = { #West Papua
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				1055 = { #N Moluccas
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				668 = { #S Moluccas
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				1056 = { #N Sulawesi
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				673 = { #S Sulawesi
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				721 = { #Timor Leste
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				1052 = { #Bali
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				1024 = { #Sabah
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				333 = { #Sarawak
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				1082 = { #N Moluccas
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex

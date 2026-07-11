@@ -11,6 +11,7 @@ characters = {
 			desc = WPG_machmud_rumagesan_desc
 			ideology = despotism
 			traits = {
+				blessed_monarch_trait
 			}
 			expire = "1964.7.5.1"
 			id=-1
@@ -28,6 +29,7 @@ characters = {
 			desc = WPG_karel_van_eechoud_desc
 			ideology = despotism
 			traits = {
+				AST_governor_general
 			}
 			expire = "1958.9.7.1"
 			id=-1

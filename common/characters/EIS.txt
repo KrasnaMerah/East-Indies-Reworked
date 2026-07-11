@@ -1,0 +1,138 @@
+characters = {
+
+	INS_sukawati = {
+		name = INS_sukawati
+		portraits = {
+			civilian = {
+				large = GFX_portrait_indonesia_sukawati
+			}
+			army = {
+				small = GFX_idea_indonesia_sukawati
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = INS_sukawati
+			allowed = {
+				OR = {
+					original_tag = INS
+					tag = EIS
+				}
+				has_dlc = "Man the Guns"
+			}
+			available = {
+				has_completed_focus = INS_indies_nation
+				NOT = {
+					has_government = fascism
+				}
+			}
+			visible = {
+				has_completed_focus = INS_challenge_dutch_elitism
+				if = {
+					limit = {
+						tag = INS
+					}
+					NOT = {
+						has_completed_focus = INS_nusantara_accord
+					}
+				}
+			}
+			traits = {
+				balinese_noble
+			}
+			cost = 135
+		}
+	}
+
+	INS_ida_anak_agung = {
+		name = INS_ida_anak_agung
+		portraits = {
+			army = {
+				small = GFX_idea_indonesia_ida_anak_agung
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = INS_ida_anak_agung
+			allowed = {
+				OR = {
+					original_tag = INS
+					tag = EIS
+				}
+				has_dlc = "Man the Guns"
+			}
+			available = {
+				has_completed_focus = INS_reestablish_royal_houses
+				has_completed_focus = INS_indies_nation
+				NOT = {
+					has_government = fascism
+				}
+			}
+			visible = {
+				has_completed_focus = INS_challenge_dutch_elitism
+				if = {
+					limit = {
+						tag = INS
+					}
+					NOT = {
+						has_completed_focus = INS_nusantara_accord
+					}
+				}
+				date > 1946.7.24
+			}
+			traits = {
+				the_man_from_gianyar
+			}
+			cost = 135
+		}
+	}
+
+	INS_dewa_geg = {
+		name = INS_dewa_geg
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_INS_dewa_geg"
+				small = "GFX_portrait_INS_dewa_geg_small"
+			}
+		}
+
+		country_leader = {
+			ideology = despotism
+			traits = {
+				INS_lord_of_the_nine_kingdoms
+			}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			idea_token = INS_dewa_geg
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = HOL
+					original_tag = BLI
+					original_tag = EIS
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = INS
+					AND = {
+						original_tag = HOL
+						has_cosmetic_tag = INS_UNION
+					}
+				}
+				is_country_leader = no
+			}
+			available = {
+				
+			}
+			traits = {
+				INS_paramount_of_bali
+			}
+		}
+	}
+}

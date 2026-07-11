@@ -1,0 +1,38 @@
+state={
+	id=1083
+	name="STATE_1083"
+
+	resources = {
+		aluminium = 28
+	}
+
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = SSI
+		set_resistance = 0
+		set_compliance = 60
+		victory_points = {
+			12113 1
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+			12113 = {
+				naval_base = 1
+			}
+			13298 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		12113 13298 
+	}
+
+	manpower = 159622
+	buildings_max_level_factor = 1.000
+	state_category = small_island
+	local_supplies = 1
+}

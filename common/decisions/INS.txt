@@ -1,3 +1,190 @@
+debug_decisions = {
+
+	INS_switch_to_INS = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = INS
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			INS = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_HOL = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = HOL
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			HOL = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_JVA = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = JVA
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			JVA = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_MAL = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = MAL
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			MAL = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_become_fascist = {
+
+		allowed = {
+			is_asean_state = yes
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+
+			set_politics = {
+				ruling_party = fascism
+				last_election = "1935.01.01"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+		}
+	}
+
+	INS_become_democratic = {
+
+		allowed = {
+			is_asean_state = yes
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+
+			set_politics = {
+				ruling_party = democratic
+				last_election = "1935.01.01"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+		}
+	}
+
+	INS_become_communist = {
+
+		allowed = {
+			is_asean_state = yes
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+
+			set_politics = {
+				ruling_party = communism
+				last_election = "1935.01.01"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+		}
+	}
+
+	INS_become_neutral = {
+
+		allowed = {
+			is_asean_state = yes
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+
+			set_politics = {
+				ruling_party = neutrality
+				last_election = "1935.01.01"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+		}
+	}
+}
+
 
 INS_category_volksraad = {
 
@@ -75,7 +262,7 @@ INS_category_volksraad = {
 				province = 7421
 				value = 10
 			}
-			set_capital = { state = 1051 }
+			set_capital = { state = 335 }
 		}
 
 		ai_will_do = {
@@ -232,9 +419,9 @@ INS_category_volksraad = {
 		target_trigger = {
 			FROM = {
 				OR = {
+					state = 1058
 					state = 335
 					state = 1051
-					state = 1052
 				}
 				is_fully_controlled_by = ROOT
 			}
@@ -491,7 +678,7 @@ INS_category_volksraad = {
 		}
 
 		remove_effect = {
-			335 = {
+			1058 = {
 				add_manpower = 629
 			}
 			add_stability = 0.075
@@ -530,7 +717,7 @@ INS_category_national_projects = {
 		icon = GFX_decision_SWE_set_air_budget
 
 		available = {
-			controls_state = 1051
+			controls_state = 335
 			has_completed_focus = INS_copy_dutch_navair
 			NOT = {
 				has_country_flag = INS_merbabu_quits_flag
@@ -566,7 +753,7 @@ INS_category_national_projects = {
 			show_ideas_tooltip = INS_nv_merbabu
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			1051 = {
+			335 = {
 				add_building_construction = {
 					type = air_facility
 					level = 1
@@ -582,7 +769,7 @@ INS_category_national_projects = {
 		icon = GFX_decision_generic_industry
 
 		available = {
-			controls_state = 1051
+			controls_state = 335
 			has_completed_focus = INS_state_weapons
 			num_of_civilian_factories_available_for_projects > 8
 			custom_trigger_tooltip = {
@@ -610,7 +797,7 @@ INS_category_national_projects = {
 		}
 
 		remove_effect = {
-			1051 = {
+			335 = {
 				add_building_construction = {
 					type = land_facility
 					level = 1
@@ -626,7 +813,7 @@ INS_category_national_projects = {
 		icon = GFX_decision_SWE_set_navy_budget
 
 		available = {
-			controls_state = 1052
+			controls_state = 1051
 			has_completed_focus = INS_expand_javan_dockyards
 			num_of_civilian_factories_available_for_projects > 8
 			custom_trigger_tooltip = {
@@ -654,7 +841,7 @@ INS_category_national_projects = {
 		}
 
 		remove_effect = {
-			1052 = {
+			1051 = {
 				add_building_construction = {
 					type = naval_facility
 					level = 1
@@ -676,7 +863,7 @@ INS_category_national_projects = {
 
 		available = {
 			is_subject = no
-			controls_state = 1052
+			controls_state = 1051
 			OR = {
 				has_completed_focus = INS_expel_the_colonials
 				has_completed_focus = INS_merdeka
@@ -739,7 +926,7 @@ INS_category_national_projects = {
 
 		available = {
 			is_subject = no
-			controls_state = 1051
+			controls_state = 335
 			OR = {
 				has_completed_focus = INS_expel_the_colonials
 				has_completed_focus = INS_merdeka
@@ -802,7 +989,7 @@ INS_category_national_projects = {
 
 		available = {
 			is_subject = no
-			controls_state = 335
+			controls_state = 1058
 			OR = {
 				has_completed_focus = INS_expel_the_colonials
 				has_completed_focus = INS_merdeka
@@ -1063,7 +1250,7 @@ INS_category_invite_foreign_investors = {
 		days_mission_timeout = 720
 
 		activation = {
-			controls_state = 672
+			controls_state = 1049
 			has_idea = INS_economic_aid
 		}
 
@@ -1091,7 +1278,7 @@ INS_category_invite_foreign_investors = {
 				limit = {
 					has_country_flag = INS_resources_exchange_program
 				}
-				remove_resource_rights = 672
+				remove_resource_rights = 1049
 			}
 		}
 	}
@@ -1556,7 +1743,7 @@ INS_category_invite_foreign_investors = {
 				capital_scope = { is_on_continent = asia }
 			}
 			has_idea = INS_economic_aid
-			controls_state = 672
+			controls_state = 1049
 		}
 
 		visible = {
@@ -1574,7 +1761,7 @@ INS_category_invite_foreign_investors = {
 				limit = {
 					has_country_flag = INS_resources_for_aid
 				}
-				remove_resource_rights = 672
+				remove_resource_rights = 1049
 			}
 		}
 	}
@@ -1631,7 +1818,7 @@ INS_category_pki_decisions = {
 		}
 
 		remove_effect = {
-			335 = {
+			1058 = {
 				add_manpower = 629
 			}
 			add_stability = 0.075
@@ -2971,16 +3158,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -3016,10 +3207,10 @@ INS_category_ethical_policies = {
 						region = 158 #Sunda Islands except Java
 						region = 187 #Sumatra
 						state = 724 #Pattani
-						state = 1060 #Kedah
+						state = 1061 #Kedah
 						state = 336 #Cent Malaya
 						state = 1059 #Kelantan
-						state = 1058 #Johor
+						state = 1060 #Johor
 						region = 159 #Borneo
 						region = 299 #Banda Sea
 						state = 738 #Aru Islands
@@ -3038,9 +3229,10 @@ INS_category_ethical_policies = {
 					OR = {
 						NOT = { #Don't give it back to Java
 							OR = {
+								state = 1058
 								state = 335
 								state = 1051
-								state = 1052
+								state = 1086
 							}
 						}
 						AND = {
@@ -3062,7 +3254,7 @@ INS_category_ethical_policies = {
 							}
 						}
 						AND = {
-							state = 1056 #Vogelkop
+							state = 1073 #Vogelkop
 							NOT = {
 								has_state_flag = INS_transmigration_2
 							}
@@ -3080,13 +3272,13 @@ INS_category_ethical_policies = {
 							}
 						}
 						AND = {
-							state = 1049 #Riau Islands
+							state = 1083 #Riau Islands
 							NOT = {
 								has_state_flag = INS_transmigration_4
 							}
 						}
 						AND = {
-							state = 1060 #Kedah
+							state = 1061 #Kedah
 							NOT = {
 								has_state_flag = INS_transmigration_6
 							}
@@ -3116,7 +3308,7 @@ INS_category_ethical_policies = {
 							}
 						}
 						AND = {
-							state = 1055 #North Maluku
+							state = 1082 #North Maluku
 							NOT = {
 								has_state_flag = INS_transmigration_9
 							}
@@ -3140,13 +3332,13 @@ INS_category_ethical_policies = {
 							}
 						}
 						AND = {
-							state = 1047 #Aceh
+							state = 1050 #Aceh
 							NOT = {
 								has_state_flag = INS_transmigration_13
 							}
 						}
 						AND = {
-							state = 1053 #Dutch Timor
+							state = 1054 #Dutch Timor
 							NOT = {
 								has_state_flag = INS_transmigration_13
 							}
@@ -3158,7 +3350,7 @@ INS_category_ethical_policies = {
 							}
 						}
 						AND = {
-							state = 1058 #Johor
+							state = 1060 #Johor
 							NOT = {
 								has_state_flag = INS_transmigration_14
 							}
@@ -3176,7 +3368,7 @@ INS_category_ethical_policies = {
 							}
 						}
 						AND = {
-							state = 1050 #West Kalimantan
+							state = 334 #West Kalimantan
 							NOT = {
 								has_state_flag = INS_transmigration_26
 							}
@@ -3188,7 +3380,7 @@ INS_category_ethical_policies = {
 							}
 						}
 						AND = {
-							state = 334 #East Kalimantan
+							state = 1055 #East Kalimantan
 							NOT = {
 								has_state_flag = INS_transmigration_32
 							}
@@ -3210,7 +3402,7 @@ INS_category_ethical_policies = {
 				}
 				if = {
 					limit = {
-						state = 334
+						state = 1055
 						has_state_flag = INS_transmigration_32
 					}
 					add_extra_state_shared_building_slots = 1
@@ -3223,7 +3415,7 @@ INS_category_ethical_policies = {
 				}
 				if = {
 					limit = {
-						state = 1050
+						state = 334
 						has_state_flag = INS_transmigration_26
 					}
 					add_extra_state_shared_building_slots = 1
@@ -3264,7 +3456,7 @@ INS_category_ethical_policies = {
 					limit = {
 						OR = {
 							state = 737
-							state = 1055
+							state = 1082
 						}
 						has_state_flag = INS_transmigration_9
 					}
@@ -3285,7 +3477,7 @@ INS_category_ethical_policies = {
 				}
 				if = {
 					limit = {
-						state = 1049
+						state = 1083
 						has_state_flag = INS_transmigration_4
 					}
 					add_extra_state_shared_building_slots = 1
@@ -3316,7 +3508,7 @@ INS_category_ethical_policies = {
 				}
 				if = {
 					limit = {
-						state = 1056
+						state = 1073
 						has_state_flag = INS_transmigration_1
 					}
 					add_extra_state_shared_building_slots = 1
@@ -3346,7 +3538,7 @@ INS_category_ethical_policies = {
 		}
 	}
 
-	INS_transmigration_to_aceh = { #Can handle 13 waves at 20%, 16 at 25%
+	INS_transmigration_to_aceh = { #Can handle 30 waves at 20%, 16 at 25%
 
 		icon = GFX_decision_hol_engelandvaarders
 
@@ -3359,7 +3551,7 @@ INS_category_ethical_policies = {
 		}
 
 		available = {
-			1047 = {
+			1050 = {
 				is_fully_controlled_by = ROOT
 				NOT = {
 					has_state_flag = INS_transmigration_13
@@ -3374,7 +3566,7 @@ INS_category_ethical_policies = {
 		}
 
 		visible = {
-			1047 = {
+			1050 = {
 				is_owned_by = INS
 			}
 		}
@@ -3382,7 +3574,7 @@ INS_category_ethical_policies = {
 		cancel_if_not_visible = yes
 
 		highlight_states = {
- 			highlight_state_targets = { state = 1047 } 
+ 			highlight_state_targets = { state = 1050 } 
 		}
 
 		on_map_mode = map_only
@@ -3400,16 +3592,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -3438,7 +3634,7 @@ INS_category_ethical_policies = {
 		}
 
 		remove_effect = {
-			1047 = {
+			1050 = {
 				add_manpower = 7500
 				INS_add_transmigrant_wave = yes
 				if = {
@@ -3458,7 +3654,7 @@ INS_category_ethical_policies = {
 		}
 	}
 
-	INS_transmigration_to_nsumatra = { #Can handle 117 waves at 20%, 147 at 25%
+	INS_transmigration_to_esumatra = { #Can handle 73 waves at 20%, 147 at 25%
 
 		icon = GFX_decision_hol_engelandvaarders
 
@@ -3471,7 +3667,7 @@ INS_category_ethical_policies = {
 		}
 
 		available = {
-			672 = {
+			1049 = {
 				is_fully_controlled_by = ROOT
 			}
 			num_of_civilian_factories_available_for_projects > 3
@@ -3485,7 +3681,7 @@ INS_category_ethical_policies = {
 		cancel_if_not_visible = yes
 
 		highlight_states = {
- 			highlight_state_targets = { state = 672 } 
+ 			highlight_state_targets = { state = 1049 } 
 		}
 
 		on_map_mode = map_only
@@ -3503,16 +3699,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -3541,7 +3741,7 @@ INS_category_ethical_policies = {
 		}
 
 		remove_effect = {
-			672 = {
+			1049 = {
 				add_manpower = 7500
 				INS_add_transmigrant_wave = yes
 				if = {
@@ -3591,7 +3791,7 @@ INS_category_ethical_policies = {
 		}
 	}
 
-	INS_transmigration_to_ssumatra = { #Can handle 85 waves
+	INS_transmigration_to_wsumatra = { #Can handle 79 waves at 20%, 147 at 25%
 
 		icon = GFX_decision_hol_engelandvaarders
 
@@ -3604,7 +3804,9 @@ INS_category_ethical_policies = {
 		}
 
 		available = {
-			has_full_control_of_state = 1048
+			1048 = {
+				is_fully_controlled_by = ROOT
+			}
 			num_of_civilian_factories_available_for_projects > 3
 			has_war_support > 0.25
 			NOT = {
@@ -3634,16 +3836,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -3722,7 +3928,7 @@ INS_category_ethical_policies = {
 		}
 	}
 
-	INS_transmigration_to_natuna = { #Can handle 4 waves
+	INS_transmigration_to_ssumatra = { #Can handle 75 waves
 
 		icon = GFX_decision_hol_engelandvaarders
 
@@ -3735,12 +3941,7 @@ INS_category_ethical_policies = {
 		}
 
 		available = {
-			1049 = {
-				is_fully_controlled_by = ROOT
-				NOT = {
-					has_state_flag = INS_transmigration_4
-				}
-			}
+			has_full_control_of_state = 672
 			num_of_civilian_factories_available_for_projects > 3
 			has_war_support > 0.25
 			NOT = {
@@ -3749,16 +3950,10 @@ INS_category_ethical_policies = {
 			NOT = { has_country_flag = INS_transmigration_flag }
 		}
 
-		visible = {
-			1049 = {
-				is_owned_by = INS
-			}
-		}
-
 		cancel_if_not_visible = yes
 
 		highlight_states = {
- 			highlight_state_targets = { state = 1049 } 
+ 			highlight_state_targets = { state = 672 } 
 		}
 
 		on_map_mode = map_only
@@ -3776,16 +3971,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -3814,121 +4013,27 @@ INS_category_ethical_policies = {
 		}
 
 		remove_effect = {
-			1049 = {
+			672 = {
 				add_manpower = 7500
 				INS_add_transmigrant_wave = yes
 				if = {
 					limit = {
-						has_state_flag = INS_transmigration_3
+						has_state_flag = INS_transmigration_39
 					}
 					add_extra_state_shared_building_slots = 1
 				}
 				if = {
 					limit = {
-						has_state_flag = INS_transmigration_1
+						has_state_flag = INS_transmigration_35
 					}
 					add_extra_state_shared_building_slots = 1
 				}
-			}
-			clr_country_flag = INS_transmigration_flag
-		}
-	}
-
-	INS_transmigration_to_wkalimantan = { #Can handle 26 waves
-
-		icon = GFX_decision_hol_engelandvaarders
-
-		days_remove = 90
-
-		cost = 25
-
-		allowed = {
-			original_tag = INS
-		}
-
-		available = {
-			1050 = {
-				is_fully_controlled_by = ROOT
-				NOT = {
-					has_state_flag = INS_transmigration_26
-				}
-			}
-			num_of_civilian_factories_available_for_projects > 3
-			has_war_support > 0.25
-			NOT = {
-				has_country_flag = INS_agrarian_reform_enacted
-			}
-			NOT = { has_country_flag = INS_transmigration_flag }
-		}
-
-		visible = {
-			1050 = {
-				is_owned_by = INS
-			}
-		}
-
-		cancel_if_not_visible = yes
-
-		highlight_states = {
- 			highlight_state_targets = { state = 1050 } 
-		}
-
-		on_map_mode = map_only
-
-		modifier = {
-			civilian_factory_use = 2
-			neutrality_drift = -0.05
-			monthly_population = 0.05
-		}
-
-		complete_effect = {
-			random_owned_state = { #reduce population at Java
-				limit = {
-					is_core_of = ROOT
-					is_fully_controlled_by = ROOT
-					OR = {
-						AND = {
-							state = 335
-							state_population_k > 3500
-						}
-						AND = {
-							state = 1051
-							state_population_k > 10000
-						}
-						AND = {
-							state = 1052
-							state_population_k > 7500
-						}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_29
 					}
+					add_extra_state_shared_building_slots = 1
 				}
-				add_manpower = -7500
-			}
-			if = {
-				limit = {
-					NOT = {
-						check_variable = {
-							var = INS_transmigration_upgrade
-							value = 1
-							compare = greater_than_or_equals
-						}
-					}
-				}
-				set_variable = {
-					var = INS_transmigration_upgrade
-					value = 0
-				}
-			}
-			add_to_variable = {
-				var = INS_transmigration_upgrade
-				value = 1
-			}
-			set_country_flag = INS_transmigration_flag
-		}
-
-		remove_effect = {
-			1050 = {
-				add_manpower = 7500
-				INS_add_transmigrant_wave = yes
 				if = {
 					limit = {
 						has_state_flag = INS_transmigration_23
@@ -3958,7 +4063,239 @@ INS_category_ethical_policies = {
 		}
 	}
 
-	INS_transmigration_to_ekalimantan = { #Can handle 32 waves at 20%, 40 at 25%
+	INS_transmigration_to_bangka = { #Can handle 12 waves
+
+		icon = GFX_decision_hol_engelandvaarders
+
+		days_remove = 90
+
+		cost = 25
+
+		allowed = {
+			original_tag = INS
+		}
+
+		available = {
+			1047 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					has_state_flag = INS_transmigration_12
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 3
+			has_war_support > 0.25
+			NOT = {
+				has_country_flag = INS_agrarian_reform_enacted
+			}
+			NOT = { has_country_flag = INS_transmigration_flag }
+		}
+
+		visible = {
+			1047 = {
+				is_owned_by = INS
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		highlight_states = {
+ 			highlight_state_targets = { state = 1047 } 
+		}
+
+		on_map_mode = map_only
+
+		modifier = {
+			civilian_factory_use = 2
+			neutrality_drift = -0.05
+			monthly_population = 0.05
+		}
+
+		complete_effect = {
+			random_owned_state = { #reduce population at Java
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					OR = {
+						AND = {
+							state = 1058
+							state_population_k > 3500
+						}
+						AND = {
+							state = 335
+							state_population_k > 6500
+						}
+						AND = {
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
+						}
+					}
+				}
+				add_manpower = -7500
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = INS_transmigration_upgrade
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				set_variable = {
+					var = INS_transmigration_upgrade
+					value = 0
+				}
+			}
+			add_to_variable = {
+				var = INS_transmigration_upgrade
+				value = 1
+			}
+			set_country_flag = INS_transmigration_flag
+		}
+
+		remove_effect = {
+			1047 = {
+				add_manpower = 7500
+				INS_add_transmigrant_wave = yes
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_3
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_1
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			clr_country_flag = INS_transmigration_flag
+		}
+	}
+
+	INS_transmigration_to_natuna = { #Can handle 4 waves
+
+		icon = GFX_decision_hol_engelandvaarders
+
+		days_remove = 90
+
+		cost = 25
+
+		allowed = {
+			original_tag = INS
+		}
+
+		available = {
+			1083 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					has_state_flag = INS_transmigration_4
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 3
+			has_war_support > 0.25
+			NOT = {
+				has_country_flag = INS_agrarian_reform_enacted
+			}
+			NOT = { has_country_flag = INS_transmigration_flag }
+		}
+
+		visible = {
+			1083 = {
+				is_owned_by = INS
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		highlight_states = {
+ 			highlight_state_targets = { state = 1083 } 
+		}
+
+		on_map_mode = map_only
+
+		modifier = {
+			civilian_factory_use = 2
+			neutrality_drift = -0.05
+			monthly_population = 0.05
+		}
+
+		complete_effect = {
+			random_owned_state = { #reduce population at Java
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					OR = {
+						AND = {
+							state = 1058
+							state_population_k > 3500
+						}
+						AND = {
+							state = 335
+							state_population_k > 6500
+						}
+						AND = {
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
+						}
+					}
+				}
+				add_manpower = -7500
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = INS_transmigration_upgrade
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				set_variable = {
+					var = INS_transmigration_upgrade
+					value = 0
+				}
+			}
+			add_to_variable = {
+				var = INS_transmigration_upgrade
+				value = 1
+			}
+			set_country_flag = INS_transmigration_flag
+		}
+
+		remove_effect = {
+			1083 = {
+				add_manpower = 7500
+				INS_add_transmigrant_wave = yes
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_3
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_1
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			clr_country_flag = INS_transmigration_flag
+		}
+	}
+
+	INS_transmigration_to_wkalimantan = { #Can handle 23 waves
 
 		icon = GFX_decision_hol_engelandvaarders
 
@@ -3974,7 +4311,7 @@ INS_category_ethical_policies = {
 			334 = {
 				is_fully_controlled_by = ROOT
 				NOT = {
-					has_state_flag = INS_transmigration_32
+					has_state_flag = INS_transmigration_23
 				}
 			}
 			num_of_civilian_factories_available_for_projects > 3
@@ -4012,16 +4349,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -4051,6 +4392,134 @@ INS_category_ethical_policies = {
 
 		remove_effect = {
 			334 = {
+				add_manpower = 7500
+				INS_add_transmigrant_wave = yes
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_23
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_17
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_11
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_5
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			clr_country_flag = INS_transmigration_flag
+		}
+	}
+
+	INS_transmigration_to_ekalimantan = { #Can handle 38 waves at 20%, 40 at 25%
+
+		icon = GFX_decision_hol_engelandvaarders
+
+		days_remove = 90
+
+		cost = 25
+
+		allowed = {
+			original_tag = INS
+		}
+
+		available = {
+			1055 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					has_state_flag = INS_transmigration_38
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 3
+			has_war_support > 0.25
+			NOT = {
+				has_country_flag = INS_agrarian_reform_enacted
+			}
+			NOT = { has_country_flag = INS_transmigration_flag }
+		}
+
+		visible = {
+			1055 = {
+				is_owned_by = INS
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		highlight_states = {
+ 			highlight_state_targets = { state = 1055 } 
+		}
+
+		on_map_mode = map_only
+
+		modifier = {
+			civilian_factory_use = 2
+			neutrality_drift = -0.05
+			monthly_population = 0.05
+		}
+
+		complete_effect = {
+			random_owned_state = { #reduce population at Java
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					OR = {
+						AND = {
+							state = 1058
+							state_population_k > 3500
+						}
+						AND = {
+							state = 335
+							state_population_k > 6500
+						}
+						AND = {
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
+						}
+					}
+				}
+				add_manpower = -7500
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = INS_transmigration_upgrade
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				set_variable = {
+					var = INS_transmigration_upgrade
+					value = 0
+				}
+			}
+			add_to_variable = {
+				var = INS_transmigration_upgrade
+				value = 1
+			}
+			set_country_flag = INS_transmigration_flag
+		}
+
+		remove_effect = {
+			1055 = {
 				add_manpower = 7500
 				INS_add_transmigrant_wave = yes
 				if = {
@@ -4088,7 +4557,7 @@ INS_category_ethical_policies = {
 		}
 	}
 
-	INS_transmigration_to_sarawak = { #Can handle 16 waves at 20%, 20 at 25%
+	INS_transmigration_to_sarawak = { #Can handle 13 waves at 20%, 20 at 25%
 
 		icon = GFX_decision_hol_engelandvaarders
 
@@ -4104,7 +4573,7 @@ INS_category_ethical_policies = {
 			333 = {
 				is_fully_controlled_by = ROOT
 				NOT = {
-					has_state_flag = INS_transmigration_16
+					has_state_flag = INS_transmigration_13
 				}
 			}
 			has_full_control_of_state = 333
@@ -4143,16 +4612,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -4262,16 +4735,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -4312,6 +4789,117 @@ INS_category_ethical_policies = {
 				if = {
 					limit = {
 						has_state_flag = INS_transmigration_3
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			clr_country_flag = INS_transmigration_flag
+		}
+	}
+
+	INS_transmigration_to_limbang = { #Can handle 2 waves
+
+		icon = GFX_decision_hol_engelandvaarders
+
+		days_remove = 90
+
+		cost = 25
+
+		allowed = {
+			original_tag = INS
+		}
+
+		available = {
+			1059 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					has_state_flag = INS_transmigration_2
+				}
+			}
+			has_full_control_of_state = 1059
+			num_of_civilian_factories_available_for_projects > 3
+			has_war_support > 0.25
+			NOT = {
+				has_country_flag = INS_agrarian_reform_enacted
+			}
+			NOT = { has_country_flag = INS_transmigration_flag }
+		}
+
+		visible = {
+			1059 = {
+				is_core_of = INS
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		highlight_states = {
+ 			highlight_state_targets = { state = 1059 } 
+		}
+
+		on_map_mode = map_only
+
+		modifier = {
+			civilian_factory_use = 2
+			neutrality_drift = -0.05
+			monthly_population = 0.05
+		}
+
+		complete_effect = {
+			random_owned_state = { #reduce population at Java
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					OR = {
+						AND = {
+							state = 1058
+							state_population_k > 3500
+						}
+						AND = {
+							state = 335
+							state_population_k > 6500
+						}
+						AND = {
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
+						}
+					}
+				}
+				add_manpower = -7500
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = INS_transmigration_upgrade
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				set_variable = {
+					var = INS_transmigration_upgrade
+					value = 0
+				}
+			}
+			add_to_variable = {
+				var = INS_transmigration_upgrade
+				value = 1
+			}
+			set_country_flag = INS_transmigration_flag
+		}
+
+		remove_effect = {
+			1059 = {
+				add_manpower = 7500
+				INS_add_transmigrant_wave = yes
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_2
 					}
 					add_extra_state_shared_building_slots = 1
 				}
@@ -4374,16 +4962,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -4432,7 +5024,146 @@ INS_category_ethical_policies = {
 		}
 	}
 
-	INS_transmigration_to_ende = { #Can handle 85 waves
+	INS_transmigration_to_bali = { #Can handle 39 waves
+
+		icon = GFX_decision_hol_engelandvaarders
+
+		days_remove = 90
+
+		cost = 25
+
+		allowed = {
+			original_tag = INS
+		}
+
+		available = {
+			has_full_control_of_state = 1052
+			num_of_civilian_factories_available_for_projects > 3
+			has_war_support > 0.25
+			NOT = {
+				has_country_flag = INS_agrarian_reform_enacted
+			}
+			NOT = { has_country_flag = INS_transmigration_flag }
+		}
+
+		cancel_if_not_visible = yes
+
+		highlight_states = {
+ 			highlight_state_targets = { state = 1052 } 
+		}
+
+		on_map_mode = map_only
+
+		modifier = {
+			civilian_factory_use = 2
+			neutrality_drift = -0.05
+			monthly_population = 0.05
+		}
+
+		complete_effect = {
+			random_owned_state = { #reduce population at Java
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					OR = {
+						AND = {
+							state = 1058
+							state_population_k > 3500
+						}
+						AND = {
+							state = 335
+							state_population_k > 6500
+						}
+						AND = {
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
+						}
+					}
+				}
+				add_manpower = -7500
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = INS_transmigration_upgrade
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				set_variable = {
+					var = INS_transmigration_upgrade
+					value = 0
+				}
+			}
+			add_to_variable = {
+				var = INS_transmigration_upgrade
+				value = 1
+			}
+			set_country_flag = INS_transmigration_flag
+		}
+
+		remove_effect = {
+			1052 = {
+				add_manpower = 7500
+				INS_add_transmigrant_wave = yes
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_39
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_35
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_29
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_23
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_17
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_11
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_5
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			clr_country_flag = INS_transmigration_flag
+		}
+	}
+
+	INS_transmigration_to_ende = { #Can handle 41 waves
 
 		icon = GFX_decision_hol_engelandvaarders
 
@@ -4475,16 +5206,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -4563,7 +5298,7 @@ INS_category_ethical_policies = {
 		}
 	}
 
-	INS_transmigration_to_wtimor = { #Can handle 13 waves
+	INS_transmigration_to_wtimor = { #Can handle 6 waves
 
 		icon = GFX_decision_hol_engelandvaarders
 
@@ -4576,10 +5311,10 @@ INS_category_ethical_policies = {
 		}
 
 		available = {
-			1053 = {
+			1054 = {
 				is_fully_controlled_by = ROOT
 				NOT = {
-					has_state_flag = INS_transmigration_13
+					has_state_flag = INS_transmigration_6
 				}
 			}
 			num_of_civilian_factories_available_for_projects > 3
@@ -4591,7 +5326,7 @@ INS_category_ethical_policies = {
 		}
 
 		visible = {
-			1053 = {
+			1054 = {
 				is_owned_by = INS
 			}
 		}
@@ -4599,7 +5334,7 @@ INS_category_ethical_policies = {
 		cancel_if_not_visible = yes
 
 		highlight_states = {
- 			highlight_state_targets = { state = 1053 } 
+ 			highlight_state_targets = { state = 1054 } 
 		}
 
 		on_map_mode = map_only
@@ -4617,16 +5352,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -4655,18 +5394,18 @@ INS_category_ethical_policies = {
 		}
 
 		remove_effect = {
-			1053 = {
+			1054 = {
 				add_manpower = 7500
 				INS_add_transmigrant_wave = yes
 				if = {
 					limit = {
-						has_state_flag = INS_transmigration_11
+						has_state_flag = INS_transmigration_6
 					}
 					add_extra_state_shared_building_slots = 1
 				}
 				if = {
 					limit = {
-						has_state_flag = INS_transmigration_5
+						has_state_flag = INS_transmigration_3
 					}
 					add_extra_state_shared_building_slots = 1
 				}
@@ -4729,16 +5468,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -4787,7 +5530,7 @@ INS_category_ethical_policies = {
 		}
 	}
 
-	INS_transmigration_to_ssulawesi = { #Can handle 83 waves
+	INS_transmigration_to_ssulawesi = { #Can handle 86 waves
 
 		icon = GFX_decision_hol_engelandvaarders
 
@@ -4830,16 +5573,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -4918,7 +5665,7 @@ INS_category_ethical_policies = {
 		}
 	}
 
-	INS_transmigration_to_nsulawesi = { #Can handle 49 waves
+	INS_transmigration_to_csulawesi = { #Can handle 23 waves
 
 		icon = GFX_decision_hol_engelandvaarders
 
@@ -4931,7 +5678,12 @@ INS_category_ethical_policies = {
 		}
 
 		available = {
-			has_full_control_of_state = 1054
+			1053 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					has_state_flag = INS_transmigration_23
+				}
+			}
 			num_of_civilian_factories_available_for_projects > 3
 			has_war_support > 0.25
 			NOT = {
@@ -4943,7 +5695,7 @@ INS_category_ethical_policies = {
 		cancel_if_not_visible = yes
 
 		highlight_states = {
- 			highlight_state_targets = { state = 1054 } 
+ 			highlight_state_targets = { state = 1053 } 
 		}
 
 		on_map_mode = map_only
@@ -4961,16 +5713,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -4999,7 +5755,147 @@ INS_category_ethical_policies = {
 		}
 
 		remove_effect = {
-			1054 = {
+			1053 = {
+				add_manpower = 7500
+				INS_add_transmigrant_wave = yes
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_39
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_35
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_29
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_23
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_17
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_11
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				if = {
+					limit = {
+						has_state_flag = INS_transmigration_5
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			clr_country_flag = INS_transmigration_flag
+		}
+	}
+
+	INS_transmigration_to_nsulawesi = { #Can handle 9 waves
+
+		icon = GFX_decision_hol_engelandvaarders
+
+		days_remove = 90
+
+		cost = 25
+
+		allowed = {
+			original_tag = INS
+		}
+
+		available = {
+			1056 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					has_state_flag = INS_transmigration_9
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 3
+			has_war_support > 0.25
+			NOT = {
+				has_country_flag = INS_agrarian_reform_enacted
+			}
+			NOT = { has_country_flag = INS_transmigration_flag }
+		}
+
+		cancel_if_not_visible = yes
+
+		highlight_states = {
+ 			highlight_state_targets = { state = 1056 } 
+		}
+
+		on_map_mode = map_only
+
+		modifier = {
+			civilian_factory_use = 2
+			neutrality_drift = -0.05
+			monthly_population = 0.05
+		}
+
+		complete_effect = {
+			random_owned_state = { #reduce population at Java
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					OR = {
+						AND = {
+							state = 1058
+							state_population_k > 3500
+						}
+						AND = {
+							state = 335
+							state_population_k > 6500
+						}
+						AND = {
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
+						}
+					}
+				}
+				add_manpower = -7500
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = INS_transmigration_upgrade
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				set_variable = {
+					var = INS_transmigration_upgrade
+					value = 0
+				}
+			}
+			add_to_variable = {
+				var = INS_transmigration_upgrade
+				value = 1
+			}
+			set_country_flag = INS_transmigration_flag
+		}
+
+		remove_effect = {
+			1056 = {
 				add_manpower = 7500
 				INS_add_transmigrant_wave = yes
 				if = {
@@ -5062,7 +5958,7 @@ INS_category_ethical_policies = {
 		}
 
 		available = {
-			1055 = {
+			1082 = {
 				is_fully_controlled_by = ROOT
 				NOT = {
 					has_state_flag = INS_transmigration_9
@@ -5077,7 +5973,7 @@ INS_category_ethical_policies = {
 		}
 
 		visible = {
-			1055 = {
+			1082 = {
 				is_owned_by = INS
 			}
 		}
@@ -5085,7 +5981,7 @@ INS_category_ethical_policies = {
 		cancel_if_not_visible = yes
 
 		highlight_states = {
- 			highlight_state_targets = { state = 1055 } 
+ 			highlight_state_targets = { state = 1082 } 
 		}
 
 		on_map_mode = map_only
@@ -5103,16 +5999,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -5141,7 +6041,7 @@ INS_category_ethical_policies = {
 		}
 
 		remove_effect = {
-			1055 = {
+			1082 = {
 				add_manpower = 7500
 				INS_add_transmigrant_wave = yes
 				if = {
@@ -5215,16 +6115,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -5327,16 +6231,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -5387,7 +6295,7 @@ INS_category_ethical_policies = {
 		}
 
 		available = {
-			1056 = {
+			1073 = {
 				is_fully_controlled_by = ROOT
 				NOT = {
 					has_state_flag = INS_transmigration_2
@@ -5402,7 +6310,7 @@ INS_category_ethical_policies = {
 		}
 
 		visible = {
-			1056 = {
+			1073 = {
 				is_owned_by = INS
 				NOT = {
 					has_state_flag = INS_transmigration_2
@@ -5413,7 +6321,7 @@ INS_category_ethical_policies = {
 		cancel_if_not_visible = yes
 
 		highlight_states = {
- 			highlight_state_targets = { state = 1056 } 
+ 			highlight_state_targets = { state = 1073 } 
 		}
 
 		on_map_mode = map_only
@@ -5431,16 +6339,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -5469,7 +6381,7 @@ INS_category_ethical_policies = {
 		}
 
 		remove_effect = {
-			1056 = {
+			1073 = {
 				add_manpower = 7500
 				INS_add_transmigrant_wave = yes
 				if = {
@@ -5507,6 +6419,7 @@ INS_category_ethical_policies = {
 			NOT = {
 				has_country_flag = INS_agrarian_reform_enacted
 			}
+			NOT = { has_country_flag = INS_transmigration_flag }
 		}
 
 		visible = {
@@ -5536,16 +6449,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -5642,16 +6559,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -5748,16 +6669,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -5866,16 +6791,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -5984,16 +6913,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -6098,16 +7031,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -6201,16 +7138,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -6305,16 +7246,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -6409,16 +7354,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -6516,16 +7465,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -6631,16 +7584,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -6756,16 +7713,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -6880,16 +7841,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -6981,16 +7946,20 @@ INS_category_ethical_policies = {
 					is_fully_controlled_by = ROOT
 					OR = {
 						AND = {
-							state = 335
+							state = 1058
 							state_population_k > 3500
 						}
 						AND = {
-							state = 1051
-							state_population_k > 10000
+							state = 335
+							state_population_k > 6500
 						}
 						AND = {
-							state = 1052
-							state_population_k > 7500
+							state = 1051
+							state_population_k > 18000
+						}
+						AND = {
+							state = 1086
+							state_population_k > 3000
 						}
 					}
 				}
@@ -7215,7 +8184,7 @@ INS_category_ethical_policies = {
 
 		available = {
 			num_of_civilian_factories_available_for_projects > 4
-			1047 = {
+			1050 = {
 				is_fully_controlled_by = ROOT
 				compliance > 50
 				infrastructure > 3
@@ -7230,7 +8199,7 @@ INS_category_ethical_policies = {
 					has_idea = INS_agrarian_society_2
 				}
 			}
-			1047 = {
+			1050 = {
 				NOT = {
 					is_core_of = INS
 				}
@@ -7248,7 +8217,7 @@ INS_category_ethical_policies = {
 		}
 
 		remove_effect = {
-			1047 = {
+			1050 = {
 				add_core_of = INS
 			}
 		}
@@ -7280,7 +8249,7 @@ INS_category_ethical_policies = {
 				infrastructure > 2
 				arms_factory > 0
 			}
-			1056 = { #Vogelkop
+			1073 = { #Vogelkop
 				is_fully_controlled_by = ROOT
 				compliance > 40
 				infrastructure > 2
@@ -7297,7 +8266,7 @@ INS_category_ethical_policies = {
 		highlight_states = {
  			highlight_state_targets = {
  				state = 669
- 				state = 1056
+ 				state = 1073
  				state = 1057
  			}
 		}
@@ -7312,7 +8281,7 @@ INS_category_ethical_policies = {
 						is_core_of = INS
 					}
 				}
-				1056 = {
+				1073 = {
 					NOT = {
 						is_core_of = INS
 					}
@@ -7339,7 +8308,7 @@ INS_category_ethical_policies = {
 			669 = {
 				add_core_of = INS
 			}
-			1056 = {
+			1073 = {
 				add_core_of = INS
 			}
 			1057 = {
@@ -7578,7 +8547,7 @@ INS_category_new_capital = {
 					province = 7421
 					value = 4
 				}
-				1051 = {
+				335 = {
 					add_building_construction = {
 						type = supply_node
 						level = 1
@@ -7786,7 +8755,7 @@ INS_category_new_capital = {
 					province = 7296
 					value = 20
 				}
-				334 = {
+				1055 = {
 					add_building_construction = {
 						type = naval_base
 						level = 1
@@ -7813,7 +8782,7 @@ INS_category_new_capital = {
 					province = 7296
 					value = 4
 				}
-				334 = {
+				1055 = {
 					add_building_construction = {
 						type = naval_base
 						level = 1
@@ -7836,7 +8805,7 @@ INS_category_new_capital = {
 					province = 7296
 					value = 4
 				}
-				334 = {
+				1055 = {
 					add_building_construction = {
 						type = naval_base
 						level = 1
@@ -7859,7 +8828,7 @@ INS_category_new_capital = {
 					province = 7296
 					value = 4
 				}
-				334 = {
+				1055 = {
 					add_building_construction = {
 						type = naval_base
 						level = 1
@@ -7882,7 +8851,7 @@ INS_category_new_capital = {
 					province = 7296
 					value = 4
 				}
-				334 = {
+				1055 = {
 					add_building_construction = {
 						type = supply_node
 						level = 1
@@ -8001,7 +8970,7 @@ INS_category_new_capital = {
 					province = 2184
 					value = 4
 				}
-				1050 = {
+				1055 = {
 					add_building_construction = {
 						type = supply_node
 						level = 1
@@ -8065,7 +9034,7 @@ INS_category_new_capital = {
 					id = holhis_indonesia.13
 					hours = 6
 				}
-				1048 = {
+				672 = {
 					add_building_construction = {
 						type = naval_base
 						level = 1
@@ -8088,7 +9057,7 @@ INS_category_new_capital = {
 					province = 12268
 					value = 4
 				}
-				1048 = {
+				672 = {
 					add_building_construction = {
 						type = naval_base
 						level = 1
@@ -8111,7 +9080,7 @@ INS_category_new_capital = {
 					province = 12268
 					value = 4
 				}
-				1048 = {
+				672 = {
 					add_building_construction = {
 						type = naval_base
 						level = 1
@@ -8134,7 +9103,7 @@ INS_category_new_capital = {
 					province = 12268
 					value = 4
 				}
-				1048 = {
+				672 = {
 					add_building_construction = {
 						type = naval_base
 						level = 1
@@ -8157,7 +9126,7 @@ INS_category_new_capital = {
 					province = 12268
 					value = 4
 				}
-				1048 = {
+				672 = {
 					add_building_construction = {
 						type = supply_node
 						level = 1
@@ -8263,7 +9232,7 @@ INS_pacification_campaigns = {
 		target_trigger = {
 			FROM = {
 				OR = {
-					state = 1058 #Malaka
+					state = 1060 #Malaka
 					state = 524 #Taiwan
 					state = 428 #Gujarat
 					state = 422 #Ceylon
@@ -10382,12 +11351,14 @@ INS_category_civil_war_missions = {
 		
 		available = {
 			OR = {
+				NOT = { controls_state = 1058 }
 				NOT = { controls_state = 335 }
 				NOT = { controls_state = 1051 }
-				NOT = { controls_state = 1052 }
-				NOT = { controls_state = 1047 }
-				NOT = { controls_state = 672 }
+				NOT = { controls_state = 1086 }
+				NOT = { controls_state = 1050 }
+				NOT = { controls_state = 1049 }
 				NOT = { controls_state = 1048 }
+				NOT = { controls_state = 672 }
 			}
 		}
 
@@ -10397,15 +11368,17 @@ INS_category_civil_war_missions = {
 			has_war_with = HOL
 			custom_trigger_tooltip = {
 				tooltip = INS_control_java
+				controls_state = 1058
 				controls_state = 335
 				controls_state = 1051
-				controls_state = 1052
+				controls_state = 1086
 			}
 			custom_trigger_tooltip = {
 				tooltip = INS_control_sumatra
-				controls_state = 1047
-				controls_state = 672
+				controls_state = 1050
+				controls_state = 1049
 				controls_state = 1048
+				controls_state = 672
 			}
 		}
 
@@ -10493,4 +11466,3118 @@ political_actions = {
 			factor = 0 #Don't you dare, AI
 		}
 	}
+
+	INS_atjeh_management = {
+		icon = GFX_decision_generic_police_action
+
+		priority = 25
+
+		available = {
+		}
+
+		visible = {
+			original_tag = INS
+			has_full_control_of_state = 1050
+			NOT = {
+				1050 = {
+					is_core_of = INS
+				}
+			}
+			FROM = {
+				resistance > 10
+			}
+		}
+
+		cost = 75
+		days_remove = 120
+		fire_only_once = no
+
+		on_map_mode = map_only
+
+		state_target = yes
+		targets = { 1050 }
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			1050 = {
+				add_resistance = -40
+				add_compliance = 20
+			}
+		}
+	}
+
+	INS_atjeh_management_2 = {
+		icon = GFX_decision_generic_political_rally
+
+		priority = 25
+
+		available = {
+		}
+
+		visible = {
+			original_tag = INS
+			has_full_control_of_state = 1050
+			NOT = {
+				1050 = {
+					is_core_of = INS
+				}
+			}
+			FROM = {
+				compliance > 40
+				resistance < 10
+			}
+		}
+
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+		on_map_mode = map_only
+
+		state_target = yes
+		targets = { 1050 }
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			1050 = {
+				add_core_of = INS
+			}
+		}
+	}
+
+	INS_move_capital_to_amsterdam = {
+		icon = GFX_decision_SOV_place_hq
+		priority = 30
+
+		ai_will_do = {
+			base = 0
+		}
+
+		available = {
+			has_full_control_of_state = 7
+		}
+
+		visible = {
+			OR = {
+				original_tag = INS
+				original_tag = HOL
+			}
+			has_cosmetic_tag = INS_UNION
+
+			7 = {
+				is_capital = no
+			}
+		}
+
+		cost = 50
+
+		complete_effect = {
+			set_capital = {
+				state = 7
+				remember_old_capital = yes
+			}
+		}
+	}
+
+	INS_move_capital_to_batavia = {
+		icon = GFX_decision_SOV_place_hq
+		priority = 30
+
+		ai_will_do = {
+			base = 0
+		}
+
+		available = {
+			has_full_control_of_state = 1058
+		}
+
+		visible = {
+			OR = {
+				original_tag = INS
+				original_tag = HOL
+			}
+			has_cosmetic_tag = INS_UNION
+
+			1058 = {
+				is_capital = no
+			}
+		}
+
+		cost = 50
+
+		complete_effect = {
+			set_capital = {
+				state = 1058
+				remember_old_capital = yes
+			}
+		}
+	}
+}
+
+INS_exile_cat = {
+
+	INS_legitimacy_decision_1 = {
+		icon = GFX_decision_generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			has_completed_focus = INS_east_indies_exile_government
+			is_government_in_exile = yes
+			check_variable = {
+				var = INS_mil_factory_cost
+				value = 200
+				compare = less_than_or_equals
+			}
+		}
+
+		cost = INS_mil_factory_cost?50
+		days_remove = 70
+		fire_only_once = no
+
+		complete_effect = {
+			add_to_variable = { INS_mil_factory_cost = 25 tooltip = INS_mil_factory_cost_tt }
+		}
+
+		remove_effect = {
+			add_legitimacy = 10
+		}
+	}
+
+	INS_army_factory_decision = {
+		icon = GFX_decision_ger_military_buildup
+
+		available = {
+		}
+
+		visible = {
+			has_completed_focus = INS_east_indies_exile_government
+			is_government_in_exile = yes
+			check_variable = {
+				var = INS_mil_factory_cost
+				value = 200
+				compare = less_than_or_equals
+			}
+		}
+
+		cost = INS_mil_factory_cost?50
+		days_remove = 70
+		fire_only_once = no
+
+		complete_effect = {
+			add_to_variable = { INS_mil_factory_cost = 25 tooltip = INS_mil_factory_cost_tt }
+		}
+
+		remove_effect = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	}
+
+	INS_dockyard_decision = {
+		icon = GFX_decision_generic_naval
+
+		available = {
+		}
+
+		visible = {
+			has_completed_focus = INS_east_indies_exile_government
+			is_government_in_exile = yes
+			check_variable = {
+				var = INS_mil_factory_cost
+				value = 200
+				compare = less_than_or_equals
+			}
+		}
+
+		cost = INS_mil_factory_cost?50
+		days_remove = 70
+		fire_only_once = no
+
+		complete_effect = {
+			add_to_variable = { INS_mil_factory_cost = 25 tooltip = INS_mil_factory_cost_tt }
+		}
+
+		remove_effect = {
+			add_offsite_building = {
+				type = dockyard
+				level = 1
+			}
+		}
+	}
+}
+
+INS_economic_cat = {
+
+	INS_improve_the_category_of_state_decision = {
+		icon = GFX_decision_generic_construction
+	
+		allowed = {
+			original_tag = INS
+			has_dlc = "Thunder at Our Gates"
+		}
+		
+		visible = {
+			has_completed_focus = INS_agrarian_reform
+		}
+		
+		available = {
+		}
+
+		state_target = any_owned_state
+	    
+	    target_trigger = {
+	        FROM = {
+				is_in_array = {
+					array = INS.owned_states_at_game_start
+					value = THIS
+				}
+	        	is_owned_and_controlled_by = ROOT
+	        	infrastructure > 3 # It needs to be 4 or higher 
+	        	has_state_flag = INS_can_upgrade_this_states_level_flag
+	        }
+	    }
+	    on_map_mode = map_and_decisions_view 
+
+	    cost = 35	
+
+		fire_only_once = yes # Can only be done once per state
+
+		days_remove = 14
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				ETH_upgrade_state_category = yes
+			}
+		}
+
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_controlled_by = ROOT }
+			}
+		}
+
+		cancel_effect = {
+		}
+	}
+
+	INS_economic_convert_rubber = {
+		icon = GFX_decision_rubber
+
+		available = {
+		}
+
+		visible = {
+			has_completed_focus = INS_cut_down_forests
+			FROM = {
+				has_resources_amount = {
+					resource = rubber
+					amount > 15
+				}
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		on_map_mode = map_only
+		state_target = yes
+		target_array = INS.owned_states_at_game_start
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				OR = {
+					has_resources_in_country = {
+						resource = oil
+						amount < 0
+						extracted = no
+					}
+					has_resources_in_country = {
+						resource = aluminium
+						amount < 0
+						extracted = no
+					}
+					has_resources_in_country = {
+						resource = tungsten
+						amount < 0
+						extracted = no
+					}
+					has_resources_in_country = {
+						resource = steel
+						amount < 0
+						extracted = no
+					}
+					has_resources_in_country = {
+						resource = chromium
+						amount < 0
+						extracted = no
+					}
+					has_resources_in_country = {
+						resource = coal
+						amount < 0
+						extracted = no
+					}
+				}
+			}
+		}
+
+		cost = 20
+		#days_remove = 70
+		fire_only_once = no
+
+		complete_effect = {
+			FROM = {
+				OWNER = {
+					country_event = {
+						id = INS_industrial_events.4
+					}
+				}
+				custom_effect_tooltip = INS_convert_rubber_tt
+			}
+		}
+
+		remove_effect = {
+
+		}
+	}
+}
+
+INS_militias_cat = {
+
+	INS_militias_railway_pemuda_mission = {
+		activation = {
+			always = no #Done manually via focus
+		}
+
+		available = {
+			OR = {
+				has_war_with = HOL
+				NOT = {
+					has_country_flag = { flag = INS_revolution_has_started }
+				}
+			}
+		}
+
+		icon = GFX_decision_generic_prepare_civil_war
+		is_good = no
+		days_mission_timeout = 365
+
+		timeout_effect = {
+			add_stability = -0.1
+		}
+
+		complete_effect = {
+			add_war_support = 0.1
+			add_political_power = 100
+		}
+	}
+
+	INS_militias_kris_repayment = {
+		activation = {
+			always = no #Done manually via focus
+		}
+
+		available = {
+			673 = { #Sulawesi
+				infrastructure > 3
+				OR = {
+					industrial_complex > 2
+					arms_factory > 2
+					AND = {
+						industrial_complex > 0
+						arms_factory > 1
+					}
+					AND = {
+						industrial_complex > 1
+						arms_factory > 0
+					}
+				}
+			}
+
+			1056 = { #Manado
+				infrastructure > 2
+				OR = {
+					industrial_complex > 1
+					arms_factory > 1
+					AND = {
+						industrial_complex > 0
+						arms_factory > 0
+					}
+				}
+			}
+		}
+
+		icon = GFX_decision_generic_construction
+		is_good = no
+		days_mission_timeout = 1095
+		
+		timeout_effect = {
+			if = {
+				limit = {
+					673 = { #Sulawesi
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				673 = {
+					add_resistance = 40
+					add_compliance = -25
+				}
+			}
+			if = {
+				limit = {
+					1056 = { #Manado
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				1056 = {
+					add_resistance = 40
+					add_compliance = -25
+				}
+			}
+
+			add_stability = -0.075
+			add_war_support = -0.075
+			add_manpower = -50000
+			add_political_power = -150
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_to_variable = { var = INS_missions_completed value = 1 }
+			}
+			if = {
+				limit = {
+					673 = { #Sulawesi
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				673 = { add_core_of = ROOT }
+			}
+			if = {
+				limit = {
+					1056 = { #Manado
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				1056 = { add_core_of = ROOT }
+			}
+		}
+	}
+
+	INS_militias_moestopo_mission = {
+		activation = {
+			always = no #Done manually via focus
+		}
+
+		available = {
+			INS_moestopo = {
+				is_field_marshal = yes
+			}
+		}
+
+		icon = GFX_decision_generic_army_support
+		is_good = no
+		days_mission_timeout = 480
+
+		timeout_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				INS_moestopo = {
+					remove_unit_leader_role = yes
+				}
+				add_political_power = -150
+			}
+			else = {
+				# the AI is stupid
+				INS_moestopo = {
+					promote_leader = yes
+
+				}
+				hidden_effect = {
+					add_to_variable = { var = INS_missions_completed value = 1 }
+				}
+				INS_moestopo = {
+					add_skill_level = 2
+					add_attack = 1
+					add_logistics = 1
+					add_defense = 1
+					add_planning = 1
+					# add_skill_level adds 1 instead of 3 for some reason so im only adding 4
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_to_variable = { var = INS_missions_completed value = 1 }
+			}
+			INS_moestopo = {
+				add_skill_level = 2
+				add_attack = 1
+				add_logistics = 1
+				add_defense = 1
+				add_planning = 1
+				# add_skill_level adds 1 instead of 3 for some reason so im only adding 4
+			}
+		}
+	}
+
+	INS_militias_di_mission = {
+		activation = {
+			always = no #Done manually via focus
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = INS_integrate_sarekat_islam
+				has_completed_focus = INS_dominion_of_atjeh
+			}
+		}
+
+		icon = GFX_decision_tur_unifying_the_country
+		is_good = no
+		days_mission_timeout = 730
+
+		timeout_effect = {
+			add_stability = -0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_to_variable = { var = INS_missions_completed value = 1 }
+			}
+			add_stability = 0.1
+		}
+	}
+
+	INS_militias_pki_uprising_mission = {
+		activation = {
+			always = no #Done manually via focus
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = INS_support_tan_malakas_coup
+				has_government = communism
+				communism < 0.02 #either embrace communism, or destroy it
+			}
+		}
+
+		icon = GFX_decision_revolt
+		is_good = no
+		days_mission_timeout = 730
+
+		timeout_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_stability = -0.1
+			add_political_power = -200
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_to_variable = { var = INS_missions_completed value = 1 }
+			}
+		}
+	}
+
+	INS_militias_jakarta_pemuda_mission = {
+		activation = {
+			always = no #Done manually via focus
+		}
+
+		available = {
+			OR = {
+				amount_research_slots > 3
+				has_tech = construction4
+				has_tech = improved_computing_machine
+				has_tech = atomic_research
+			}
+		}
+
+		icon = GFX_decision_generic_research
+		is_good = no
+		days_mission_timeout = 720
+
+		timeout_effect = {
+			add_war_support = -0.1
+			add_stability = -0.1
+			add_political_power = -200
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_to_variable = { var = INS_missions_completed value = 1 }
+			}
+		}
+	}
+
+}
+
+INS_malay_unification_cat = {
+
+	INS_propose_malay_unification_decision = {
+		icon = GFX_decision_generic_form_nation
+		available = {
+			original_tag = INS
+			is_subject = no
+
+			334 = { is_core_of = INS }
+			1055 = { is_core_of = INS }
+			1049 = { is_core_of = INS }
+
+			MAL = {
+				controls_state = 1060 #Johor
+				controls_state = 1063 #Pahang
+				controls_state = 336 #Kuala Lampur
+				controls_state = 1064 #Perak
+				controls_state = 1062 # Kelantan-Terengganu
+				controls_state = 1061 #Perlis-Kedah
+				controls_state = 333 #Sarawak
+				controls_state = 1059 #Limbang
+				controls_state = 1024 #Sabah
+				controls_state = 1023 #Brunei
+
+				OR = {
+					is_subject = no
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		cost = 150
+		days_remove = 120
+		fire_only_once = yes
+
+		remove_effect = {
+			if = {
+				limit = {
+					MAL = {
+						is_subject = no
+					}
+				}
+				MAL = {
+					country_event = {
+						id = INS_loyalist_events.4
+						hours = 4
+					}
+					custom_effect_tooltip = if_they_accept_tt
+					effect_tooltip = {
+						INS = {
+							annex_country = {
+								target = MAL
+								transfer_troops = yes
+							}
+							1060 = { add_core_of = INS }
+							336 = { add_core_of = INS }
+							1063 = { add_core_of = INS }
+							if = {
+								limit = {
+									334 = {
+										is_core_of = INS
+									}
+								}
+								333 = { add_core_of = INS }
+							}
+						}
+					}
+				}
+			}
+			else = {
+				MAL = {
+					OVERLORD = {
+						country_event = {
+							id = INS_loyalist_events.7
+							hours = 4
+						}
+						custom_effect_tooltip = if_they_accept_tt
+						custom_effect_tooltip = newline_tt
+						effect_tooltip = {
+							INS = {
+								annex_country = {
+									target = MAL
+									transfer_troops = yes
+								}
+								1060 = { add_core_of = INS }
+								336 = { add_core_of = INS }
+								1063 = { add_core_of = INS }
+								if = {
+									limit = {
+										334 = {
+											is_core_of = INS
+										}
+									}
+									333 = { add_core_of = INS }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	INS_invite_phillipines_decision = {
+		icon = GFX_decision_generic_form_nation
+		available = {
+			controls_state = 333
+			controls_state = 1059
+			controls_state = 1024
+			controls_state = 1023
+			controls_state = 1060
+			controls_state = 1063
+			controls_state = 336
+			PHI = {
+				exists = yes
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+
+		cost = 150
+		days_remove = 120
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					PHI = {
+						is_subject = no
+					}
+				}
+				PHI = {
+					country_event = {
+						id = INS_loyalist_events.25
+						hours = 4
+					}
+					custom_effect_tooltip = if_they_accept_tt
+					custom_effect_tooltip = newline_tt
+					effect_tooltip = {
+						indonesia_phillipines_unite_effect = yes
+					}
+					unlock_decision_tooltip = INS_request_ceylon_decision
+				}
+			}
+			else = {
+				PHI = {
+					OVERLORD = {
+						country_event = {
+							id = INS_loyalist_events.28
+							hours = 4
+						}
+						custom_effect_tooltip = if_they_accept_tt
+						custom_effect_tooltip = newline_tt
+						effect_tooltip = {
+							indonesia_phillipines_unite_effect = yes
+						}
+						unlock_decision_tooltip = INS_request_ceylon_decision
+					}
+				}
+			}
+		}
+	}
+
+	INS_singapore_compromise_decision = {
+		icon = GFX_decision_generic_political_discourse
+		available = {
+			1021 = {
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+		}
+
+		cost = 75
+		days_remove = 90
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		remove_effect = {
+			1021 = {
+				controller = {
+					country_event = { id = INS_loyalist_events.13 hours = 6 }
+				}
+			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				transfer_state = 1021
+				give_resource_rights = {
+					receiver = FROM 
+					state = 1021 
+				}
+				give_military_access = FROM
+			}
+		}
+	}
+
+	INS_request_ceylon_decision = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			controls_state = 327
+		}
+		available = {
+			422 = {
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+		}
+
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		remove_effect = {
+			422 = {
+				controller = {
+					country_event = { id = INS_loyalist_events.16 hours = 6 }
+				}
+			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				transfer_state = 422
+				422 = {
+					add_core_of = PREV
+				}
+			}
+		}
+	}
+
+	INS_papua_referendum_decision = {
+		icon = GFX_decision_generic_political_discourse
+		available = {
+			original_tag = INS
+			is_subject = no
+			669 = {
+				is_core_of = INS
+			}
+			1057 = {
+				is_core_of = INS
+			}
+			1073 = {
+				is_core_of = INS
+			}
+
+			AST = {
+				controls_state = 523
+				controls_state = 979
+				controls_state = 737
+				controls_state = 1070
+				OR = {
+					is_subject = no
+					has_autonomy_state = autonomy_dominion
+				}
+			}
+		}
+
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		remove_effect = {
+			AST = {
+				country_event = { id = INS_loyalist_events.19 hours = 6 }
+			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				transfer_state = 979
+				transfer_state = 523
+				transfer_state = 737
+				transfer_state = 1070
+				979 = {
+					add_core_of = INS
+				}
+				523 = {
+					add_core_of = INS
+				}
+				737 = {
+					add_core_of = INS
+				}
+				1070 = {
+					add_core_of = INS
+				}
+			}
+		}
+	}
+}
+
+INS_unity_in_diversity_cat = {
+
+	INS_core_state_decision = {
+		icon = GFX_decision_generic_monarchy
+		available = {
+			FROM = {
+				resistance < 20
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = INS_has_built_at_least_one_infrastructure
+						check_variable = { building_level@infrastructure > INS_infrastructure_pre_investment }
+					}
+					custom_trigger_tooltip = {
+						tooltip = INS_has_built_at_least_one_civ
+						check_variable = { building_level@industrial_complex > INS_civs_pre_investment }
+					}
+				}
+			}
+		}
+
+		visible = {
+
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_in_array = { array = INS.owned_states_at_game_start value = THIS }
+					state = 721 #East Timor
+				}
+				is_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { state = 1050 } #Atjeh has to be released or cored seperately
+			}
+		}
+
+		cost = 25
+		days_remove = 60
+		fire_only_once = no
+
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+}
+
+INS_national_revolution_cat = {
+	
+	INS_renville_timer_mission_republic = {
+		days_mission_timeout = 365
+		priority = 150
+		icon = GFX_decision_generic_political_discourse
+		activation = {
+			always = no #done manually
+		}
+
+		available = {
+			INS = {
+				OR = {
+					exists = no
+					is_subject_of = HOL
+				}
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = INS_renville_wont_happen_neutral_tt
+		}
+
+		timeout_effect = {
+			USA = {
+				HOL = {
+					country_event = {
+						id = INS_revolution_events.37
+						hours = 4
+					}
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			custom_effect_tooltip = INS_national_revolution_republic_win_ins_tt
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				indonesia_renville_war_effect = yes
+			}
+		}
+	}
+
+	INS_gradual_escalation_republic = {
+		days_mission_timeout = 400
+		icon = GFX_decision_generic_ignite_civil_war
+		activation = {
+			has_country_flag = { flag = INS_revolution_has_started }
+		}
+		visible = {
+			tag = INS
+			has_country_flag = { flag = INS_revolution_has_started }
+		}
+		available = {
+			hidden_trigger = { always = no }
+		}
+		cancel_trigger = {
+			NOT = {
+				has_country_flag = { flag = INS_revolution_has_started }
+			}
+		}
+		is_good = no
+		priority = 50
+
+		timeout_effect = {
+			indonesia_increase_escalation_1_effect = yes
+			custom_effect_tooltip = newline_tt
+		}
+	}
+
+	INS_win_condition_base_republic_warning = {
+		icon = GFX_decision_INS_destroy_the_east_indies
+		priority = 150
+		visible = {
+			tag = INS
+			has_country_flag = { flag = INS_revolution_has_started }
+
+			NOT = {
+				has_country_flag = INS_renville_waiting
+				has_country_flag = INS_java_mission_ongoing
+			}
+
+			any_state_in = {
+				array = INS.owned_states_at_game_start
+				tooltip = INS_owned_states_at_game_start_tt
+				OR = {
+					is_owned_by = HOL
+					is_owned_by = event_target:INS_dutch_indonesia
+				}
+			}
+		}
+
+		available = {
+			NOT = {
+				any_state_in = {
+					array = INS.owned_states_at_game_start
+					tooltip = INS_owned_states_at_game_start_tt
+					OR = {
+						is_owned_by = HOL
+						is_owned_by = event_target:INS_dutch_indonesia
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = will_complete_when_conditions_met_tt
+			}
+			
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = INS_national_revolution_republic_win_ins_tt
+			effect_tooltip = {
+				HOL = {
+					country_event = {
+						id = INS_revolution_events.29
+						hours = 1
+					}
+				}
+				annex_country = {
+					target = event_target:INS_dutch_indonesia
+					transfer_troops = no
+				}
+				if = {
+					limit = {
+						has_war_with = HOL
+					}
+					indonesia_white_peace_HOL_effect = yes
+				}
+				set_rule = { can_join_factions = yes }
+			}
+		}
+	}
+
+	INS_win_condition_base_republic_real = {
+		icon = GFX_decision_INS_destroy_the_east_indies
+		priority = 150
+
+		available = {
+			always = yes
+		}
+
+		activation = {
+			has_country_flag = INS_revolution_has_started
+			NOT = {
+				has_country_flag = INS_renville_waiting
+				has_country_flag = INS_java_mission_ongoing
+			}
+			NOT = {
+				any_state_in = {
+					array = INS.owned_states_at_game_start
+					tooltip = INS_owned_states_at_game_start_tt
+
+					impassable = no
+					OR = {
+						is_owned_by = HOL
+						is_owned_by = event_target:INS_dutch_indonesia
+					}
+				}
+			}
+		}
+
+		days_mission_timeout = 0
+		is_good = no
+
+		complete_effect = {
+			custom_effect_tooltip = INS_national_revolution_republic_win_ins_tt
+			HOL = {
+				country_event = {
+					id = INS_revolution_events.29
+					hours = 1
+				}
+			}
+			indonesia_declare_war_is_over_effect = yes
+			annex_country = {
+				target = event_target:INS_dutch_indonesia
+				transfer_troops = no
+			}	
+			indonesia_white_peace_HOL_effect = yes
+		}
+	}
+
+	INS_take_batavia = {
+		icon = GFX_decision_INS_take_java
+		days_mission_timeout = 730
+		priority = 140
+		activation = {
+			has_country_flag = { flag = INS_java_mission_ongoing }
+			has_country_flag = INS_revolution_has_started
+		}
+		visible = {
+			tag = INS
+			has_country_flag = { flag = INS_revolution_has_started }
+		}
+		available = {
+			controls_state = 1058
+			controls_state = 1051
+			controls_state = 335
+			if = {
+				limit = {
+					has_event_target = INS_extra_state_to_take
+				}
+				controls_state = event_target:INS_extra_state_to_take
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = INS_national_revolution_republic_win_ins_tt
+			HOL = {
+				country_event = {
+					id = INS_revolution_events.29
+					hours = 1
+				}
+			}
+			annex_country = {
+				target = event_target:INS_dutch_indonesia
+				transfer_troops = no
+			}
+			if = {
+				limit = {
+					has_war_with = HOL
+				}
+				every_enemy_country = {
+					limit = {
+						is_in_faction_with = HOL
+					}
+					INS = {
+						white_peace = PREV
+					}
+				}
+				white_peace = HOL
+			}
+			indonesia_declare_war_is_over_effect = yes
+		}
+		timeout_effect = {
+			add_stability = -0.25
+			add_war_support = -0.25
+		}
+		is_good = no
+	}
+
+	INS_national_revolution_republic_sukarno_threatened = {
+		icon = GFX_decision_INS_sukarno_threatened
+		days_mission_timeout = 720
+		activation = {
+			always = no #triggered manually
+		}
+		visible = {
+			tag = INS
+			INS = {
+				has_country_flag = { flag = INS_revolution_has_started }
+			}
+		}
+		available = {
+			OR = {
+				NOT = {
+					has_country_leader = {
+						character = INS_sukarno
+					}
+				}
+				AND = {
+					neutrality > 0.6
+					has_completed_focus = INS_guided_democracy
+				}
+				NOT = {
+					has_country_flag = INS_revolution_has_started
+				}
+			}
+		}
+		is_good = no
+		priority = 45
+
+		timeout_effect = {
+			kill_country_leader = yes
+			set_country_flag = INS_sukarno_is_dead
+			country_event = {
+				id = INS_chaos_events.4
+				hours = 4
+			}
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = 0.075
+		}
+	}
+
+	INS_national_revolution_republic_warning_police_action = {
+		icon = GFX_decision_generic_police_action
+		days_mission_timeout = 120
+		activation = {
+			always = no #triggereed manually
+		}
+		visible = {
+			tag = INS
+			INS = {
+				has_country_flag = { flag = INS_revolution_has_started }
+			}
+		}
+		available = {
+			hidden_trigger = { always = no }
+		}
+		is_good = yes
+		priority = 40
+
+		timeout_effect = {
+			effect_tooltip = {
+				HOL = {
+					declare_war_on = {
+						target = INS
+						type = annex_everything
+					}
+				}
+				indonesia_increase_escalation_2_effect = yes
+			}
+		}
+
+		complete_effect = {
+		}
+	}
+
+	INS_national_revolution_peace_negotiation = {
+		icon = GFX_decision_generic_political_address
+
+		available = {
+			
+		}
+
+		visible = {
+			tag = INS
+			INS = { has_country_flag = { flag = INS_revolution_has_started } }
+			INS = {
+				has_completed_focus = INSHOL_linggadjati_agreement
+			}
+		}
+
+		cost = 75
+		fire_only_once = no
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_in_array = {
+					array = INS.owned_states_at_game_start
+					value = THIS
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = INS_state_revolution_hq
+					}
+				}
+			}
+		}
+		on_map_mode	= map_and_decisions_view
+		#ai_will_do = {
+		#	base = 100
+		#}
+
+		complete_effect = {
+
+			HOL = {
+				country_event = {
+					id = INS_revolution_events.30
+					hours = 4
+				}
+			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				FROM = {
+					transfer_state_to = HOL
+				}
+				custom_effect_tooltip = indonesia_reduce_escalation_1_effect_tooltip_for_min_4
+				add_days_mission_timeout = {
+					mission = INS_take_batavia
+					days = 240
+				}
+
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+
+		}
+	}
+
+	INS_launch_feint_uprising = {
+		icon = GFX_decision_generic_civil_support
+		allowed = {
+			original_tag = INS
+		}
+
+		visible = {
+			has_country_flag = INS_revolution_has_started
+			has_event_target = INS_dutch_indonesia
+		}
+		available = {
+			NOT = {
+				has_country_flag = INS_launched_feint_uprising
+			}
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_in_array = {
+					array = INS.owned_states_at_game_start
+					value = THIS
+				}
+				OWNER = {
+					OR = {
+						tag = HOL
+						tag = event_target:INS_dutch_indonesia
+					}
+				}
+				any_neighbor_state = {
+					OR = {
+						is_owned_by = INS
+					}
+				}
+				any_neighbor_state = {
+					OR = {
+						is_owned_by = HOL
+						is_owned_by = event_target:INS_dutch_indonesia
+					}
+					impassable = no
+				}
+				impassable = no
+			}
+		}
+
+		custom_cost_trigger = {
+			has_political_power > 49
+			has_manpower > 4999
+			has_equipment = {
+				infantry_equipment > 1499
+			}
+		}
+		custom_cost_text = decision_cost_PP_50_MP_5000_ie_1500
+
+		fire_only_once = no
+
+		on_map_mode = map_only
+
+		ai_will_do = {
+			base = 0
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -50
+				add_manpower = -5000
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment
+					amount = -1500
+				}
+			}
+			FROM = { set_state_flag = { flag = INS_feint_uprising value = 1 days = 60 } }
+			set_country_flag = INS_launched_feint_uprising
+		}
+
+		modifier = {
+			custom_modifier_tooltip = INS_feint_uprising_tt
+		}
+
+		remove_effect = {
+			FROM = { clr_state_flag = INS_feint_uprising }
+			clr_country_flag = INS_launched_feint_uprising
+			add_stability = -0.05
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = INS_feint_uprising_state
+					days = 240
+				}
+			}
+		}
+
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_owned_by = event_target:INS_dutch_indonesia }
+				NOT = { is_owned_by = HOL }
+			}
+		}
+
+		cancel_effect = {
+			FROM = { clr_state_flag = INS_feint_uprising }
+			clr_country_flag = INS_launched_feint_uprising
+		}
+	}
+
+	INS_reorganize_freedom_fighter_militia_1 = {
+
+		icon = generic_reorganize_irregulars
+		allowed = {
+			original_tag = INS
+		}
+
+		visible = {
+			has_country_flag = INS_revolution_has_started
+			has_event_target = INS_dutch_indonesia
+		}
+
+		available = {
+			set_temp_variable = {
+				var = INS_militia_cap_multiplied_eq
+				value = INS_militia_cap
+			}
+			set_temp_variable = {
+				var = INS_militia_cap_multiplied_mp
+				value = INS_militia_cap
+			}
+
+			multiply_temp_variable = { INS_militia_cap_multiplied_eq = 200 }
+			multiply_temp_variable = { INS_militia_cap_multiplied_mp = 2000 }
+			subtract_from_temp_variable = { INS_militia_cap_multiplied_eq = 1 } #it bothers me
+
+			has_manpower > var:INS_militia_cap_multiplied_mp
+			has_equipment = {
+				infantry_equipment > var:INS_militia_cap_multiplied_eq
+			}
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			
+		}
+
+		days_remove = 30
+
+		custom_cost_trigger = {
+			command_power > 24
+			has_army_experience > 14
+		}
+		custom_cost_text = decision_cost_CP_25_ArmXP_15
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				army_experience = -15
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = INS_reorganize_freedom_fighter_militia_1_tt
+			hidden_effect = {
+				add_units_to_division_template = {
+					template_name = "Freedom Fighter Militia"
+					regiments = {
+						militia = 2
+						militia = 2
+					}
+				}
+				add_to_variable = { INS_level_of_militias = 2 }
+				set_country_flag = INS_reorganize_freedom_fighter_militia_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+
+	INS_reorganize_freedom_fighter_militia_2 = {
+
+		icon = generic_reorganize_irregulars
+		allowed = {
+			original_tag = INS
+		}
+
+		visible = {
+			has_country_flag = INS_revolution_has_started
+			has_event_target = INS_dutch_indonesia
+		}
+
+		available = {
+			has_country_flag = INS_reorganize_freedom_fighter_militia_flag
+			set_temp_variable = {
+				var = INS_militia_cap_multiplied_eq
+				value = INS_militia_cap
+			}
+			set_temp_variable = {
+				var = INS_militia_cap_multiplied_mp
+				value = INS_militia_cap
+			}
+
+			multiply_temp_variable = { INS_militia_cap_multiplied_eq = 300 }
+			multiply_temp_variable = { INS_militia_cap_multiplied_mp = 3000 }
+			subtract_from_temp_variable = { INS_militia_cap_multiplied_eq = 1 } #it bothers me
+
+			has_manpower > var:INS_militia_cap_multiplied_mp
+			has_equipment = {
+				infantry_equipment > var:INS_militia_cap_multiplied_eq
+			}
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			
+		}
+
+		days_remove = 30
+
+		custom_cost_trigger = {
+			command_power > 24
+			has_army_experience > 14
+		}
+		custom_cost_text = decision_cost_CP_25_ArmXP_15
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				army_experience = -15
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = INS_reorganize_freedom_fighter_militia_2_tt
+			hidden_effect = {
+				add_units_to_division_template = {
+					template_name = "Freedom Fighter Militia"
+					regiments = {
+						militia = 0
+						militia = 1
+						militia = 2
+					}
+				}
+				add_to_variable = { INS_level_of_militias = 3 }
+			}
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+
+	INS_reorganize_freedom_fighter_militia_recon = {
+
+		icon = GFX_decisions_generic_infiltration
+		allowed = {
+			original_tag = INS
+		}
+
+		visible = {
+			has_country_flag = INS_revolution_has_started
+			has_event_target = INS_dutch_indonesia
+		}
+
+		available = {
+			set_temp_variable = {
+				var = INS_militia_cap_multiplied_eq
+				value = INS_militia_cap
+			}
+			set_temp_variable = {
+				var = INS_militia_cap_multiplied_mp
+				value = INS_militia_cap
+			}
+
+			multiply_temp_variable = { INS_militia_cap_multiplied_eq = 40 }
+			multiply_temp_variable = { INS_militia_cap_multiplied_mp = 400 }
+			subtract_from_temp_variable = { INS_militia_cap_multiplied_eq = 1 } #it bothers me
+
+			has_manpower > var:INS_militia_cap_multiplied_mp
+			has_equipment = {
+				infantry_equipment > var:INS_militia_cap_multiplied_eq
+			}
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			
+		}
+
+		days_remove = 30
+
+		custom_cost_trigger = {
+			command_power > 24
+			has_army_experience > 14
+		}
+		custom_cost_text = decision_cost_CP_25_ArmXP_15
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				army_experience = -15
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = INS_reorganize_freedom_fighter_militia_recon_tt
+			hidden_effect = {
+				add_units_to_division_template = {
+					template_name = "Freedom Fighter Militia"
+					support = {
+   					    recon = 0
+   					}
+				}
+				add_to_variable = { INS_level_of_militias = 1 }
+			}
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+
+	INS_escalate_the_conflict = {
+
+		icon = GFX_decision_SWI_consolidate_council_power
+		allowed = {
+			original_tag = INS
+		}
+
+		visible = {
+			has_country_flag = INS_revolution_has_started
+			has_event_target = INS_dutch_indonesia
+		}
+
+		available = {
+			check_variable = {
+				var = INS_war_escalation_level
+				value = 10
+				compare = less_than
+				tooltip = war_escalation_10_max_tt
+			}
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			
+		}
+
+		days_remove = 90
+
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 99
+		}
+		custom_cost_text = decision_cost_CP_25_PP_100
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -100
+			}
+		}
+
+		remove_effect = {
+			indonesia_increase_escalation_1_effect = yes
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				strength_ratio = {
+					tag = HOL
+					ratio > 1
+				}
+			}
+			modifier = {
+				add = 1
+				strength_ratio = {
+					tag = HOL
+					ratio > 1.3
+				}
+			}
+			modifier = {
+				add = 2
+				strength_ratio = {
+					tag = HOL
+					ratio > 1.5
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = HOL
+					ratio > 2
+				}
+			}
+			modifier = {
+				add = 10
+				strength_ratio = {
+					tag = HOL
+					ratio > 3
+				}
+			}
+			modifier = {
+				add = 2
+				has_active_mission = INS_militias_railway_pemuda_mission
+				check_variable = {
+					var = INS_war_escalation_level
+					value = 7
+					compare = less_than
+				}
+			}
+		}
+	}
+
+	INS_deescalate_the_conflict = {
+
+		icon = GFX_decision_generic_political_address
+		allowed = {
+			original_tag = INS
+		}
+
+		visible = {
+			has_country_flag = INS_revolution_has_started
+			has_event_target = INS_dutch_indonesia
+			NOT = {
+				has_war_with = HOL
+			}
+		}
+
+		available = {
+			check_variable = {
+				var = INS_war_escalation_level
+				value = 4
+				compare = greater_than_or_equals
+				tooltip = war_escalation_4_or_more_tt
+			}
+			custom_trigger_tooltip = {
+				tooltip = INS_is_deescalating_tt
+				NOT = {
+					has_country_flag = INS_deescalating_in_progress
+					has_country_flag = INS_no_raids_allowed
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			
+		}
+
+		days_remove = 120
+
+		cost = 175
+
+		complete_effect = {
+			set_country_flag = INS_deescalating_in_progress
+		}
+
+		remove_effect = {
+			indonesia_reduce_escalation_1_effect = yes
+			clr_country_flag = INS_deescalating_in_progress
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	INS_deescalate_the_conflict_2 = {
+
+		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+		allowed = {
+			original_tag = INS
+		}
+
+		visible = {
+			has_country_flag = INS_revolution_has_started
+			has_event_target = INS_dutch_indonesia
+			has_war = no
+		}
+
+		available = {
+			check_variable = {
+				var = INS_war_escalation_level
+				value = 2
+				compare = greater_than_or_equals
+				tooltip = war_escalation_2_or_more_tt
+			}
+			custom_trigger_tooltip = {
+				tooltip = INS_is_deescalating_tt
+				NOT = {
+					has_country_flag = INS_deescalating_in_progress
+					has_country_flag = INS_no_raids_allowed
+				}
+			}
+			has_war = no
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			
+		}
+
+		days_remove = 120
+
+		cost = 25
+
+		complete_effect = {
+			set_country_flag = INS_no_raids_allowed
+			set_country_flag = INS_deescalating_in_progress
+			custom_effect_tooltip = INS_no_raids_allowed_tt
+		}
+
+		remove_effect = {
+			indonesia_reduce_escalation_1_effect = yes
+			clr_country_flag = INS_no_raids_allowed
+			clr_country_flag = INS_deescalating_in_progress
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
+
+INS_national_revolution_dutch_cat = {
+
+	INS_renville_timer_mission_HOL = {
+		days_mission_timeout = 365
+		priority = 150
+		icon = GFX_decision_generic_political_discourse
+		is_good = yes
+		activation = {
+			always = no #done manually
+		}
+		cancel_trigger = {
+			INS = {
+				NOT = {
+					has_country_flag = { flag = INS_revolution_has_started }
+				}
+			}
+		}
+
+		available = {
+			INS = {
+				OR = {
+					exists = no
+					is_subject_of = HOL
+				}
+			}
+		}
+
+		complete_effect = {
+			#renville wont happen 
+			custom_effect_tooltip = INS_renville_wont_happen_neutral_tt
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = INS_renville_tt_HOL
+		}
+	}
+
+	INS_gradual_escalation_HOL = {
+		days_mission_timeout = 400
+		icon = GFX_decision_generic_ignite_civil_war
+		activation = {
+			INS = {
+				has_country_flag = { flag = INS_revolution_has_started }
+			}
+		}
+		cancel_trigger = {
+			INS = {
+				NOT = {
+					has_country_flag = { flag = INS_revolution_has_started }
+				}
+			}
+		}
+		visible = {
+			tag = HOL
+			INS = { has_country_flag = { flag = INS_revolution_has_started } }
+		}
+		available = {
+			hidden_trigger = { always = no }
+		}
+		is_good = yes
+		priority = 50
+
+		timeout_effect = {
+			effect_tooltip = { indonesia_increase_escalation_1_effect = yes }
+			custom_effect_tooltip = newline_tt
+		}
+	}
+
+	INS_hold_batavia_HOL = {
+		icon = GFX_decision_INS_hold_java
+		days_mission_timeout = 730
+		priority = 140
+		activation = {
+			INS = {
+				has_country_flag = { flag = INS_java_mission_ongoing }
+			}
+		}
+		cancel_trigger = {
+			NOT = {
+				INS = {
+					has_country_flag = { flag = INS_java_mission_ongoing }
+				}
+			}
+		}
+		visible = {
+			tag = HOL
+			INS = { has_country_flag = { flag = INS_revolution_has_started } }
+		}
+		available = {
+			NOT = {
+				1058 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				335 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				1051 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				if = {
+					limit = {
+						has_event_target = INS_extra_state_to_take
+					}
+					event_target:INS_extra_state_to_take = {
+						is_controlled_by_ROOT_or_subject = yes
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			effect_tooltip = {
+				country_event = {
+					id = INS_revolution_events.29
+					hours = 1
+				}
+				INS = {
+					annex_country = {
+						target = event_target:INS_dutch_indonesia
+						transfer_troops = no
+					}
+				}
+			}
+		}
+		timeout_effect = {
+			if = {
+				limit = {
+					has_event_target = INS_dutch_indonesia
+				}
+				event_target:INS_dutch_indonesia = {
+					annex_country = {
+						target = INS
+						transfer_troops = no
+					}
+				}
+			}
+			else = {
+				HOL = {
+					annex_country = {
+						target = INS
+						transfer_troops = no
+					}
+				}
+			}
+		}
+		is_good = yes
+	}
+
+	INS_revolution_war_HOL = {
+		icon = GFX_decision_generic_police_action
+
+		available = {
+			NOT = {
+				has_war_with = INS
+			}
+			INS = {
+				check_variable = {
+					var = INS_war_escalation_level
+					value = 4
+					compare = greater_than_or_equals
+					tooltip = war_escalation_4_or_more_tt
+				}
+			}
+		}
+
+		visible = {
+			tag = HOL
+			INS = { has_country_flag = { flag = INS_revolution_has_started } }
+		}
+
+		cancel_trigger = {
+			NOT = {
+				INS = { has_country_flag = { flag = INS_revolution_has_started } }
+			}
+		}
+
+		cost = 0
+		days_remove = 120
+		war_with_on_remove = INS
+		fire_only_once = no
+		ai_will_do = {
+			base = 0
+
+			# Escalation 4-6 has a tiny chance each month
+			modifier = {
+				add = 1
+				check_variable = {
+					var = INS.INS_war_escalation_level
+					value = 4
+					compare = greater_than_or_equals
+				}
+				INS = {
+					check_variable = {
+						var = INS_random_seed
+						value = 97 #3% chance each month
+						compare = greater_than_or_equals
+					}
+				}
+			}
+			modifier = {
+				add = 1
+				check_variable = {
+					var = INS.INS_war_escalation_level
+					value = 5
+					compare = greater_than_or_equals
+				}
+				INS = {
+					check_variable = {
+						var = INS_random_seed
+						value = 95 #5% chance each month
+						compare = greater_than_or_equals
+					}
+				}
+			}
+			modifier = {
+				add = 1
+				check_variable = {
+					var = INS.INS_war_escalation_level
+					value = 6
+					compare = greater_than_or_equals
+				}
+				INS = {
+					check_variable = {
+						var = INS_random_seed
+						value = 93 #7% chance each month
+						compare = greater_than_or_equals
+					}
+				}
+			}
+
+			# Escalation 7/8 has a high chance each month
+			modifier = {
+				add = 1
+				check_variable = {
+					var = INS.INS_war_escalation_level
+					value = 7
+					compare = greater_than_or_equals
+				}
+				INS = {
+					check_variable = {
+						var = INS_random_seed
+						value = 85 #15% chance each month
+						compare = greater_than_or_equals
+					}
+				}
+			}
+			modifier = {
+				add = 1
+				check_variable = {
+					var = INS.INS_war_escalation_level
+					value = 8
+					compare = greater_than_or_equals
+				}
+				INS = {
+					check_variable = {
+						var = INS_random_seed
+						value = 60 #40% chance each month
+						compare = greater_than_or_equals
+					}
+				}
+			}
+
+			# Guaranteed at escalation 9
+			modifier = {
+				add = 1
+				check_variable = {
+					var = INS.INS_war_escalation_level
+					value = 9
+					compare = greater_than_or_equals
+				}
+			}
+
+			# In addition to random chance, Indonesia controlling any state in Java will significantly up the odds
+			modifier = {
+				add = 1
+				check_variable = {
+					var = INS.INS_war_escalation_level
+					value = 4
+					compare = greater_than_or_equals
+				}
+				INS = {
+					check_variable = {
+						var = INS_random_seed
+						value = 90 #10% chance each month
+						compare = greater_than_or_equals
+					}
+					OR = {
+						controls_state = 1058
+						controls_state = 1051
+						controls_state = 335
+					}
+				}
+			}
+			modifier = {
+				add = 1
+				check_variable = {
+					var = INS.INS_war_escalation_level
+					value = 4
+					compare = greater_than_or_equals
+				}
+				INS = {
+					# two states in java = guaranteed, immediately
+					OR = {
+						AND = {
+							controls_state = 1058
+							controls_state = 1051
+						}
+						AND = {
+							controls_state = 1058
+							controls_state = 335
+						}
+						AND = {
+							controls_state = 1051
+							controls_state = 335
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			INS = {
+				activate_mission = INS_national_revolution_republic_warning_police_action
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = INS_war_escalation_level
+						value = 7
+						compare = greater_than_or_equals
+					}
+				}
+				# nothing
+			}
+			else = {
+				add_timed_idea = {
+					idea = HOL_internationally_controversial_aggression
+					days = 480
+				}
+				custom_effect_tooltip = INS_revolution_penalty_reduce_tt
+			}
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = INS
+				type = annex_everything
+			}
+			every_subject_country = {
+				limit = {
+					original_tag = INS
+				}
+				declare_war_on = {
+					target = INS
+					type = annex_everything
+				}
+			}
+			INS = { indonesia_increase_escalation_2_effect = yes }
+		}
+	}
+
+
+
+	INS_escalate_the_conflict_HOL = {
+
+		icon = GFX_decision_SWI_consolidate_council_power
+		allowed = {
+			original_tag = HOL
+		}
+
+		visible = {
+			INS = {
+				has_country_flag = INS_revolution_has_started
+				has_event_target = INS_dutch_indonesia
+			}
+		}
+
+		available = {
+			check_variable = {
+				var = INS.INS_war_escalation_level
+				value = 10
+				compare = less_than
+				tooltip = war_escalation_10_max_tt
+			}
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			
+		}
+
+		days_remove = 90
+
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 99
+		}
+		custom_cost_text = decision_cost_CP_25_PP_100
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -100
+			}
+		}
+
+		remove_effect = {
+			indonesia_increase_escalation_1_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	INS_can_raid_here_HOL = {
+		icon = GFX_decision_generic_nationalism
+		allowed = {
+			original_tag = HOL
+		}
+
+		visible = {
+			INS = {
+				has_country_flag = INS_revolution_has_started
+				has_event_target = INS_dutch_indonesia
+			}
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_in_array = {
+					array = INS.owned_states_at_game_start
+					value = THIS
+				}
+				OWNER = {
+					OR = {
+						tag = HOL
+						tag = event_target:INS_dutch_indonesia
+					}
+				}
+				any_neighbor_state = {
+					OR = {
+						is_owned_by = INS
+						has_dynamic_modifier = { modifier = INS_state_militia_activity_1 }
+						has_dynamic_modifier = { modifier = INS_state_militia_activity_2 }
+						has_dynamic_modifier = { modifier = INS_state_militia_activity_3 }
+					}
+				}
+				impassable = no
+			}
+		}
+
+		fire_only_once = no
+
+		on_map_mode = map_only
+
+		ai_will_do = {
+			base = 0
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = INS_can_raid_here_HOL_tt
+		}
+
+		remove_effect = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cancel_effect = {
+		}
+	}
+}
+
+INS_pacific_revolution_cat = {
+	INS_instigate_in_country = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = {
+			original_tag = INS
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = FROM
+			}
+		}
+
+		target_root_trigger	= {
+			has_completed_focus = INS_pacific_revolution
+			#NOT = {
+			#	has_country_flag = INS_coup_in_progress
+			#}
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = INS_coup_in_progress
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = MAL
+					tag = SIA
+					tag = PHI
+					tag = AST
+					tag = NZL
+					tag = BRM
+					tag = VIN
+					tag = LAO
+					tag = CAM
+					tag = GDC
+					tag = GXC
+					tag = YUN
+					tag = PNG
+					tag = WPG
+					tag = SRL
+					tag = SAR
+					tag = BRN
+					tag = SAB
+					tag = SNG
+					tag = TML
+					tag = BOU
+					tag = CHM
+					tag = CPS
+				}
+				NOT = {
+					is_subject_of = ROOT
+					has_government = communism
+					has_country_flag = INS_has_already_done_revolution
+				}
+			}
+		}
+
+		cost = 25
+		fire_only_once = no
+		on_map_mode = map_and_decisions_view
+
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 10
+				FROM = {
+					OR = {
+						tag = MAL
+						tag = SIA
+						tag = PHI
+						tag = AST
+						tag = NZL
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				save_global_event_target_as = INS_revolution_target
+				country_event = {
+					id = INS_communist_events.6
+					hours = 12
+				}
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					overlord = {
+						country_event = {
+							id = INS_communist_events.7
+							hours = 12
+						}
+					}
+				}
+			}
+			set_country_flag = INS_coup_in_progress
+		}
+	}
+
+	INS_abandon_mission = {
+		icon = GFX_decision_BOL_reintegrate_litoral_department
+		visible = {
+			has_country_flag = INS_coup_in_progress
+		}
+
+		priority = 15
+
+		complete_effect = {
+			clr_country_flag = INS_coup_in_progress
+			clear_global_event_target = INS_revolution_target
+		}
+	}
+
+	INS_launch_revolution = {
+		icon = GFX_decision_revolt
+		visible = {
+			has_country_flag = INS_coup_in_progress
+		}
+
+		target_root_trigger = {
+			has_country_flag = INS_coup_in_progress
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = FROM
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = event_target:INS_revolution_target
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+
+		available = {
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = INS_purge_oppurtunists
+						has_completed_focus = INS_musso_ascends
+					}
+				}
+				OR = {
+					AND = {
+						has_completed_focus = INS_purge_oppurtunists
+						FROM = {
+							communism > 0.6
+						}
+					}
+					AND = {
+						has_completed_focus = INS_musso_ascends
+						FROM = {
+							communism > 0.3
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = INS_purge_oppurtunists
+				}
+				FROM = {
+					communism > 0.6
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = INS_musso_ascends
+				}
+				FROM = {
+					communism > 0.3
+				}
+			}
+
+
+			country_exists = event_target:INS_revolution_target
+			NOT = {
+				event_target:INS_revolution_target = {
+					has_government = communism
+				}
+			}
+		}
+
+		on_map_mode = decision_view_only
+
+		priority = 20
+		cost = 100
+		complete_effect = {
+
+			FROM = {
+				country_event = {
+					id = INS_communist_events.1
+					hours = 12
+				}
+			}
+
+			hidden_effect = {
+				remove_decision_on_cooldown = INS_arm_militias
+				remove_decision_on_cooldown = INS_propoganda_mission
+				
+
+				clr_country_flag = INS_coup_in_progress
+				event_target:INS_revolution_target = {
+					set_country_flag = INS_has_already_done_revolution
+				}
+				clear_global_event_target = INS_revolution_target
+			}
+		}
+	}
+
+	INS_propoganda_mission = {
+		icon = GFX_decision_SOV_secure_the_administration
+		visible = {
+			has_country_flag = INS_coup_in_progress
+		}
+
+		target_root_trigger = {
+			has_country_flag = INS_coup_in_progress
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = FROM
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = event_target:INS_revolution_target
+			}
+		}
+		on_map_mode = decision_view_only
+
+		priority = 16
+		cost = 50
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 70
+
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+				add_stability = -0.05
+
+				country_event = {
+					id = INS_communist_events.8
+					hours = 12
+				}
+			}
+		}
+	}
+
+	INS_arm_militias = {
+		icon = GFX_decision_POL_looming_peasants_strike
+		visible = {
+			has_country_flag = INS_coup_in_progress
+		}
+
+		target_root_trigger = {
+			has_country_flag = INS_coup_in_progress
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = FROM
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = event_target:INS_revolution_target
+			}
+		}
+		on_map_mode = decision_view_only
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_ie_500
+
+		priority = 17
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 70
+
+		complete_effect = {
+
+			FROM = {
+				add_to_variable = { INS_automatic_militias_var_for_target = 1 }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+
+			custom_effect_tooltip = INS_arm_militias_tt
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+		}
+	}
+
+	INS_revolutionary_sentiment = {
+		icon = GFX_decision_POL_organize_strike_two
+		visible = {
+			has_country_flag = INS_coup_in_progress
+		}
+
+		target_root_trigger = {
+			has_country_flag = INS_coup_in_progress
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = FROM
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = event_target:INS_revolution_target
+			}
+		}
+
+		available = {
+			FROM = {
+				NOT = {
+					has_idea = INS_revolutionaries_working_with_indonesians_idea
+				}
+			}
+		}
+
+		on_map_mode = decision_view_only
+
+		priority = 18
+		cost = 75
+
+		ai_will_do = {
+			base = 10
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = {
+					idea = INS_revolutionaries_working_with_indonesians_idea
+					days = 240
+				}
+				country_event = {
+					id = INS_communist_events.9
+					hours = 12
+				}
+			}
+		}
+	}
+
+	INS_anti_colonialist_bonus = {
+		icon = GFX_decision_generic_independence
+		visible = {
+			has_country_flag = INS_coup_in_progress
+		}
+
+		target_root_trigger = {
+			has_country_flag = INS_coup_in_progress
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = FROM
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = event_target:INS_revolution_target
+				is_subject = yes
+			}
+		}
+
+		available = {
+			FROM = {
+				NOT = {
+					has_idea = INS_anti_colonialist_sentiment_idea
+				}
+			}
+		}
+
+		on_map_mode = decision_view_only
+
+		cost = 50
+
+		priority = 19
+
+		ai_will_do = {
+			base = 10
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = {
+					idea = INS_anti_colonialist_sentiment_idea
+					days = 240
+				}
+				country_event = {
+					id = INS_communist_events.10
+					hours = 12
+				}
+			}
+		}
+	}
+}
+
+INS_aslia_cat = {
+	INS_integrate_subject = {
+		icon = GFX_decision_generic_confiscation
+		target_root_trigger = {
+			has_completed_focus = INS_federation_of_aslia
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = INS_integrate_subject_in_progress
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = INS
+				has_civil_war = no
+				OR = {
+					original_tag = MAL
+					original_tag = SIA
+					original_tag = PHI
+					original_tag = AST
+					original_tag = NZL
+					original_tag = BRM
+					original_tag = VIN
+					original_tag = LAO
+					original_tag = CAM
+					original_tag = GDC
+					original_tag = GXC
+					original_tag = YUN
+					original_tag = PNG
+					original_tag = WPG
+					original_tag = SRL
+					original_tag = SAR
+					original_tag = BRN
+					original_tag = SAB
+					original_tag = SNG
+					original_tag = TML
+					original_tag = BOU
+					original_tag = CHM
+					original_tag = CPS
+				}
+			}
+		}
+
+		cost = 100
+		days_remove = 120
+
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			set_country_flag = {
+				flag = INS_integrate_subject_in_progress
+				days = 120
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				every_core_state = {
+					add_core_of = ROOT
+				}
+			}
+			ROOT = {
+				annex_country = {
+					target = FROM
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+}
+
+INS_limited_wars_cat = {
+	INS_start_limited_war_malaya = {
+
+	    target_root_trigger = {
+	       original_tag = INS
+	    }
+	    target_array = ROOT.malaya_controllers
+	    target_trigger = {
+    		NOT = {
+    			is_in_array = {
+    				array = previous_limited_war_targets value = FROM
+    			}
+    		}
+
+    		is_in_array = {
+    			array = ROOT.malaya_controllers
+    			value = FROM
+    		}
+
+			any_of_scopes = {
+				array = ROOT.malaya_states
+				is_controlled_by = FROM
+			}
+	    }
+	    visible = {
+	    	has_completed_focus = INS_destroy_pacific_colonialism
+	    }
+	    available = {
+	    	NOT = {
+	    		is_ally_with = FROM
+    			has_war_with = FROM
+    			has_non_aggression_pact_with = FROM
+    			FROM = { is_guaranteed_by = ROOT }
+	    	}
+
+    		custom_trigger_tooltip = {
+    			tooltip = is_not_engaged_in_a_limited_war
+	    		NOT = { has_variable = limited_war_target } 
+    		}
+	    }
+
+	    highlight_states = {
+	        highlight_states_trigger = {
+		    	is_in_array = {
+		    		array = ROOT.malaya_states
+		    		value = THIS
+		    	}
+		    	is_controlled_by = FROM
+
+	        }
+	    }
+
+	    cost = 20
+	    complete_effect = {
+	    	custom_effect_tooltip = SIA_start_limited_war_indochina_tt_main
+	    	clear_variable = pre_limited_war_faction_leader
+
+	    	if = {
+	    		limit = {
+	    			is_in_faction = yes
+	    			is_faction_leader = no
+	    		}
+
+	    		faction_leader = { set_variable = { ROOT.pre_limited_war_faction_leader = THIS } }
+	    		leave_faction = yes
+	    		custom_effect_tooltip = SIA_start_limited_war_rejoin_faction
+	    		custom_effect_tooltip = newline_tt
+
+	    	}
+
+	    	custom_effect_tooltip = newline_tt
+	    	set_rule = { can_join_factions = no }
+
+	    	custom_effect_tooltip = SIA_start_limited_war_can_join_faction
+	    	#General cleanup
+	    	clear_array = limited_war_states
+	    	clear_variable = limited_war_target
+	    	clear_array = limited_war_target_allies
+
+	    	#Save all states that is included in the limited war
+	    	for_each_scope_loop = {
+	    		array = malaya_states
+	    		if = {
+	    			limit = { is_controlled_by = FROM }
+	
+	    			add_to_array = { array = ROOT.limited_war_states value = THIS }
+	    		}
+	    	}
+
+	    	
+	    	set_variable = { limited_war_target = FROM } #is_target_of_limited_war
+	    	if = { #overlord will always be called if target is a subject
+	    		limit = {
+	    			var:limited_war_target = { is_subject = yes }
+	    		}
+
+	    		var:limited_war_target = {
+	    			overlord = {
+	    				add_to_array = { array = ROOT.limited_war_target_allies value = THIS }
+	    			}
+	    		}
+	    	}
+
+	    	declare_war_on = {
+	    		target = FROM
+	    		type = annex_everything
+	    	}
+
+	    	activate_mission = INS_limited_war_malaya
+	    	add_to_array = { previous_limited_war_targets = FROM }
+	    }
+    }
+
+    INS_limited_war_malaya = {
+		visible = {
+			always = yes
+		}
+		is_good = no
+		available = { 
+			all_of_scopes = {
+				array = ROOT.limited_war_states
+				is_controlled_by = ROOT
+			}
+		}
+		fire_only_once = yes
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+				surrender_progress > var:global.limited_war_surrender_threshold
+			}
+		}
+		days_mission_timeout = 365
+		complete_effect = {
+			country_event = { id = INS_limited_war_events.1 hours = 2 }
+		}
+
+		cancel_effect = {
+			if = {
+				limit = { surrender_progress > var:global.limited_war_surrender_threshold }
+				var:limited_war_target = {
+					country_event = { id = INS_limited_war_events.6 hours = 2 }
+				}
+			}
+		}
+
+		timeout_effect = {
+			var:limited_war_target = {
+				country_event = { id = INS_limited_war_events.6 hours = 2 }
+			}
+		}
+    }
 }

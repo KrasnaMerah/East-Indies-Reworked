@@ -175,16 +175,16 @@ DEI = { #Led by Dutch Loyalists or puppets
 	original_tag = INS
 	OR = {
 		has_country_leader = {
-			name = "Bonifacius Cornelis de Jonge"
+			character = INS_bonifacius_de_jonge
 			ruling_only = yes
 		}
 		has_country_leader = {
-			name = "Tjarda van Starkenborgh"
+			character = INS_a_t_van_starkenborgh_stachouwer
 			ruling_only = yes
 		}
 		AND = {
 			has_country_leader = {
-				name = "Hubertus van Mook"
+				character = INS_hubertus_van_mook
 				ruling_only = yes
 			}
 			NOT = {
@@ -202,7 +202,7 @@ IDN = { #Led by Indonesians
 	OR = {
 		AND = {
 			has_country_leader = {
-				name = "Hubertus van Mook"
+				character = INS_hubertus_van_mook
 				ruling_only = yes
 			}
 			OR = {

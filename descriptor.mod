@@ -1,4 +1,4 @@
-version="1.7.5 Sungsang"
+version="1.8 Muntok"
 tags={
 	"Alternative History"
 	"Events"
@@ -13,5 +13,5 @@ tags={
 }
 picture="thumbnail.png"
 name="Hollandia Historica: East Indies Reworked"
-supported_version="1.18.*"
+supported_version="1.19.*"
 remote_file_id="2898713030"

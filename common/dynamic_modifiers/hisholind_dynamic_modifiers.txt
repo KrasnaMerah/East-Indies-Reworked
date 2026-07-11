@@ -134,13 +134,13 @@ INS_west_java_di_nata_modifier = { #State Modifier
 
 	icon = GFX_modifier_regional_west_java
 	
-	recruitable_population_factor = 0.07
-	local_building_slots_factor = 0.05
+	recruitable_population_factor = 0.1
+	local_building_slots_factor = 0.15
 	state_production_speed_buildings_factor = 0.1
 	army_speed_factor_for_controller = 0.1
 	local_org_regain = 0.1
-	army_defence_factor = 0.25
-	local_supplies = 0.075
+	army_defence_factor = 0.4
+	local_supplies = 0.08
 }
 
 INS_central_java_sutarjo_modifier = { #State Modifier

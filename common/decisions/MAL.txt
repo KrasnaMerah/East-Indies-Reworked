@@ -247,7 +247,7 @@ ASEAN_malacca_strait_security = {
 		icon = GFX_decision_infiltrate_state
 
 		highlight_states = {
-			highlight_state_targets = { state = 1047 } 
+			highlight_state_targets = { state = 1050 } 
 		}
 
 		allowed = {
@@ -264,17 +264,17 @@ ASEAN_malacca_strait_security = {
 		available = {
 			OR = {
 				ROOT = {
-					controls_state = 1047 # Aceh
+					controls_state = 1050 # Aceh
 				}
 				any_country = {
 					is_subject_of = ROOT
-					controls_state = 1047 # Aceh
+					controls_state = 1050 # Aceh
 				}
 			}
 		}
 
 		visible = {
-			1047 = {
+			1050 = {
 				owner = {
 					check_variable = { FROM.num_owned_states > 1 }
 				}
@@ -287,7 +287,7 @@ ASEAN_malacca_strait_security = {
 
 			# Atjeh
 			MAL = {
-				transfer_state = 1047
+				transfer_state = 1050
 			}
 		}
 
@@ -303,68 +303,6 @@ ASEAN_malacca_strait_security = {
 	ASEAN_handover_medan_to_MAL = {
 
 		cost = 50
-
-		fire_only_once = yes
-
-		icon = GFX_decision_infiltrate_state
-
-		highlight_states = {
-			highlight_state_targets = { state = 672 } 
-		}
-
-		allowed = {
-			is_asean_state = no
-			336 = { #Malaya
-				owner = {
-					original_tag = MAL
-					is_subject_of = ROOT
-					has_full_control_of_state = PREV
-				}
-			}
-		}
-
-		available = {
-			OR = {
-				ROOT = {
-					controls_state = 672 # Northern Sumatra
-				}
-				any_country = {
-					is_subject_of = ROOT
-					controls_state = 672 # Northern Sumatra
-				}
-			}
-		}
-
-		visible = {
-			672 = {
-				owner = {
-					check_variable = { FROM.num_owned_states > 1 }
-				}
-			}
-		}
-
-		days_remove = 28
-
-		remove_effect = {
-
-			# Northern Sumatra
-			MAL = {
-				transfer_state = 672
-			}
-		}
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 200
-				is_historical_focus_on = yes
-			}
-		}
-	}
-
-	ASEAN_handover_riau_to_MAL = {
-
-		cost = 25
 
 		fire_only_once = yes
 
@@ -388,11 +326,11 @@ ASEAN_malacca_strait_security = {
 		available = {
 			OR = {
 				ROOT = {
-					controls_state = 1049 # Riau Islands
+					controls_state = 1049 # East Sumatra
 				}
 				any_country = {
 					is_subject_of = ROOT
-					controls_state = 1049 # Riau Islands
+					controls_state = 1049 # East Sumatra
 				}
 			}
 		}
@@ -409,7 +347,7 @@ ASEAN_malacca_strait_security = {
 
 		remove_effect = {
 
-			# Riau Islands
+			# Northern Sumatra
 			MAL = {
 				transfer_state = 1049
 			}
@@ -424,9 +362,9 @@ ASEAN_malacca_strait_security = {
 		}
 	}
 
-	ASEAN_handover_palembang_to_MAL = {
+	ASEAN_handover_padang_to_MAL = {
 
-		cost = 40
+		cost = 50
 
 		fire_only_once = yes
 
@@ -450,11 +388,11 @@ ASEAN_malacca_strait_security = {
 		available = {
 			OR = {
 				ROOT = {
-					controls_state = 1048 # Southern Sumatra
+					controls_state = 1048 # West Sumatra
 				}
 				any_country = {
 					is_subject_of = ROOT
-					controls_state = 1048 # Southern Sumatra
+					controls_state = 1048 # West Sumatra
 				}
 			}
 		}
@@ -471,9 +409,133 @@ ASEAN_malacca_strait_security = {
 
 		remove_effect = {
 
-			# Southern Sumatra
+			# Northern Sumatra
 			MAL = {
 				transfer_state = 1048
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 200
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	ASEAN_handover_riau_to_MAL = {
+
+		cost = 25
+
+		fire_only_once = yes
+
+		icon = GFX_decision_infiltrate_state
+
+		highlight_states = {
+			highlight_state_targets = { state = 1083 } 
+		}
+
+		allowed = {
+			is_asean_state = no
+			336 = { #Malaya
+				owner = {
+					original_tag = MAL
+					is_subject_of = ROOT
+					has_full_control_of_state = PREV
+				}
+			}
+		}
+
+		available = {
+			OR = {
+				ROOT = {
+					controls_state = 1083 # Riau Islands
+				}
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 1083 # Riau Islands
+				}
+			}
+		}
+
+		visible = {
+			1083 = {
+				owner = {
+					check_variable = { FROM.num_owned_states > 1 }
+				}
+			}
+		}
+
+		days_remove = 28
+
+		remove_effect = {
+
+			# Riau Islands
+			MAL = {
+				transfer_state = 1083
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 200
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	ASEAN_handover_palembang_to_MAL = {
+
+		cost = 40
+
+		fire_only_once = yes
+
+		icon = GFX_decision_infiltrate_state
+
+		highlight_states = {
+			highlight_state_targets = { state = 672 } 
+		}
+
+		allowed = {
+			is_asean_state = no
+			336 = { #Malaya
+				owner = {
+					original_tag = MAL
+					is_subject_of = ROOT
+					has_full_control_of_state = PREV
+				}
+			}
+		}
+
+		available = {
+			OR = {
+				ROOT = {
+					controls_state = 672 # Southern Sumatra
+				}
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 672 # Southern Sumatra
+				}
+			}
+		}
+
+		visible = {
+			672 = {
+				owner = {
+					check_variable = { FROM.num_owned_states > 1 }
+				}
+			}
+		}
+
+		days_remove = 28
+
+		remove_effect = {
+
+			# Southern Sumatra
+			MAL = {
+				transfer_state = 672
 			}
 		}
 
@@ -495,7 +557,7 @@ ASEAN_malacca_strait_security = {
 		icon = GFX_decision_infiltrate_state
 
 		highlight_states = {
-			highlight_state_targets = { state = 1050 } 
+			highlight_state_targets = { state = 334 } 
 		}
 
 		allowed = {
@@ -512,17 +574,17 @@ ASEAN_malacca_strait_security = {
 		available = {
 			OR = {
 				ROOT = {
-					controls_state = 1050 # Western Kalimantan
+					controls_state = 334 # Western Kalimantan
 				}
 				any_country = {
 					is_subject_of = ROOT
-					controls_state = 1050 # Western Kalimantan
+					controls_state = 334 # Western Kalimantan
 				}
 			}
 		}
 
 		visible = {
-			1050 = {
+			334 = {
 				owner = {
 					check_variable = { FROM.num_owned_states > 1 }
 				}
@@ -535,7 +597,7 @@ ASEAN_malacca_strait_security = {
 
 			# Western Kalimantan
 			MAL = {
-				transfer_state = 1050
+				transfer_state = 334
 			}
 		}
 
@@ -557,7 +619,7 @@ ASEAN_malacca_strait_security = {
 		icon = GFX_decision_infiltrate_state
 
 		highlight_states = {
-			highlight_state_targets = { state = 334 } 
+			highlight_state_targets = { state = 1055 } 
 		}
 
 		allowed = {
@@ -574,17 +636,17 @@ ASEAN_malacca_strait_security = {
 		available = {
 			OR = {
 				ROOT = {
-					controls_state = 334 # Eastern Kalimantan
+					controls_state = 1055 # Eastern Kalimantan
 				}
 				any_country = {
 					is_subject_of = ROOT
-					controls_state = 334 # Eastern Kalimantan
+					controls_state = 1055 # Eastern Kalimantan
 				}
 			}
 		}
 
 		visible = {
-			334 = {
+			1055 = {
 				owner = {
 					check_variable = { FROM.num_owned_states > 1 }
 				}
@@ -597,7 +659,7 @@ ASEAN_malacca_strait_security = {
 
 			# Eastern Kalimantan
 			MAL = {
-				transfer_state = 334
+				transfer_state = 1055
 			}
 		}
 
@@ -619,7 +681,7 @@ ASEAN_malacca_strait_security = {
 		icon = GFX_decision_infiltrate_state
 
 		highlight_states = {
-			highlight_state_targets = { state = 1050 } 
+			highlight_state_targets = { state = 334 } 
 		}
 
 		allowed = {
@@ -636,11 +698,11 @@ ASEAN_malacca_strait_security = {
 		available = {
 			OR = {
 				ROOT = {
-					controls_state = 1050 # Western Kalimantan
+					controls_state = 334 # Western Kalimantan
 				}
 				any_country = {
 					is_subject_of = ROOT
-					controls_state = 1050 # Western Kalimantan
+					controls_state = 334 # Western Kalimantan
 				}
 			}
 		}
@@ -649,7 +711,7 @@ ASEAN_malacca_strait_security = {
 			BRN = {
 				exists = yes
 			}
-			1050 = {
+			334 = {
 				owner = {
 					check_variable = { FROM.num_owned_states > 1 }
 				}
@@ -662,7 +724,7 @@ ASEAN_malacca_strait_security = {
 
 			# Western Kalimantan
 			BRN = {
-				transfer_state = 1050
+				transfer_state = 334
 			}
 		}
 
@@ -684,7 +746,7 @@ ASEAN_malacca_strait_security = {
 		icon = GFX_decision_infiltrate_state
 
 		highlight_states = {
-			highlight_state_targets = { state = 334 } 
+			highlight_state_targets = { state = 1055 } 
 		}
 
 		allowed = {
@@ -701,11 +763,11 @@ ASEAN_malacca_strait_security = {
 		available = {
 			OR = {
 				ROOT = {
-					controls_state = 334 # Eastern Kalimantan
+					controls_state = 1055 # Eastern Kalimantan
 				}
 				any_country = {
 					is_subject_of = ROOT
-					controls_state = 334 # Eastern Kalimantan
+					controls_state = 1055 # Eastern Kalimantan
 				}
 			}
 		}
@@ -714,7 +776,7 @@ ASEAN_malacca_strait_security = {
 			BRN = {
 				exists = yes
 			}
-			334 = {
+			1055 = {
 				owner = {
 					check_variable = { FROM.num_owned_states > 1 }
 				}
@@ -727,7 +789,7 @@ ASEAN_malacca_strait_security = {
 
 			# Eastern Kalimantan
 			BRN = {
-				transfer_state = 334
+				transfer_state = 1055
 			}
 		}
 

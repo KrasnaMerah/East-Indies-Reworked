@@ -3,11 +3,11 @@ state={
 	name="STATE_1022"
 
 	impassable = yes 
-	force_link_ownership_to = 1050 # West Kalimantan
+	force_link_ownership_to = 334 # West Kalimantan
 	
 	history={
 		owner = INS
-		add_core_of = INS
+		add_core_of = POK
 	}
 
 	provinces={
@@ -16,6 +16,6 @@ state={
 
 	manpower=8600
 	buildings_max_level_factor=1
-	state_category=wasteland
+	state_category=enclave
 	local_supplies=0
 }

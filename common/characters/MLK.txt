@@ -23,14 +23,6 @@ characters = {
 				large = GFX_portrait_maluku_soumokil
 			}
 		}
-		country_leader = {
-			ideology = falangism
-			traits = {
-
-			}
-			expire = "1965.1.1.1"
-			id = -1
-		}
 	}
 
 	MLK_uktolseja = {
@@ -43,7 +35,7 @@ characters = {
 		country_leader = {
 			ideology = marxism
 			traits = {
-
+				marxist_priest
 			}
 			expire = "1965.1.1.1"
 			id = -1
@@ -58,7 +50,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = centrism
+			ideology = falangism
 			traits = {
 
 			}
@@ -72,16 +64,6 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/Asia/portrait_Asia_Generic_navy_2.dds"
-			}
-		}
-	}
-
-	MLK_latuharhary = {
-		name = MLK_johannes_latuharhary
-		portraits = {
-			civilian = {
-				large = GFX_portrait_maluku_latuharhary
-				small = GFX_idea_maluku_latuharhary
 			}
 		}
 	}
@@ -112,6 +94,114 @@ characters = {
 			}
 			traits = {
 				progressive_doctor 
+			}
+		}
+	}
+
+	INS_johannes_latuharhary = {
+		name = MLK_johannes_latuharhary
+		portraits = {
+			civilian = {
+				large = GFX_portrait_maluku_latuharhary
+				small = GFX_idea_maluku_latuharhary
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = INS_johannes_latuharhary
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = MLK
+				}
+			}
+			available = {
+				if = {
+					limit = { tag = INS }
+					OR = {
+						has_completed_focus = INS_indies_nation
+						has_completed_focus = INS_support_sutarjo
+						has_completed_focus = INS_expel_the_colonials
+					}
+				}
+			}
+			visible = {
+				has_country_flag = INS_de_jonge_resigned
+			}
+			traits = {
+				moluccan_representative
+			}
+			on_add = {
+				668 = {
+					add_dynamic_modifier = {
+						modifier = INS_mollucas_latuharhary_modifier
+					}
+				}
+				738 = {
+					add_dynamic_modifier = {
+						modifier = INS_mollucas_latuharhary_modifier
+					}
+				}
+			}
+			on_remove = {
+				668 = {
+					remove_dynamic_modifier = {
+						modifier = INS_mollucas_latuharhary_modifier
+					}
+				}
+				738 = {
+					remove_dynamic_modifier = {
+						modifier = INS_mollucas_latuharhary_modifier
+					}
+				}
+			}
+			cost = 135
+		}
+	}
+
+	INS_iskandar_sjah = {
+		name = INS_iskandar_sjah
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_INS_iskandar_sjah"
+				small = "GFX_portrait_INS_iskandar_sjah_small"
+			}
+		}
+
+		country_leader = {
+			ideology = despotism
+			traits = {
+				INS_kolano_of_the_spice_sea
+			}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			idea_token = INS_iskandar_sjah
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = HOL
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = INS
+					AND = {
+						original_tag = HOL
+						has_cosmetic_tag = INS_UNION
+					}
+				}
+				is_country_leader = no
+			}
+			available = {
+				
+			}
+			traits = {
+				INS_the_four_mountains_of_ternate
 			}
 		}
 	}

@@ -37,7 +37,7 @@ spriteTypes = {
 
 	SpriteType = { 
 		name = "GFX_focus_INS_approach_malaka"
-		texturefile = "gfx/interface/goals/focus_INS_approach_malaka.dds"
+		texturefile = "gfx/interface/goals/focus_INS_approach_tan_malaka.dds"
 	}
 
 	SpriteType = { 
@@ -213,11 +213,6 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_focus_HOL_sphere"
 		texturefile = "gfx/interface/goals/focus_HOL_sphere.dds"
-	}
-
-	SpriteType = { 
-		name = "GFX_hol_pressure_france"
-		texturefile = "gfx/interface/goals/hol_pressure_france.dds"
 	}
 
 	SpriteType = { 

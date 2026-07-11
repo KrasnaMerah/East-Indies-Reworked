@@ -32,10 +32,10 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 12126;1428;sea;812;-1;-1;-1;-1;;Tanahbala-Siberut
 4306;4608;sea;5666;-1;-1;-1;-1;;Soerbaja-Madura
 7654;4273;sea;2239;-1;-1;-1;-1;;Java-Bali
-7293;4273;sea;2239;-1;-1;-1;-1;;Bali-Lombok
-7293;10191;sea;2239;-1;-1;-1;-1;;Lombok-W.Nusa Tenggara
-12162;1298;sea;2124;-1;-1;-1;-1;;West Nusa Tenggara-East Nusa Tenggara
-12151;10219;sea;5414;-1;-1;-1;-1;;East Nusa Tenggara-Pulau Alor
+7293;13385;sea;2239;-1;-1;-1;-1;;Bali-Lombok
+7293;13388;sea;2239;-1;-1;-1;-1;;Lombok-W.Nusa Tenggara
+13391;1298;sea;2124;-1;-1;-1;-1;;West Nusa Tenggara-East Nusa Tenggara
+13394;10219;sea;5414;-1;-1;-1;-1;;East Nusa Tenggara-Pulau Alor
 12444;10222;sea;5515;-1;-1;-1;-1;;Sulawesi-Pulau Buton
 1293;4269;sea;8751;-1;-1;-1;-1;;Surigao-Leyte
 1311;4228;sea;2856;-1;-1;-1;-1;;San Bernardino Strait
@@ -218,9 +218,10 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 7570;8235;impassable;-1;-1;-1;-1;-1;;maoke mts
 7570;8250;impassable;-1;-1;-1;-1;-1;;maoke mts
 10990;8250;impassable;-1;-1;-1;-1;-1;;maoke mts
-10990;11004;impassable;-1;-1;-1;-1;-1;;maoke mts
-10423;11004;impassable;-1;-1;-1;-1;-1;;maoke mts
-11018;11004;impassable;-1;-1;-1;-1;-1;;bismarck range
+8250;11004;impassable;-1;-1;-1;-1;-1;;maoke mts
+1617;11004;impassable;-1;-1;-1;-1;-1;;maoke mts
+4635;11004;impassable;-1;-1;-1;-1;-1;;bismarck range
+11004;2129;impassable;-1;-1;-1;-1;-1;;bismarck range
 10954;11018;impassable;-1;-1;-1;-1;-1;;bismarck range
 11018;2129;impassable;-1;-1;-1;-1;-1;;bismarck range
 10954;12428;impassable;-1;-1;-1;-1;-1;;bismarck range
@@ -266,16 +267,18 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 12415;1533;impassable;-1;-1;-1;-1;-1;;barisan range
 7368;1533;impassable;-1;-1;-1;-1;-1;;barisan range
 10382;1533;impassable;-1;-1;-1;-1;-1;;barisan range
-10354;12343;impassable;-1;-1;-1;-1;-1;;barisan range
+10382;12343;impassable;-1;-1;-1;-1;-1;;barisan range
 10354;12181;impassable;-1;-1;-1;-1;-1;;barisan range
 10354;7327;impassable;-1;-1;-1;-1;-1;;barisan range
 1460;7327;impassable;-1;-1;-1;-1;-1;;barisan range
 10522;12302;impassable;-1;-1;-1;-1;-1;;barisan range
 10522;7673;impassable;-1;-1;-1;-1;-1;;barisan range
-8360;1648;impassable;-1;-1;-1;-1;-1;;barisan range
+8360;4652;impassable;-1;-1;-1;-1;-1;;barisan range
+13399;1648;impassable;-1;-1;-1;-1;-1;;barisan range
 12488;1648;impassable;-1;-1;-1;-1;-1;;barisan range
 12488;10509;impassable;-1;-1;-1;-1;-1;;barisan range
-10297;4384;impassable;-1;-1;-1;-1;-1;;titiwangsa range
+7658;10509;impassable;-1;-1;-1;-1;-1;;barisan range
+13409;4384;impassable;-1;-1;-1;-1;-1;;titiwangsa range
 1376;4384;impassable;-1;-1;-1;-1;-1;;titiwangsa range
 1364;4384;impassable;-1;-1;-1;-1;-1;;titiwangsa range
 1364;10227;impassable;-1;-1;-1;-1;-1;;titiwangsa range

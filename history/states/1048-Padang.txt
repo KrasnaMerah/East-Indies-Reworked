@@ -1,0 +1,35 @@
+state={ #West Sumatra
+	id=1048
+	name="STATE_1048"
+	resources={
+		rubber = 7
+		oil = 9
+		coal = 7
+	}
+
+	history={
+		owner = INS
+		add_core_of = INS
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			10382 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			10522 1 #Sibolga
+		}
+		victory_points = {
+			10382 3 #Padang
+		}
+	}
+
+	provinces={
+		12415 7368 12343 10354 1460 4446 10522 8360 10382 1533 13395 1428 13397 12126 10194
+	}
+	manpower = 2952394
+	state_category = rural
+
+	local_supplies=1 
+}

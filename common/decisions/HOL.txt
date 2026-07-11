@@ -31,7 +31,7 @@ HOL_obtain_foreign_colonial_investments = {
 					has_full_control_of_state = PREV
 				}
 			}
-			1051 = {
+			335 = {
 				controller = {
 					OR = {
 						tag = ROOT
@@ -123,7 +123,7 @@ HOL_obtain_foreign_colonial_investments = {
 					has_full_control_of_state = PREV
 				}
 			}
-			1051 = {
+			335 = {
 				controller = {
 					OR = {
 						tag = ROOT
@@ -334,7 +334,7 @@ HOL_obtain_foreign_colonial_investments = {
 					check_variable = { var = east_indies_oil value = 0 compare = equals }
 				}
 				build_railway = { #Medan to Kutaraja
-					path = { 4652 1648 10509 7658 }
+					path = { 4652 1648 10509 13398 }
 				}
 			}
 			if = {
@@ -342,7 +342,7 @@ HOL_obtain_foreign_colonial_investments = {
 					check_variable = { var = east_indies_oil value = 1 compare = equals }
 				}
 				build_railway = { #Medan to Padang
-					path = { 4652 7673 12302 4446 1460 10354 10382 }
+					path = { 4652 13402 7673 12302 4446 1460 10354 10382 }
 				}
 			}
 			if = {
@@ -363,7 +363,7 @@ HOL_obtain_foreign_colonial_investments = {
 					check_variable = { var = east_indies_oil value = 3 compare = equals }
 				}
 				build_railway = { #Padang to Pakanbaru
-					path = { 10382 12343 10225 }
+					path = { 10382 10354 12343 12181 }
 				}
 			}
 			if = {
@@ -371,14 +371,14 @@ HOL_obtain_foreign_colonial_investments = {
 					check_variable = { var = east_indies_oil value = 4 compare = equals }
 				}
 				build_railway = { #Riau to Muaraenim
-					path = { 12343 1533 1373 10294 10150 1274 }
+					path = { 12343 12212 1373 10294 10150 }
 				}
 			}
 			if = {
 				limit = {
 					check_variable = { var = east_indies_oil value = 5 compare = equals }
 				}
-				672 = {
+				1048 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -398,7 +398,7 @@ HOL_obtain_foreign_colonial_investments = {
 					check_variable = { var = east_indies_oil value = 6 compare = equals }
 				}
 				build_railway = { #Balikpapan to Tarakan
-					path = { 10237 12196 1252 4236 10325 }
+					path = { 12225 10237 12196 1252 4236 10325 1404 }
 				}
 			}
 			if = {
@@ -406,9 +406,9 @@ HOL_obtain_foreign_colonial_investments = {
 					check_variable = { var = east_indies_oil value = 7 compare = equals }
 				}
 				build_railway = { #Medan to Padang (II)
-					path = { 4652 7673 12302 4446 1460 10354 10382 }
+					path = { 4652 13402 7673 12302 4446 1460 10354 10382 }
 				}
-				1048 = {
+				672 = {
 					add_building_construction = {
 						type = naval_base
 						level = 1
@@ -422,7 +422,7 @@ HOL_obtain_foreign_colonial_investments = {
 					check_variable = { var = east_indies_oil value = 8 compare = equals }
 				}
 				build_railway = { #Muaraenim to Padang
-					path = { 1274 10150 10294 1373 1533 12343 10382 }
+					path = { 10322 10150 10294 1373 12212 12343 10354 10382 }
 				}
 			}
 			if = {
@@ -513,7 +513,7 @@ HOL_obtain_foreign_colonial_investments = {
 		}
 	}
 
-	HOL_state_crackdown_north_sumatra = {
+	HOL_state_crackdown_west_sumatra = {
 
 		icon = eng_blackshirt_march
 
@@ -521,84 +521,6 @@ HOL_obtain_foreign_colonial_investments = {
 			NOT = {
 				has_country_flag = HOL_state_crackdown_flag
 			}
-			has_full_control_of_state = 672
-		}
-
-		highlight_states = {
-			highlight_state_targets = { state = 672 } 
-		}
-
-		on_map_mode = map_only
-
-		cost = 25
-
-		fire_only_once = yes
-
-		visible = {
-			has_completed_focus = HOL_secure_east_indies
-			672 = {
-				is_owned_and_controlled_by = INS
-			}
-		}
-
-		cancel_if_not_visible = yes
-
-		complete_effect = {
-			set_country_flag = HOL_state_crackdown_flag
-			random_list = {
-				25 = {
-					INS = {
-						add_stability = -0.01
-						add_popularity = { ideology = fascism popularity = 0.03 }
-					}
-				}
-				50 = {
-					INS = {
-						add_stability = -0.025
-						add_popularity = { ideology = fascism popularity = 0.05 }
-					}
-				}
-				25 = {
-					INS = {
-						add_stability = -0.03
-						add_popularity = { ideology = fascism popularity = 0.075 }
-					}
-				}
-			}
-		}
-
-		days_remove = 28
-
-		remove_effect = {
-			clr_country_flag = HOL_state_crackdown_flag
-			672 = {
-				set_state_flag = nsb_loyal_state
-			}
-		}
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				INS = {
-					has_stability < 0.581
-				}
-			}
-			modifier = {
-				factor = 0
-				INS = {
-					fascism > 0.6
-				}
-			}
-		}
-	}
-
-	HOL_state_crackdown_south_sumatra = {
-
-		icon = eng_blackshirt_march
-
-		available = {
-			NOT = { has_country_flag = HOL_state_crackdown_flag }
 			has_full_control_of_state = 1048
 		}
 
@@ -645,11 +567,169 @@ HOL_obtain_foreign_colonial_investments = {
 			}
 		}
 
-		days_remove = 21
+		days_remove = 28
 
 		remove_effect = {
 			clr_country_flag = HOL_state_crackdown_flag
 			1048 = {
+				set_state_flag = nsb_loyal_state
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				INS = {
+					has_stability < 0.581
+				}
+			}
+			modifier = {
+				factor = 0
+				INS = {
+					fascism > 0.6
+				}
+			}
+		}
+	}
+
+	HOL_state_crackdown_east_sumatra = {
+
+		icon = eng_blackshirt_march
+
+		available = {
+			NOT = {
+				has_country_flag = HOL_state_crackdown_flag
+			}
+			has_full_control_of_state = 1049
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 1049 } 
+		}
+
+		on_map_mode = map_only
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = HOL_secure_east_indies
+			1049 = {
+				is_owned_and_controlled_by = INS
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			set_country_flag = HOL_state_crackdown_flag
+			random_list = {
+				25 = {
+					INS = {
+						add_stability = -0.01
+						add_popularity = { ideology = fascism popularity = 0.03 }
+					}
+				}
+				50 = {
+					INS = {
+						add_stability = -0.025
+						add_popularity = { ideology = fascism popularity = 0.05 }
+					}
+				}
+				25 = {
+					INS = {
+						add_stability = -0.03
+						add_popularity = { ideology = fascism popularity = 0.075 }
+					}
+				}
+			}
+		}
+
+		days_remove = 28
+
+		remove_effect = {
+			clr_country_flag = HOL_state_crackdown_flag
+			1049 = {
+				set_state_flag = nsb_loyal_state
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				INS = {
+					has_stability < 0.581
+				}
+			}
+			modifier = {
+				factor = 0
+				INS = {
+					fascism > 0.6
+				}
+			}
+		}
+	}
+
+	HOL_state_crackdown_south_sumatra = {
+
+		icon = eng_blackshirt_march
+
+		available = {
+			NOT = { has_country_flag = HOL_state_crackdown_flag }
+			has_full_control_of_state = 672
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 672 } 
+		}
+
+		on_map_mode = map_only
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = HOL_secure_east_indies
+			672 = {
+				is_owned_and_controlled_by = INS
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			set_country_flag = HOL_state_crackdown_flag
+			random_list = {
+				25 = {
+					INS = {
+						add_stability = -0.01
+						add_popularity = { ideology = fascism popularity = 0.03 }
+					}
+				}
+				50 = {
+					INS = {
+						add_stability = -0.025
+						add_popularity = { ideology = fascism popularity = 0.05 }
+					}
+				}
+				25 = {
+					INS = {
+						add_stability = -0.03
+						add_popularity = { ideology = fascism popularity = 0.075 }
+					}
+				}
+			}
+		}
+
+		days_remove = 21
+
+		remove_effect = {
+			clr_country_flag = HOL_state_crackdown_flag
+			672 = {
 				set_state_flag = nsb_loyal_state
 			}
 		}
@@ -2959,9 +3039,9 @@ HOL_war_in_the_east = {
 							has_country_flag = INS_set_up_batavia
 						}
 					}
-					has_full_control_of_state = 335
+					has_full_control_of_state = 1058
 				}
-				has_full_control_of_state = 335
+				has_full_control_of_state = 1058
 			}
 		}
 
@@ -2989,7 +3069,7 @@ HOL_war_in_the_east = {
 			}
 			if = {
 				limit = {
-					has_full_control_of_state = 335
+					has_full_control_of_state = 1058
 				}
 				HOL = {
 					every_state = {
@@ -2998,7 +3078,7 @@ HOL_war_in_the_east = {
 						}
 						add_compliance = 70
 					}
-					set_capital = { state = 335 }
+					set_capital = { state = 1058 }
 				}
 				hidden_effect = { news_event = { id = mtg_news.46 days = 1 } }
 			}
@@ -3106,7 +3186,7 @@ HOL_war_in_the_east = {
 		}
 
 		available = {
-			has_full_control_of_state = 1051
+			has_full_control_of_state = 335
 		}
 
 		visible = {
@@ -3221,7 +3301,7 @@ HOL_war_in_the_east = {
 					province = 7421
 					value = 5
 				}
-				1051 = {
+				335 = {
 					add_building_construction = {
 						type = supply_node
 						level = 1
@@ -3248,15 +3328,17 @@ HOL_second_indonesian_rebellion = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = INS_control_java
+				controls_state = 1058
 				controls_state = 335
 				controls_state = 1051
-				controls_state = 1052
+				controls_state = 1086
 			}
 			custom_trigger_tooltip = {
 				tooltip = INS_control_sumatra
-				controls_state = 1047
-				controls_state = 672
+				controls_state = 1050
 				controls_state = 1048
+				controls_state = 1049
+				controls_state = 672
 			}
 		}
 
@@ -3265,12 +3347,14 @@ HOL_second_indonesian_rebellion = {
 		activation = {
 			has_war_with = INS
 			OR = {
-				NOT = { controls_state = 335 }
 				NOT = { controls_state = 1051 }
-				NOT = { controls_state = 1052 }
-				NOT = { controls_state = 1047 }
-				NOT = { controls_state = 672 }
+				NOT = { controls_state = 335 }
+				NOT = { controls_state = 1058 }
+				NOT = { controls_state = 1086 }
+				NOT = { controls_state = 1050 }
 				NOT = { controls_state = 1048 }
+				NOT = { controls_state = 1049 }
+				NOT = { controls_state = 672 }
 			}
 		}
 

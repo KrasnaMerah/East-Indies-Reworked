@@ -4,6 +4,9 @@ HOL_historical_plan = {
 
 	allowed = {
 		original_tag = HOL
+		NOT = {
+			has_dlc = "Thunder at Our Gates"
+		}
 	}
 	enable = {
 		OR = {
@@ -20,9 +23,6 @@ HOL_historical_plan = {
 				option = DEMOCRATIC_HISTORICAL
 			}
 		}
-		INS = {
-			is_ai = yes
-		}
 	}
 	abort = {
 		AND = {
@@ -37,48 +37,49 @@ HOL_historical_plan = {
 	}
 
 	ai_national_focuses = {
-		HOL_obtain_foreign_colonial_investments		#10	
-		HOL_the_crown_jewel_colony					#10 = 20
-		HOL_the_western_possessions					#10 = 30
-		HOL_abandon_the_gold_standard				#10 = 40
-		HOL_continue_the_public_works				#10 = 50	
-		HOL_finish_the_noordoostpolder				#10 = 60	
-		HOL_the_maastunnel							#10 = 70	
-		HOL_expand_the_artillerieinrichtingen		#10 = 80	
-		HOL_philips_focus							#10 = 90
-		HOL_expand_RD_facilities					#10 = 100
-		HOL_overturn_military_budget_cuts			#10 = 110
-		HOL_prepare_naval_expansion					#10 = 120
-		HOL_cornerstone_of_colonial_defense			#10 = 130
-		HOL_modernize_the_cruiser_fleet				#10	= 140
-		HOL_expand_curacao_oil_refineries			#10 = 150
-		HOL_prepare_the_inundation_lines			#10 = 160
-		HOL_germany_is_the_greater_threat			#5 = 165
-		HOL_antilles_defenses						#5 = 170
-		HOL_form_new_government						#10 = 180
-		HOL_gateway_to_europe						#10 = 190
-		HOL_appoint_new_supreme_commander			#10	= 200
-		HOL_modernize_our_infantry_equipment		#10 = 210
-		HOL_secret_staff_talks						#10 = 220
-		HOL_cave_to_the_british						#5 = 225
-		HOL_unity_through_democracy					#10 = 235
-		HOL_go_with_britain							#10 = 245
-		HOL_replace_the_defeatist_government		#10	= 255
-		HOL_de_vaarplicht							#10 = 265
-		HOL_expand_the_mld							#10 = 275
-		HOL_protect_the_colonies					#10 = 285
-		HOL_java									#10 = 295
-		HOL_reinforce_java							#5 = 300
-		HOL_modernize_the_air_fleet					#10 = 310
- 		HOL_the_singapore_conferences				#10 = 320
- 		HOL_ship_a_day_sinking_quotas				#10 = 330
- 		HOL_allied_technological_developments		#10 = 340
- 		HOL_american_west_indies_protectorate		#10	= 350
- 		HOL_protect_swpa							#10 = 360
- 		HOL_zandery_military_airport				#10	= 370
- 		HOL_open_second_paranam_bauxite_mine		#10 = 380
- 		HOL_request_allied_favors					#10	= 390
- 		HOL_the_foundations_of_defense				#10 = 400
+
+		HOL_obtain_foreign_colonial_investments					#March 10 1936	
+		HOL_the_crown_jewel_colony					#May 20 1936	
+		HOL_the_western_possessions					#July 30 1936	
+		HOL_abandon_the_gold_standard					#October 10 1936
+		HOL_continue_the_public_works					#October 10 1936	
+		HOL_finish_the_noordoostpolder					#December 20 1936	
+		HOL_the_maastunnel					#February 30 1937	
+		HOL_expand_the_artillerieinrichtingen					#May 10 1937	
+		HOL_philips_focus					#July 20 1937	
+		HOL_expand_RD_facilities					#September 30 1937	
+		HOL_overturn_military_budget_cuts					#December 10 1937
+		HOL_prepare_naval_expansion					#February 20 1938	
+		HOL_cornerstone_of_colonial_defense					#April 30 1938	
+		HOL_modernize_the_cruiser_fleet					#July 10 1938	
+		HOL_expand_curacao_oil_refineries				#September 20 1938
+		HOL_prepare_the_inundation_lines					#November 30 1938
+		HOL_germany_is_the_greater_threat					#February 10 1939	
+		HOL_antilles_defenses					#April 20 1939	
+		HOL_form_new_government					#June 30 1939
+		HOL_gateway_to_europe				#September 10 1939	
+		HOL_appoint_new_supreme_commander					#November 20 1939	
+		HOL_modernize_our_infantry_equipment					#January 30 1940
+		HOL_secret_staff_talks					#April 10 1940
+		HOL_cave_to_the_british					#June 20 1940	
+		HOL_unity_through_democracy					#August 30 1940
+		HOL_go_with_britain					#November 10 1940
+		HOL_replace_the_defeatist_government					#January 20 1941	
+		HOL_de_vaarplicht					#March 30 1941	
+		HOL_expand_the_mld					#June 10 1941
+		HOL_protect_the_colonies					#August 20 1941
+		HOL_java
+		HOL_reinforce_java					#October 30 1941	
+		HOL_modernize_the_air_fleet					#January 10
+ 		HOL_the_singapore_conferences					#March 20 1942
+ 		HOL_ship_a_day_sinking_quotas					#May 30 1942	
+ 		HOL_allied_technological_developments					#August 10 1942
+ 		HOL_american_west_indies_protectorate					#October 20 1942	
+ 		HOL_zandery_military_airport					#December 30 1942	
+ 		HOL_open_second_paranam_bauxite_mine					#March 10 1943
+ 		HOL_request_allied_favors				#May 20 1943	
+ 		HOL_the_foundations_of_defense					#July 30 1943
+
 	}
 
 	research = {

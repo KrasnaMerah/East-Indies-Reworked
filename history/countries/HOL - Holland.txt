@@ -13,26 +13,23 @@ if = {
 }
 
 if = {
-	limit = {
-		has_dlc = "By Blood Alone"
-	}
-	set_air_oob = "HOL_1936_air_bba"
-	set_technology = {
-		aa_lmg = 1
-		engines_1 = 1
-		aircraft_construction = 1
-		iw_small_airframe = 1
-		iw_medium_airframe = 1
-		early_bombs = 1
-		bba_early_transport_plane = 1
-		air_torpedoe_1 = 1
-	}
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "HOL_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			early_bombs = 1
+			bba_early_transport_plane = 1
+			air_torpedoe_1 = 1
+		}
 	else = {
 		set_air_oob = "HOL_1936_air_legacy"
 		set_technology = {
 			early_fighter = 1
 			early_bomber = 1
-			CAS1 = 1
 			early_transport_plane = 1
 		}
 	}
@@ -176,6 +173,14 @@ if = {
 		has_dlc = "Man the Guns"
 	}
 	recruit_character = HOL_anthony_fokker
+}
+
+if = {
+	limit = {
+		has_dlc = "Thunder at Our Gates"
+	}
+	recruit_character = INS_charles_welter
+	recruit_character = INS_andries_cornelis_dirk_de_graeff
 }
 
 1939.1.1 = {

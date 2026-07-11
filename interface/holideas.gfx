@@ -581,6 +581,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_indonesia_mohammad_noor"
+		texturefile = "gfx/ideas/INS/idea_ins_mohammad_noor.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_indonesia_mohammad_yamin"
 		texturefile = "gfx/ideas/INS/idea_ins_mohammad_yamin.dds"
 	}
@@ -623,6 +628,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_indonesia_overakker"
 		texturefile = "gfx/ideas/INS/idea_ins_overakker.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_indonesia_pakubuwono_tenth"
+		texturefile = "gfx/ideas/INS/idea_ins_pakubuwono_tenth.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_indonesia_pakubuwono_eleventh"
+		texturefile = "gfx/ideas/INS/idea_ins_pakubuwono_eleventh.dds"
 	}
 
 	spriteType = {
@@ -1267,7 +1282,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_idea_malaysia_tuanku_abdul_rahman"
-		texturefile = "gfx/ideas/MAL/idea_mal_tuanku_abdul_rahman.dds"
+		texturefile = "gfx/ideas/MAL/idea_mal_tunku_abdul_rahman.dds"
 	}
 
 	spriteType = {
@@ -1358,6 +1373,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_indonesia_buurman_van_vreden"
 		texturefile = "gfx/leaders/INS/portrait_ins_buurman_van_vreden.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_indonesia_cipto_mangunkusumo"
+		texturefile = "gfx/leaders/INS/portrait_ins_cipto_mangunkusumo.dds"
 	}
 
 	spriteType = {
@@ -1461,6 +1481,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_portrait_indonesia_mangkunegara_vii_army"
+		texturefile = "gfx/leaders/INS/portrait_ins_mangkunegara_vii_army.dds"
+	}
+
+	spriteType = {
 		name = "GFX_portrait_indonesia_mas_pardi"
 		texturefile = "gfx/leaders/INS/portrait_ins_mas_pardi.dds"
 	}
@@ -1491,6 +1516,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_portrait_indonesia_national_committee"
+		texturefile = "gfx/leaders/INS/portrait_ins_national_committee.dds"
+	}
+
+	spriteType = {
 		name = "GFX_portrait_indonesia_natsir"
 		texturefile = "gfx/leaders/INS/portrait_ins_natsir.dds"
 	}
@@ -1513,6 +1543,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_indonesia_overakker"
 		texturefile = "gfx/leaders/INS/portrait_ins_overakker.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_indonesia_pakubuwono_x"
+		texturefile = "gfx/leaders/INS/portrait_ins_pakubuwono_x.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_indonesia_pakubuwono_x_army"
+		texturefile = "gfx/leaders/INS/portrait_ins_pakubuwono_x_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_indonesia_pakubuwono_xi"
+		texturefile = "gfx/leaders/INS/portrait_ins_pakubuwono_xi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_indonesia_pakubuwono_xii"
+		texturefile = "gfx/leaders/INS/portrait_ins_pakubuwono_xii.dds"
 	}
 
 	spriteType = {
@@ -1592,7 +1642,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_portrait_indonesia_sudirman"
-		texturefile = "gfx/leaders/INS/r56_portrait_INS_sudirman.dds"
+		texturefile = "gfx/leaders/INS/portrait_ins_sudirman.dds"
 	}
 
 	spriteType = {
@@ -1726,13 +1776,30 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_portrait_kalimantan_mohammad_yusuf_alqadri"
+		texturefile = "gfx/leaders/KLM/portrait_klm_mohammad_yusuf_alqadri.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_kalimantan_syarif_hamid_alqadri"
+		texturefile = "gfx/leaders/KLM/portrait_klm_syarif_hamid_alqadri.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_kalimantan_syarif_hamid_alqadri_army"
+		texturefile = "gfx/leaders/KLM/portrait_klm_syarif_hamid_mil_leader.dds"
+	}
+
+
+
+	spriteType = {
 		name = "GFX_portrait_papua_eechoud"
-		texturefile = "gfx/leaders/PPA/portrait_ppa_eechoud.dds"
+		texturefile = "gfx/leaders/WPG/portrait_WPG_eechoud.dds"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_papua_rumagesan"
-		texturefile = "gfx/leaders/PPA/portrait_ppa_rumagesan.dds"
+		texturefile = "gfx/leaders/WPG/portrait_WPG_rumagesan.dds"
 	}
 
 	spriteType = {

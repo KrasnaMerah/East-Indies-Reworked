@@ -26,6 +26,24 @@ is_lon_mandate_territory = {
 	}
 }
 
+INS_is_indonesian_state = {
+	OR = {
+		original_tag = INS
+		original_tag = ATJ
+		original_tag = SSI
+		original_tag = JVA
+		original_tag = EIS
+		original_tag = POK
+		original_tag = KUT
+		original_tag = MNH
+		original_tag = GOW
+		original_tag = TNE
+		original_tag = MLK
+		original_tag = WPG
+		original_tag = TML
+	}
+}
+
 INS_state_is_southeast_asia = {
 	OR = {
 		state = 286
@@ -89,13 +107,15 @@ INS_state_is_southeast_asia = {
 		state = 1067
 		state = 1068
 		state = 1069
-		state = 1070
-		state = 1071
-		state = 1072
 		state = 1073
-		state = 1074
-		state = 1075
 		state = 1076
+		state = 1077
+		state = 1078
+		state = 1082
+		state = 1083
+		state = 1084
+		state = 1085
+		state = 1086
 	}
 }
 
@@ -115,7 +135,14 @@ is_asean_state = {
 		original_tag = CHM
 		original_tag = VIE
 		original_tag = ATJ
-		original_tag = KLM
+		original_tag = SSI
+		original_tag = JVA
+		original_tag = BLI
+		original_tag = EIS
+		original_tag = POK
+		original_tag = KUT
+		original_tag = MNH
+		original_tag = GOW
 		original_tag = WPG
 		original_tag = MLK
 		original_tag = TML
@@ -221,11 +248,17 @@ is_southwest_pacific_state = {
 		original_tag = CHM
 		original_tag = VIE
 		original_tag = ATJ
+		original_tag = JVA
+		original_tag = EIS
 		original_tag = SAB
 		original_tag = SAR
 		original_tag = BRN
-		original_tag = KLM
+		original_tag = POK
+		original_tag = KUT
+		original_tag = MNH
+		original_tag = GOW
 		original_tag = WPG
+		original_tag = TNE
 		original_tag = MLK
 		original_tag = TML
 		original_tag = SLU
@@ -291,8 +324,10 @@ is_east_asian_state = {
 
 is_muslim_nation = {
 	OR = {
+		original_tag = ATJ
 		original_tag = SLU
 		original_tag = KLM
+		original_tag = KUT
 		original_tag = BRN
 		original_tag = MAL
 		original_tag = BAN
@@ -382,6 +417,19 @@ is_monarchist = {
 					character = JAP_emperor_hirohito
 					ruling_only = yes
 				}
+				has_country_leader = {
+					character = JAP_empress_nagako
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = JAP_emperor_yasuhito
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = JAP_emperor_nobuhito
+					ruling_only = yes
+				}
+				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
 			}
 		}
 		AND = {

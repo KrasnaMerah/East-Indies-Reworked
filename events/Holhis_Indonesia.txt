@@ -839,7 +839,7 @@ country_event = { #11 - Hamengkubuwono Eighth's passing
 			}
 			add_corps_commander_role = {
 				character = INS_hamengkubuwono_ninth
-				traits = { politically_connected }
+				traits = { INS_loyalty_to_indonesia politically_connected }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 1
@@ -2550,18 +2550,18 @@ country_event = { #49 - Dr. Sutomo's passing
 		}
 		if = {
 			limit = {
-				has_idea = INS_sutomo
+				has_idea = INS_dr_sutomo
 				OR = {
 					has_completed_focus = INS_challenge_dutch_elitism
 					has_completed_focus = INS_appease_nationalists
 				}
 			}
-			remove_ideas = INS_sutomo
+			remove_ideas = INS_dr_sutomo
 			add_ideas = INS_mohammad_husni_thamrin
 		}
-		retire_character = INS_sutomo
+		retire_character = INS_dr_sutomo
 		hidden_effect = {
-			set_country_flag = INS_sutomo_passed
+			set_country_flag = INS_dr_sutomo_passed
 			335 = {
 				add_manpower = -1
 			}
@@ -2609,18 +2609,18 @@ country_event = { #49 - Dr. Sutomo's passing
 		}
 		if = {
 			limit = {
-				has_idea = INS_sutomo
+				has_idea = INS_dr_sutomo
 				OR = {
 					has_completed_focus = INS_challenge_dutch_elitism
 					has_completed_focus = INS_appease_nationalists
 				}
 			}
-			remove_ideas = INS_sutomo
+			remove_ideas = INS_dr_sutomo
 			add_ideas = INS_mohammad_husni_thamrin
 		}
-		retire_character = INS_sutomo
+		retire_character = INS_dr_sutomo
 		hidden_effect = {
-			set_country_flag = INS_sutomo_passed
+			set_country_flag = INS_dr_sutomo_passed
 			335 = {
 				add_manpower = -1
 			}
@@ -3097,7 +3097,7 @@ country_event = { #Navair 1 - Asking the Dutch to transfer the East Indies Fleet
 			modifier = {
 				factor = 2
 				INS = {
-					has_completed_focus = INS_improve_dutch_relations
+					has_completed_focus = INS_jewel_of_the_crown
 				}
 			}
 			modifier = {
@@ -3146,7 +3146,7 @@ country_event = { #Navair 1 - Asking the Dutch to transfer the East Indies Fleet
 			modifier = {
 				factor = 0.5
 				INS = {
-					has_completed_focus = INS_improve_dutch_relations
+					has_completed_focus = INS_jewel_of_the_crown
 				}
 			}
 			modifier = {
@@ -4168,7 +4168,7 @@ country_event = { #SWPA 6 - request Timor access
 								target = ROOT
 								value < 11
 							}
-							has_completed_focus = POR_develop_timor
+							has_completed_focus = POR_revert_the_local_autonomy_policies
 						}
 					}
 				}
@@ -5222,7 +5222,7 @@ country_event = { #Japindo 1 - Japan setting up Indonesian occupation
 							OR = {
 								state = 1054
 								state = 668
-								state = 1055
+								state = 1055 #North Moluccas
 								state = 738
 								state = 669
 								state = 1056
@@ -5393,28 +5393,27 @@ country_event = { #Japindo 1 - Japan setting up Indonesian occupation
 		trigger = {
 			NOT = { has_dlc = "Waking the Tiger" }
 		}
-		if = {
+		if = { #North Sulawesi
 			limit = { 1054 = { owner = { original_tag = INS } } }
 			set_state_controller = 1054
 		}
-		if = {
+		if = { #Moluccas
 			limit = { 668 = { owner = { original_tag = INS } } }
 			set_state_controller = 668
 		}
-		if = {
+		if = { #North Moluccas
 			limit = { 1055 = { owner = { original_tag = INS } } }
 			set_state_controller = 1055
 		}
-		if = {
+		if = { #Northwest Papua
 			limit = { 669 = { owner = { original_tag = INS } } }
 			set_state_controller = 669
 		}
-		if = {
+		if = { #Vogelkop
 			limit = { 1056 = { owner = { original_tag = INS } } }
 			set_state_controller = 1056
 		}
 		INS = {
-			add_ideas = INS_defeatism
 			if = {
 				limit = {
 					has_country_flag = INS_stuwgroep_evacuated_flag
@@ -6212,17 +6211,6 @@ country_event = { #Nationalists 4 - PNI Uprising
 				}
 				promote_leader = yes
 			}
-			add_advisor_role = {
-				character = INS_ernest_douwes_dekker
-				advisor = {
-					slot = high_command
-					idea_token = INS_ernest_douwes_dekker_command
-					traits = {
-						army_regrouping_1
-					}
-					cost = 75
-				}
-			}
 			if = {
 				limit = {
 					NOT = {
@@ -6232,23 +6220,12 @@ country_event = { #Nationalists 4 - PNI Uprising
 				set_country_flag = INS_urip_general
 				add_corps_commander_role = {
 					character = INS_urip_sumoharjo
-					traits = { unyielding_defender jungle_rat guerilla_fighter inflexible_strategist }
+					traits = { INS_loyalty_to_indonesia unyielding_defender jungle_rat guerilla_fighter inflexible_strategist }
 					skill = 2
 					attack_skill = 2
 					defense_skill = 1
 					planning_skill = 1
 					logistics_skill = 2
-				}
-				add_advisor_role = {
-					character = INS_urip_sumoharjo
-					advisor = {
-						slot = high_command
-						idea_token = INS_urip_sumoharjo
-						traits = {
-							army_logistics_2
-						}
-						cost = 50
-					}
 				}
 			}
 			if = {
@@ -6260,7 +6237,7 @@ country_event = { #Nationalists 4 - PNI Uprising
 				set_country_flag = INS_gatot_general
 				add_corps_commander_role = {
 					character = INS_gatot_subroto
-					traits = { defensive_doctrine jungle_rat }
+					traits = { INS_loyalty_to_indonesia defensive_doctrine jungle_rat }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 2
@@ -6288,7 +6265,7 @@ country_event = { #Nationalists 4 - PNI Uprising
 				}
 				add_naval_commander_role = {
 					character = INS_mas_pardi
-					traits = { bold }
+					traits = { INS_loyalty_to_indonesia bold }
 					skill = 1
 					attack_skill = 2
 					defense_skill = 1
@@ -6685,7 +6662,7 @@ country_event = { #Commies 1 - Who shall lead PKI? 3rd PKI National Congress - 1
 		remove_ideas = INS_gerindo_militias_positive
 		add_field_marshal_role = {
 			character = INS_muso_munawar
-			traits = { politically_connected }
+			traits = { INS_loyalty_to_indonesia politically_connected }
 			skill = 1
 			attack_skill = 2
 			defense_skill = 1
@@ -6726,7 +6703,7 @@ country_event = { #Commies 1 - Who shall lead PKI? 3rd PKI National Congress - 1
 		remove_ideas = INS_gerindo_militias_positive
 		add_field_marshal_role = {
 			character = INS_tan_malaka
-			traits = { guerilla_fighter }
+			traits = { INS_loyalty_to_indonesia guerilla_fighter }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 1
@@ -6795,7 +6772,7 @@ country_event = { #Commies 1 - Who shall lead PKI? 3rd PKI National Congress - 1
 		}
 		add_field_marshal_role = {
 			character = INS_tan_malaka
-			traits = { guerilla_fighter }
+			traits = { INS_loyalty_to_indonesia guerilla_fighter }
 			skill = 3
 			attack_skill = 1
 			defense_skill = 1
@@ -7728,13 +7705,13 @@ country_event = { #Commies 11 - Communist Uprising
 			if = {
 				limit = {
 					NOT = {
-						has_country_flag = INS_sutomo_passed
+						has_country_flag = INS_dr_sutomo_passed
 					}
 				}
 				add_country_leader_role = {
-					character = INS_sutomo
+					character = INS_dr_sutomo
 					country_leader = {
-						desc = INS_sutomo_desc
+						desc = INS_dr_sutomo_desc
 						expire = "1965.1.1"
 						ideology = fascism_ideology
 						traits = {
@@ -7743,7 +7720,7 @@ country_event = { #Commies 11 - Communist Uprising
 					}
 					promote_leader = yes
 				}
-				INS_sutomo = {
+				INS_dr_sutomo = {
 					add_trait = {
 						slot = political_advisor
 						trait = conservative_amongst_radicals_f
@@ -7756,7 +7733,7 @@ country_event = { #Commies 11 - Communist Uprising
 			}
 			if = {
 				limit = {
-					has_country_flag = INS_sutomo_passed
+					has_country_flag = INS_dr_sutomo_passed
 				}
 				add_country_leader_role = {
 					character = INS_mohammad_husni_thamrin
@@ -7843,7 +7820,7 @@ country_event = { #Commies 11 - Communist Uprising
 				set_country_flag = INS_urip_general
 				add_corps_commander_role = {
 					character = INS_urip_sumoharjo
-					traits = { unyielding_defender jungle_rat guerilla_fighter inflexible_strategist }
+					traits = { INS_loyalty_to_indonesia unyielding_defender jungle_rat guerilla_fighter inflexible_strategist }
 					skill = 2
 					attack_skill = 2
 					defense_skill = 1
@@ -7871,7 +7848,7 @@ country_event = { #Commies 11 - Communist Uprising
 				set_country_flag = INS_gatot_general
 				add_corps_commander_role = {
 					character = INS_gatot_subroto
-					traits = { defensive_doctrine jungle_rat }
+					traits = { INS_loyalty_to_indonesia INS_loyalty_to_netherlands defensive_doctrine jungle_rat }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 2
@@ -7908,7 +7885,7 @@ country_event = { #Commies 11 - Communist Uprising
 				}
 				add_naval_commander_role = {
 					character = INS_mas_pardi
-					traits = { bold }
+					traits = { INS_loyalty_to_indonesia bold }
 					skill = 1
 					attack_skill = 2
 					defense_skill = 1
@@ -9878,7 +9855,7 @@ country_event = { #Commies 35 - 4th PKI National Congress - 1940-1945
 		add_war_support = 0.075
 		add_field_marshal_role = {
 			character = INS_muso_munawar
-			traits = { politically_connected }
+			traits = { INS_loyalty_to_indonesia politically_connected }
 			skill = 1
 			attack_skill = 2
 			defense_skill = 1
@@ -9966,7 +9943,7 @@ country_event = { #Commies 35 - 4th PKI National Congress - 1940-1945
 		promote_character = INS_tan_malaka
 		add_field_marshal_role = {
 			character = INS_tan_malaka
-			traits = { guerilla_fighter }
+			traits = { INS_loyalty_to_indonesia guerilla_fighter }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 1
@@ -10174,7 +10151,7 @@ country_event = { #Commies 36 - 5th PKI National Congress - 1945-1950
 		add_war_support = 0.075
 		add_field_marshal_role = {
 			character = INS_muso_munawar
-			traits = { politically_connected }
+			traits = { INS_loyalty_to_indonesia politically_connected }
 			skill = 1
 			attack_skill = 2
 			defense_skill = 1
@@ -10867,7 +10844,7 @@ country_event = { #Commies 38 - 7th PKI National Congress - 1955-1960
 		promote_character = INS_tan_malaka
 		add_field_marshal_role = {
 			character = INS_tan_malaka
-			traits = { guerilla_fighter }
+			traits = { INS_loyalty_to_indonesia guerilla_fighter }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 1
@@ -12183,20 +12160,9 @@ country_event = { #NSB 5 - NSB Uprising
 						owner = PREV
 					}
 				}
-				add_advisor_role = {
-					character = INS_ernest_douwes_dekker
-					advisor = {
-						slot = high_command
-						idea_token = INS_ernest_douwes_dekker_command
-						traits = {
-							army_regrouping_1
-						}
-						cost = 75
-					}
-				}
 				add_corps_commander_role = {
 					character = INS_urip_sumoharjo
-					traits = { unyielding_defender jungle_rat guerilla_fighter inflexible_strategist }
+					traits = { INS_loyalty_to_indonesia unyielding_defender jungle_rat guerilla_fighter inflexible_strategist }
 					skill = 2
 					attack_skill = 2
 					defense_skill = 1
@@ -12216,7 +12182,7 @@ country_event = { #NSB 5 - NSB Uprising
 				}
 				add_corps_commander_role = {
 					character = INS_gatot_subroto
-					traits = { defensive_doctrine jungle_rat }
+					traits = { INS_loyalty_to_indonesia defensive_doctrine jungle_rat }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 2
@@ -12243,7 +12209,7 @@ country_event = { #NSB 5 - NSB Uprising
 					}
 					add_naval_commander_role = {
 						character = INS_mas_pardi
-						traits = { bold }
+						traits = { INS_loyalty_to_indonesia bold }
 						skill = 1
 						attack_skill = 2
 						defense_skill = 1
@@ -12856,7 +12822,7 @@ country_event = { #Volskraad 2 - Petition signed by Indonesians
 			modifier = {
 				factor = 4
 				INS = {
-					has_completed_focus = INS_improve_dutch_relations
+					has_completed_focus = INS_jewel_of_the_crown
 				}
 			}
 			modifier = {
@@ -12935,7 +12901,7 @@ country_event = { #Volskraad 3 - Netherlands supports dominion or not
 			modifier = {
 				factor = 4
 				INS = {
-					has_completed_focus = INS_improve_dutch_relations
+					has_completed_focus = INS_jewel_of_the_crown
 				}
 			}
 			modifier = {
@@ -13670,17 +13636,6 @@ country_event = { #Volskraad 10 - Parindra Uprising
 				}
 				promote_leader = yes
 			}
-			add_advisor_role = {
-				character = INS_ernest_douwes_dekker
-				advisor = {
-					slot = high_command
-					idea_token = INS_ernest_douwes_dekker_command
-					traits = {
-						army_regrouping_1
-					}
-					cost = 75
-				}
-			}
 			if = {
 				limit = {
 					NOT = {
@@ -13690,7 +13645,7 @@ country_event = { #Volskraad 10 - Parindra Uprising
 				set_country_flag = INS_urip_general
 				add_corps_commander_role = {
 					character = INS_urip_sumoharjo
-					traits = { unyielding_defender jungle_rat guerilla_fighter inflexible_strategist }
+					traits = { INS_loyalty_to_indonesia unyielding_defender jungle_rat guerilla_fighter inflexible_strategist }
 					skill = 2
 					attack_skill = 2
 					defense_skill = 1
@@ -13718,7 +13673,7 @@ country_event = { #Volskraad 10 - Parindra Uprising
 				set_country_flag = INS_gatot_general
 				add_corps_commander_role = {
 					character = INS_gatot_subroto
-					traits = { defensive_doctrine jungle_rat }
+					traits = { INS_loyalty_to_indonesia defensive_doctrine jungle_rat }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 2
@@ -13746,7 +13701,7 @@ country_event = { #Volskraad 10 - Parindra Uprising
 				}
 				add_naval_commander_role = {
 					character = INS_mas_pardi
-					traits = { bold }
+					traits = { INS_loyalty_to_indonesia bold }
 					skill = 1
 					attack_skill = 2
 					defense_skill = 1
@@ -14078,7 +14033,7 @@ country_event = { #Volksraad 14 - Dr. Sutomo's passing in Parindrist Indonesia
 		date > 1938.3.31
 		has_start_date < 1936.01.02
 		NOT = {
-			has_country_flag = INS_sutomo_passed
+			has_country_flag = INS_dr_sutomo_passed
 		}
 	}
 
@@ -14086,7 +14041,7 @@ country_event = { #Volksraad 14 - Dr. Sutomo's passing in Parindrist Indonesia
 
 	immediate = {
 		hidden_effect = {
-			set_country_flag = INS_sutomo_passed
+			set_country_flag = INS_dr_sutomo_passed
 			335 = {
 				add_manpower = -1
 			}
@@ -14107,7 +14062,7 @@ country_event = { #Volksraad 14 - Dr. Sutomo's passing in Parindrist Indonesia
 				traits = { indies_nationalist_leader }
 			}
 		}
-		retire_character = INS_sutomo
+		retire_character = INS_dr_sutomo
 		ai_chance = {
 			base = 20
 		}
@@ -14124,7 +14079,7 @@ country_event = { #Volksraad 14 - Dr. Sutomo's passing in Parindrist Indonesia
 				traits = { cautious_japan devoted_corporatist }
 			}
 		}
-		retire_character = INS_sutomo
+		retire_character = INS_dr_sutomo
 		ai_chance = {
 			base = 30
 		}
@@ -14580,6 +14535,8 @@ country_event = { #Volksraad 19 - Thamrin died in prison
 
 	option = { #Goddamit
 		name = holhis_volksraad.19.a
+		add_ideas = INS_defeatism
+		set_country_flag = INS_thamrin_died
 		retire_character = INS_mohammad_husni_thamrin
 		add_country_leader_role = {
 			character = INS_sukarjo_wiryopranoto
@@ -14613,6 +14570,8 @@ country_event = { #Volksraad 20 - Thamrin died in his house
 	option = { #Goddamit
 		name = holhis_volksraad.20.a
 		retire_character = INS_mohammad_husni_thamrin
+		add_ideas = INS_defeatism
+		set_country_flag = INS_thamrin_died
 		add_country_leader_role = {
 			character = INS_sukarjo_wiryopranoto
 			country_leader = {
@@ -14878,6 +14837,7 @@ country_event = { #Council 2 - Van Kan retires
 		set_country_flag = INS_raad_member_kuneman
 		set_country_flag = INS_covdp_east_java_gov_flag
 		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = INS_harry_kuneman
 		show_ideas_tooltip = INS_governor_van_der_plas
 
 		hidden_effect = {

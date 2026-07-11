@@ -1097,6 +1097,79 @@ characters = {
 		}
 	}
 
+	INS_andries_cornelis_dirk_de_graeff = {
+		name = INS_andries_cornelis_dirk_de_graeff
+
+		portraits = {
+			army = {
+				small = GFX_portrait_INS_andries_graeff_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = INS_andries_cornelis_dirk_de_graeff
+			can_be_fired = no
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = HOL
+				}
+			}
+			visible = {
+				OR = {
+					AND = {
+						original_tag = INS
+						is_subject_of = HOL
+					}
+					original_tag = HOL
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = INS
+					}
+					is_subject_of = HOL
+				}
+			}
+			traits = {
+				TAOG_foreign_affairs_minister
+			}
+		}	
+	}
+
+	INS_charles_welter = {
+		name = INS_charles_welter
+
+		portraits = {
+			army = {
+				small = GFX_portrait_PLACEHOLDER_small
+			}
+		}
+
+		#advisor = {
+		#	slot = political_advisor
+		#	idea_token = INS_charles_welter
+		#	allowed = {
+		#		original_tag = INS
+		#	}
+		#	visible = {
+		#		NOT = {
+		#			has_country_flag = INS_freed_from_dutch
+		#		}
+		#	}
+		#	available = {
+		#		NOT = {
+		#			has_country_flag = INS_freed_from_dutch
+		#		}
+		#	}
+		#	traits = {
+		#		TAOG_foreign_affairs_minister
+		#	}
+		#}	
+	}
+
 	HOL_abraham_vromans = {
 		name = HOL_abraham_vromans
 		portraits = {

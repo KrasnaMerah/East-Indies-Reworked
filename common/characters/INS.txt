@@ -43,8 +43,8 @@ characters = {
 				has_country_flag = INS_de_jonge_resigned
 				NOT = {
 					has_country_leader = {
-						name = "Tjarda van Starkenborgh"
-						ruling_only = yes 
+						character = INS_a_t_van_starkenborgh_stachouwer
+						ruling_only = yes
 					}
 				}
 			}
@@ -123,8 +123,8 @@ characters = {
 					INS = {
 						OR = {
 							has_country_leader = {
-								name = "Hubertus van Mook"
-								ruling_only = yes 
+								character = INS_hubertus_van_mook
+								ruling_only = yes
 							}
 							has_completed_focus = INS_make_use_nsboi
 						}
@@ -217,44 +217,54 @@ characters = {
 				has_dlc = "Man the Guns"
 			}
 			available = {
-				has_completed_focus = INS_make_use_nsboi
+				if = {
+					limit = {
+						tag = INS
+					}
+					has_completed_focus = INS_make_use_nsboi
+				}
 				NOT = {
 					has_government = communism
 				}
 				NOT = {
 					INS = {
 						has_country_leader = {
-							name = "Anton van der Laaken"
-							ruling_only = yes 
+							character = INS_anton_van_der_laaken
+							ruling_only = yes
 						}
 					}
 				}
 				NOT = { has_country_flag = INS_nsb_arrested_flag }
 			}
 			visible = {
-				OR = {
-					if = {
-						limit = {
-							has_completed_focus = INS_discourage_democratic_reforms
-						}
-						NOT = {
-							has_completed_focus = INS_revive_spirit_1926
-						}
+				if = {
+					limit = {
+						tag = INS
 					}
-					if = {
-						limit = {
-							has_completed_focus = INS_continue_reform
+					OR = {
+						if = {
+							limit = {
+								has_completed_focus = INS_discourage_democratic_reforms
+							}
+							NOT = {
+								has_completed_focus = INS_revive_spirit_1926
+							}
 						}
-						NOT = {
-							has_country_flag = INS_de_jonge_resigned
+						if = {
+							limit = {
+								has_completed_focus = INS_continue_reform
+							}
+							NOT = {
+								has_country_flag = INS_de_jonge_resigned
+							}
 						}
 					}
 				}
 				NOT = {
 					INS = {
 						has_country_leader = {
-							name = "Anton van der Laaken"
-							ruling_only = yes 
+							character = INS_anton_van_der_laaken
+							ruling_only = yes
 						}
 					}
 				}
@@ -291,15 +301,18 @@ characters = {
 						has_character_flag = INS_imprisoned_flag
 					}
 				}
-				NOT = {
-					has_idea = INS_group_partai_nasional
+				if = {
+					limit = { tag = INS }
+					NOT = {
+						has_idea = INS_group_partai_nasional
+					}
 				}
 				compare_autonomy_state > autonomy_colony
 			}
 			visible = {
 				NOT = {
 					has_country_leader = {
-						name = "Sukarno"
+						character = INS_sukarno
 						ruling_only = yes
 					}
 				}
@@ -336,6 +349,7 @@ characters = {
 				OR = {
 					original_tag = INS
 					tag = ATJ
+					tag = SSI
 				}
 				has_dlc = "Man the Guns"
 			}
@@ -351,14 +365,17 @@ characters = {
 				NOT = {
 					has_government = fascism
 				}
-				NOT = {
-					has_idea = INS_group_partai_nasional
+				if = {
+					limit = { tag = INS }
+					NOT = {
+						has_idea = INS_group_partai_nasional
+					}
 				}
 			}
 			visible = {
 				NOT = {
 					has_country_leader = {
-						name = "Mohammad Hatta"
+						character = INS_mohammad_hatta
 						ruling_only = yes
 					}
 				}
@@ -417,6 +434,7 @@ characters = {
 				OR = {
 					original_tag = INS
 					tag = ATJ
+					tag = SSI
 				}
 				has_dlc = "Man the Guns"
 			}
@@ -437,15 +455,15 @@ characters = {
 			visible = {
 				NOT = {
 					has_country_leader = {
-						name = "Tan Malaka"
+						character = INS_tan_malaka
 						ruling_only = yes
 					}
 				}
-				NOT = {
-					if = {
-						limit = {
-							has_completed_focus = INS_upheld_status_quo
-						}
+				if = {
+					limit = {
+						has_completed_focus = INS_upheld_status_quo
+					}
+					NOT = {
 						is_puppet_of = HOL
 					}
 				}
@@ -480,7 +498,10 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_muso_munawar
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 				has_dlc = "Man the Guns"
 			}
 			available = {
@@ -500,7 +521,7 @@ characters = {
 			visible = {
 				NOT = {
 					has_country_leader = {
-						name = "Muso Munawar"
+						character = INS_muso_munawar
 						ruling_only = yes
 					}
 				}
@@ -538,6 +559,7 @@ characters = {
 				OR = {
 					original_tag = INS
 					tag = ATJ
+					tag = SSI
 				}
 				has_dlc = "Man the Guns"
 			}
@@ -588,7 +610,7 @@ characters = {
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Amir Sjarifuddin Harahap"
+						character = INS_amir_syarifuddin
 						ruling_only = yes
 					}
 				}
@@ -639,8 +661,8 @@ characters = {
 		}
 	}
 
-	INS_sutomo = {
-		name = INS_sutomo
+	INS_dr_sutomo = {
+		name = INS_dr_sutomo
 		portraits = {
 			civilian = {
 				large = GFX_portrait_indonesia_sutomo
@@ -650,7 +672,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = INS_sutomo_desc
+			desc = INS_dr_sutomo_desc
 			ideology = conservatism
 			traits = {
 				conservative_amongst_radicals
@@ -660,9 +682,12 @@ characters = {
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = INS_sutomo
+			idea_token = INS_dr_sutomo
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 			}
 			available = {
 				if = {
@@ -687,8 +712,8 @@ characters = {
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Sutomo"
-						ruling_only = yes 
+						character = INS_dr_sutomo
+						ruling_only = yes
 					}
 				}
 			}
@@ -698,8 +723,8 @@ characters = {
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Sutomo"
-						ruling_only = yes 
+						character = INS_dr_sutomo
+						ruling_only = yes
 					}
 				}
 			}
@@ -710,8 +735,8 @@ characters = {
 				base = 20
 				modifier = {
 					has_country_leader = {
-						name = "Sukarno"
-						ruling_only = yes 
+						character = INS_sukarno
+						ruling_only = yes
 					}
 					factor = 10
 				}
@@ -736,19 +761,26 @@ characters = {
 				original_tag = INS
 			}
 			available = {
-				has_completed_focus = INS_expel_the_colonials
 				if = {
 					limit = {
-						has_completed_focus = INS_break_the_chains
+						NOT = {
+							has_global_flag = INS_has_balkanized_flag
+						}
 					}
-					NOT = {
-						has_completed_focus = INS_reappropriation
+					has_completed_focus = INS_expel_the_colonials
+					if = {
+						limit = {
+							has_completed_focus = INS_break_the_chains
+						}
+						NOT = {
+							has_completed_focus = INS_reappropriation
+						}
 					}
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Mohammad Husni Thamrin"
-						ruling_only = yes 
+						character = INS_mohammad_husni_thamrin
+						ruling_only = yes
 					}
 				}
 				if = {
@@ -769,14 +801,21 @@ characters = {
 				}
 			}
 			visible = {
-				OR = {
-					has_completed_focus = INS_discourage_democratic_reforms
-					has_completed_focus = INS_first_election
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = INS_has_balkanized_flag
+						}
+					}
+					OR = {
+						has_completed_focus = INS_discourage_democratic_reforms
+						has_completed_focus = INS_first_election
+					}
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Mohammad Husni Thamrin"
-						ruling_only = yes 
+						character = INS_mohammad_husni_thamrin
+						ruling_only = yes
 					}
 				}
 			}
@@ -806,8 +845,8 @@ characters = {
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Mohammad Husni Thamrin"
-						ruling_only = yes 
+						character = INS_mohammad_husni_thamrin
+						ruling_only = yes
 					}
 				}
 				if = {
@@ -828,6 +867,7 @@ characters = {
 				}
 			}
 			visible = {
+				has_completed_focus = INS_continue_reform
 				NOT = {
 					OR = {
 						has_completed_focus = INS_discourage_democratic_reforms
@@ -836,8 +876,8 @@ characters = {
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Mohammad Husni Thamrin"
-						ruling_only = yes 
+						character = INS_mohammad_husni_thamrin
+						ruling_only = yes
 					}
 				}
 			}
@@ -875,19 +915,28 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_sukarjo
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = INS_placate_nationalists
-					has_completed_focus = INS_appease_nationalists
+				if = {
+					limit = { tag = INS }
+					OR = {
+						has_completed_focus = INS_placate_nationalists
+						has_completed_focus = INS_appease_nationalists
+					}
 				}
 			}
 			visible = {
-				has_country_flag = INS_thamrin_died
+				if = {
+					limit = { tag = INS }
+					has_country_flag = INS_thamrin_died
+				}
 			}
 			traits = {
-				parindra_leader
+				national_propagandist
 			}
 			ai_will_do = {
 				base = 20
@@ -912,7 +961,7 @@ characters = {
 				OR = {
 					original_tag = INS
 					original_tag = HOL #Palar starts here
-					tag = EIS
+					original_tag = MNH
 				}
 				has_dlc = "Man the Guns"
 			}
@@ -941,8 +990,8 @@ characters = {
 				base = 20
 				modifier = {
 					has_country_leader = {
-						name = "Sukarno"
-						ruling_only = yes 
+						character = INS_sukarno
+						ruling_only = yes
 					}
 					factor = 10
 				}
@@ -969,25 +1018,32 @@ characters = {
 			available = {
 				if = {
 					limit = {
-						has_character_flag = INS_psii_member_flag
-					}
-					OR = {
-						has_completed_focus = INS_invite_psii
-						has_country_flag = INS_ally_gapi_flag
+						NOT = {
+							has_global_flag = INS_has_balkanized_flag
+						}
 					}
 					if = {
 						limit = {
+							has_character_flag = INS_psii_member_flag
+						}
+						OR = {
+							has_completed_focus = INS_invite_psii
 							has_country_flag = INS_ally_gapi_flag
 						}
-						NOT = {
-							has_idea = INS_group_gapi
+						if = {
+							limit = {
+								has_country_flag = INS_ally_gapi_flag
+							}
+							NOT = {
+								has_idea = INS_group_gapi
+							}
 						}
 					}
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Abikusno Cokrosuyoso"
-						ruling_only = yes 
+						character = INS_abikusno_cokrosuyoso
+						ruling_only = yes
 					}
 				}
 			}
@@ -1023,7 +1079,10 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_abdulkadir_wijoyoatmojo
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 				has_dlc = "Man the Guns"
 			}
 			available = {
@@ -1031,16 +1090,19 @@ characters = {
 					has_government = neutrality
 					has_government = democratic
 				}
-				OR = {
-					has_completed_focus = INS_prepare_flight
-					has_completed_focus = INS_indies_nation
+				if = {
+					limit = { tag = INS }
+					OR = {
+						has_completed_focus = INS_prepare_flight
+						has_completed_focus = INS_indies_nation
+					}
 				}
+				has_capitulated = yes
 			}
 			visible = {
-				has_country_flag = INS_de_jonge_resigned
 				OR = {
 					has_country_leader = {
-						name = "Hubertus van Mook"
+						character = INS_hubertus_van_mook
 						ruling_only = yes
 					}
 					is_subject = no
@@ -1049,6 +1111,7 @@ characters = {
 					limit = {
 						tag = INS
 					}
+					has_country_flag = INS_de_jonge_resigned
 					NOT = {
 						has_completed_focus = INS_make_use_nsboi
 					}
@@ -1080,6 +1143,7 @@ characters = {
 				OR = {
 					original_tag = INS
 					tag = ATJ
+					tag = SSI
 				}
 				has_dlc = "Man the Guns"
 			}
@@ -1121,6 +1185,7 @@ characters = {
 				OR = {
 					original_tag = INS
 					tag = ATJ
+					tag = SSI
 				}
 				has_dlc = "Man the Guns"
 			}
@@ -1142,7 +1207,7 @@ characters = {
 					}
 				}
 				has_country_leader = {
-					name = "Amir Sjarifuddin Harahap"
+					character = INS_amir_syarifuddin
 					ruling_only = yes
 				}
 			}
@@ -1218,6 +1283,7 @@ characters = {
 			ideology = marxism
 			desc = INS_alimin_desc
 			traits = {
+				SWI_trade_unionist
 			}
 			expire = "1964.3.12.1"
 			id = -1
@@ -1226,7 +1292,10 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_alimin
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 			}
 			available = {
 				NOT = {
@@ -1265,6 +1334,7 @@ characters = {
 					OR = {
 						original_tag = INS
 						original_tag = HOL
+						original_tag = JVA
 					}
 					has_dlc = "Man the Guns"
 				}
@@ -1297,14 +1367,20 @@ characters = {
 						has_government = neutrality
 						has_government = democratic
 					}
-					NOT = {
-						has_idea = INS_group_stuwgroep
+					if = {
+						limit = { tag = INS }
+						NOT = {
+							has_idea = INS_group_stuwgroep
+						}
 					}
 				}
 				visible = {
-					AND = {
-						has_completed_focus = INS_continue_reform
-						has_country_flag = INS_de_jonge_resigned
+					if = {
+						limit = { tag = INS }
+						AND = {
+							has_completed_focus = INS_continue_reform
+							has_country_flag = INS_de_jonge_resigned
+						}
 					}
 					NOT = {
 						INS = { has_country_flag = INS_covdp_east_java_gov_flag }
@@ -1332,6 +1408,7 @@ characters = {
 					OR = {
 						original_tag = INS
 						original_tag = HOL
+						original_tag = JVA
 					}
 					has_dlc = "Man the Guns"
 				}
@@ -1364,14 +1441,20 @@ characters = {
 						has_government = neutrality
 						has_government = democratic
 					}
-					NOT = {
-						has_idea = INS_group_stuwgroep
+					if = {
+						limit = { tag = INS }
+						NOT = {
+							has_idea = INS_group_stuwgroep
+						}
 					}
 				}
 				visible = {
-					AND = {
-						has_completed_focus = INS_continue_reform
-						has_country_flag = INS_de_jonge_resigned
+					if = {
+						limit = { tag = INS }
+						AND = {
+							has_completed_focus = INS_continue_reform
+							has_country_flag = INS_de_jonge_resigned
+						}
 					}
 					NOT = {
 						INS = { has_country_flag = INS_covdp_east_java_gov_flag }
@@ -1398,6 +1481,7 @@ characters = {
 				OR = {
 					original_tag = INS
 					original_tag = HOL
+					original_tag = JVA
 				}
 			}
 			available = {
@@ -1416,9 +1500,12 @@ characters = {
 				}
 			}
 			visible = {
-				AND = {
-					has_completed_focus = INS_continue_reform
-					has_country_flag = INS_de_jonge_resigned
+				if = {
+					limit = { tag = INS }
+					AND = {
+						has_completed_focus = INS_continue_reform
+						has_country_flag = INS_de_jonge_resigned
+					}
 				}
 				INS = { has_country_flag = INS_covdp_east_java_gov_flag }
 			}
@@ -1426,16 +1513,22 @@ characters = {
 				friend_of_the_clergy
 			}
 			on_add = {
-				1052 = {
-					add_dynamic_modifier = {
-						modifier = INS_east_java_covdp_modifier
+				if = {
+					limit = { tag = INS }
+					1051 = {
+						add_dynamic_modifier = {
+							modifier = INS_east_java_covdp_modifier
+						}
 					}
 				}
 			}
 			on_remove = {
-				1052 = {
-					remove_dynamic_modifier = {
-						modifier = INS_east_java_covdp_modifier
+				if = {
+					limit = { tag = INS }
+					1051 = {
+						remove_dynamic_modifier = {
+							modifier = INS_east_java_covdp_modifier
+						}
 					}
 				}
 			}
@@ -1529,28 +1622,38 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_ernest_douwes_dekker_minister
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = INS_placate_nationalists
-					has_completed_focus = INS_indies_nation
-					is_subject = no
+				if = {
+					limit = { tag = INS }
+					OR = {
+						has_completed_focus = INS_placate_nationalists
+						has_completed_focus = INS_indies_nation
+					}
 				}
+				is_subject = no
 				NOT = {
 					has_idea = INS_group_indische_partij
 				}
+				not_already_hired_except_as = high_command
 			}
 			visible = {
-				has_country_flag = INS_de_jonge_resigned
-				NOT = {
-					has_completed_focus = INS_make_use_nsboi
+				if = {
+					limit = { tag = INS }
+					has_country_flag = INS_de_jonge_resigned
+					NOT = {
+						has_completed_focus = INS_make_use_nsboi
+					}
 				}
-				NOT = {
-					if = {
-						limit = {
-							has_completed_focus = INS_upheld_status_quo
-						}
+				if = {
+					limit = {
+						has_completed_focus = INS_upheld_status_quo
+					}
+					NOT = {
 						is_puppet_of = HOL
 					}
 				}
@@ -1559,6 +1662,27 @@ characters = {
 				indies_nationalist
 			}
 			cost = 125
+		}
+		advisor = {
+			slot = high_command
+			idea_token = INS_ernest_douwes_dekker_command
+			ledger = army
+			allowed = {
+				original_tag = INS
+			}
+			available = {
+				not_already_hired_except_as = political_advisor
+			}
+			visible = {
+				OR = {
+					has_completed_focus = INS_break_the_chains
+					has_completed_focus = INS_expel_the_colonials
+				}
+			}
+			traits = {
+				army_regrouping_1
+			}
+			cost = 75
 		}
 	}
 
@@ -1616,7 +1740,7 @@ characters = {
 						has_government = fascism
 					}
 				}
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 			}
 			visible = {
 				NOT = {
@@ -1679,12 +1803,12 @@ characters = {
 				has_completed_focus = INS_address_malaise
 				NOT = {
 					OR = {
-						has_idea_with_trait = lieutenant_of_industry
 						custom_trigger_tooltip = {
 							tooltip = INS_has_coi_trait_tt
 							has_idea_with_trait = coi_mook
 							has_idea_with_trait = coi_verboom
 						}
+						has_idea_with_trait = lieutenant_of_industry
 						AND = {
 							has_idea_with_trait = captain_of_industry
 							NOT = { has_idea = INS_george_hart }
@@ -1746,114 +1870,6 @@ characters = {
 			}
 			traits = {
 				head_of_intelligence
-			}
-		}
-	}
-
-	INS_hamengkubuwono_eighth = {
-		name = INS_hamengkubuwono_eighth
-		portraits = {
-			army = {
-				small = GFX_idea_indonesia_hamengkubuwono_eighth
-				large = GFX_portrait_indonesia_hamengkubuwono_eighth_army
-			}
-			civilian = {
-				small = GFX_idea_indonesia_hamengkubuwono_eighth
-				large = GFX_portrait_indonesia_hamengkubuwono_eighth
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = INS_hamengkubuwono_eighth
-			allowed = {
-				original_tag = INS
-				has_dlc = "Man the Guns"
-			}
-			available = {
-				OR = {
-					has_government = democratic
-					has_government = neutrality
-				}
-				OR = {
-					has_completed_focus = INS_reestablish_royal_houses
-					has_completed_focus = INS_merdeka
-				}
-				controls_state = 1051
-			}
-			visible = {
-				OR = {
-					AND = {
-						has_completed_focus = INS_challenge_dutch_elitism
-						has_country_flag = INS_de_jonge_resigned
-					}
-					has_country_leader = {
-						name = "Sukarno"
-						ruling_only = yes
-					}
-				}
-				NOT = {
-					has_country_flag = INS_hamengkubuwono_viii_passed
-				}
-			}
-			traits = {
-				sultan_of_yogyakarta_8
-			}
-		}
-	}
-	
-	INS_hamengkubuwono_ninth = {
-		name = INS_hamengkubuwono_ninth
-		portraits = {
-			army = {
-				small = GFX_idea_indonesia_hamengkubuwono_ninth
-				large = GFX_portrait_indonesia_hamengkubuwono_ninth_army
-			}
-			civilian = {
-				small = GFX_idea_indonesia_hamengkubuwono_ninth
-				large = GFX_portrait_indonesia_hamengkubuwono_ninth
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = INS_hamengkubuwono_ninth
-			allowed = {
-				original_tag = INS
-				has_dlc = "Man the Guns"
-			}
-			available = {
-				NOT = {
-					has_government = communism
-				}
-				OR = {
-					has_government = democratic
-					has_government = neutrality
-				}
-				OR = {
-					has_completed_focus = INS_reestablish_royal_houses
-					has_completed_focus = INS_merdeka
-				}
-				controls_state = 1051
-			}
-			visible = {
-				has_country_flag = INS_hamengkubuwono_viii_passed
-				OR = {
-					AND = {
-						has_completed_focus = INS_challenge_dutch_elitism
-						compare_autonomy_state > autonomy_colony
-					}
-					is_subject = no
-				}
-				if = {
-					limit = {
-						tag = INS
-					}
-					NOT = {
-						has_completed_focus = INS_make_use_nsboi
-					}
-				}
-			}
-			traits = {
-				sultan_of_yogyakarta_9
 			}
 		}
 	}
@@ -1955,6 +1971,65 @@ characters = {
 		}
 	}
 
+	INS_harry_kuneman = { #TAOG Exclusive
+		name = INS_harry_kuneman
+
+		portraits = {
+			army = {
+				small = GFX_portrait_INS_harry_kuneman_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = INS_harry_kuneman
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = HOL
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = INS
+					AND = {
+						original_tag = HOL
+						has_cosmetic_tag = INS_UNION
+					}
+				}
+				INS_is_volksaad_active_VISIBLE = yes
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = INS
+					}
+					OR = {
+						has_country_flag = INS_raad_member_kuneman
+						has_completed_focus = INSHOL_autonomous_dominion
+					}
+				}
+			}
+			traits = {
+				TAOG_dutch_representative
+			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 5
+					OR = {
+						INS_check_plan_true_historical = yes
+						has_completed_focus = INSHOL_sideline_the_volksraad
+					}
+				}
+				modifier = {
+					add = 1.5
+					INS_check_plan_loyalist	= yes
+				}
+			}
+		}
+	}
+
 	INS_hoogstraten = {
 		name = INS_hoogstraten
 		portraits = {
@@ -1980,7 +2055,7 @@ characters = {
 					has_completed_focus = INS_reinstate_stuwgroep
 					has_country_flag = INS_hart_retired
 					has_country_leader = {
-						name = "Hubertus Johannes van Mook"
+						character = INS_hubertus_van_mook
 						ruling_only = yes
 					}
 				}
@@ -1988,49 +2063,6 @@ characters = {
 			traits = {
 				captain_of_industry
 			}
-		}
-	}
-
-	INS_ida_anak_agung = {
-		name = INS_ida_anak_agung
-		portraits = {
-			army = {
-				small = GFX_idea_indonesia_ida_anak_agung
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = INS_ida_anak_agung
-			allowed = {
-				OR = {
-					original_tag = INS
-					tag = EIS
-				}
-				has_dlc = "Man the Guns"
-			}
-			available = {
-				has_completed_focus = INS_reestablish_royal_houses
-				has_completed_focus = INS_indies_nation
-				NOT = {
-					has_government = fascism
-				}
-			}
-			visible = {
-				has_completed_focus = INS_challenge_dutch_elitism
-				if = {
-					limit = {
-						tag = INS
-					}
-					NOT = {
-						has_completed_focus = INS_nusantara_accord
-					}
-				}
-				date > 1946.7.24
-			}
-			traits = {
-				the_man_from_gianyar
-			}
-			cost = 135
 		}
 	}
 
@@ -2045,7 +2077,10 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_ignatius_kasimo
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 				has_dlc = "Man the Guns"
 			}
 			available = {
@@ -2053,35 +2088,44 @@ characters = {
 					has_government = neutrality
 					has_government = democratic
 					AND = {
-						has_government = communism
-						NOT = {
-							has_completed_focus = INS_a_distant_ally
+						if = {
+							limit = { tag = INS }
+							has_government = communism
+							NOT = {
+								has_completed_focus = INS_a_distant_ally
+							}
 						}
 					}
 				}
-				has_completed_focus = INS_address_malaise
-				NOT = {
-					OR = {
-						AND = {
-							has_idea_with_trait = lieutenant_of_industry
-							NOT = { has_idea = INS_ignatius_kasimo }
+				if = {
+					limit = { tag = INS }
+					has_completed_focus = INS_address_malaise
+					NOT = {
+						OR = {
+							AND = {
+								has_idea_with_trait = lieutenant_of_industry
+								NOT = { has_idea = INS_ignatius_kasimo }
+							}
+							custom_trigger_tooltip = {
+								tooltip = INS_has_coi_trait_tt
+								has_idea_with_trait = coi_hart
+								has_idea_with_trait = coi_mook
+								has_idea_with_trait = coi_verboom
+							}
+							has_idea_with_trait = captain_of_industry
 						}
-						custom_trigger_tooltip = {
-							tooltip = INS_has_coi_trait_tt
-							has_idea_with_trait = coi_hart
-							has_idea_with_trait = coi_mook
-							has_idea_with_trait = coi_verboom
-						}
-						has_idea_with_trait = captain_of_industry
 					}
 				}
 			}
 			visible = {
-				OR = {
-					has_country_flag = INS_de_jonge_resigned
-					has_completed_focus = INS_expel_the_colonials
-					has_completed_focus = INS_merdeka
-					has_completed_focus = INS_break_the_chains
+				if = {
+					limit = { tag = INS }
+					OR = {
+						has_country_flag = INS_de_jonge_resigned
+						has_completed_focus = INS_expel_the_colonials
+						has_completed_focus = INS_merdeka
+						has_completed_focus = INS_break_the_chains
+					}
 				}
 				NOT = {
 					has_completed_focus = INS_make_use_nsboi
@@ -2297,67 +2341,6 @@ characters = {
 		}
 	}
 
-	INS_johannes_latuharhary = {
-		name = MLK_johannes_latuharhary
-		portraits = {
-			civilian = {
-				large = GFX_portrait_maluku_latuharhary
-				small = GFX_idea_indonesia_latuharhary
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = INS_johannes_latuharhary
-			allowed = {
-				OR = {
-					original_tag = INS
-					original_tag = MLK
-				}
-			}
-			available = {
-				if = {
-					limit = { tag = INS }
-					OR = {
-						has_completed_focus = INS_indies_nation
-						has_completed_focus = INS_support_sutarjo
-						has_completed_focus = INS_expel_the_colonials
-					}
-				}
-			}
-			visible = {
-				has_country_flag = INS_de_jonge_resigned
-			}
-			traits = {
-				moluccan_representative
-			}
-			on_add = {
-				668 = {
-					add_dynamic_modifier = {
-						modifier = INS_mollucas_latuharhary_modifier
-					}
-				}
-				738 = {
-					add_dynamic_modifier = {
-						modifier = INS_mollucas_latuharhary_modifier
-					}
-				}
-			}
-			on_remove = {
-				668 = {
-					remove_dynamic_modifier = {
-						modifier = INS_mollucas_latuharhary_modifier
-					}
-				}
-				738 = {
-					remove_dynamic_modifier = {
-						modifier = INS_mollucas_latuharhary_modifier
-					}
-				}
-			}
-			cost = 135
-		}
-	}
-
 	INS_kh_dewantara = {
 		name = INS_kh_dewantara
 		portraits = {
@@ -2369,15 +2352,21 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_kh_dewantara
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 			}
 			available = {
 				NOT = {
 					has_government = fascism
 				}
-				OR = {
-					has_completed_focus = INS_placate_nationalists
-					has_completed_focus = INS_indies_nation
+				if = {
+					limit = { tag = INS }
+					OR = {
+						has_completed_focus = INS_placate_nationalists
+						has_completed_focus = INS_indies_nation
+					}
 				}
 				compare_autonomy_state > autonomy_puppet
 				NOT = {
@@ -2385,19 +2374,13 @@ characters = {
 				}
 			}
 			visible = {
-				has_completed_focus = INS_challenge_dutch_elitism
+				if = {
+					limit = { tag = INS }
+					has_completed_focus = INS_challenge_dutch_elitism
+				}
 			}
 			traits = {
 				tamansiswa_educationer
-			}
-		}
-	}
-
-	INS_mangkunegara_seventh = {
-		name = INS_mangkunegara_seventh
-		portraits = {
-			army = {
-				small = GFX_idea_indonesia_mangkunegara_seventh_army
 			}
 		}
 	}
@@ -2413,16 +2396,25 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_margono_joyohadikusumo
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 			}
 			available = {
 				NOT = {
 					has_government = communism
 				}
-				has_completed_focus = INS_expel_the_colonials
+				if = {
+					limit = { tag = INS }
+					has_completed_focus = INS_expel_the_colonials
+				}
 			}
 			visible = {
-				has_completed_focus = INS_discourage_democratic_reforms
+				if = {
+					limit = { tag = INS }
+					has_completed_focus = INS_discourage_democratic_reforms
+				}
 			}
 			traits = {
 				JUNO_president_of_the_central_bank
@@ -2467,6 +2459,72 @@ characters = {
 		}
 	}
 
+	INS_mohammad_natsir = {
+		name = INS_mohammad_natsir
+		portraits = {
+			civilian = {
+				large = GFX_portrait_indonesia_natsir
+			}
+			army = {
+				small = GFX_idea_indonesia_natsir
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = INS_mohammad_natsir
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = ATJ
+					original_tag = SSI
+				}
+				has_dlc = "Man the Guns"
+			}
+			available = {
+				if = {
+					limit = {
+						tag = INS
+						has_character_flag = INS_psii_member_flag
+					}
+					OR = {
+						has_completed_focus = INS_invite_psii
+						has_country_flag = INS_ally_gapi_flag
+					}
+					if = {
+						limit = {
+							has_country_flag = INS_ally_gapi_flag
+						}
+						NOT = {
+							has_idea = INS_group_gapi
+						}
+					}
+				}
+				NOT = {
+					has_country_leader = {
+						character = INS_abikusno_cokrosuyoso
+						ruling_only = yes
+					}
+				}
+			}
+			visible = {
+				if = {
+					limit = {
+						tag = INS
+					}
+					NOT = {
+						has_completed_focus = INS_make_use_nsboi
+					}
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+			traits = {
+				islamist_scholar
+			}
+		}
+	}
+
 	INS_mohammad_yamin = {
 		name = INS_mohammad_yamin
 		portraits = {
@@ -2481,6 +2539,7 @@ characters = {
 				OR = {
 					original_tag = INS
 					original_tag = ATJ
+					original_tag = SSI
 				}
 				has_dlc = "Man the Guns"
 			}
@@ -2489,9 +2548,12 @@ characters = {
 					NOT = {
 						has_government = communism
 					}
-					AND = {
-						has_government = communism
-						has_completed_focus = INS_one_people_one_state
+					if = {
+						limit = { tag = INS }
+						AND = {
+							has_government = communism
+							has_completed_focus = INS_one_people_one_state
+						}
 					}
 				}
 			}
@@ -2567,10 +2629,17 @@ characters = {
 				original_tag = INS
 			}
 			available = {
-				OR = {
-					has_completed_focus = INS_indies_nation
-					has_completed_focus = INS_support_sutarjo
-					has_completed_focus = INS_expel_the_colonials
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = INS_has_balkanized_flag
+						}
+					}
+					OR = {
+						has_completed_focus = INS_indies_nation
+						has_completed_focus = INS_support_sutarjo
+						has_completed_focus = INS_expel_the_colonials
+					}
 				}
 			}
 			visible = {
@@ -2580,14 +2649,14 @@ characters = {
 				pasundan_representative
 			}
 			on_add = {
-				1051 = {
+				335 = {
 					add_dynamic_modifier = {
 						modifier = INS_west_java_di_nata_modifier
 					}
 				}
 			}
 			on_remove = {
-				1051 = {
+				335 = {
 					remove_dynamic_modifier = {
 						modifier = INS_west_java_di_nata_modifier
 					}
@@ -2620,7 +2689,7 @@ characters = {
 						has_government = fascism
 					}
 				}
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 			}
 			visible = {
 				NOT = {
@@ -2786,7 +2855,7 @@ characters = {
 			allowed = {
 				OR = {
 					original_tag = INS
-					tag = SLW
+					original_tag = MNH
 				}
 			}
 			available = {
@@ -2810,14 +2879,19 @@ characters = {
 				minahasan_autonomist
 			}
 			on_add = {
-				1054 = {
-					add_dynamic_modifier = {
-						modifier = INS_north_sulawesi_ratulangi_modifier
+				if = {
+					limit = {
+						tag = INS
+					}
+					1056 = {
+						add_dynamic_modifier = {
+							modifier = INS_north_sulawesi_ratulangi_modifier
+						}
 					}
 				}
 			}
 			on_remove = {
-				1054 = {
+				1056 = {
 					remove_dynamic_modifier = {
 						modifier = INS_north_sulawesi_ratulangi_modifier
 					}
@@ -2841,7 +2915,10 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_sarjono
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 			}
 			available = {
 				if = {
@@ -2860,7 +2937,7 @@ characters = {
 			visible = {
 				NOT = {
 					has_country_leader = {
-						name = "Sarjono"
+						character = INS_sarjono
 						ruling_only = yes
 					}
 				}
@@ -2917,7 +2994,10 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_semaun
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 			}
 			available = {
 				if = {
@@ -2934,6 +3014,7 @@ characters = {
 				}
 				if = {
 					limit = {
+						tag = INS
 						has_trait = captain_of_industry
 					}
 					has_completed_focus = INS_address_malaise
@@ -2955,17 +3036,18 @@ characters = {
 				}
 				if = {
 					limit = {
+						tag = INS
 						has_trait = former_railroad_union_leader
 					}
 					has_completed_focus = INS_expand_javan_railroads
 				}
 			}
 			visible = {
-				NOT = {
-					if = {
-						limit = {
-							has_completed_focus = INS_upheld_status_quo
-						}
+				if = {
+					limit = {
+						has_completed_focus = INS_upheld_status_quo
+					}
+					NOT = {
 						is_puppet_of = HOL
 					}
 				}
@@ -2974,7 +3056,9 @@ characters = {
 				former_railroad_union_leader
 			}
 			ai_will_do = {
+				base = 20
 				modifier = {
+					factor = 10
 					has_government = communism
 				}
 			}
@@ -3037,6 +3121,9 @@ characters = {
 				if = {
 					limit = {
 						has_character_flag = INS_psii_member_flag
+						NOT = {
+							has_global_flag = INS_has_balkanized_flag
+						}
 					}
 					OR = {
 						has_country_flag = INS_ally_gapi_flag
@@ -3053,8 +3140,8 @@ characters = {
 				base = 20
 				modifier = {
 					has_country_leader = {
-						name = "Abikusno Cokrosuyoso"
-						ruling_only = yes 
+						character = INS_abikusno_cokrosuyoso
+						ruling_only = yes
 					}
 					factor = 10
 				}
@@ -3076,27 +3163,33 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_supomo
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 				has_dlc = "Man the Guns"
 			}
 			visible = {
-				has_country_flag = INS_de_jonge_resigned
+				if = {
+					limit = { tag = INS }
+					has_country_flag = INS_de_jonge_resigned
+				}
 				NOT = {
 					has_country_leader = {
-						name = "Supomo"
-						ruling_only = yes 
+						character = INS_supomo
+						ruling_only = yes
 					}
 				}
 				NOT = {
 					has_completed_focus = INS_make_use_nsboi
 					OR = {
 						has_country_leader = {
-							name = "Tjarda van Starkenborgh"
+							character = INS_a_t_van_starkenborgh_stachouwer
 							ruling_only = yes
 						}
 						has_country_leader = {
-							name = "Hubertus van Mook"
-							ruling_only = yes 
+							character = INS_hubertus_van_mook
+							ruling_only = yes
 						}
 					}
 				}
@@ -3107,8 +3200,8 @@ characters = {
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Supomo"
-						ruling_only = yes 
+						character = INS_supomo
+						ruling_only = yes
 					}
 				}
 			}
@@ -3119,56 +3212,12 @@ characters = {
 				base = 20
 				modifier = {
 					has_country_leader = {
-						name = "Sukarno"
-						ruling_only = yes 
+						character = INS_sukarno
+						ruling_only = yes
 					}
 					factor = 10
 				}
 			}
-		}
-	}
-
-	INS_sukawati = {
-		name = INS_sukawati
-		portraits = {
-			civilian = {
-				large = GFX_portrait_indonesia_sukawati
-			}
-			army = {
-				small = GFX_idea_indonesia_sukawati
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = INS_sukawati
-			allowed = {
-				OR = {
-					original_tag = INS
-					tag = EIS
-				}
-				has_dlc = "Man the Guns"
-			}
-			available = {
-				has_completed_focus = INS_indies_nation
-				NOT = {
-					has_government = fascism
-				}
-			}
-			visible = {
-				has_completed_focus = INS_challenge_dutch_elitism
-				if = {
-					limit = {
-						tag = INS
-					}
-					NOT = {
-						has_completed_focus = INS_nusantara_accord
-					}
-				}
-			}
-			traits = {
-				balinese_noble
-			}
-			cost = 135
 		}
 	}
 
@@ -3189,6 +3238,7 @@ characters = {
 				OR = {
 					original_tag = INS
 					original_tag = ATJ
+					original_tag = SSI
 				}
 				has_dlc = "Man the Guns"
 			}
@@ -3201,8 +3251,11 @@ characters = {
 						has_character_flag = INS_imprisoned_flag
 					}
 				}
-				NOT = {
-					has_idea = INS_group_partai_nasional
+				if = {
+					limit = { tag = INS }
+					NOT = {
+						has_idea = INS_group_partai_nasional
+					}
 				}
 				NOT = {
 					has_government = fascism
@@ -3228,16 +3281,25 @@ characters = {
 			slot = political_advisor
 			idea_token = INS_sutarjo_kartohadikusumo
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 			}
 			available = {
-				has_completed_focus = INS_support_sutarjo
+				if = {
+					limit = { tag = INS }
+					has_completed_focus = INS_support_sutarjo
+				}
 				NOT = {
 					has_government = fascism
 				}
 			}
 			visible = {
-				has_completed_focus = INS_improve_dutch_relations
+				if = {
+					limit = { tag = INS }
+					has_completed_focus = INS_jewel_of_the_crown
+				}
 			}
 			traits = {
 				javanese_bestuurder
@@ -3308,12 +3370,16 @@ characters = {
 				OR = {
 					original_tag = INS
 					original_tag = ATJ
+					original_tag = SSI
 				}
 				has_dlc = "Man the Guns"
 			}
 			available = {
 				if = {
 					limit = {
+						NOT = {
+							has_global_flag = INS_has_balkanized_flag
+						}
 						has_character_flag = INS_psii_member_flag
 					}
 					OR = {
@@ -3380,12 +3446,18 @@ characters = {
 			army = {
 				small = GFX_idea_indonesia_cipto_jailed
 			}
+			civilian = {
+				large = GFX_portrait_indonesia_cipto_mangunkusumo
+			}
 		}
 		advisor = {
 			slot = political_advisor
 			idea_token = INS_cipto_mangunkusumo
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
 			}
 			available = {
 				if = {
@@ -3396,13 +3468,16 @@ characters = {
 						has_character_flag = INS_imprisoned_flag
 					}
 				}
-				OR = {
-					has_completed_focus = INS_placate_nationalists
-					has_completed_focus = INS_indies_nation
-					is_subject = no
-				}
-				NOT = {
-					has_idea = INS_group_indische_partij
+				if = {
+					limit = { tag = INS }
+					OR = {
+						has_completed_focus = INS_placate_nationalists
+						has_completed_focus = INS_indies_nation
+						is_subject = no
+					}
+					NOT = {
+						has_idea = INS_group_indische_partij
+					}
 				}
 			}
 			visible = {
@@ -3481,15 +3556,6 @@ characters = {
 	}
 
 	#TRAITLESS ADVISORS (either not of age yet or is not relevant yet in the grand scheme of things)
-	
-	INS_bernard_lapian = {
-		name = INS_bernard_lapian
-		portraits = {
-			army = {
-				small = GFX_idea_indonesia_bernard_lapian
-			}
-		}
-	}
 
 	INS_ferdinand_lumbantobing = {
 		name = INS_ferdinand_lumbantobing
@@ -3518,7 +3584,7 @@ characters = {
 			available = {
 				if = {
 					limit = {
-						has_completed_focus = INS_improve_dutch_relations
+						has_completed_focus = INS_jewel_of_the_crown
 					}
 					OR = {
 						AND = {
@@ -3670,6 +3736,9 @@ characters = {
 			}
 			visible = {
 				NOT = {
+					has_global_flag = INS_has_balkanized_flag
+				}
+				NOT = {
 					OR = {
 						has_idea = INS_sukarno
 						has_idea = INS_mohammad_hatta
@@ -3773,6 +3842,7 @@ characters = {
 						has_idea = INS_hubertus_van_mook
 						has_idea = INS_jan_jonkman
 						has_idea = INS_charles_van_der_plas
+						has_idea = INS_governor_van_der_plas
 					}
 				}
 			}
@@ -3795,6 +3865,15 @@ characters = {
 		}
 	}
 
+	INS_national_committee = {
+		name = INS_national_committee
+		portraits = {
+			civilian = {
+				large = GFX_portrait_indonesia_national_committee
+			}
+		}
+	}
+
 	#ARMY LEADERS - Netherlands Indies
 
 	INS_murk_boerstra = {
@@ -3806,7 +3885,7 @@ characters = {
 			}
 		}
 		field_marshal = {
-			traits = { logistics_wizard inspirational_leader }
+			traits = { INS_loyalty_to_netherlands logistics_wizard inspirational_leader }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -3837,7 +3916,6 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = INS_murk_boerstra_command
-			ledger = army
 			allowed = {
 				OR = {
 					original_tag = INS
@@ -3869,7 +3947,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = {  }
+			traits = { INS_loyalty_to_netherlands }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
@@ -3928,7 +4006,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { logistics_wizard }
+			traits = { INS_loyalty_to_netherlands logistics_wizard }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -3976,7 +4054,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { logistics_wizard }
+			traits = { INS_loyalty_to_netherlands logistics_wizard }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -3995,7 +4073,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_leader infantry_expert }
+			traits = { INS_loyalty_to_netherlands infantry_leader infantry_expert }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
@@ -4116,7 +4194,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { logistics_wizard }
+			traits = { INS_loyalty_to_netherlands logistics_wizard }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
@@ -4150,6 +4228,15 @@ characters = {
 				large = GFX_portrait_hol_hein_ter_poorten
 				small = GFX_idea_HOL_hein_ter_poorten
 			}
+		}
+		corps_commander = {
+			traits = { INS_loyalty_to_netherlands }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
 		}
 		advisor = {
 			slot = high_command
@@ -4341,6 +4428,7 @@ characters = {
 				OR = {
 					original_tag = INS
 					original_tag = HOL
+					original_tag = MLK
 				}
 			}
 			available = {
@@ -4352,7 +4440,10 @@ characters = {
 						has_idea = INS_simon_spoor_operative
 					}
 				}
-				has_completed_focus = INS_more_knil_funds
+				if = {
+					limit = { tag = INS }
+					has_completed_focus = INS_more_knil_funds
+				}
 			}
 			traits = {
 				military_theorist
@@ -4369,6 +4460,7 @@ characters = {
 				OR = {
 					original_tag = INS
 					original_tag = HOL
+					original_tag = MLK
 				}
 				has_dlc = "La Resistance"
 			}
@@ -4377,10 +4469,16 @@ characters = {
 					has_idea = INS_simon_spoor_theorist
 				}
 				has_intelligence_agency = yes 
-				has_completed_focus = INS_expand_ard
+				if = {
+					limit = { tag = INS }
+					has_completed_focus = INS_expand_ard
+				}
 			}
 			visible = {
-				has_completed_focus = INS_discourage_democratic_reforms
+				if = {
+					limit = { tag = INS }
+					has_completed_focus = INS_discourage_democratic_reforms
+				}
 			}
 			traits = {
 				head_of_intelligence 
@@ -4578,12 +4676,16 @@ characters = {
 				OR = {
 					original_tag = INS
 					original_tag = HOL
+					original_tag = JVA
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = INS_air_offense
-					has_completed_focus = INS_air_defense
+				if = {
+					limit = { tag = INS }
+					OR = {
+						has_completed_focus = INS_air_offense
+						has_completed_focus = INS_air_defense
+					}
 				}
 			}
 			traits = {
@@ -4615,6 +4717,26 @@ characters = {
 				large = GFX_portrait_indonesia_urip
 				small = GFX_idea_indonesia_urip
 			}
+
+		}
+		advisor = {
+			slot = high_command
+			idea_token = INS_urip_sumoharjo
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = HOL
+				}
+			}
+			available = {
+				NOT = {
+					has_idea = INS_murk_boerstra_chief
+				}
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
 		}
 	}
 
@@ -4702,8 +4824,8 @@ characters = {
 		name = INS_subijakto
 		portraits = {
 			army = {
-				large = GFX_portrait_indonesia_subijakto
-				small = GFX_idea_indonesia_subijakto
+				large = GFX_portrait_indonesia_subiyakto
+				small = GFX_idea_indonesia_subiyakto
 			}
 		}
 	}
@@ -4758,13 +4880,13 @@ characters = {
 		}
 	}
 
-  #####                                                              
- #     #   ####   #  ######  #    #  #####  #   ####   #####   ####  
- #        #    #  #  #       ##   #    #    #  #         #    #      
-  #####   #       #  #####   # #  #    #    #   ####     #     ####  
-       #  #       #  #       #  # #    #    #       #    #         # 
- #     #  #    #  #  #       #   ##    #    #  #    #    #    #    # 
-  #####    ####   #  ######  #    #    #    #   ####     #     ####  
+	  #####                                                              
+	 #     #   ####   #  ######  #    #  #####  #   ####   #####   ####  
+	 #        #    #  #  #       ##   #    #    #  #         #    #      
+	  #####   #       #  #####   # #  #    #    #   ####     #     ####  
+	       #  #       #  #       #  # #    #    #       #    #         # 
+	 #     #  #    #  #  #       #   ##    #    #  #    #    #    #    # 
+	  #####    ####   #  ######  #    #    #    #   ####     #     ####  
 
 
 	INS_laurens_walraven = {

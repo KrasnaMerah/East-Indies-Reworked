@@ -1,3 +1,19 @@
+### search_filters = { FOCUS_FILTER_POLITICAL }
+### search_filters = { FOCUS_FILTER_RESEARCH }
+### search_filters = { FOCUS_FILTER_INDUSTRY }
+### search_filters = { FOCUS_FILTER_STABILITY }
+### search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+### search_filters = { FOCUS_FILTER_MANPOWER }
+### search_filters = { FOCUS_FILTER_ANNEXATION }
+### search_filters = { FOCUS_FILTER_ARMY_XP }
+### search_filters = { FOCUS_FILTER_NAVY_XP }
+### search_filters = { FOCUS_FILTER_AIR_XP }
+### search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
+### search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+### search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
+### search_filters = { FOCUS_FILTER_HISTORICAL }
+### search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
+
 focus_tree = {
 	id = east_indies_focus
 	
@@ -9,16 +25,20 @@ focus_tree = {
 			tag = INS
 		}
 	}
-
-	initial_show_position = {
-		x = 15
-		y = 0
-	}
 	
 	default = no
 
 	continuous_focus_position = { x = 995 y = 950 }
 
+	shared_focus = INSHOL_dutch_east_indies
+	shared_focus = INSHOL_reasserting_control
+	shared_focus = INSHOL_reform_knil
+	shared_focus = ABDA_abdacom
+
+	initial_show_position = {
+		x = 15
+		y = 0
+	}
 
 #	modifier = {
 #		factor = 0
@@ -126,6 +146,318 @@ focus_tree = {
 		}
 	}
 
+	#### Industry Tree - The Bangka Project
+	focus = {
+		id = INS_the_bangka_project
+		icon = GFX_focus_generic_aluminum
+
+        allow_branch = {
+			has_dlc = "Thunder at Our Gates"
+			has_country_flag = INS_taog_enabled_flag
+        }
+
+		available = {
+			has_full_control_of_state = 1083
+		}
+		prerequisite = { focus = INS_address_malaise }
+		#mutually_exclusive = {}
+
+		x = 6
+		y = 1
+		relative_position_id = INS_address_malaise
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 3
+				date > 1937.1.1
+			}
+			modifier = {
+				factor = 0.5
+				has_country_flag = INS_revolution_has_started
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			1083 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				if = {
+					limit = {
+						any_province_building_level = {
+							province = {
+								id = 12113
+								limit_to_border = no
+							}
+							building = naval_base
+							level < 4
+						}
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						instant_build = yes
+						province = 12113
+					}
+				}
+				else_if = {
+					limit = {
+						any_province_building_level = {
+							province = {
+								id = 12113
+								limit_to_border = no
+							}
+							building = naval_base
+							level < 5
+						}
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 12113
+					}
+				}
+				else_if = {
+					limit = {
+						any_province_building_level = {
+							province = {
+								id = 12113
+								limit_to_border = no
+							}
+							building = naval_base
+							level < 6
+						}
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						instant_build = yes
+						province = 12113
+					}
+				}
+				else = {
+					ROOT = {
+						add_political_power = 30 #its something i guess
+					}
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = INS_bangka_bauxite_export
+			}
+		}
+	}
+
+	focus = {
+		id = INS_aluminium_factory
+		icon = GFX_focus_generic_aluminum
+
+		available = {
+			has_full_control_of_state = 1083
+			has_dynamic_modifier = {
+				modifier = INS_bangka_bauxite_export
+			}
+			has_tech = excavation1
+		}
+		prerequisite = { focus = INS_the_bangka_project }
+		mutually_exclusive = { focus = INS_bauxite_export }
+
+		x = 1
+		y = 1
+		relative_position_id = INS_the_bangka_project
+		cost = 10
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				check_variable = {
+					var = INS_great_depression_min_export
+					value = -0.5
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = INS_great_depression_tt
+			add_to_variable = { var = INS_great_depression_min_export value = 0.05 tooltip = min_export_tt }
+			1083 = { #Bangka-Belitung
+				add_resource = {
+					type = aluminium
+					amount = 74
+				}
+				add_resource = {
+					type = steel
+					amount = 18
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = INS_bauxite_export
+		icon = GFX_focus_RAJ_special_economic_zones
+
+		available = {
+			has_full_control_of_state = 1083
+			has_dynamic_modifier = {
+				modifier = INS_bangka_bauxite_export
+			}
+			has_tech = excavation1
+		}
+		prerequisite = { focus = INS_the_bangka_project }
+		mutually_exclusive = { focus = INS_aluminium_factory }
+
+		x = -1
+		y = 1
+		relative_position_id = INS_the_bangka_project
+		cost = 10
+
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			custom_effect_tooltip = INS_bangka_bauxite_export_tt
+			add_to_variable = { var = INS_bangka_bauxite_export_consumer_goods_factor value = -0.15  tooltip = consumer_goods_factor_tt }
+			set_country_flag = INS_bangka_bauxite_export_flag
+		}
+	}
+
+	focus = {
+		id = INS_new_bauxite_routes
+		icon = GFX_goal_generic_trade
+
+		available = {
+			has_full_control_of_state = 1083
+			has_dynamic_modifier = {
+				modifier = INS_bangka_bauxite_export
+			}
+			has_tech = excavation3
+           	custom_trigger_tooltip = {
+               tooltip = INS_bangka_bauxite_export_flag_removed_tt
+               has_country_flag = {
+                   flag = INS_bangka_bauxite_export_flag
+                   days > 365
+               }
+            }
+		}
+		prerequisite = { focus = INS_bauxite_export }
+		#mutually_exclusive = { }
+
+		x = -1
+		y = 1
+		relative_position_id = INS_bauxite_export
+		cost = 5
+
+		ai_will_do = {
+			base = 3
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = INS_bangka_bauxite_export_tt
+			add_to_variable = { var = INS_bangka_bauxite_export_consumer_goods_factor value = -0.1  tooltip = consumer_goods_factor_tt }
+		}
+	}
+
+	focus = {
+		id = INS_finish_the_bauxite_project
+		icon = GFX_focus_CHI_import_fertilisers
+
+		available = {
+			has_tech = excavation4
+			1083 = {
+				is_fully_controlled_by = ROOT
+				infrastructure > 4
+			}
+			1047 = {
+				is_fully_controlled_by = ROOT
+				infrastructure > 4
+			}
+		}
+		prerequisite = { focus = INS_bauxite_export focus = INS_aluminium_factory }
+		#mutually_exclusive = { }
+
+		x = 1
+		y = 1
+		relative_position_id = INS_bauxite_export
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 4
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = INS_great_depression_tt
+			add_to_variable = { var = INS_great_depression_min_export value = 0.05 tooltip = min_export_tt }
+			1083 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = aluminium
+						amount = 14
+					}
+					add_resource = {
+						type = steel
+						amount = 8
+					}
+				}
+			}
+			1047 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = tungsten
+						amount = 6
+					}
+					add_resource = {
+						type = chromium
+						amount = 6
+					}
+				}
+			}
+		}
+	}
+
 	focus = {
 		id = INS_limit_exports
 		icon = GFX_focus_GER_integrated_economies
@@ -205,8 +537,8 @@ focus_tree = {
 
 		available = {
 			has_full_control_of_state = 1051
-			has_full_control_of_state = 1052
-			has_full_control_of_state = 672
+			has_full_control_of_state = 335
+			has_full_control_of_state = 1049
 		}
 		
 		bypass = {
@@ -229,7 +561,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			1052 = {
+			335 = {
 				INS_add_5_compliance_effect = yes
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -238,7 +570,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			672 = {
+			1049 = {
 				INS_add_5_compliance_effect = yes
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -270,9 +602,10 @@ focus_tree = {
 		}
 
 		available = {
+			has_full_control_of_state = 1058
 			has_full_control_of_state = 335
 			has_full_control_of_state = 1051
-			has_full_control_of_state = 1052
+			has_full_control_of_state = 1086
 		}
 		
 		bypass = {
@@ -328,7 +661,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			1052 = {
+			335 = {
 				INS_add_5_compliance_effect = yes
 				add_extra_state_shared_building_slots = 1
 			}
@@ -452,9 +785,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_full_control_of_state = 1047
-			has_full_control_of_state = 672
+			has_full_control_of_state = 1050
+			has_full_control_of_state = 1049
 			has_full_control_of_state = 1048
+			has_full_control_of_state = 672
 		}
 
 		bypass = {
@@ -473,18 +807,9 @@ focus_tree = {
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			1047 = {
+			1050 = {
 				INS_add_5_compliance_effect = yes
 				add_extra_state_shared_building_slots = 1
-			}
-			672 = {
-				INS_add_5_compliance_effect = yes
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
 			}
 			1048 = {
 				INS_add_5_compliance_effect = yes
@@ -495,11 +820,38 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			1049 = {
+				INS_add_5_compliance_effect = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			672 = {
+				INS_add_5_compliance_effect = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			if = {
 				limit = {
-					has_full_control_of_state = 1049
+					has_full_control_of_state = 1083
 				}
-				1049 = {
+				1083 = {
+					add_extra_state_shared_building_slots = 1
+					INS_add_5_compliance_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 1047
+				}
+				1047 = {
 					add_extra_state_shared_building_slots = 1
 					INS_add_5_compliance_effect = yes
 				}
@@ -861,19 +1213,21 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = INS_full_control_java
-				has_full_control_of_state = 335
+				has_full_control_of_state = 1058
 				has_full_control_of_state = 1051
-				has_full_control_of_state = 1052
+				has_full_control_of_state = 335
+				has_full_control_of_state = 1086
 			}
 			custom_trigger_tooltip = {
 				tooltip = INS_full_control_sumatra
-				has_full_control_of_state = 1047
+				has_full_control_of_state = 1050
 				has_full_control_of_state = 672
 				has_full_control_of_state = 1048
+				has_full_control_of_state = 1049
 			}
 			custom_trigger_tooltip = {
 				tooltip = INS_full_control_kalimantan
-				has_full_control_of_state = 1050
+				has_full_control_of_state = 1055
 				has_full_control_of_state = 334
 			}
 		}
@@ -890,7 +1244,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = INS_develop_west_tt
 			hidden_effect = {
-				335 = {
+				1058 = {
 					if = {
 						limit = {
 							NOT = {
@@ -912,7 +1266,7 @@ focus_tree = {
 					}
 					add_dynamic_modifier = { modifier = early_develop_modif_west }
 				}
-				1052 = {
+				335 = {
 					if = {
 						limit = {
 							NOT = {
@@ -923,7 +1277,7 @@ focus_tree = {
 					}
 					add_dynamic_modifier = { modifier = early_develop_modif_west }
 				}
-				1047 = {
+				1050 = {
 					if = {
 						limit = {
 							NOT = {
@@ -967,7 +1321,18 @@ focus_tree = {
 					}
 					add_dynamic_modifier = { modifier = early_develop_modif_west }
 				}
-				1050 = {
+				1083 = {
+					if = {
+						limit = {
+							NOT = {
+								is_core_of = ROOT
+							}
+						}
+						add_compliance = 5
+					}
+					add_dynamic_modifier = { modifier = early_develop_modif_west }
+				}
+				1055 = {
 					if = {
 						limit = {
 							NOT = {
@@ -996,7 +1361,7 @@ focus_tree = {
 						owns_state = 1023
 						owns_state = 333
 						owns_state = 1024
-						owns_state = 1050
+						owns_state = 1055
 						owns_state = 1060
 						owns_state = 1059
 						owns_state = 336
@@ -1018,7 +1383,7 @@ focus_tree = {
 			else_if = {
 				limit = {
 					NOT = {
-						owns_state = 1050
+						owns_state = 1055
 						owns_state = 1060
 						owns_state = 1059
 						owns_state = 336
@@ -1048,13 +1413,13 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_full_control_of_state = 1050
+					has_full_control_of_state = 1055
 					has_full_control_of_state = 1060
 					has_full_control_of_state = 1059
 					has_full_control_of_state = 336
 					has_full_control_of_state = 1058
 				}
-				1050 = {
+				1055 = {
 					add_compliance = 10
 					add_dynamic_modifier = { modifier = early_develop_modif_west }
 				}
@@ -1100,19 +1465,21 @@ focus_tree = {
 			industrial_complex > 6
 			custom_trigger_tooltip = {
 				tooltip = INS_full_control_java
-				has_full_control_of_state = 335
+				has_full_control_of_state = 1058
 				has_full_control_of_state = 1051
-				has_full_control_of_state = 1052
+				has_full_control_of_state = 335
+				has_full_control_of_state = 1086
 			}
 			custom_trigger_tooltip = {
 				tooltip = INS_full_control_sumatra
-				has_full_control_of_state = 1047
+				has_full_control_of_state = 1050
 				has_full_control_of_state = 672
 				has_full_control_of_state = 1048
+				has_full_control_of_state = 1049
 			}
 			custom_trigger_tooltip = {
 				tooltip = INS_full_control_kalimantan
-				has_full_control_of_state = 1050
+				has_full_control_of_state = 1055
 				has_full_control_of_state = 334
 			}
 		}
@@ -1198,9 +1565,10 @@ focus_tree = {
 			industrial_complex > 12
 			custom_trigger_tooltip = {
 				tooltip = INS_full_control_java
-				has_full_control_of_state = 335
+				has_full_control_of_state = 1058
 				has_full_control_of_state = 1051
-				has_full_control_of_state = 1052
+				has_full_control_of_state = 335
+				has_full_control_of_state = 1086
 			}
 		}
 
@@ -1212,25 +1580,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
-				limit = {
-					1051 = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				1051 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
 			if = {
 				limit = {
 					335 = {
@@ -1250,8 +1599,27 @@ focus_tree = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					1058 = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				1058 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			1051 = {
+			335 = {
 				add_building_construction = {
 					type = dam
 					level = 1
@@ -1295,19 +1663,21 @@ focus_tree = {
 					}
 					custom_trigger_tooltip = {
 						tooltip = INS_full_control_java
-						has_full_control_of_state = 335
+						has_full_control_of_state = 1058
 						has_full_control_of_state = 1051
-						has_full_control_of_state = 1052
+						has_full_control_of_state = 335
+						has_full_control_of_state = 1086
 					}
 					custom_trigger_tooltip = {
 						tooltip = INS_full_control_sumatra
-						has_full_control_of_state = 1047
+						has_full_control_of_state = 1050
 						has_full_control_of_state = 672
 						has_full_control_of_state = 1048
+						has_full_control_of_state = 1049
 					}
 					custom_trigger_tooltip = {
 						tooltip = INS_full_control_kalimantan
-						has_full_control_of_state = 1050
+						has_full_control_of_state = 1055
 						has_full_control_of_state = 334
 					}
 				}
@@ -1315,19 +1685,21 @@ focus_tree = {
 					has_global_flag = form_majapahit_empire_flag
 					custom_trigger_tooltip = {
 						tooltip = INS_full_control_java
-						has_full_control_of_state = 335
+						has_full_control_of_state = 1058
 						has_full_control_of_state = 1051
-						has_full_control_of_state = 1052
+						has_full_control_of_state = 335
+						has_full_control_of_state = 1086
 					}
 					custom_trigger_tooltip = {
 						tooltip = INS_full_control_sumatra
-						has_full_control_of_state = 1047
+						has_full_control_of_state = 1050
 						has_full_control_of_state = 672
 						has_full_control_of_state = 1048
+						has_full_control_of_state = 1049
 					}
 					custom_trigger_tooltip = {
 						tooltip = INS_full_control_borneo
-						has_full_control_of_state = 1050
+						has_full_control_of_state = 1055
 						has_full_control_of_state = 334
 						has_full_control_of_state = 1023
 						has_full_control_of_state = 333
@@ -1335,7 +1707,7 @@ focus_tree = {
 					}
 					custom_trigger_tooltip = {
 						tooltip = INS_full_control_malaya
-						has_full_control_of_state = 1050
+						has_full_control_of_state = 1055
 						has_full_control_of_state = 1060
 						has_full_control_of_state = 1059
 						has_full_control_of_state = 336
@@ -1357,7 +1729,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = INS_further_develop_west_tt
 			hidden_effect = {
-				335 = {
+				1058 = {
 					if = {
 						limit = {
 							NOT = {
@@ -1379,7 +1751,7 @@ focus_tree = {
 					}
 					upgrade_develop_modif = yes
 				}
-				1052 = {
+				335 = {
 					if = {
 						limit = {
 							NOT = {
@@ -1390,7 +1762,7 @@ focus_tree = {
 					}
 					upgrade_develop_modif = yes
 				}
-				1047 = {
+				1050 = {
 					if = {
 						limit = {
 							NOT = {
@@ -1429,7 +1801,24 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-				1050 = {
+				1049 = {
+					if = {
+						limit = {
+							NOT = {
+								is_core_of = ROOT
+							}
+						}
+						add_compliance = 5
+					}
+					upgrade_develop_modif = yes
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						province = 4361
+						instant_build = yes
+					}
+				}
+				1055 = {
 					if = {
 						limit = {
 							NOT = {
@@ -1476,22 +1865,22 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						has_full_control_of_state = 1050
-						1050 = {
+						has_full_control_of_state = 1055
+						1055 = {
 							NOT = {
 								has_dynamic_modifier = { modifier = early_develop_modif_west }
 							}
 						}
 					}
-					1050 = {
+					1055 = {
 						add_compliance = 10
 						add_dynamic_modifier = { modifier = early_develop_modif_west }
 					}
 					else_if = {
 						limit = {
-							has_full_control_of_state = 1050	
+							has_full_control_of_state = 1055	
 						}
-						1050 = {
+						1055 = {
 							add_compliance = 10
 							upgrade_develop_modif = yes
 						}	
@@ -1504,7 +1893,7 @@ focus_tree = {
 						owns_state = 1023
 						owns_state = 333
 						owns_state = 1024
-						owns_state = 1050
+						owns_state = 1055
 						owns_state = 1060
 						owns_state = 1059
 						owns_state = 336
@@ -1526,7 +1915,7 @@ focus_tree = {
 			else_if = {
 				limit = {
 					NOT = {
-						owns_state = 1050
+						owns_state = 1055
 						owns_state = 1060
 						owns_state = 1059
 						owns_state = 336
@@ -1563,13 +1952,15 @@ focus_tree = {
 					}
 					custom_trigger_tooltip = {
 						tooltip = INS_full_control_west
-						has_full_control_of_state = 335
+						has_full_control_of_state = 1058
 						has_full_control_of_state = 1051
-						has_full_control_of_state = 1052
-						has_full_control_of_state = 1047
+						has_full_control_of_state = 335
+						has_full_control_of_state = 1086
+						has_full_control_of_state = 1050
 						has_full_control_of_state = 672
 						has_full_control_of_state = 1048
-						has_full_control_of_state = 1050
+						has_full_control_of_state = 1049
+						has_full_control_of_state = 1055
 						has_full_control_of_state = 334
 					}
 				}
@@ -1577,18 +1968,20 @@ focus_tree = {
 					has_global_flag = form_majapahit_empire_flag
 					custom_trigger_tooltip = {
 						tooltip = INS_full_control_west_majapahit
-						has_full_control_of_state = 335
+						has_full_control_of_state = 1058
 						has_full_control_of_state = 1051
-						has_full_control_of_state = 1052
-						has_full_control_of_state = 1047
+						has_full_control_of_state = 335
+						has_full_control_of_state = 1086
+						has_full_control_of_state = 1050
 						has_full_control_of_state = 672
 						has_full_control_of_state = 1048
-						has_full_control_of_state = 1050
+						has_full_control_of_state = 1049
+						has_full_control_of_state = 1055
 						has_full_control_of_state = 334
 						has_full_control_of_state = 1023
 						has_full_control_of_state = 333
 						has_full_control_of_state = 1024
-						has_full_control_of_state = 1050
+						has_full_control_of_state = 1055
 						has_full_control_of_state = 1060
 						has_full_control_of_state = 1059
 						has_full_control_of_state = 336
@@ -1629,7 +2022,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = INS_finalize_develop_west_tt
 			hidden_effect = {
-				335 = {
+				1058 = {
 					if = {
 						limit = {
 							INS_is_enough_built_west = yes
@@ -1655,11 +2048,11 @@ focus_tree = {
 					INS_add_5_compliance_effect = yes
 					upgrade_state_category = yes
 				}
-				1052 = {
+				335 = {
 					INS_add_5_compliance_effect = yes
 					upgrade_state_category = yes
 				}
-				1047 = {
+				1050 = {
 					INS_add_5_compliance_effect = yes
 					upgrade_state_category = yes
 				}
@@ -1671,7 +2064,11 @@ focus_tree = {
 					INS_add_5_compliance_effect = yes
 					upgrade_state_category = yes
 				}
-				1050 = {
+				1049 = {
+					INS_add_5_compliance_effect = yes
+					upgrade_state_category = yes
+				}
+				1055 = {
 					INS_add_5_compliance_effect = yes
 					upgrade_state_category = yes
 				}
@@ -2136,7 +2533,7 @@ focus_tree = {
 			industrial_complex > 3
 			custom_trigger_tooltip = {
 				tooltip = INS_full_control_moluccas
-				1055 = {
+				1082 = { #North Moluccas
 					controller = {
 						OR = {
 							tag = ROOT
@@ -2201,7 +2598,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = INS_develop_east_tt
 			hidden_effect = {
-				1055 = {
+				1082 = { #North Moluccas
 					if = {
 						limit = {
 							NOT = {
@@ -2438,7 +2835,7 @@ focus_tree = {
 			industrial_complex > 4
 			custom_trigger_tooltip = {
 				tooltip = INS_full_control_moluccas
-				1055 = {
+				1082 = { #North Moluccas
 					controller = {
 						OR = {
 							tag = ROOT
@@ -2513,7 +2910,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = INS_further_develop_east_tt
 			hidden_effect = {
-				1055 = {
+				1082 = { #North Moluccas
 					if = {
 						limit = {
 							NOT = {
@@ -2749,7 +3146,7 @@ focus_tree = {
 			industrial_complex > 4
 			custom_trigger_tooltip = {
 				tooltip = INS_full_control_moluccas
-				1055 = {
+				1082 = { #North Moluccas
 					controller = {
 						OR = {
 							tag = ROOT
@@ -2826,7 +3223,7 @@ focus_tree = {
 					province = 4468
 					value = 1
 				}
-				add_victory_points = {
+				add_victory_points = { #Merauke
 					province = 10505
 					value = 1
 				}
@@ -2874,7 +3271,7 @@ focus_tree = {
 			industrial_complex > 6
 			custom_trigger_tooltip = {
 				tooltip = INS_full_control_moluccas
-				1055 = {
+				1082 = { #North Moluccas
 					controller = {
 						OR = {
 							tag = ROOT
@@ -3009,7 +3406,7 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				1055 = {
+				1082 = { #North Moluccas
 					INS_add_5_compliance_effect = yes
 					if = {
 						limit = {
@@ -3562,8 +3959,9 @@ focus_tree = {
 		}
 
 		available = {
-			has_full_control_of_state = 334
+			has_full_control_of_state = 1049
 			has_full_control_of_state = 672
+			has_full_control_of_state = 1055
 		}
 		
 		bypass = {
@@ -3665,17 +4063,18 @@ focus_tree = {
 				tooltip = INS_full_control_rubber_states_tt
 				if = {
 					limit = {
-						1047 = {
+						1050 = {
 							is_core_of = INS
 						}
 					}
-					has_full_control_of_state = 1047
+					has_full_control_of_state = 1050
 				}
 				has_full_control_of_state = 672
 				has_full_control_of_state = 1048
+				has_full_control_of_state = 1049
 				has_full_control_of_state = 1051
-				has_full_control_of_state = 1052
-				has_full_control_of_state = 1050
+				has_full_control_of_state = 335
+				has_full_control_of_state = 1055
 				has_full_control_of_state = 334
 				667 = {
 					controller = {
@@ -4189,19 +4588,21 @@ focus_tree = {
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = INS_full_control_java
-					has_full_control_of_state = 335
+					has_full_control_of_state = 1058
 					has_full_control_of_state = 1051
-					has_full_control_of_state = 1052
+					has_full_control_of_state = 335
+					has_full_control_of_state = 1086
 				}
 				custom_trigger_tooltip = {
 					tooltip = INS_full_control_sumatra
-					has_full_control_of_state = 1047
+					has_full_control_of_state = 1050
 					has_full_control_of_state = 672
 					has_full_control_of_state = 1048
+					has_full_control_of_state = 1049
 				}
 				custom_trigger_tooltip = {
 					tooltip = INS_full_control_kalimantan
-					has_full_control_of_state = 1050
+					has_full_control_of_state = 1055
 					has_full_control_of_state = 334
 				}
 			}
@@ -4262,7 +4663,7 @@ focus_tree = {
 				}
 				add_corps_commander_role = {
 					character = INS_hamengkubuwono_eighth
-					traits = { politically_connected }
+					traits = { INS_loyalty_to_netherlands politically_connected }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 2
@@ -4277,7 +4678,7 @@ focus_tree = {
 				}
 				add_corps_commander_role = {
 					character = INS_hamengkubuwono_ninth
-					traits = { politically_connected }
+					traits = { INS_loyalty_to_indonesia politically_connected }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 1
@@ -4314,7 +4715,7 @@ focus_tree = {
 				}
 				add_naval_commander_role = {
 					character = INS_mas_pardi
-					traits = { bold }
+					traits = { INS_loyalty_to_indonesia bold }
 					skill = 1
 					attack_skill = 2
 					defense_skill = 1
@@ -4345,6 +4746,7 @@ focus_tree = {
 					NOT = {
 						has_country_flag = INS_wardiman_officer_flag
 					}
+					has_character = INS_wardiman
 				}
 				add_advisor_role = {
 					character = INS_wardiman
@@ -4448,7 +4850,7 @@ focus_tree = {
 			show_ideas_tooltip = INS_leon_trotsky
 			add_corps_commander_role = {
 				character = INS_lev_trotsky
-				traits = { media_personality organisational_leader }
+				traits = { INS_loyalty_to_indonesia media_personality organisational_leader }
 				skill = 4
 				attack_skill = 3
 				defense_skill = 2
@@ -4533,7 +4935,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_mass_assault
-		icon = GFX_hol_arm_the_people
+		icon = GFX_focus_INS_laskar_rakjat
 		prerequisite = { focus = INS_local_militias }
 
 		relative_position_id = INS_local_militias
@@ -4576,7 +4978,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_ideological_devotion
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_hol_arm_the_people
 		prerequisite = { focus = INS_mass_assault }
 
 		relative_position_id = INS_mass_assault
@@ -4807,7 +5209,7 @@ focus_tree = {
 		completion_reward = {
 			add_corps_commander_role = {
 				character = INS_pesman
-				traits = { }
+				traits = { INS_loyalty_to_netherlands }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 1
@@ -4817,7 +5219,7 @@ focus_tree = {
 			}
 			add_corps_commander_role = {
 				character = INS_maurer
-				traits = { }
+				traits = { INS_loyalty_to_netherlands }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 1
@@ -4835,7 +5237,7 @@ focus_tree = {
 			}
 			add_corps_commander_role = {
 				character = INS_pierre_cox
-				traits = { infantry_leader }
+				traits = { INS_loyalty_to_netherlands infantry_leader }
 				skill = 1
 				attack_skill = 2
 				defense_skill = 1
@@ -4859,7 +5261,7 @@ focus_tree = {
 				set_country_flag = INS_urip_general
 				add_corps_commander_role = {
 					character = INS_urip_sumoharjo
-					traits = { defensive_doctrine unyielding_defender jungle_rat guerilla_fighter inflexible_strategist }
+					traits = { INS_loyalty_to_indonesia defensive_doctrine guerilla_fighter inflexible_strategist }
 					skill = 2
 					attack_skill = 2
 					defense_skill = 2
@@ -5015,7 +5417,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_corps_commander_role = {
 				character = INS_bakkers
-				traits = { }
+				traits = { INS_loyalty_to_indonesia }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 2
@@ -5034,7 +5436,7 @@ focus_tree = {
 				}
 				add_corps_commander_role = {
 					character = INS_hendrik_uhl
-					traits = { }
+					traits = { INS_loyalty_to_netherlands }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 2
@@ -5044,7 +5446,7 @@ focus_tree = {
 				}
 				add_corps_commander_role = {
 					character = INS_van_rees
-					traits = { }
+					traits = { INS_loyalty_to_netherlands }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 2
@@ -5072,7 +5474,7 @@ focus_tree = {
 				set_country_flag = INS_didi_general
 				add_corps_commander_role = {
 					character = INS_didi_kartasasmita
-					traits = { jungle_rat }
+					traits = { INS_loyalty_to_indonesia jungle_rat }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 1
@@ -5847,13 +6249,13 @@ focus_tree = {
 					engineer = { x = 0 y = 1 }
 				}
 			}
-			672 = {
+			1049 = {
 				create_unit = {
 					division = "name = \"1. Dutch Exiles\" division_template = \"Dutch Exile Legions\" start_experience_factor = 0.5 start_equipment_factor = 0.1" 
 					owner = INS
 				}
 			}
-			335 = {
+			1058 = {
 				create_unit = {
 					division = "name = \"2. Dutch Exiles\" division_template = \"Dutch Exile Legions\" start_experience_factor = 0.5 start_equipment_factor = 0.1" 
 					owner = INS
@@ -6001,7 +6403,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 			}
 		}
 
@@ -6075,7 +6477,7 @@ focus_tree = {
 	focus = {
 		id = INS_challenge_dutch_elitism
 		icon = GFX_focus_INS_challenge_dutch_elitism
-		mutually_exclusive = { focus = INS_improve_dutch_relations }
+		mutually_exclusive = { focus = INS_jewel_of_the_crown }
 		prerequisite = { focus = INS_continue_reform }
 		
 		relative_position_id = INS_continue_reform
@@ -6104,7 +6506,7 @@ focus_tree = {
 				}
 				NOT = {
 					OR = {
-						has_completed_focus = INS_improve_dutch_relations
+						has_completed_focus = INS_jewel_of_the_crown
 						has_completed_focus = INS_discourage_democratic_reforms
 						has_completed_focus = INS_support_decol
 					}
@@ -6271,11 +6673,8 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			hidden_effect = {
-				KLM = {
-					INS_mohammad_yusuf_alqadri = {
-						set_nationality = INS
-					}
-					INS_hamid_mohammad_alqadri = {
+				POK = {
+					KLM_mohammad_yusuf_alqadri = {
 						set_nationality = INS
 					}
 				}
@@ -6328,7 +6727,7 @@ focus_tree = {
 				}
 				add_corps_commander_role = {
 					character = INS_hamengkubuwono_eighth
-					traits = { politically_connected }
+					traits = { INS_loyalty_to_netherlands politically_connected }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 2
@@ -6343,7 +6742,7 @@ focus_tree = {
 				}
 				add_corps_commander_role = {
 					character = INS_hamengkubuwono_ninth
-					traits = { politically_connected }
+					traits = { INS_loyalty_to_indonesia politically_connected }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 1
@@ -6418,7 +6817,7 @@ focus_tree = {
 				add_idea = INS_national_awakening
 			}
 			custom_effect_tooltip = INS_parindra_available_tt
-			show_ideas_tooltip = INS_sutomo
+			show_ideas_tooltip = INS_dr_sutomo
 			show_ideas_tooltip = INS_mohammad_husni_thamrin
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -6746,7 +7145,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_emerald_equator
-		icon = GFX_focus_generic_east_indies
+		icon = GFX_focus_INS_the_jewel_in_the_crown
 		prerequisite = { focus = INS_free_nationalists focus = INS_indies_nation }
 		
 		relative_position_id = INS_free_nationalists
@@ -6997,7 +7396,7 @@ focus_tree = {
 					limit = {
 						has_country_flag = INS_choose_makassar
 					}
-					set_capital = { state = 1052 }
+					set_capital = { state = 1051 }
 				}
 				667 = { add_core_of = EIS }
 				1053 = { add_core_of = EIS }
@@ -7588,8 +7987,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = INS_improve_dutch_relations
-		icon = GFX_hol_political_effort
+		id = INS_jewel_of_the_crown
+		icon = GFX_focus_INS_dutch_east_indies
 		mutually_exclusive = { focus = INS_challenge_dutch_elitism }
 		prerequisite = { focus = INS_continue_reform }
 		
@@ -7623,7 +8022,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 			}
 		}
 
@@ -7696,9 +8095,9 @@ focus_tree = {
 		id = INS_upheld_status_quo
 		icon = GFX_focus_hol_oranje_boven
 		mutually_exclusive = { focus = INS_support_sutarjo }
-		prerequisite = { focus = INS_improve_dutch_relations }
+		prerequisite = { focus = INS_jewel_of_the_crown }
 		
-		relative_position_id = INS_improve_dutch_relations
+		relative_position_id = INS_jewel_of_the_crown
 		x = -1
 		y = 1
 
@@ -7706,7 +8105,7 @@ focus_tree = {
 			x = 1
 			y = 0
 			trigger = {
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 			}
 		}
 
@@ -7768,9 +8167,9 @@ focus_tree = {
 		id = INS_support_sutarjo
 		icon = GFX_focus_INS_support_sutarjo
 		mutually_exclusive = { focus = INS_upheld_status_quo }
-		prerequisite = { focus = INS_improve_dutch_relations }
+		prerequisite = { focus = INS_jewel_of_the_crown }
 		
-		relative_position_id = INS_improve_dutch_relations
+		relative_position_id = INS_jewel_of_the_crown
 		x = 1
 		y = 1
 
@@ -7778,7 +8177,7 @@ focus_tree = {
 			x = 1
 			y = 0
 			trigger = {
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 			}
 		}
 
@@ -7850,7 +8249,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = INS_parindra_available_tt
-			show_ideas_tooltip = INS_sutomo
+			show_ideas_tooltip = INS_dr_sutomo
 			show_ideas_tooltip = INS_mohammad_husni_thamrin
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -7874,7 +8273,7 @@ focus_tree = {
 	focus = {
 		id = INS_reinstate_ethical_policies
 		icon = GFX_focus_INS_support_tjarda
-		prerequisite = { focus = INS_improve_dutch_relations focus = INS_challenge_dutch_elitism }
+		prerequisite = { focus = INS_jewel_of_the_crown focus = INS_challenge_dutch_elitism }
 		
 		relative_position_id = INS_continue_reform
 		x = 0
@@ -7902,7 +8301,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 			}
 		}
 
@@ -7943,7 +8342,7 @@ focus_tree = {
 
 		available = {
 			has_full_control_of_state = 335
-			has_full_control_of_state = 1051
+			has_full_control_of_state = 1058
 		}
 		
 		bypass = {
@@ -8007,6 +8406,7 @@ focus_tree = {
 			show_ideas_tooltip = INS_gm_java
 			show_ideas_tooltip = INS_toyota
 			show_ideas_tooltip = INS_nakajima
+			show_ideas_tooltip = idea_INS_standard_oil_california_borrowed_concern
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_offsite_building = { type = industrial_complex level = 2 }
@@ -8180,6 +8580,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
+			has_completed_focus = INS_increase_sufficiency
 		}
 
 		bypass = {
@@ -8232,10 +8633,10 @@ focus_tree = {
 				has_war_support > 0.5
 				has_war = yes
 			}
-			has_full_control_of_state = 1051
+			has_full_control_of_state = 335
 			if = {
 				limit = { num_of_factories > 9 }
-				has_full_control_of_state = 672
+				has_full_control_of_state = 1048
 			}
 			has_full_control_of_state = 334
 			if = {
@@ -8254,7 +8655,7 @@ focus_tree = {
 			add_war_support = 0.1
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			1051 = {
+			335 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -8264,7 +8665,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { num_of_factories > 9 }
-				672 = {
+				1048 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -8405,7 +8806,7 @@ focus_tree = {
 
 		available = {
 			has_war = yes
-			has_full_control_of_state = 335
+			has_full_control_of_state = 1058
 			OR = {
 				has_stability < 0.70
 				any_country = {
@@ -8428,7 +8829,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_naval_commander_role = {
 				character = INS_johan_van_staveren
-				traits = { fleet_protector }
+				traits = { INS_loyalty_to_netherlands fleet_protector }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 2
@@ -8570,7 +8971,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_naval_commander_role = {
 				character = INS_johan_van_staveren
-				traits = { fleet_protector }
+				traits = { INS_loyalty_to_netherlands fleet_protector }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 2
@@ -8645,10 +9046,10 @@ focus_tree = {
 			compare_autonomy_state > autonomy_integrated_puppet
 			has_war = yes
 			has_stability > 0.55
-			has_full_control_of_state = 1051
-			has_full_control_of_state = 1052
+			has_full_control_of_state = 1051 #Semarang Steel and Cepu/Tuban Oil
 			has_full_control_of_state = 672
-			has_full_control_of_state = 1048
+			has_full_control_of_state = 1048 #Padang Steel
+			has_full_control_of_state = 1047 #Belitung Tungsten
 			has_full_control_of_state = 673
 			has_full_control_of_state = 669
 		}
@@ -8702,9 +9103,9 @@ focus_tree = {
 			add_resource = {
 				type = oil
 				amount = 8
-				state = 1052
+				state = 1051
 			}
-			1052 = {
+			1051 = {
 				if = {
 					limit = {
 						NOT = {
@@ -8726,9 +9127,9 @@ focus_tree = {
 			add_resource = {
 				type = steel
 				amount = 10
-				state = 672
+				state = 1048
 			}
-			672 = {
+			1048 = {
 				if = {
 					limit = {
 						NOT = {
@@ -8750,9 +9151,9 @@ focus_tree = {
 			add_resource = {
 				type = tungsten
 				amount = 14
-				state = 1048
+				state = 1049
 			}
-			1048 = {
+			1047 = {
 				if = {
 					limit = {
 						NOT = {
@@ -8803,9 +9204,9 @@ focus_tree = {
 			add_resource = {
 				type = coal
 				amount = 15
-				state = 1048
+				state = 672
 			}
-			1048 = {
+			672 = {
 				if = {
 					limit = {
 						NOT = {
@@ -9035,10 +9436,10 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			335 = {
+			1058 = {
 				if = {
 					limit = {
-						335 = {
+						1058 = {
 							free_building_slots = {
 								building = dockyard
 								size > 0
@@ -9054,10 +9455,10 @@ focus_tree = {
 					}
 				}
 			}
-			1052 = {
+			1051 = {
 				if = {
 					limit = {
-						1052 = {
+						1051 = {
 							free_building_slots = {
 								building = dockyard
 								size > 0
@@ -9073,10 +9474,10 @@ focus_tree = {
 					}
 				}
 			}
-			672 = {
+			1049 = {
 				if = {
 					limit = {
-						672 = {
+						1049 = {
 							free_building_slots = {
 								building = dockyard
 								size > 0
@@ -9361,7 +9762,7 @@ focus_tree = {
 			x = 2
 			y = 0
 			trigger = {
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 			}
 		}
 
@@ -9489,7 +9890,7 @@ focus_tree = {
 			x = -2
 			y = 0
 			trigger = {
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 			}
 		}
 
@@ -9511,6 +9912,12 @@ focus_tree = {
 					has_war_with = CHI
 					has_war_with = JAP
 					has_war_with = PRC
+					if = {
+						limit = {
+							has_dlc = "Graveyard of Empires"
+						}
+						has_completed_focus = RAJ_south_east_asia_command
+					}
 				}
 			}
 		}
@@ -9551,31 +9958,8 @@ focus_tree = {
 
 	focus = {
 		id = INS_request_timor
+		icon = GFX_focus_INS_request_east_timor
 		prerequisite = { focus = INS_threat_from_the_north focus = INS_invite_swpa_philippines }
-
-		icon = { #Portugal
-			trigger = {
-				721 = { is_controlled_by = POR }
-			}
-			value = GFX_focus_generic_befriend_portugal
-		}
-		icon = { #Spain
-			trigger = {
-				721 = { is_controlled_by = SPR }
-			}
-			value = GFX_focus_generic_befriend_communist_spain_focus
-		}
-		icon = { #Else
-			trigger = {
-				NOT = {
-					721 = { is_controlled_by = SPR }
-				}
-				NOT = {
-					721 = { is_controlled_by = POR }
-				}
-			}
-			value = GFX_goal_generic_major_alliance
-		}
 		
 		relative_position_id = INS_invite_swpa_philippines
 		x = -1
@@ -9585,7 +9969,7 @@ focus_tree = {
 			x = 1
 			y = 0
 			trigger = {
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 			}
 		}
 
@@ -10180,7 +10564,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_crush_indonesian_nationalism
-		icon = GFX_focus_generic_attack_indonesia
+		icon = GFX_focus_INS_restore_order_in_indies
 		prerequisite = { focus = INS_proclaim_the_empire }
 
 		relative_position_id = INS_proclaim_the_empire
@@ -10544,8 +10928,8 @@ focus_tree = {
 	focus = {
 		id = INS_join_the_axis
 
-		icon = { #German Reich
-			trigger = {
+		icon = {
+			GFX_focus_chi_mission_to_germany = { #German Reich
 				AND = {
 					GER = {
 						NOT = { has_war_with = INS }
@@ -10560,10 +10944,7 @@ focus_tree = {
 					}
 				}
 			}
-			value = GFX_focus_chi_mission_to_germany
-		}
-		icon = { #Italy
-			trigger = {
+			GFX_focus_befriend_italy = { #Fascist Italy
 				AND = {
 					GER = {
 						NOT = { has_government = fascism }
@@ -10581,20 +10962,7 @@ focus_tree = {
 					}
 				}
 			}
-			value = GFX_focus_befriend_italy
-		}
-		icon = { #Else
-			trigger = {
-				OR = {
-					GER = {
-						NOT = { has_government = fascism }
-					}
-					ITA = {
-						NOT = { has_government = fascism }
-					}
-				}
-			}
-			value = GFX_goal_support_fascism
+			GFX_goal_support_fascism = yes #Else
 		}
 		
 		prerequisite = { focus = INS_anti_japanese_sentiments }
@@ -11647,7 +12015,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_revive_spirit_1926
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		icon = GFX_focus_INS_mobilize_the_pemuda
 		prerequisite = { focus = INS_discourage_democratic_reforms }
 		mutually_exclusive = { focus = INS_make_use_nsboi }
 
@@ -11714,7 +12082,7 @@ focus_tree = {
 			hidden_effect = {
 				DFS = {
 					add_state_core = 738
-					add_state_core = 1055
+					add_state_core = 1082 #North Moluccas
 					add_state_core = 668
 					add_state_core = 669
 					add_state_core = 1056
@@ -11743,7 +12111,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_secret_weapon_production
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_INS_instigate_chaos_medan
 		prerequisite = { focus = INS_revive_spirit_1926 }
 
 		relative_position_id = INS_revive_spirit_1926
@@ -11753,7 +12121,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			controls_state = 672
+			controls_state = 1049
 			controls_state = 1048
 		}
 		
@@ -12371,7 +12739,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
-				prioritize = { 335 }
+				prioritize = { 1058 }
 				limit = {
 					is_in_home_area = yes
 					is_core_of = INS
@@ -12390,7 +12758,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				prioritize = { 1052 }
+				prioritize = { 1051 }
 				limit = {
 					is_in_home_area = yes
 					is_core_of = INS
@@ -12409,7 +12777,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				prioritize = { 672 }
+				prioritize = { 1049 }
 				limit = {
 					is_in_home_area = yes
 					is_core_of = INS
@@ -12620,7 +12988,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_back_to_seafaring_past
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_focus_PHI_reunite_madagascar
 		prerequisite = { focus = INS_claims_in_the_indian }
 		prerequisite = { focus = INS_JAP_naval_cooperation }
 
@@ -12707,13 +13075,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
+			if = { #North Moluccas
 				limit = {
 					NOT = {
-						has_full_control_of_state = 1055
+						has_full_control_of_state = 1082
 					}
 				}
-				add_state_claim = 1055
+				add_state_claim = 1082
 			}
 			if = {
 				limit = {
@@ -12965,10 +13333,9 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			has_full_control_of_state = 1051
-			has_full_control_of_state = 1052
-			has_full_control_of_state = 672
-			has_full_control_of_state = 1048
+			has_full_control_of_state = 1051 #Semarang Steel
+			has_full_control_of_state = 1048 #Ombilin Coalmine
+			has_full_control_of_state = 1047 #Belitung Tungsten
 		}
 		
 		bypass = {
@@ -13004,9 +13371,9 @@ focus_tree = {
 			add_resource = {
 				type = oil
 				amount = 6
-				state = 1052
+				state = 1051
 			}
-			1052 = {
+			1051 = {
 				if = {
 					limit = {
 						NOT = {
@@ -13028,9 +13395,9 @@ focus_tree = {
 			add_resource = {
 				type = steel
 				amount = 8
-				state = 672
+				state = 1048
 			}
-			672 = {
+			1048 = {
 				if = {
 					limit = {
 						NOT = {
@@ -13052,9 +13419,9 @@ focus_tree = {
 			add_resource = {
 				type = tungsten
 				amount = 10
-				state = 1048
+				state = 1047
 			}
-			1048 = {
+			1047 = {
 				if = {
 					limit = {
 						NOT = {
@@ -13432,58 +13799,9 @@ focus_tree = {
 
 	focus = {
 		id = INS_join_allies
+		icon = GFX_focus_INS_pledge_to_allies
 		prerequisite = { focus = INS_align_with_westerners }
 		mutually_exclusive = { focus = INS_reconciliation focus = INS_across_pacific }
-
-		icon = { #UK
-			trigger = {
-				AND = {
-					ENG = {
-						NOT = { has_war_with = INS }
-						has_government = democratic
-						is_faction_leader = yes
-					}
-					any_other_country = {
-						is_in_faction_with = ENG
-						NOT = {
-							has_war_with = INS
-						}
-					}
-				}
-			}
-			value = GFX_focus_chi_british_cooperation
-		}
-		icon = { #France
-			trigger = {
-				AND = {
-					FRA = {
-						NOT = { has_war_with = INS }
-						has_government = democratic
-						is_faction_leader = yes
-					}
-					any_other_country = {
-						is_in_faction_with = FRA
-						NOT = {
-							has_war_with = INS
-						}
-					}
-				}
-			}
-			value = GFX_focus_chi_reach_out_to_france
-		}
-		icon = { #Else
-			trigger = {
-				OR = {
-					ENG = {
-						NOT = { has_government = democratic }
-					}
-					FRA = {
-						NOT = { has_government = democratic }
-					}
-				}
-			}
-			value = GFX_goal_support_democracy
-		}
 
 		relative_position_id = INS_align_with_westerners
 		x = 4
@@ -13954,15 +14272,15 @@ focus_tree = {
 		}
 	}
 
-	##################
-	#                #
-	# ###   #  # ### #
-	# #  #  # #   #  #
-	# ###   ##    #  #
-	# #     # #   #  #
-	# #     #  # ### #
-	#                #
-	##################
+	#################
+	#               #
+	# ###  #  # ### #
+	# #  # # #   #  #
+	# ###  ##    #  #
+	# #    # #   #  #
+	# #    #  # ### #
+	#               #
+	#################
 
 	focus = {
 		id = INS_support_communists
@@ -14364,7 +14682,7 @@ focus_tree = {
 		id = INS_a_distant_ally
 
 		icon = { #Soviet
-			trigger = {
+			GFX_focus_chi_mission_to_the_soviet_union = { #CPSU
 				AND = {
 					SOV = {
 						NOT = { has_war_with = INS }
@@ -14379,10 +14697,7 @@ focus_tree = {
 					}
 				}
 			}
-			value = GFX_focus_chi_mission_to_the_soviet_union
-		}
-		icon = { #PRC
-			trigger = {
+			GFX_focus_chi_cooperation_with_the_communists = { #CPC
 				AND = {
 					SOV = {
 						NOT = { has_government = communism }
@@ -14400,10 +14715,7 @@ focus_tree = {
 					}
 				}
 			}
-			value = GFX_focus_chi_cooperation_with_the_communists
-		}
-		icon = { #France
-			trigger = {
+			GFX_hol_pressure_france = { #CPF
 				AND = {
 					SOV = {
 						NOT = { has_government = communism }
@@ -14424,23 +14736,31 @@ focus_tree = {
 					}
 				}
 			}
-			value = GFX_hol_pressure_france
-		}
-		icon = { #Else
-			trigger = {
-				OR = {
-					PRC = {
+			GFX_hol_pressure_france = { #JCP
+				AND = {
+					SOV = {
 						NOT = { has_government = communism }
 					}
-					SOV = {
+					PRC = {
 						NOT = { has_government = communism }
 					}
 					FRA = {
 						NOT = { has_government = communism }
 					}
+					JAP = {
+						NOT = { has_war_with = INS }
+						has_government = communism
+						is_faction_leader = yes
+					}
+					any_other_country = {
+						is_in_faction_with = JAP
+						NOT = {
+							has_war_with = INS
+						}
+					}
 				}
 			}
-			value = GFX_focus_chi_cooperation_with_the_communists
+			GFX_focus_chi_cooperation_with_the_communists = yes #Else
 		}
 		
 		prerequisite = { focus = INS_break_the_chains }
@@ -14715,7 +15035,7 @@ focus_tree = {
 				}
 				set_country_flag = INS_resources_exchange_program
 				give_resource_rights = {
-					state = 672
+					state = 1049
 				}
 			}
 		}
@@ -15089,12 +15409,12 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					owns_state = 1055
+					owns_state = 1082
 					owns_state = 668
 					owns_state = 738
 				}
 				MLK = {
-					remove_state_core = 1055
+					remove_state_core = 1082
 					remove_state_core = 668
 					remove_state_core = 738
 				}
@@ -15124,10 +15444,10 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_full_control_of_state = 1050
+						has_full_control_of_state = 1055
 					}
 				}
-				add_state_claim = 1050
+				add_state_claim = 1055
 			}
 			if = {
 				limit = {
@@ -15185,17 +15505,17 @@ focus_tree = {
 					limit = {
 						has_country_flag = INS_choose_makassar
 					}
-					set_capital = { state = 1052 }
+					set_capital = { state = 1051 }
 				}
-				673 = { add_core_of = SLW }
-				1054 = { add_core_of = SLW }
+				673 = { add_core_of = MNH }
+				1053 = { add_core_of = MNH }
 				INS = {
 					INS_thomas_nayoan = {
 						clr_character_flag = INS_imprisoned_flag
-						set_nationality = SLW
+						set_nationality = MNH
 					}
 				}
-				SLW = {
+				MNH = {
 					set_capital = { state = 673 }
 					add_country_leader_role = {
 						character = INS_thomas_nayoan
@@ -15233,7 +15553,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			INS = {
 				release = TML
-				release = SLW
+				release = MNH
 				release = EIS
 				release = MLK
 				release = WPG
@@ -15243,7 +15563,7 @@ focus_tree = {
 				autonomy_state = autonomy_dominion
 			}
 			set_autonomy = {
-				target = SLW
+				target = MNH
 				autonomy_state = autonomy_dominion
 			}
 			set_autonomy = {
@@ -15260,13 +15580,13 @@ focus_tree = {
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			1051 = {
+			1051 = { #Central Java
 				add_extra_state_shared_building_slots = 2
 			}
-			672 = {
+			1049 = { #Central Sumatra
 				add_extra_state_shared_building_slots = 2
 			}
-			334 = {
+			334 = { #East Kalimantan
 				add_extra_state_shared_building_slots = 2
 			}
 		}
@@ -16245,20 +16565,85 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
 		}
 	}
 
-	##############################################
-	#                                            #
-	# #     #       #     #           # #     #  #
-	# ##    #      # #     #         #   #   #   #
-	# # #   #     #   #     #       #     # #    #
-	# #  #  #    #######     #     #       #     #
-	# #   # #   #       #     #   #        #     #
-	# #    ##  #         #     # #         #     #
-	# #     # #           #     #          #     #
-	#                                            #
-	##############################################
+	#####################################
+	#                                   #
+	# ####  ###  ####  ####   ###  #    #
+	# #    #   # #   # #   # #   # #    #
+	# #### #   # ####  ####  #   # #    #
+	# #    #   # #  #  #     #   # #    #
+	# #     ###  #   # #      ###  #### #
+	#                                   #
+	#####################################
+
+	focus = {
+		id = INS_in_the_world_stage
+		icon = GFX_focus_generic_befriend_indonesia
+
+		relative_position_id = INS_secret_weapon_production
+		x = 11
+		y = 4
+
+		prerequisite = { focus = INS_break_the_chains focus = INS_expel_the_colonials }
+
+		cost = 5
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				OR = {
+					has_completed_focus = INS_break_the_chains
+					has_completed_focus = INS_expel_the_colonials
+				}
+			}
+		}
+
+		available = {
+			is_subject = no
+			has_stability > 0.5
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = INS_artilerie_inrichtingen
+				}
+				swap_ideas = {
+					remove_idea = INS_independence_mess_1
+					add_idea = INS_independence_mess_2
+				}
+			}
+		}	
+
+	}
+
+	#############################
+	#                           #
+	# #   #    #    #   # #   # #
+	# ##  #   # #   #   # #   # #
+	# # # #  #####  #   #  ###  #
+	# #  ##  #   #   # #    #   #
+	# #   #  #   #    #     #   #
+	#                           #
+	#############################
 
 	focus = {
 		id = INS_pave_the_way_for_a_navy
@@ -16300,7 +16685,7 @@ focus_tree = {
 				remove_idea = INS_navy_1
 				add_idea = INS_navy_2
 			}
-			random_owned_controlled_state = {
+			random_owned_controlled_state = { #Surabaya
 				limit = {
 					is_in_home_area = yes
 					is_core_of = INS
@@ -16311,7 +16696,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				prioritize = { 672 }
+				prioritize = { 1049 }
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -16319,7 +16704,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
+			random_owned_controlled_state = { #Medan
 				limit = {
 					is_in_home_area = yes
 					is_core_of = INS
@@ -16330,7 +16715,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				prioritize = { 1052 }
+				prioritize = { 1049 }
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -16343,7 +16728,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_ask_indies_fleet
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_focus_INS_request_naval_control
 		prerequisite = { focus = INS_pave_the_way_for_a_navy }
 
 		relative_position_id = INS_pave_the_way_for_a_navy
@@ -16544,8 +16929,8 @@ focus_tree = {
 		}
 
 		available = {
-			has_full_control_of_state = 335
-			has_full_control_of_state = 1052
+			has_full_control_of_state = 1058
+			has_full_control_of_state = 1051
 		}
 		
 		bypass = {
@@ -16594,7 +16979,7 @@ focus_tree = {
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			335 = {
+			1058 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -16602,7 +16987,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			1052 = {
+			1051 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -16620,7 +17005,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_naval_commander_role = {
 					character = INS_mas_pardi
-					traits = { bold }
+					traits = { INS_loyalty_to_indonesia bold }
 					skill = 1
 					attack_skill = 2
 					defense_skill = 1
@@ -16775,7 +17160,7 @@ focus_tree = {
 
 		available = {
 			OR = {
-				672 = {
+				1049 = {
 					is_fully_controlled_by = INS
 					free_building_slots = {
 						building = fuel_silo
@@ -16783,7 +17168,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				1052 = {
+				335 = {
 					is_fully_controlled_by = INS
 					free_building_slots = {
 						building = fuel_silo
@@ -16813,7 +17198,7 @@ focus_tree = {
 			navy_experience = 10
 			if = {
 				limit = {
-					672 = {
+					1049 = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 1
@@ -16821,7 +17206,7 @@ focus_tree = {
 						}
 					}
 				}
-				672 = {
+				1049 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = fuel_silo
@@ -16832,7 +17217,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					1052 = {
+					335 = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 1
@@ -16840,7 +17225,7 @@ focus_tree = {
 						}
 					}
 				}
-				1052 = {
+				335 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = fuel_silo
@@ -16969,8 +17354,8 @@ focus_tree = {
 
 		available = {
 			AND = {
-				has_full_control_of_state = 335
-				has_full_control_of_state = 672
+				has_full_control_of_state = 1058
+				has_full_control_of_state = 1049
 				has_full_control_of_state = 673
 				has_full_control_of_state = 334
 				has_full_control_of_state = 667
@@ -16987,14 +17372,14 @@ focus_tree = {
 			air_experience = 10
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			335 = {
+			1058 = {
 				add_building_construction = {
 					type = air_base
 					level = 2
 					instant_build = yes
 				}
 			}
-			672 = {
+			1049 = {
 				add_building_construction = {
 					type = air_base
 					level = 2
@@ -17111,6 +17496,15 @@ focus_tree = {
 					category = naval_doctrine
 				}
 				random_owned_controlled_state = {
+					prioritize = { 1058 }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
 					prioritize = { 335 }
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
@@ -17120,16 +17514,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					prioritize = { 1052 }
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}
-				random_owned_controlled_state = {
-					prioritize = { 672 }
+					prioritize = { 1049 }
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = dockyard
@@ -17195,7 +17580,7 @@ focus_tree = {
 					value = 0.25
 				}
 				random_owned_controlled_state = {
-					prioritize = { 1052 }
+					prioritize = { 335 }
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = dockyard
@@ -17248,7 +17633,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
-				prioritize = { 1052 }
+				prioritize = { 335 }
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -17726,6 +18111,7 @@ focus_tree = {
 					NOT = {
 						has_country_flag = INS_wardiman_officer_flag
 					}
+					has_character = INS_wardiman
 				}
 				add_advisor_role = {
 					character = INS_wardiman
@@ -17807,6 +18193,7 @@ focus_tree = {
 					NOT = {
 						has_country_flag = INS_wardiman_officer_flag
 					}
+					has_character = INS_wardiman
 				}
 				add_advisor_role = {
 					character = INS_wardiman
@@ -18268,10 +18655,10 @@ focus_tree = {
 
 	focus = {
 		id = INS_prepare_flight
-		icon = GFX_goal_generic_intelligence_exchange
+		icon = GFX_focus_generic_government_in_exile
 
 		relative_position_id = INS_continue_reform
-		x = 11
+		x = 12
 		y = 0
 
 		offset = {
@@ -18294,7 +18681,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 			}
 		}
 
@@ -18413,7 +18800,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_evacuation
-		icon = GFX_focus_generic_government_in_exile
+		icon = GFX_focus_INS_evacuate_soldiers_to_australia
 		prerequisite = { focus = INS_build_exile_port }
 		
 		relative_position_id = INS_build_exile_port
@@ -18448,7 +18835,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				prioritize = { 335 } #Batavia
+				prioritize = { 1058 } #Batavia
 				limit = {
 					is_fully_controlled_by = ROOT
 					OR = {
@@ -18488,7 +18875,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				prioritize = { 1052 } #East Java
+				prioritize = { 1051 } #East Java
 				limit = {
 					is_fully_controlled_by = ROOT
 					OR = {
@@ -18801,6 +19188,16 @@ focus_tree = {
 				}
 				promote_leader = yes
 			}
+			hidden_effect = {
+				INS_sarjono = {
+					clr_character_flag = INS_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = GFX_idea_indonesia_sarjono
+						}
+					}
+				}
+			}
 			add_manpower = 10000
 			add_popularity = {
 				ideology = communism
@@ -18988,7 +19385,7 @@ focus_tree = {
 				}
 				add_corps_commander_role = {
 					character = INS_simon_spoor
-					traits = { ambusher }
+					traits = { INS_loyalty_to_netherlands ambusher }
 					skill = 2
 					attack_skill = 1
 					defense_skill = 2
@@ -19004,7 +19401,7 @@ focus_tree = {
 			}
 			add_corps_commander_role = {
 				character = INS_overakker
-				traits = { }
+				traits = { INS_loyalty_to_netherlands }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 1
@@ -19021,7 +19418,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_naval_commander_role = {
 				character = INS_pieter_koenraad
-				traits = { fleet_protector }
+				traits = { INS_loyalty_to_netherlands fleet_protector }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 2
@@ -19237,33 +19634,37 @@ focus_tree = {
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = INS_control_capital_island_tt
-				if = {
+				if = { #Whole Kalimantan
 					limit = {
 						has_country_flag = INS_choose_banjarmasin
 					}
 					has_full_control_of_state = 334
-					has_full_control_of_state = 1050
+					has_full_control_of_state = 1055
 				}
-				else_if = {
+				else_if = { #Whole Sulawesi
 					limit = {
 						has_country_flag = INS_choose_makassar
 					}
 					has_full_control_of_state = 673
-					has_full_control_of_state = 1054
+					has_full_control_of_state = 1053
+					has_full_control_of_state = 1056
 				}
-				else_if = {
+				else_if = { #Whole Sumatra
 					limit = {
 						has_country_flag = INS_choose_palembang
 					}
 					has_full_control_of_state = 1048
+					has_full_control_of_state = 1049
+					has_full_control_of_state = 1050
 					has_full_control_of_state = 672
 				}
-				else = {
+				else = { #Whole Java
 					custom_trigger_tooltip = {
 						tooltip = INS_control_java
+						controls_state = 1058
 						controls_state = 335
 						controls_state = 1051
-						controls_state = 1052
+						controls_state = 1086
 					}
 				}
 			}
@@ -19311,7 +19712,7 @@ focus_tree = {
 					value = 5
 				}
 			}
-			IF = {
+			IF = { #Merauke
 				limit = {
 					var:ROOT.INS_stepping_stone_state = { state = 1057 }
 				}
@@ -19409,9 +19810,10 @@ focus_tree = {
 					}
 					custom_trigger_tooltip = {
 						tooltip = INS_control_java
+						controls_state = 1058
 						controls_state = 335
 						controls_state = 1051
-						controls_state = 1052
+						controls_state = 1086
 					}
 				}
 				else_if = {
@@ -19419,21 +19821,24 @@ focus_tree = {
 						has_country_flag = INS_choose_banjarmasin
 					}
 					has_full_control_of_state = 334
-					has_full_control_of_state = 1050
+					has_full_control_of_state = 1055
 				}
 				else_if = {
 					limit = {
 						has_country_flag = INS_choose_makassar
 					}
 					has_full_control_of_state = 673
-					has_full_control_of_state = 1054
+					has_full_control_of_state = 1056
+					has_full_control_of_state = 1053
 				}
 				else_if = {
 					limit = {
 						has_country_flag = INS_choose_palembang
 					}
 					has_full_control_of_state = 1048
+					has_full_control_of_state = 1049
 					has_full_control_of_state = 672
+					has_full_control_of_state = 1050
 				}
 			}
 		}
@@ -19455,7 +19860,7 @@ focus_tree = {
 				limit = {
 					has_country_flag = INS_choose_bandung
 				}
-				set_capital = { state = 1051 }
+				set_capital = { state = 335 }
 			}
 			else_if = {
 				limit = {
@@ -19473,10 +19878,10 @@ focus_tree = {
 				limit = {
 					has_country_flag = INS_choose_palembang
 				}
-				set_capital = { state = 1048 }
+				set_capital = { state = 672 }
 			}
 			else = {
-				set_capital = { state = 335 }
+				set_capital = { state = 1058 }
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt

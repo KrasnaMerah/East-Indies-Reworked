@@ -4134,25 +4134,14 @@ INS_HOL = {
 	  }
 }
 
-INS = {
-	male = {
-		names = { Joko Fauzi Prabowo Ali Soemarno Henk Widji Teuku Hadi Azwar Mustafa Zaini Abdul Anak Ida Dewa }
-	}
-	female = {
-		names = { Diah Siti }
-	}
-	surnames = { Widodo Bowo Subianto Sadikin Sosroatmodjo Ngantung Permatasari Damono Wibowo Thukul Hartinah Gunawan Haryanto Suprianto Sabara Abubakar "Bagus Oka" "Bagus Mantra" Martha}
-	callsigns = { }
-}
-
-TIM = {
+TML = {
 	male = {
 		names = { Abineno Adrianus Anderias Carlos Clementino Darius Dominikus Edmund Eliaser Frans Fransiskus Gaspar Gerson Hendrik "I Gusti" Ida Jan Johannes Jose Xanana Xaverius Viktor }
 	}
 	female = {
 		names = { Fransiska Yovita }
 	}
-	surnames = { Amaral Belo "da Lopez" Fanggidaej Gusmao Horta Karim Laiskodat "Leboe Raja" Mauloko Nabunome Nooteboom Paranggi Ruiter Saku Taek Tenkudi }
+	surnames = { Amaral Belo "da Lopez" Fanggidaej Gusmao Horta Karim Laiskodat "Lebu Raya" Mauloko Nabunome Nooteboom Paranggi Ruiter Saku Taek Tenkudi }
 	callsigns = { "The Black Devil" "Elang" "Godham" "Liger" "Kilat" "Kolibri" "Kondor" "Martin" "Mohawk" "Raider" }
 }
 

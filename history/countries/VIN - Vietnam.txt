@@ -88,7 +88,7 @@ set_popularities = {
 }
 
 add_ideas = {
-	INS_agrarian_society_2
+	ASEAN_agrarian_society_2
 }
 
 #NOTICE# please watch out for spelling, im using Vietnamese names as they spell them, game might not support these characters!

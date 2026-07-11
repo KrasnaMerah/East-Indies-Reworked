@@ -995,7 +995,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_johor_aluminium_deposits = { #1058
+	develop_johor_aluminium_deposits = { #1060
 
 		icon = aluminium
 
@@ -1006,20 +1006,20 @@ prospect_for_resources = {
 		available = {
 			has_tech = excavation2
 			num_of_civilian_factories_available_for_projects > 2
-			owns_state = 1058
-			controls_state = 1058
+			owns_state = 1060
+			controls_state = 1060
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1058
+				state = 1060
 			}
 		}
 
 		visible = {
-			owns_state = 1058
-			controls_state = 1058
-			1058 = {
+			owns_state = 1060
+			controls_state = 1060
+			1060 = {
 				NOT = {
 					has_state_flag = johor_aluminium_developed
 				}
@@ -1068,8 +1068,8 @@ prospect_for_resources = {
 		}
 
 		remove_effect = {
-			1058 = { set_state_flag = johor_aluminium_developed }
-			1058 = {
+			1060 = { set_state_flag = johor_aluminium_developed }
+			1060 = {
 				add_resource = {
 					type = aluminium
 					amount = 12
@@ -10581,6 +10581,78 @@ prospect_for_resources = {
 		}
 	}
 
+	open_mae_moh_lignite_mine = {
+		icon = coal
+
+		allowed = {
+			
+		}
+
+		available = {
+			owns_state = 869
+			controls_state = 869
+			num_of_civilian_factories_available_for_projects > 2
+			OR = {
+				has_tech = excavation4
+				has_tech = excavation5
+			}
+
+			if = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+					original_tag = SIA
+				}
+				has_completed_focus = SIA_domestic_tin_smelters
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 869
+			}
+		}
+
+		visible = {
+			owns_state = 869
+			controls_state = 869
+		} 
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = coal
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			869 = {
+				add_resource = {
+					type = coal
+					amount = 13
+				}
+			}
+		}
+	}
+
 	develop_central_java_steel_deposits = { #1051
 
 		icon = steel
@@ -10699,7 +10771,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_west_java_coal_mines = { #1051
+	develop_west_java_coal_mines = { #335
 		icon = coal
 
 		allowed = {
@@ -10707,22 +10779,22 @@ prospect_for_resources = {
 		}
 
 		available = {
-			owns_state = 1051
-			controls_state = 1051
+			owns_state = 335
+			controls_state = 335
 			num_of_civilian_factories_available_for_projects > 2
 			has_tech = excavation4
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1051
+				state = 335
 			}
 		}
 
 		visible = {
-			owns_state = 1051
-			controls_state = 1051
-			1051 = {
+			owns_state = 335
+			controls_state = 335
+			335 = {
 				NOT = {
 					has_state_flag = {
 						flag = bayah_coal_developed
@@ -10775,7 +10847,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = javan_coal_duration value = 30 }
-			1051 = {
+			335 = {
 				if = {
 					limit = {
 						NOT = {
@@ -10794,7 +10866,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			1051 = {
+			335 = {
 				add_resource = {
 					type = coal
 					amount = 4
@@ -10803,7 +10875,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_east_java_oil_deposits = { #1052
+	develop_east_java_oil_deposits = { #1051
 
 		icon = oil
 
@@ -10813,21 +10885,21 @@ prospect_for_resources = {
 
 		available = {
 			has_tech = excavation3
-			owns_state = 1052
-			controls_state = 1052
+			owns_state = 1051
+			controls_state = 1051
 			num_of_civilian_factories_available_for_projects > 7
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1052
+				state = 1051
 			}
 		}
 
 		visible = {
-			owns_state = 1052
-			controls_state = 1052
-			1052 = {
+			owns_state = 1051
+			controls_state = 1051
+			1051 = {
 				NOT = {
 					has_state_flag = {
 						flag = javan_oil_developed
@@ -10881,7 +10953,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = javan_oil_duration value = 30 }
-			1052 = {
+			1051 = {
 				if = {
 					limit = {
 						NOT = {
@@ -10900,7 +10972,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			1052 = {
+			1051 = {
 				add_resource = {
 					type = oil
 					amount = 6
@@ -10918,7 +10990,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_central_sumatra_steel_deposits = { #672
+	develop_central_sumatra_steel_deposits = { #1048
 
 		icon = steel
 
@@ -10928,21 +11000,21 @@ prospect_for_resources = {
 
 		available = {
 			has_tech = excavation3
-			owns_state = 672
-			controls_state = 672
+			owns_state = 1048
+			controls_state = 1048
 			num_of_civilian_factories_available_for_projects > 7
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 672
+				state = 1048
 			}
 		}
 
 		visible = {
-			owns_state = 672
-			controls_state = 672
-			672 = {
+			owns_state = 1048
+			controls_state = 1048
+			1048 = {
 				NOT = {
 					has_state_flag = {
 						flag = sumatran_steel_developed
@@ -10999,7 +11071,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = sumatran_steel_duration value = 30 }
-			672 = {
+			1048 = {
 				if = {
 					limit = {
 						NOT = {
@@ -11018,7 +11090,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			672 = {
+			1048 = {
 				add_resource = {
 					type = steel
 					amount = 5
@@ -11036,7 +11108,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_central_sumatra_oil_deposits = { #672
+	develop_central_sumatra_oil_deposits = { #1049
 
 		icon = oil
 
@@ -11046,21 +11118,21 @@ prospect_for_resources = {
 
 		available = {
 			has_tech = excavation3
-			owns_state = 672
-			controls_state = 672
+			owns_state = 1049
+			controls_state = 1049
 			num_of_civilian_factories_available_for_projects > 6
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 672
+				state = 1049
 			}
 		}
 
 		visible = {
-			owns_state = 672
-			controls_state = 672
-			672 = {
+			owns_state = 1049
+			controls_state = 1049
+			1049 = {
 				NOT = {
 					has_state_flag = {
 						flag = riau_oil_developed
@@ -11114,7 +11186,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = riau_oil_duration value = 30 }
-			672 = {
+			1049 = {
 				if = {
 					limit = {
 						NOT = {
@@ -11133,7 +11205,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			672 = {
+			1049 = {
 				add_resource = {
 					type = oil
 					amount = 6
@@ -11151,7 +11223,7 @@ prospect_for_resources = {
 		}
 	}
 
-	expand_central_sumatra_coal_mines = { #672
+	expand_central_sumatra_coal_mines = { #1048
 
 		icon = coal
 
@@ -11160,21 +11232,21 @@ prospect_for_resources = {
 		}
 
 		available = {
-			owns_state = 672
-			controls_state = 672
+			owns_state = 1048
+			controls_state = 1048
 			num_of_civilian_factories_available_for_projects > 3
 			has_tech = excavation3
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 672
+				state = 1048
 			}
 		}
 
 		visible = {
-			owns_state = 672
-			controls_state = 672
-			672 = {
+			owns_state = 1048
+			controls_state = 1048
+			1048 = {
 				NOT = {
 					has_state_flag = {
 						flag = ombilin_coal_developed
@@ -11227,7 +11299,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = ombilin_coal_duration value = 45 }
-			672 = {
+			1048 = {
 				if = {
 					limit = {
 						NOT = {
@@ -11246,7 +11318,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			672 = {
+			1048 = {
 				add_resource = {
 					type = coal
 					amount = 5
@@ -11255,7 +11327,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_riau_bauxite_deposits = { #1049
+	develop_riau_bauxite_deposits = { #1083
 		
 		icon = aluminium
 
@@ -11265,21 +11337,21 @@ prospect_for_resources = {
 
 		available = {
 			has_tech = excavation3
-			owns_state = 1049
-			controls_state = 1049
+			owns_state = 1083
+			controls_state = 1083
 			num_of_civilian_factories_available_for_projects > 2
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1049
+				state = 1083
 			} 
 		}
 
 		visible = {
-			owns_state = 1049
-			controls_state = 1049
-			1049 = {
+			owns_state = 1083
+			controls_state = 1083
+			1083 = {
 				NOT = {
 					has_state_flag = {
 						flag = riau_bauxite_developed
@@ -11333,7 +11405,7 @@ prospect_for_resources = {
 		}
 
 		remove_effect = {
-			1049 = {
+			1083 = {
 				if = {
 					limit = {
 						NOT = {
@@ -11352,7 +11424,7 @@ prospect_for_resources = {
 					}
 				}
 			} 
-			1049 = {
+			1083 = {
 				add_resource = {
 					type = aluminium
 					amount = 8
@@ -11370,7 +11442,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_southern_sumatra_tungsten_deposits = { #1048
+	develop_southern_sumatra_tungsten_deposits = { #1047
 
 		icon = tungsten
 
@@ -11380,21 +11452,21 @@ prospect_for_resources = {
 
 		available = {
 			has_tech = excavation4
-			owns_state = 1048
-			controls_state = 1048
+			owns_state = 1047
+			controls_state = 1047
 			num_of_civilian_factories_available_for_projects > 5
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1048
+				state = 1047
 			}
 		}
 
 		visible = {
-			owns_state = 1048
-			controls_state = 1048
-			1048 = {
+			owns_state = 1047
+			controls_state = 1047
+			1047 = {
 				NOT = {
 					has_state_flag = {
 						flag = sumatran_tungsten_developed
@@ -11449,7 +11521,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = sumatran_tungsten_duration value = 30 }
-			1048 = {
+			1047 = {
 				if = {
 					limit = {
 						NOT = {
@@ -11468,7 +11540,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			1048 = {
+			1047 = {
 				add_resource = {
 					type = tungsten
 					amount = 5
@@ -11486,7 +11558,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_southern_sumatra_oil_deposits = { #1048
+	develop_southern_sumatra_oil_deposits = { #672
 
 		icon = oil
 
@@ -11496,21 +11568,21 @@ prospect_for_resources = {
 
 		available = {
 			has_tech = excavation3
-			owns_state = 1048
-			controls_state = 1048
+			owns_state = 672
+			controls_state = 672
 			num_of_civilian_factories_available_for_projects > 7
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1048
+				state = 672
 			}
 		}
 
 		visible = {
-			owns_state = 1048
-			controls_state = 1048
-			1048 = {
+			owns_state = 672
+			controls_state = 672
+			672 = {
 				NOT = {
 					has_state_flag = {
 						flag = palembang_oil_developed
@@ -11562,7 +11634,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = palembang_oil_duration value = 30 }
-			1048 = {
+			672 = {
 				if = {
 					limit = {
 						NOT = {
@@ -11581,7 +11653,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			1048 = {
+			672 = {
 				add_resource = {
 					type = oil
 					amount = 6
@@ -11599,7 +11671,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_southern_sumatra_coal_mines = { #1048
+	develop_southern_sumatra_coal_mines = { #672
 
 		icon = coal
 
@@ -11608,21 +11680,21 @@ prospect_for_resources = {
 		}
 
 		available = {
-			owns_state = 1048
-			controls_state = 1048
+			owns_state = 672
+			controls_state = 672
 			num_of_civilian_factories_available_for_projects > 2
 			has_tech = excavation3
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1048
+				state = 672
 			}
 		}
 
 		visible = {
-			owns_state = 1048
-			controls_state = 1048
-			1048 = {
+			owns_state = 672
+			controls_state = 672
+			672 = {
 				NOT = {
 					has_state_flag = {
 						flag = muaraenim_coal_developed
@@ -11675,7 +11747,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = muaraenim_coal_duration value = 30 }
-			1048 = {
+			672 = {
 				if = {
 					limit = {
 						NOT = {
@@ -11694,7 +11766,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			1048 = {
+			672 = {
 				add_resource = {
 					type = coal
 					amount = 6
@@ -11703,7 +11775,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_southern_sumatra_coal_mines_2 = { #1048
+	develop_southern_sumatra_coal_mines_2 = { #672
 
 		icon = coal
 
@@ -11712,22 +11784,22 @@ prospect_for_resources = {
 		}
 
 		available = {
-			owns_state = 1048
-			controls_state = 1048
+			owns_state = 672
+			controls_state = 672
 			num_of_civilian_factories_available_for_projects > 5
 			has_tech = excavation4
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1048
+				state = 672
 			}
 		}
 
 		visible = {
-			owns_state = 1048
-			controls_state = 1048
-			1048 = {
+			owns_state = 672
+			controls_state = 672
+			672 = {
 				has_state_flag = {
 					flag = muaraenim_coal_developed
 					value = 2
@@ -11785,7 +11857,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = muaraenim_coal_duration2 value = 45 }
-			1048 = {
+			672 = {
 				if = {
 					limit = {
 						NOT = {
@@ -11804,7 +11876,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			1048 = {
+			672 = {
 				add_resource = {
 					type = coal
 					amount = 9
@@ -11822,7 +11894,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_southern_sumatra_coal_mines_3 = { #1048
+	develop_southern_sumatra_coal_mines_3 = { #672
 
 		icon = coal
 
@@ -11831,22 +11903,22 @@ prospect_for_resources = {
 		}
 
 		available = {
-			owns_state = 1048
-			controls_state = 1048
+			owns_state = 672
+			controls_state = 672
 			num_of_civilian_factories_available_for_projects > 8
 			has_tech = excavation5
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1048
+				state = 672
 			}
 		}
 
 		visible = {
-			owns_state = 1048
-			controls_state = 1048
-			1048 = {
+			owns_state = 672
+			controls_state = 672
+			672 = {
 				has_state_flag = {
 					flag = muaraenim_coal_developed2
 					value = 3
@@ -11904,7 +11976,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = muaraenim_coal_duration3 value = 60 }
-			1048 = {
+			672 = {
 				if = {
 					limit = {
 						NOT = {
@@ -11923,7 +11995,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			1048 = {
+			672 = {
 				add_resource = {
 					type = coal
 					amount = 12
@@ -11941,7 +12013,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_eastern_kalimantan_oil_deposits = { #334
+	develop_eastern_kalimantan_oil_deposits = { #1055
 
 		icon = oil
 
@@ -11951,21 +12023,21 @@ prospect_for_resources = {
 
 		available = {
 			has_tech = excavation3
-			owns_state = 334
-			controls_state = 334
+			owns_state = 1055
+			controls_state = 1055
 			num_of_civilian_factories_available_for_projects > 6
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 334
+				state = 1055
 			}
 		}
 
 		visible = {
-			owns_state = 334
-			controls_state = 334
-			334 = {
+			owns_state = 1055
+			controls_state = 1055
+			1055 = {
 				NOT = {
 					has_state_flag = {
 						flag = kalimantan_oil_developed
@@ -12017,7 +12089,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = kalimantan_oil_duration value = 30 }
-			334 = {
+			1055 = {
 				if = {
 					limit = {
 						NOT = {
@@ -12036,7 +12108,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			334 = {
+			1055 = {
 				add_resource = {
 					type = oil
 					amount = 6
@@ -12054,7 +12126,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_eastern_kalimantan_coal_mines = { #334
+	develop_eastern_kalimantan_coal_mines = { #1055
 		icon = coal
 
 		allowed = {
@@ -12062,22 +12134,22 @@ prospect_for_resources = {
 		}
 
 		available = {
-			owns_state = 334
-			controls_state = 334
+			owns_state = 1055
+			controls_state = 1055
 			num_of_civilian_factories_available_for_projects > 2
 			has_tech = excavation3
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 334
+				state = 1055
 			}
 		}
 
 		visible = {
-			owns_state = 334
-			controls_state = 334
-			334 = {
+			owns_state = 1055
+			controls_state = 1055
+			1055 = {
 				NOT = {
 					has_state_flag = {
 						flag = kalimantan_coal_developed
@@ -12128,7 +12200,7 @@ prospect_for_resources = {
 			}
 		}
 		remove_effect = {
-			334 = {
+			1055 = {
 				if = {
 					limit = {
 						NOT = {
@@ -12147,7 +12219,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			334 = {
+			1055 = {
 				add_resource = {
 					type = coal
 					amount = 9
@@ -12156,7 +12228,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_eastern_kalimantan_coal_mines_2 = { #334
+	develop_eastern_kalimantan_coal_mines_2 = { #1055
 		icon = coal
 
 		allowed = {
@@ -12164,22 +12236,22 @@ prospect_for_resources = {
 		}
 
 		available = {
-			owns_state = 334
-			controls_state = 334
+			owns_state = 1055
+			controls_state = 1055
 			num_of_civilian_factories_available_for_projects > 5
 			has_tech = excavation4
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 334
+				state = 1055
 			}
 		}
 
 		visible = {
-			owns_state = 334
-			controls_state = 334
-			334 = {
+			owns_state = 1055
+			controls_state = 1055
+			1055 = {
 				has_state_flag = {
 					flag = kalimantan_coal_developed
 					value = 2
@@ -12236,7 +12308,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = kalimantan_coal_duration2 value = 45 }
-			334 = {
+			1055 = {
 				if = {
 					limit = {
 						NOT = {
@@ -12255,7 +12327,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			334 = {
+			1055 = {
 				add_resource = {
 					type = coal
 					amount = 9
@@ -12273,7 +12345,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_eastern_kalimantan_coal_mines_3 = { #334
+	develop_eastern_kalimantan_coal_mines_3 = { #1055
 		icon = coal
 
 		allowed = {
@@ -12281,22 +12353,22 @@ prospect_for_resources = {
 		}
 
 		available = {
-			owns_state = 334
-			controls_state = 334
+			owns_state = 1055
+			controls_state = 1055
 			num_of_civilian_factories_available_for_projects > 8
 			has_tech = excavation5
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 334
+				state = 1055
 			}
 		}
 
 		visible = {
-			owns_state = 334
-			controls_state = 334
-			334 = {
+			owns_state = 1055
+			controls_state = 1055
+			1055 = {
 				has_state_flag = {
 					flag = kalimantan_coal_developed2
 					value = 3
@@ -12353,7 +12425,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = kalimantan_coal_duration3 value = 60 }
-			334 = {
+			1055 = {
 				if = {
 					limit = {
 						NOT = {
@@ -12372,7 +12444,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			334 = {
+			1055 = {
 				add_resource = {
 					type = coal
 					amount = 12
@@ -12506,7 +12578,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_northern_sulawesi_chromium_deposits = { #1054
+	develop_northern_sulawesi_chromium_deposits = { #1053
 
 		icon = chromium
 
@@ -12516,21 +12588,21 @@ prospect_for_resources = {
 
 		available = {
 			has_tech = excavation4
-			owns_state = 1054
-			controls_state = 1054
+			owns_state = 1053
+			controls_state = 1053
 			num_of_civilian_factories_available_for_projects > 7
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1054
+				state = 1053
 			}
 		}
 
 		visible = {
-			owns_state = 1054
-			controls_state = 1054
-			1054 = {
+			owns_state = 1053
+			controls_state = 1053
+			1053 = {
 				NOT = {
 					has_state_flag = {
 						flag = sulawesi_chromium_developed
@@ -12585,7 +12657,7 @@ prospect_for_resources = {
 		remove_effect = {
 			custom_effect_tooltip = repeatable_decision_tt
 			add_to_variable = { var = sulawesi_chromium_duration value = 30 }
-			1054 = {
+			1053 = {
 				if = {
 					limit = {
 						NOT = {
@@ -12604,7 +12676,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			1054 = {
+			1053 = {
 				add_resource = {
 					type = chromium
 					amount = 5
@@ -12735,7 +12807,7 @@ prospect_for_resources = {
 		}
 	}
 
-	develop_west_papuan_oil_deposits = { #1056
+	develop_west_papuan_oil_deposits = { #1073
 		
 		icon = oil
 
@@ -12745,20 +12817,20 @@ prospect_for_resources = {
 
 		available = {
 			has_tech = excavation3
-			owns_state = 1056
-			controls_state = 1056
+			owns_state = 1073
+			controls_state = 1073
 			num_of_civilian_factories_available_for_projects > 3
 		}
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1056
+				state = 1073
 			}
 		}
 
 		visible = {
-			owns_state = 1056
-			controls_state = 1056
+			owns_state = 1073
+			controls_state = 1073
 			668 = {
 				NOT = {
 					has_state_flag = {
@@ -12772,7 +12844,7 @@ prospect_for_resources = {
 		fire_only_once = no
 
 		cancel_trigger = {
-			1056 = { is_controlled_by_ROOT_or_subject = no }
+			1073 = { is_controlled_by_ROOT_or_subject = no }
 		}
 
 		cost = 25
@@ -12815,7 +12887,7 @@ prospect_for_resources = {
 		}
 
 		remove_effect = {
-			1056 = {
+			1073 = {
 				if = {
 					limit = {
 						NOT = {
@@ -12834,7 +12906,7 @@ prospect_for_resources = {
 					}
 				}
 			}
-			1056 = {
+			1073 = {
 				add_resource = {
 					type = oil
 					amount = 6

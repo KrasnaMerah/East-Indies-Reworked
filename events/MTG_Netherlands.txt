@@ -302,18 +302,23 @@ country_event = {
 	option = {
 		name = mtg_netherlands.11.a
 		effect_tooltip = {
-			JAP = { #Sumatra, Borneo, and South Sulawesi
-				transfer_state = 1017
+			JAP = { #Sumatra, Java, Borneo, and Sulawesi
+				transfer_state = 1050 #Aceh
+				transfer_state = 1049
+				transfer_state = 1048
 				transfer_state = 672
-				transfer_state = 1018
-				transfer_state = 1019
+				transfer_state = 1083
+				transfer_state = 1047
+				transfer_state = 1058 #Batavia
 				transfer_state = 335
-				transfer_state = 1020
-				transfer_state = 1021
+				transfer_state = 1051
+				transfer_state = 1086
+				transfer_state = 334 #W Kalimantan
+				transfer_state = 1055
 				transfer_state = 334
-				transfer_state = 1022
-				transfer_state = 673
-				transfer_state = 667
+				transfer_state = 673 #S Sulawesi
+				transfer_state = 1056
+				transfer_state = 1053
 			}
 			add_offsite_building = { type = arms_factory level = 8 }
 		}
@@ -328,18 +333,20 @@ country_event = {
 				limit = {
 					country_exists = INS
 					INS = { is_subject_of = HOL }
-					1018 = { is_owned_and_controlled_by = INS }
-					1021 = { is_owned_and_controlled_by = INS }
-					334 = { is_owned_and_controlled_by = INS }
+					1049 = { is_owned_and_controlled_by = INS }
+					1048 = { is_owned_and_controlled_by = INS }
+					672 = { is_owned_and_controlled_by = INS }
+					1047 = { is_owned_and_controlled_by = INS }
+					1083 = { is_owned_and_controlled_by = INS }
 					673 = { is_owned_and_controlled_by = INS }
-					667 = { is_owned_and_controlled_by = INS }
+					334 = { is_owned_and_controlled_by = INS }
 				}
 				INS = {
-					give_resource_rights = { receiver = JAP state = 1018 }
-					give_resource_rights = { receiver = JAP state = 1021 }
-					give_resource_rights = { receiver = JAP state = 334 }
+					give_resource_rights = { receiver = JAP state = 1049 }
+					give_resource_rights = { receiver = JAP state = 1048 }
+					give_resource_rights = { receiver = JAP state = 672 }
 					give_resource_rights = { receiver = JAP state = 673 }
-					give_resource_rights = { receiver = JAP state = 667 }
+					give_resource_rights = { receiver = JAP state = 1055 }
 					if = {
 						limit = {
 							has_idea = INS_japanese_investment_3
@@ -379,17 +386,17 @@ country_event = {
 			}
 			else_if = {
 				limit = {
-					1018 = { is_owned_and_controlled_by = HOL }
-					1021 = { is_owned_and_controlled_by = HOL }
-					334 = { is_owned_and_controlled_by = HOL }
+					1049 = { is_owned_and_controlled_by = HOL }
+					1048 = { is_owned_and_controlled_by = HOL }
+					672 = { is_owned_and_controlled_by = HOL }
 					673 = { is_owned_and_controlled_by = HOL }
-					667 = { is_owned_and_controlled_by = HOL }
+					1055 = { is_owned_and_controlled_by = HOL }
 				}
-				give_resource_rights = { receiver = JAP state = 1018 }
-				give_resource_rights = { receiver = JAP state = 1021 }
-				give_resource_rights = { receiver = JAP state = 334 }
+				give_resource_rights = { receiver = JAP state = 1049 }
+				give_resource_rights = { receiver = JAP state = 1048 }
+				give_resource_rights = { receiver = JAP state = 672 }
 				give_resource_rights = { receiver = JAP state = 673 }
-				give_resource_rights = { receiver = JAP state = 667 }
+				give_resource_rights = { receiver = JAP state = 334 }
 			}
 		}
 		effect_tooltip = {
@@ -412,15 +419,15 @@ country_event = {
 	option = {
 		name = mtg_netherlands.12.a
 		effect_tooltip = { #Java, Sumatra, Lesser Sunda, Borneo, and South Sulawesi
-			transfer_state = 1017
+			transfer_state = 1050
 			transfer_state = 672
-			transfer_state = 1018
-			transfer_state = 1019
+			transfer_state = 1048
+			transfer_state = 1083
 			transfer_state = 335
-			transfer_state = 1020
-			transfer_state = 1021
+			transfer_state = 1058
+			transfer_state = 1051
+			transfer_state = 1055
 			transfer_state = 334
-			transfer_state = 1022
 			transfer_state = 673
 			transfer_state = 667
 			FROM = { add_offsite_building = { type = arms_factory level = 8 } }
@@ -456,16 +463,16 @@ country_event = {
 				limit = {
 					country_exists = INS
 					INS = { is_subject_of = HOL }
-					1018 = { is_owned_and_controlled_by = INS }
-					1021 = { is_owned_and_controlled_by = INS }
-					334 = { is_owned_and_controlled_by = INS }
+					1048 = { is_owned_and_controlled_by = INS }
+					1051 = { is_owned_and_controlled_by = INS }
+					1055 = { is_owned_and_controlled_by = INS }
 					673 = { is_owned_and_controlled_by = INS }
 					667 = { is_owned_and_controlled_by = INS }
 				}
 				INS = {
-					give_resource_rights = { receiver = JAP state = 1018 }
-					give_resource_rights = { receiver = JAP state = 1021 }
-					give_resource_rights = { receiver = JAP state = 334 }
+					give_resource_rights = { receiver = JAP state = 1048 }
+					give_resource_rights = { receiver = JAP state = 1051 }
+					give_resource_rights = { receiver = JAP state = 1055 }
 					give_resource_rights = { receiver = JAP state = 673 }
 					give_resource_rights = { receiver = JAP state = 667 }
 				}
@@ -473,17 +480,17 @@ country_event = {
 			else_if = {
 				limit = {
 					FROM = {
-						1018 = { is_owned_and_controlled_by = HOL }
-						1021 = { is_owned_and_controlled_by = HOL }
-						334 = { is_owned_and_controlled_by = HOL }
+						1048 = { is_owned_and_controlled_by = HOL }
+						1051 = { is_owned_and_controlled_by = HOL }
+						1055 = { is_owned_and_controlled_by = HOL }
 						673 = { is_owned_and_controlled_by = HOL }
 						667 = { is_owned_and_controlled_by = HOL }
 					}
 				}
 				FROM = {
-					give_resource_rights = { receiver = JAP state = 1018 }
-					give_resource_rights = { receiver = JAP state = 1021 }
-					give_resource_rights = { receiver = JAP state = 334 }
+					give_resource_rights = { receiver = JAP state = 1048 }
+					give_resource_rights = { receiver = JAP state = 1051 }
+					give_resource_rights = { receiver = JAP state = 1055 }
 					give_resource_rights = { receiver = JAP state = 673 }
 					give_resource_rights = { receiver = JAP state = 667 }
 				}
@@ -845,7 +852,7 @@ country_event = {
 				}
 				add_compliance = 70
 			}
-			set_capital = { state = 335 }
+			set_capital = { state = 1058 }
 		}
 		hidden_effect = {
 			news_event = { id = mtg_news.46 days = 1 }
@@ -868,7 +875,7 @@ country_event = {
 			}
 		}
 		INS = {
-			set_capital = { state = 1020 }
+			set_capital = { state = 335 }
 			INS_hein_ter_poorten = {
 				set_nationality = HOL
 			}
@@ -932,15 +939,15 @@ country_event = {
 			}
 		}
 		FROM = { #Java, Sumatra, Lesser Sunda, Borneo, and South Sulawesi
-			transfer_state = 1017
+			transfer_state = 1050
 			transfer_state = 672
-			transfer_state = 1018
-			transfer_state = 1019
+			transfer_state = 1048
+			transfer_state = 1083
 			transfer_state = 335
-			transfer_state = 1020
-			transfer_state = 1021
+			transfer_state = 1058
+			transfer_state = 1051
+			transfer_state = 1055
 			transfer_state = 334
-			transfer_state = 1022
 			transfer_state = 673
 			transfer_state = 667
 		}
@@ -997,16 +1004,16 @@ country_event = {
 			limit = {
 				country_exists = INS
 				INS = { is_subject_of = HOL }
-				1018 = { is_owned_and_controlled_by = INS }
-				1021 = { is_owned_and_controlled_by = INS }
-				334 = { is_owned_and_controlled_by = INS }
+				1048 = { is_owned_and_controlled_by = INS }
+				1051 = { is_owned_and_controlled_by = INS }
+				1055 = { is_owned_and_controlled_by = INS }
 				673 = { is_owned_and_controlled_by = INS }
 				667 = { is_owned_and_controlled_by = INS }
 			}
 			INS = {
-				give_resource_rights = { receiver = JAP state = 1018 }
-				give_resource_rights = { receiver = JAP state = 1021 }
-				give_resource_rights = { receiver = JAP state = 334 }
+				give_resource_rights = { receiver = JAP state = 1048 }
+				give_resource_rights = { receiver = JAP state = 1051 }
+				give_resource_rights = { receiver = JAP state = 1055 }
 				give_resource_rights = { receiver = JAP state = 673 }
 				give_resource_rights = { receiver = JAP state = 667 }
 				if = {
@@ -1048,15 +1055,15 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				1018 = { is_owned_and_controlled_by = HOL }
-				1021 = { is_owned_and_controlled_by = HOL }
-				334 = { is_owned_and_controlled_by = HOL }
+				1048 = { is_owned_and_controlled_by = HOL }
+				1051 = { is_owned_and_controlled_by = HOL }
+				1055 = { is_owned_and_controlled_by = HOL }
 				673 = { is_owned_and_controlled_by = HOL }
 				667 = { is_owned_and_controlled_by = HOL }
 			}
-			give_resource_rights = { receiver = JAP state = 1018 }
-			give_resource_rights = { receiver = JAP state = 1021 }
-			give_resource_rights = { receiver = JAP state = 334 }
+			give_resource_rights = { receiver = JAP state = 1048 }
+			give_resource_rights = { receiver = JAP state = 1051 }
+			give_resource_rights = { receiver = JAP state = 1055 }
 			give_resource_rights = { receiver = JAP state = 673 }
 			give_resource_rights = { receiver = JAP state = 667 }
 		}
@@ -1087,16 +1094,18 @@ country_event = {
 			NOT = { has_country_flag = HOL_jap_rejected_control }
 		}
 		effect_tooltip = {
-			JAP = { #Java, Sumatra, Lesser Sunda, Borneo, and South Sulawesi
-				transfer_state = 1017 #Aceh
-				transfer_state = 672 #North Sumatra
-				transfer_state = 1018 #South Sumatra
-				transfer_state = 1019 #Riau Islands
-				transfer_state = 335 #Batavia
-				transfer_state = 1020 #Western Java
-				transfer_state = 1021 #East Java
-				transfer_state = 334 #East kalimantan
-				transfer_state = 1022 #West Kalimantan
+			JAP = { #Java, Sumatra, Lesser Sunda, Borneo, and Sulawesi
+				transfer_state = 1050 #Aceh
+				transfer_state = 1049 #East Sumatra
+				transfer_state = 1048 #West Sumatra
+				transfer_state = 672 #South Sumatra
+				transfer_state = 1047 #Bangka-Biliton
+				transfer_state = 1083 #Riau Islands
+				transfer_state = 1058 #Batavia
+				transfer_state = 335 #Western Java
+				transfer_state = 1051 #East Java
+				transfer_state = 1055 #East kalimantan
+				transfer_state = 334 #West Kalimantan
 				transfer_state = 673 #Southern Sulawesi
 				transfer_state = 667 #Lesser Sunda
 			}
@@ -1116,39 +1125,39 @@ country_event = {
 				limit = {
 					country_exists = INS
 					INS = { is_subject_of = HOL }
-					1017 = { is_owned_and_controlled_by = INS }
+					1050 = { is_owned_and_controlled_by = INS }
 					1018 = { is_owned_and_controlled_by = INS }
-					1021 = { is_owned_and_controlled_by = INS }
+					1051 = { is_owned_and_controlled_by = INS }
+					1055 = { is_owned_and_controlled_by = INS }
 					334 = { is_owned_and_controlled_by = INS }
-					1022 = { is_owned_and_controlled_by = INS }
 					673 = { is_owned_and_controlled_by = INS }
 					667 = { is_owned_and_controlled_by = INS }
 				}
 				INS = {
-					give_resource_rights = { receiver = JAP state = 1017 }
+					give_resource_rights = { receiver = JAP state = 1050 }
 					give_resource_rights = { receiver = JAP state = 1018 }
-					give_resource_rights = { receiver = JAP state = 1021 }
+					give_resource_rights = { receiver = JAP state = 1051 }
+					give_resource_rights = { receiver = JAP state = 1055 }
 					give_resource_rights = { receiver = JAP state = 334 }
-					give_resource_rights = { receiver = JAP state = 1022 }
 					give_resource_rights = { receiver = JAP state = 673 }
 					give_resource_rights = { receiver = JAP state = 667 }
 				}
 			}
 			else_if = {
 				limit = {
-					1017 = { is_owned_and_controlled_by = HOL }
+					1050 = { is_owned_and_controlled_by = HOL }
 					1018 = { is_owned_and_controlled_by = HOL }
-					1021 = { is_owned_and_controlled_by = HOL }
+					1051 = { is_owned_and_controlled_by = HOL }
+					1055 = { is_owned_and_controlled_by = HOL }
 					334 = { is_owned_and_controlled_by = HOL }
-					1022 = { is_owned_and_controlled_by = HOL }
 					673 = { is_owned_and_controlled_by = HOL }
 					667 = { is_owned_and_controlled_by = HOL }
 				}
-				give_resource_rights = { receiver = JAP state = 1017}
+				give_resource_rights = { receiver = JAP state = 1050}
 				give_resource_rights = { receiver = JAP state = 1018 }
-				give_resource_rights = { receiver = JAP state = 1021 }
+				give_resource_rights = { receiver = JAP state = 1051 }
+				give_resource_rights = { receiver = JAP state = 1055 }
 				give_resource_rights = { receiver = JAP state = 334 }
-				give_resource_rights = { receiver = JAP state = 1022 }
 				give_resource_rights = { receiver = JAP state = 673 }
 				give_resource_rights = { receiver = JAP state = 667 }
 			}
@@ -3770,7 +3779,7 @@ country_event = { # 82 - Second Indonesian Uprising - NSB Path - for Indies
 					can_create_factions = no
 					can_not_declare_war = yes
 				}
-				set_capital = { state = 1020 }
+				set_capital = { state = 335 }
 				set_politics = {
 					ruling_party = democratic
 					elections_allowed = yes
@@ -3944,7 +3953,7 @@ country_event = { # 82 - Second Indonesian Uprising - NSB Path - for Indies
 					can_create_factions = no
 					can_not_declare_war = yes
 				}
-				set_capital = { state = 1020 }
+				set_capital = { state = 335 }
 				set_politics = {
 					ruling_party = democratic
 					elections_allowed = yes

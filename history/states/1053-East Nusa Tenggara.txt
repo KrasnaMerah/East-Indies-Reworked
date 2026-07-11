@@ -1,0 +1,28 @@
+state = { #Central Sulawesi
+	id = 1053
+	name = "STATE_1053"
+
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_claim_by = MNH
+
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			1098 2
+		}
+		victory_points = {
+			10169 1
+		}
+	}
+
+	provinces = { #12 + 3
+		4537 1518 1561 12358 1484 1505 1098 1289 10169 4493 4262 4307
+	}
+	manpower = 865452
+	buildings_max_level_factor = 1
+	state_category = rural
+	local_supplies = 1
+}

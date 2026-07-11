@@ -135,7 +135,7 @@ music = {
 			OR = {
 				has_completed_focus = INS_make_use_nsboi
 				has_completed_focus = INS_indies_nation
-				has_completed_focus = INS_improve_dutch_relations
+				has_completed_focus = INS_jewel_of_the_crown
 				has_war = no
 			}
 		}

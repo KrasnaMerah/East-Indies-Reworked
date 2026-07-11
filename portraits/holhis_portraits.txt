@@ -44,6 +44,98 @@ INS = {
 	}
 }
 
+JVA = {
+	army = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			"GFX_Portrait_Asia_Generic_land_5"
+			"GFX_portrait_asia_generic_land_10"
+			"GFX_portrait_asia_generic_land_12"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_navy_1"
+			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
+}
+
+SSI = {
+	army = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			"GFX_Portrait_Asia_Generic_land_5"
+			"GFX_portrait_asia_generic_land_10"
+			"GFX_portrait_asia_generic_land_12"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_navy_1"
+			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
+}
+
 ATJ = {
 	army = {
 		male = {
@@ -60,6 +152,308 @@ ATJ = {
 			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
 			"GFX_Portrait_Asia_Generic_navy_1"
 			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
+}
+
+EIS = {
+	army = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			"GFX_Portrait_Asia_Generic_land_5"
+			"GFX_portrait_asia_generic_land_10"
+			"GFX_portrait_asia_generic_land_12"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_navy_1"
+			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
+}
+
+BLI = {
+	army = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			"GFX_Portrait_Asia_Generic_land_5"
+			"GFX_portrait_asia_generic_land_10"
+			"GFX_portrait_asia_generic_land_12"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_navy_1"
+			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
+}
+
+TML = {
+	army = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			"GFX_Portrait_Asia_Generic_land_5"
+			"GFX_portrait_asia_generic_land_10"
+			"GFX_portrait_asia_generic_land_12"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_navy_1"
+			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
+}
+
+POK = {
+	army = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			"GFX_Portrait_Asia_Generic_land_5"
+			"GFX_portrait_asia_generic_land_10"
+			"GFX_portrait_asia_generic_land_12"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_navy_1"
+			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
+}
+
+MNH = {
+	army = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			"GFX_Portrait_Asia_Generic_land_5"
+			"GFX_portrait_asia_generic_land_10"
+			"GFX_portrait_asia_generic_land_12"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_navy_1"
+			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
+}
+
+GOW = {
+	army = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			"GFX_Portrait_Asia_Generic_land_5"
+			"GFX_portrait_asia_generic_land_10"
+			"GFX_portrait_asia_generic_land_12"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_navy_1"
+			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
 		}
 	}
 }
@@ -82,6 +476,32 @@ MAL = {
 			"GFX_portrait_asia_generic_navy_8"
 		}
 	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
 }
 
 BRN = {
@@ -102,6 +522,170 @@ BRN = {
 			"GFX_portrait_asia_generic_navy_8"
 		}
 	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
+}
+
+SAB = {
+	army = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			"GFX_Portrait_Asia_Generic_land_5"
+			"GFX_portrait_asia_generic_land_10"
+			"GFX_portrait_asia_generic_land_12"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_navy_1"
+			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
+}
+
+SAR = {
+	army = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			"GFX_Portrait_Asia_Generic_land_5"
+			"GFX_portrait_asia_generic_land_10"
+			"GFX_portrait_asia_generic_land_12"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_navy_1"
+			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
+}
+
+SGP = {
+	army = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			"GFX_Portrait_Asia_Generic_land_5"
+			"GFX_portrait_asia_generic_land_10"
+			"GFX_portrait_asia_generic_land_12"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Southeast_Asia_Generic_navy_1"
+			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+	}
 }
 
 SLU = {
@@ -120,6 +704,32 @@ SLU = {
 			"GFX_Portrait_Southeast_Asia_Generic_navy_2"
 			"GFX_Portrait_Asia_Generic_navy_1"
 			"GFX_portrait_asia_generic_navy_8"
+		}
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_Portrait_Southeast_Asia_Leader_Generic_1"
+				"GFX_Portrait_Southeast_Asia_Generic_land_1"
+			}
 		}
 	}
 }

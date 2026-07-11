@@ -1,4 +1,5 @@
 characters = {
+
 	KUT_ali_muhammad_parikesit = {
 		name = KUT_ali_muhammad_parikesit
 		portraits = {
@@ -20,14 +21,15 @@ characters = {
 			id=-1
 		}
 	}
+
 	KUT_mohammad_noor = {
 		name = KUT_mohammad_noor
 		portraits = {
 			civilian = {
-				large = GFX_portrait_Onn_Jaafar
+				large = GFX_portrait_indonesia_mohammad_noor
 			}
 			army = {
-				small = GFX_idea_indonesia_yusuf_alkadrie
+				small = GFX_idea_indonesia_mohammad_noor
 			}
 		}
 		country_leader = {
@@ -35,7 +37,42 @@ characters = {
 			expire="1953.3.1.1"
 			id=-1
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = KUT_mohammad_noor
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = KUT
+					original_tag = KLM
+				}
+				has_dlc = "Man the Guns"
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+				NOT = {
+					has_country_leader = {
+						character = KUT_mohammad_noor
+						ruling_only = yes
+					}
+				}
+			}
+			visible = {
+			
+			}
+			traits = {
+				democratic_reformer
+			}
+		}
 	}
+
 	KUT_fachrul_baraqbah = {
 		name = KUT_fachrul_baraqbah
 		portraits = {
@@ -55,7 +92,6 @@ characters = {
 				has_dlc = "Man the Guns"
 			}
 			available = {
-			available = {
 				if = {
 					limit = {
 						has_dlc = "Man the Guns"
@@ -66,12 +102,14 @@ characters = {
 				}
 			}
 			visible = {
+			
 			}
 			traits = {
 				communist_revolutionary 
 			}
 		}
 	}
+	
 	KUT_pki_committee = {
 		name = INA_cc_pki
 		portraits = {

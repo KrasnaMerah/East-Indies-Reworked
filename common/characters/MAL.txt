@@ -122,6 +122,9 @@ characters = {
 	MAL_charles_brooke = {
 		name = MAL_charles_brooke
 		portraits = {
+			civilian = {
+				large = GFX_portrait_malaysia_abdul_rahman
+			}
 			army = {
 				small = GFX_idea_malaysia_charles_brooke
 			}
@@ -132,7 +135,7 @@ characters = {
 			allowed = {
 				OR = {
 					original_tag = MAL
-					original_tag = KLM
+					original_tag = SAR
 				}
 			}
 			available = {

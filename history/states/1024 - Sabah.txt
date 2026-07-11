@@ -14,6 +14,7 @@ state = {
 	history = {
 
 		owner = MAL
+		add_core_of = MAL
 		add_core_of = SAB
 		add_claim_by = SLU
 

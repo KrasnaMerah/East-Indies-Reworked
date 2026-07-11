@@ -1,4 +1,4 @@
-﻿capital = 334 #Samarinda
+﻿capital = 1055 #Samarinda
 
 oob = "KUT_1936"
 

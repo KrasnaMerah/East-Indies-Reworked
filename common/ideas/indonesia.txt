@@ -24,7 +24,8 @@ ideas = {
 			modifier = {
 				trade_laws_cost_factor = 0.25
 				trade_opinion_factor = -0.1
-				consumer_goods_expected_value = 0.4
+				consumer_goods_expected_value = 0.35
+				resource_trade_cost_bonus_per_factory = 2
 				min_export = 0.2
 				industrial_capacity_factory = -0.1
 				stability_factor = -0.1
@@ -54,7 +55,8 @@ ideas = {
 			modifier = {
 				trade_laws_cost_factor = 0.15
 				trade_opinion_factor = -0.1
-				consumer_goods_expected_value = 0.3
+				consumer_goods_expected_value = 0.25
+				resource_trade_cost_bonus_per_factory = 2
 				min_export = 0.2
 				industrial_capacity_factory = -0.1
 				stability_factor = -0.05
@@ -1326,7 +1328,38 @@ ideas = {
 			}
 		}
 
-		INS_independence_mess = {
+		INS_independence_mess_1 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_stability < 0.9
+			}
+
+			removal_cost = -1
+			
+			picture = generic_deal_with_the_devil
+
+			modifier = {
+				fascism_drift = 0.05
+				communism_drift = 0.05
+				democratic_drift = 0.05
+				political_power_gain = -0.25
+				improve_relations_maintain_cost_factor = 0.4
+				production_speed_buildings_factor = -0.2
+				surrender_limit = -0.05
+				resistance_target = 0.25
+				resistance_growth = -0.15
+			}
+		}
+
+		INS_independence_mess_2 = {
 		
 			allowed = {
 				always = no
@@ -1348,10 +1381,11 @@ ideas = {
 				fascism_drift = 0.05
 				communism_drift = 0.05
 				democratic_drift = 0.05
-				political_power_gain = -0.25
+				political_power_gain = -0.15
 				production_speed_buildings_factor = -0.2
 				surrender_limit = -0.05
 				resistance_target = 0.2
+				resistance_growth = -0.1
 			}
 		}
 
@@ -1650,6 +1684,7 @@ ideas = {
 				communism_drift = 0.01
 				surrender_limit = -0.2
 				autonomy_manpower_share = -0.5
+				mic_to_overlord_factor = -0.25
 			}
 		}
 		
@@ -1779,7 +1814,7 @@ ideas = {
 				democratic_drift = 0.03
 				neutrality_drift = 0.01
 				surrender_limit = -0.15
-				mic_to_overlord_factor = -0.25
+				mic_to_overlord_factor = -0.3
 				cic_to_overlord_factor = 0.05
 				autonomy_manpower_share = -0.45
 				high_command_cost_factor = -0.05
@@ -2163,7 +2198,7 @@ ideas = {
 			picture = INS_imports
 
 			modifier = {
-				cic_to_overlord_factor = 0.5
+				cic_to_overlord_factor = 0.25
 			}
 		}
 
@@ -2188,7 +2223,7 @@ ideas = {
 			picture = INS_imports
 
 			modifier = {
-				cic_to_overlord_factor = 0.3
+				cic_to_overlord_factor = 0.15
 			}
 		}
 
@@ -2213,7 +2248,7 @@ ideas = {
 			picture = INS_imports
 
 			modifier = {
-				cic_to_overlord_factor = 0.15
+				cic_to_overlord_factor = 0.08
 			}
 		}
 
@@ -4828,6 +4863,753 @@ ideas = {
 				line_change_production_efficiency_factor = 0.1
 			}
 		}
+
+		#from TAOG	
+
+		INS_anti_colonialist_sentiment_idea = {
+			picture = MEX_revolutionary_army
+			allowed = {
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			cancel = {
+				NOT = {
+					tag = event_target:INS_revolution_target
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				autonomy_gain = 1.0
+				communism_drift = 0.01
+			}
+		}
+
+		INS_revolutionaries_working_with_indonesians_idea = {
+			picture = MEX_revolutionary_army
+			allowed = {
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			removal_cost = -1
+
+			cancel = {
+				NOT = {
+					tag = event_target:INS_revolution_target
+				}
+			}
+
+			modifier = {
+				communism_drift = 0.05
+				stability_weekly = -0.02
+			}
+		}
+
+		INS_plane_making = {
+			picture = generic_aircraft_support
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				fighter = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				heavy_fighter = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				cas = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				naval_bomber = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				strategic_bomber = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+
+		INS_construction_boom = {
+			picture = SOV_third_five_year_plan_civilian
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.2
+			}
+		}
+
+		idea_INS_restoring_order = {
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			picture = RAJ_independence_movement
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = 0.005
+				political_power_factor = 0.05
+			}
+		}
+
+		idea_INS_volksraad = {
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			cancel = {
+				has_country_flag = { flag = INS_freed_from_dutch }
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = INS_volksraad
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				custom_modifier_tooltip = INS_volksraad_custom_tt
+			}
+		}
+
+		idea_INS_great_depression_fake = {
+			name = INS_great_depression
+
+			picture = great_depression
+			
+			allowed = {
+				original_tag = INS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				min_export = -0.7
+			}
+		}
+
+		idea_INS_great_depression_fake_2 = {
+			name = INS_great_depression
+
+			picture = great_depression
+			
+			allowed = {
+				original_tag = INS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				min_export = -0.42
+			}
+		}
+
+		idea_INS_mismanaged_admin_fake = {
+			name = INS_dutch_east_indies
+
+			picture = INS_dutch_east_indies
+			
+			allowed = {
+				original_tag = INS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.25
+				consumer_goods_factor = 0.2
+				stability_factor = -0.3
+				production_speed_buildings_factor = -0.1
+				research_speed_factor = -0.15
+			}
+		}
+
+		idea_INS_mismanaged_admin_fake_2 = {
+			name = INS_dutch_east_indies
+
+			picture = INS_dutch_east_indies
+			
+			allowed = {
+				original_tag = INS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.15
+				consumer_goods_factor = 0.2
+				stability_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				research_speed_factor = -0.1
+			}
+		}
+
+		idea_INS_netherlands_most_precious_jewel = {
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			cancel = {
+				has_country_flag = { flag = INS_freed_from_dutch }
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = INS_netherlands_most_precious_jewel
+
+			removal_cost = -1
+
+			modifier = {
+				# See /autonomous_states/colony and /autonomous_states/dominion to see how this actually works
+				custom_modifier_tooltip = INS_netherlands_most_precious_jewel_tt
+			}
+		}
+
+		idea_INS_prioritizing_dutch_profits = {
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					is_subject_of = HOL
+				}
+			}
+
+			picture = INS_prioritizing_dutch_profits
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		idea_INS_japanese_symphasizers = {
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					is_subject_of = HOL
+					has_war_with = JAP
+				}
+			}
+
+			picture = JAP_japanese_influence_growing
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.02
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		idea_INS_nefis = {
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+				has_dlc = "La Resistance"
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					is_subject_of = HOL
+				}
+			}
+
+			picture = generic_secret_police
+
+			removal_cost = -1
+
+			modifier = {
+				intel_network_gain = 0.5
+				intel_from_combat_factor = 0.3
+				intel_from_operatives_factor = 0.15
+				own_operative_capture_chance_factor = -0.5
+				operative_slot = 1
+			}
+		}
+
+		idea_INS_nefis_no_lar = {
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+				NOT = { has_dlc = "La Resistance" }
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					is_subject_of = HOL
+				}
+			}
+
+			picture = generic_secret_police
+
+			removal_cost = -1
+
+			modifier = {
+				intel_network_gain = 0.5
+				intel_from_combat_factor = 0.3
+				intel_from_operatives_factor = 0.15
+				navy_intel_factor = 0.5
+				army_intel_factor = 0.4
+			}
+		}
+
+		idea_INS_defend_java_til_death = {
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					is_subject_of = HOL
+					has_war = yes
+				}
+			}
+
+			picture = INS_defend_java_til_death
+
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = 0.95
+			}
+		}
+
+		idea_HOL_prioritizing_dutch_profits = {
+			allowed = {
+				original_tag = HOL
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					is_subject_of = HOL
+				}
+			}
+
+			picture = INS_prioritizing_dutch_profits
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		idea_INS_tax_reduction = {
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				local_resources_factor = 0.1
+				global_building_slots = 1
+			}
+		}
+
+		idea_INS_radio_democratic = { 
+
+			allowed = {
+				tag = INS
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = SWE_radiotjanst_corrupted
+
+			modifier = {
+				research_speed_factor = 0.07
+				drift_defence_factor = -0.3
+				democratic_drift = 0.05
+				fascism_drift = -0.02
+				stability_factor = 0.05
+			}
+		}
+
+
+		idea_INS_radio_fascist = { 
+
+			allowed = {
+				tag = INS
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = SWE_radiotjanst_corrupted 
+
+			modifier = {
+				research_speed_factor = 0.07
+				drift_defence_factor = -0.3
+				justify_war_goal_time = -0.25
+				fascism_drift = 0.05
+				communism_drift = -0.02
+				war_support_factor = 0.05
+			}
+		}
+
+
+		idea_INS_radio_communist = { 
+
+			allowed = {
+				tag = INS
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = SWE_radiotjanst_corrupted
+
+			modifier = {
+				research_speed_factor = 0.07
+				drift_defence_factor = -0.3
+				communism_drift = 0.05
+				fascism_drift = -0.02
+				democratic_drift = 0.02
+				war_support_factor = 0.03
+				stability_factor = 0.03
+			}
+		}
+
+		idea_INS_radio_sukarno = { 
+
+			allowed = {
+				tag = INS
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = SWE_radiotjanst
+
+			modifier = {
+				research_speed_factor = 0.07
+				drift_defence_factor = 0.4
+				war_support_factor = 0.075
+				stability_factor = 0.05
+			}
+		}
+
+		idea_INS_policy_shift = {
+			allowed = {
+				original_tag = INS
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = generic_flexible_foreign_policy2
+
+			modifier = {
+				mobilization_laws_cost_factor = -0.33
+				trade_laws_cost_factor = -0.33
+				economy_cost_factor = -0.33
+				political_advisor_cost_factor = -0.33
+			}
+		}
+
+		idea_INS_western_trade = {
+			allowed = {
+				original_tag = INS
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = INS_western_trade_idea
+
+			modifier = {
+
+			}
+
+			targeted_modifier = {
+				tag = USA
+				extra_trade_to_target_factor = 0.2
+				trade_cost_for_target_factor = -0.4
+			}
+			targeted_modifier = {
+				tag = ENG
+				extra_trade_to_target_factor = 0.2
+				trade_cost_for_target_factor = -0.4
+			}
+			targeted_modifier = {
+				tag = AST
+				extra_trade_to_target_factor = 0.2
+				trade_cost_for_target_factor = -0.4
+			}
+			targeted_modifier = {
+				tag = CAN
+				extra_trade_to_target_factor = 0.2
+				trade_cost_for_target_factor = -0.4
+			}
+			targeted_modifier = {
+				tag = FRA
+				extra_trade_to_target_factor = 0.2
+				trade_cost_for_target_factor = -0.4
+			}
+			targeted_modifier = {
+				tag = JAP
+				extra_trade_to_target_factor = -0.90
+			}
+			targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = -0.90
+			}
+		}
+
+		INS_establishing_naval_doctrine = {
+
+			allowed = {
+				original_tag = INS
+			}
+			
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = AUS_naval_efficiency_idea
+
+			modifier = {
+				experience_gain_navy = 0.4
+			}
+
+		}
+
+		INS_no_compromise_idea = {
+
+			allowed = {
+				original_tag = INS
+			}
+
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			picture = INS_no_compromise
+
+			modifier = {
+				army_morale_factor = 0.2
+				army_attack_factor = 0.2
+				army_core_defence_factor = 0.3
+				army_org_factor = 0.1
+				breakthrough_factor = 0.2
+			}
+
+		}
+
+		idea_HOL_comite_rijksenheeid = {
+			allowed = {
+				OR = {
+					original_tag = HOL
+					tag = event_target:INS_dutch_indonesia
+				}
+			}
+
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+
+			picture = chi_war_of_resistance3
+
+			targeted_modifier = {
+				tag = INS
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+				defense_bonus_against = -0.1
+			}
+		}
+
+		INS_investing_in_tin_idea = {
+
+			allowed = {
+				original_tag = INS
+			}
+
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.075
+			}
+
+		}
+
+		INS_JAP_repaying_industrialists = {
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = generic_economic_crisis
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		INS_guided_democracy_idea = {
+			allowed = {
+				original_tag = INS
+			}
+
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = 0.1
+				neutrality_drift = 0.04
+				fascism_drift = 0.03
+			}
+		}
+
+		INS_military_above_all_idea = {
+			allowed = {
+				original_tag = INS
+			}
+
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = citizen_militia_1
+
+			modifier = {
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_infrastructure_factor = -0.1
+				production_speed_arms_factory_factor = 0.3
+				production_speed_dockyard_factor = 0.4
+			}
+		}
+
+		INS_economic_transition_idea = {
+			allowed = {
+				original_tag = INS
+			}
+
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = generic_economic_recovery
+
+			on_remove = {
+				add_dynamic_modifier = {
+					modifier = INS_economic_stability_idea
+				}
+			}
+
+			modifier = {
+				stability_factor = -0.075
+				production_speed_buildings_factor = -0.075
+				custom_modifier_tooltip = INS_economic_transition_idea_tt
+			}
+		}
+
+		INS_emergency_dockyard_construction_idea = {
+			allowed = {
+				original_tag = INS
+			}
+
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			picture = generic_coastal_defense_ships2
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				production_speed_industrial_complex_factor = -0.2
+				production_speed_infrastructure_factor = -0.2
+				production_speed_dockyard_factor = 0.4
+			}
+		}
 	}
 
 	#TECHNOLOGY
@@ -5093,6 +5875,18 @@ ideas = {
 			
 			modifier = {
 			}
+		}
+
+		machinefabriek_braat = {
+			allowed = {
+				original_tag = INS
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { tank_manufacturer }
 		}
 	}
 
@@ -5653,7 +6447,7 @@ ideas = {
 			}
 
 			available = {
-				controls_state = 335
+				controls_state = 1058
 				NOT = {
 					OR = {
 						has_completed_focus = INS_expel_the_colonials
@@ -5665,7 +6459,12 @@ ideas = {
 
 			visible = {
 				NOT = {
-					has_completed_focus = INS_oil_fields
+					OR = {
+						has_completed_focus = INS_oil_fields
+						HOL = {
+							has_completed_focus = INSHOL_expand_shell
+						}
+					}
 				}
 				OR = {
 					is_subject_of = HOL
@@ -5699,7 +6498,7 @@ ideas = {
 			name = INS_bpm_shell
 
 			available = {
-				controls_state = 335
+				controls_state = 1058
 				NOT = {
 					OR = {
 						has_completed_focus = INS_expel_the_colonials
@@ -5710,7 +6509,12 @@ ideas = {
 			}
 
 			visible = {
-				has_completed_focus = INS_oil_fields
+				OR = {
+					has_completed_focus = INS_oil_fields
+					HOL = {
+						has_completed_focus = INSHOL_expand_shell
+					}
+				}
 				OR = {
 					is_subject_of = HOL
 					is_subject_of = GER
@@ -5745,7 +6549,7 @@ ideas = {
 
 			available = {
 				is_subject = no
-				controls_state = 335
+				controls_state = 1058
 			}
 
 			visible = {
@@ -5781,7 +6585,7 @@ ideas = {
 
 			available = {
 				is_subject = no
-				controls_state = 335
+				controls_state = 1058
 			}
 
 			visible = {
@@ -5823,7 +6627,7 @@ ideas = {
 			}
 
 			available = {
-				controls_state = 1052
+				controls_state = 1051
 				NOT = {
 					has_government = fascism
 				}
@@ -5930,6 +6734,7 @@ ideas = {
 			available = {
 				has_completed_focus = INS_expand_javan_railroads
 				is_subject = no
+				controls_state = 1051
 			}
 
 			visible = {
@@ -6038,7 +6843,7 @@ ideas = {
 
 			available = {
 				is_in_faction_with = JAP
-				controls_state = 1052
+				controls_state = 1051
 			}
 
 			visible = {
@@ -6081,6 +6886,124 @@ ideas = {
 			}
 			
 			traits = { industrial_concern }
+		}
+
+		idea_INS_telkom_indonesia_concern = {
+
+			picture = INS_telkom_indonesia
+						
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			available = {
+				
+			}
+						
+			research_bonus = {
+
+			}
+			
+			traits = { telephone_company }
+		}
+
+		idea_INS_standard_oil_california_borrowed_concern = {
+			
+			picture = standard_oil_california
+
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			visible = {
+				has_completed_focus = INS_invite_foreign_investors
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+			
+			modifier = {
+				
+			}
+
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.2
+			}
+		}
+	}
+
+	hidden_ideas = {
+		idea_INS_hidden_debt_timer = {
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = GFX_idea_PLACEHOLDER_idea_icon
+
+			removal_cost = -1
+
+			on_remove = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = -10
+				}
+				random_owned_state = {
+					limit = {
+						industrial_complex > 0
+					}
+					remove_building = {
+						type = industrial_complex 
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						industrial_complex > 0
+					}
+					remove_building = {
+						type = industrial_complex 
+						level = 1
+					}
+				}
+
+				HOL = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+			}
+
+			modifier = {
+			}
+		}
+		idea_INS_hidden_naval_raid_range = {
+			allowed = {
+				original_tag = INS
+				has_dlc = "Thunder at Our Gates"
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				naval_commando_raid_distance = 5000
+			}
 		}
 	}
 }

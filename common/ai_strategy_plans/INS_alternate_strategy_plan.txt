@@ -74,7 +74,7 @@ INS_colony_war = {
 		INS_pave_the_way_for_a_navy				#10 = 25
 		INS_increase_military_training			#10 = 35
 		INS_trust_on_the_east					#10 = 45
-		INS_improve_dutch_relations				#10 = 55 #week 3 1937
+		INS_jewel_of_the_crown					#10 = 55 #week 3 1937
 		INS_expand_the_airforce					#10 = 65
 		INS_reinstate_ethical_policies			#10 = 75
 		INS_upheld_status_quo					#5 = 80
@@ -155,10 +155,10 @@ INS_colony_exile = {
 
 	enable = {
 		OR = {
-			has_country_flag = INS_AI_RANDOM_COLONY_ALTERNATE
+			has_country_flag = INS_AI_RANDOM_COLONY_REFORMIST
 			has_game_rule = {
 				rule = INS_ai_behavior
-				option = COLONY_ALTERNATE
+				option = COLONY_REFORMIST
 			}
 			INS = {
 				is_subject = yes
@@ -200,7 +200,7 @@ INS_colony_exile = {
 		INS_pave_the_way_for_a_navy				#10 = 25
 		INS_increase_military_training			#10 = 35
 		INS_trust_on_the_east					#10 = 45
-		INS_improve_dutch_relations				#10 = 55 #week 3 1937
+		INS_jewel_of_the_crown				#10 = 55 #week 3 1937
 		INS_expand_the_airforce					#10 = 65
 		INS_reinstate_ethical_policies			#10 = 75
 		INS_upheld_status_quo					#5 = 80
@@ -268,7 +268,7 @@ INS_colony_exile = {
 	}
 }
 
-INS_colony_alternate = {
+INS_colony_reformist = {
 	name = "Federalization of the Indies"
 	desc = "The Raad van Indie would push for their own representative to be appointed first before proceeding to balance the economic revival, political reforms, and military modernization"
 
@@ -279,10 +279,10 @@ INS_colony_alternate = {
 
 	enable = {
 		OR = {
-			has_country_flag = INS_AI_RANDOM_COLONY_ALTERNATE
+			has_country_flag = INS_AI_RANDOM_COLONY_REFORMIST
 			has_game_rule = {
 				rule = INS_ai_behavior
-				option = COLONY_ALTERNATE
+				option = COLONY_REFORMIST
 			}
 		}
 	}

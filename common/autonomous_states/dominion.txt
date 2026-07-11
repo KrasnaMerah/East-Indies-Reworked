@@ -19,6 +19,7 @@ autonomy_state = {
 		overlord_trade_cost_factor = -0.25
 		peace_score_ratio_transferred_to_overlord = 0.05
 		lend_lease_tension_with_overlord = -0.1
+		faction_influence_contribution_factor = -0.1
 	}
 	
 	ai_subject_wants_higher = {
@@ -104,6 +105,16 @@ autonomy_state = {
 				has_completed_focus = RAJ_eastern_pakistan
 				has_completed_focus = RAJ_red_in_the_shadows
 			}
+		}
+		if = {
+			limit = {
+				original_tag = RAJ
+				has_dlc = "Graveyard of Empires"
+				has_completed_focus = RAJ_his_majestys_loyal_government
+			}
+			has_completed_focus = RAJ_the_dominion_of_india
+			has_completed_focus = RAJ_keep_calm_and_carry_on
+			has_completed_focus = RAJ_holding_the_gates_of_india
 		}
 		if = {
 			limit = {

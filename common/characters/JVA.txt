@@ -1,0 +1,366 @@
+characters = {
+
+	INS_hamengkubuwono_eighth = {
+		name = INS_hamengkubuwono_eighth
+		portraits = {
+			army = {
+				small = GFX_idea_indonesia_hamengkubuwono_eighth
+				large = GFX_portrait_indonesia_hamengkubuwono_eighth_army
+			}
+			civilian = {
+				small = GFX_idea_indonesia_hamengkubuwono_eighth
+				large = GFX_portrait_indonesia_hamengkubuwono_eighth
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = INS_hamengkubuwono_eighth
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
+				has_dlc = "Man the Guns"
+			}
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+				if = {
+					limit = {
+						tag = INS
+					}
+					OR = {
+						has_completed_focus = INS_reestablish_royal_houses
+						has_completed_focus = INS_merdeka
+					}
+				}
+				controls_state = 1086
+			}
+			visible = {
+				if = {
+					limit = {
+						tag = INS
+					}
+					OR = {
+						AND = {
+							has_completed_focus = INS_challenge_dutch_elitism
+							has_country_flag = INS_de_jonge_resigned
+						}
+						has_country_leader = {
+							name = "Sukarno"
+							ruling_only = yes
+						}
+					}
+				}
+				NOT = {
+					has_country_flag = INS_hamengkubuwono_viii_passed
+				}
+			}
+			traits = {
+				sultan_of_yogyakarta_8
+			}
+		}
+	}
+	
+	INS_hamengkubuwono_ninth = {
+		name = INS_hamengkubuwono_ninth
+		portraits = {
+			army = {
+				small = GFX_idea_indonesia_hamengkubuwono_ninth
+				large = GFX_portrait_indonesia_hamengkubuwono_ninth_army
+			}
+			civilian = {
+				small = GFX_idea_indonesia_hamengkubuwono_ninth
+				large = GFX_portrait_indonesia_hamengkubuwono_ninth
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = INS_hamengkubuwono_ninth
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = JVA
+				}
+				has_dlc = "Man the Guns"
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+				OR = {
+					has_completed_focus = INS_reestablish_royal_houses
+					has_completed_focus = INS_merdeka
+				}
+				controls_state = 1086
+			}
+			visible = {
+				has_country_flag = INS_hamengkubuwono_viii_passed
+				if = {
+					limit = {
+						tag = INS
+					}
+					OR = {
+						AND = {
+							has_completed_focus = INS_challenge_dutch_elitism
+							compare_autonomy_state > autonomy_colony
+						}
+						is_subject = no
+					}
+					NOT = {
+						has_completed_focus = INS_make_use_nsboi
+					}
+				}
+			}
+			traits = {
+				sultan_of_yogyakarta_9
+			}
+		}
+	}
+
+	INS_mangkunegara_seventh = {
+		name = INS_mangkunegara_seventh
+		portraits = {
+			civilian = {
+				large = GFX_portrait_indonesia_mangkunegara_vii
+			}
+			army = {
+				small = GFX_idea_indonesia_mangkunegara_seventh_army
+				large = GFX_portrait_indonesia_mangkunegara_vii_army
+			}
+		}
+	}
+	
+	JVA_pakubuwono_x = {
+		name = JVA_pakubuwono_x
+		portraits = {
+			civilian= {
+				large = GFX_portrait_indonesia_pakubuwono_x
+				small = GFX_idea_indonesia_pakubuwono_tenth
+			}
+			army = {
+				large = GFX_portrait_indonesia_pakubuwono_x_army
+				small = GFX_idea_indonesia_pakubuwono_tenth_army
+			}
+		}
+		field_marshal = {
+			visible = {
+				has_country_leader = {
+					character = JVA_pakubuwono_x
+					ruling_only = yes
+				}
+			}
+			traits = { politically_connected }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	JVA_pakubuwono_xi = {
+		name = JVA_pakubuwono_xi
+		portraits = {
+			civilian= {
+				large = GFX_portrait_indonesia_pakubuwono_xi
+				small = GFX_idea_indonesia_pakubuwono_xi
+			}
+			army = {
+				large = GFX_portrait_indonesia_pakubuwono_xi_army
+				small = GFX_idea_indonesia_pakubuwono_xi
+			}
+		}
+	}
+	
+	JVA_pakubuwono_xii = {
+		name = JVA_pakubuwono_xii
+		portraits = {
+			civilian= {
+				large = GFX_portrait_indonesia_pakubuwono_xii
+			}
+		}
+	}
+
+	JVA_suharto = {
+		name = JVA_suharto
+		portraits = {
+			army = {
+				large = GFX_portrait_indonesia_suharto
+				small = GFX_idea_indonesia_suharto
+			}
+		}
+	}
+
+	INS_soengkono = {
+		name = INS_soengkono
+		portraits = {
+			army = {
+				large = "GFX_portrait_INS_soengkono"
+				small = "GFX_portrait_INS_soengkono_small"
+			}
+		}
+
+		#corps_commander = {
+		#	traits = { INS_loyalty_to_indonesia }
+		#	skill = 1
+		#	attack_skill = 1
+		#	defense_skill = 1
+		#	planning_skill = 1
+		#	logistics_skill = 1
+		#	legacy_id = -1
+		#}
+	}
+
+	INS_moestopo = {
+		name = INS_moestopo
+		portraits = {
+			army = {
+				large = "GFX_portrait_INS_moestopo"
+				small = "GFX_portrait_INS_moestopo_small"
+			}
+		}
+
+		#corps_commander = {
+		#	traits = { INS_loyalty_to_indonesia militias_officer }
+		#	skill = 1
+		#	attack_skill = 1
+		#	defense_skill = 1
+		#	planning_skill = 1
+		#	logistics_skill = 1
+		#	legacy_id = -1
+		#}
+
+		advisor = {
+			slot = high_command
+			cost = 25
+			idea_token = INS_moestopo
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = HOL
+					original_tag = JVA
+				}
+			}
+			visible = {
+				OR = {
+					AND = {
+						original_tag = INS
+						INS_character_republic_founded_check_VISIBLE = yes
+					}
+					AND = {
+						original_tag = HOL
+						has_cosmetic_tag = INS_UNION
+					}
+					original_tag = JVA
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = INS
+					}
+					OR = {
+						has_country_flag = INS_de_jonge_resigned
+						has_completed_focus = INS_expel_the_colonials
+						has_completed_focus = INS_merdeka
+						has_completed_focus = INS_break_the_chains
+					}
+				}
+			}
+			traits = {
+				TAOG_acting_minister_defense
+			}
+		}
+	}
+
+	INS_sutomo = {
+		name = INS_sutomo
+		portraits = {
+			army = {
+				large = "GFX_portrait_INS_sutomo"
+				small = "GFX_portrait_INS_sutomo_small"
+			}
+		}
+
+		#corps_commander = {
+		#	traits = { INS_loyalty_to_indonesia militias_officer }
+		#	skill = 1
+		#	attack_skill = 1
+		#	defense_skill = 1
+		#	planning_skill = 1
+		#	logistics_skill = 1
+		#	legacy_id = -1
+		#}
+	}
+
+	INS_djatikoesoemo = {
+		name = INS_djatikoesoemo
+		portraits = {
+			army = {
+				large = "GFX_portrait_INS_djatikoesoemo"
+				small = "GFX_portrait_INS_djatikoesoemo_small"
+			}
+		}
+
+		#corps_commander = {
+		#	traits = { INS_loyalty_to_indonesia }
+		#	skill = 1
+		#	attack_skill = 1
+		#	defense_skill = 1
+		#	planning_skill = 1
+		#	logistics_skill = 1
+		#	legacy_id = -1
+		#}
+
+		advisor = {
+			slot = high_command
+			idea_token = INS_djatikoesoemo
+			cost = 50
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = HOL
+					original_tag = JVA
+				}
+			}
+			visible = {
+				OR = {
+					AND = {
+						original_tag = INS
+						INS_character_republic_founded_check_VISIBLE = yes
+					}
+					AND = {
+						original_tag = HOL
+						has_cosmetic_tag = INS_UNION
+					}
+					original_tag = JVA
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = INS
+					}
+					OR = {
+						has_country_flag = INS_de_jonge_resigned
+						has_completed_focus = INS_expel_the_colonials
+						has_completed_focus = INS_merdeka
+						has_completed_focus = INS_break_the_chains
+					}
+				}
+			}
+			traits = {
+				army_artillery_1
+			}
+		}
+	}
+
+	#Maybe need Supomo, Kasimo, Samsi, and Djatikusumo here
+}

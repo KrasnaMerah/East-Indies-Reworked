@@ -6,7 +6,10 @@ state={
 		owner = INS
 		add_core_of = WPG
 		victory_points = {
-			12371 1 
+			12371 3 
+		}
+		victory_points = {
+			7542 1
 		}
 		buildings = {
 			infrastructure = 1
@@ -15,7 +18,7 @@ state={
 			}
 		}
 	}
-
+	
 	provinces={
 		1546 4509 4552 7529 7542 7570 10369 10396 10436 10990 12371 
 	}
