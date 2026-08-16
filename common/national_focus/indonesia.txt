@@ -13,6 +13,7 @@
 ### search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 ### search_filters = { FOCUS_FILTER_HISTORICAL }
 ### search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
+#!gfx:interface\goals.gfx
 
 focus_tree = {
 	id = east_indies_focus
