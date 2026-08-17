@@ -502,9 +502,10 @@ psii_group_trait:0 "The Indonesian Islamists" #PSII
 gapi_trait:0 "The Indonesian Political Federation" #GAPI
 propaganda_novice:0 "Novice Propagandizer"
 is_hired:0 "Has been hired as an advisor"
-german_planter:0 "German Planter"
+german_planter:0 "German Planter" #Hewel
+GER_diplomat:0 "Diplomat" #Hewel at home
+jamu_advocate:0 "Jamu Advocate" #Sardjito
 minister_public_works:0 "Minister of Public Works"
-GER_diplomat:0 "Diplomat" #Hewel
 italophile:0 "Italophile"
 aircraft_architect:0 "Aircraft Architect" #Laurens Walraven
 the_man_from_gianjar:0 "The Man from Gianjar" #Ida Anak Agung Gde Agung
