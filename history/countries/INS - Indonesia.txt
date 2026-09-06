@@ -205,7 +205,7 @@ recruit_character = INS_surjadarma
 recruit_character = INS_sudirman
 recruit_character = INS_samuel_ratulangi
 recruit_character = INS_sukawati
-recruit_character = INS_thomas_nayoan
+recruit_character = MNH_thomas_najoan
 recruit_character = INS_didi_kartasasmita
 
 recruit_character = INS_karel_supit

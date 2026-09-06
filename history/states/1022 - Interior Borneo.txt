@@ -4,6 +4,8 @@ state={
 
 	impassable = yes 
 	force_link_ownership_to = 334 # West Kalimantan
+	impassable_ignored_links = { 333 } #Sarawak
+	impassable_ignored_links = { 1059 } #Limbang
 	
 	history={
 		owner = INS

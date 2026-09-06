@@ -316,13 +316,13 @@ characters = {
 					limit = { tag = HOL }
 					NOT = {
 						INS = {
-							has_country_flag = INS_furstner_stay
+							has_country_flag = INS_furstner_stay_flag
 						}
 					}
 				}
 				if = {
 					limit = { original_tag = INS }
-					has_country_flag = INS_furstner_stay
+					has_country_flag = INS_furstner_stay_flag
 				}
 			}
 			traits = {

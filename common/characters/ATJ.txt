@@ -19,7 +19,7 @@ characters = {
 		}
 
 		country_leader = {
-			ideology = liberalism
+			ideology = conservatism
 			traits = {
 				INS_sultan_in_the_hills
 			}

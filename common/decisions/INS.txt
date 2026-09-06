@@ -683,7 +683,7 @@ INS_category_volksraad = {
 			}
 			add_stability = 0.075
 			add_war_support = 0.025
-			INS_thomas_nayoan = {
+			MNH_thomas_najoan = {
 				clr_character_flag = INS_imprisoned_flag
 				set_portraits = {
 					army = {
@@ -1823,7 +1823,7 @@ INS_category_pki_decisions = {
 			}
 			add_stability = 0.075
 			add_war_support = 0.025
-			INS_thomas_nayoan = {
+			MNH_thomas_najoan = {
 				clr_character_flag = INS_imprisoned_flag
 				set_portraits = {
 					army = {
@@ -1896,7 +1896,7 @@ INS_category_pki_decisions = {
 			has_completed_focus = INS_southeast_asian_liberation
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.32 }
+			country_event = { id = holhis_indonesia.434 }
 		}
 	}
 
@@ -1936,7 +1936,7 @@ INS_category_pki_decisions = {
 			has_completed_focus = INS_southeast_asian_liberation
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.32 }
+			country_event = { id = holhis_indonesia.434 }
 		}
 	}
 
@@ -1976,7 +1976,7 @@ INS_category_pki_decisions = {
 			has_completed_focus = INS_southeast_asian_liberation
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.33 }
+			country_event = { id = holhis_indonesia.435 }
 		}
 	}
 
@@ -2017,7 +2017,7 @@ INS_category_pki_decisions = {
 			has_completed_focus = INS_southeast_asian_liberation
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.34 }
+			country_event = { id = holhis_indonesia.436 }
 		}
 	}
 
@@ -2202,7 +2202,7 @@ INS_category_pki_decisions = {
 			has_completed_focus = INS_commie_strike_islands
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.18 }
+			country_event = { id = holhis_indonesia.420 }
 		}
 	}
 
@@ -2244,7 +2244,7 @@ INS_category_pki_decisions = {
 					set_cosmetic_tag = east_africa
 				}
 			}
-			country_event = { id = holhis_commies.19 }
+			country_event = { id = holhis_indonesia.421 }
 		}
 	}
 
@@ -2278,7 +2278,7 @@ INS_category_pki_decisions = {
 			KEN = { exists = no }
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.20 }
+			country_event = { id = holhis_indonesia.422 }
 		}
 	}
 
@@ -2312,7 +2312,7 @@ INS_category_pki_decisions = {
 			MAD = { exists = no }
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.21 }
+			country_event = { id = holhis_indonesia.423 }
 		}
 	}
 
@@ -2347,7 +2347,7 @@ INS_category_pki_decisions = {
 			FSM = { exists = no }
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.22 }
+			country_event = { id = holhis_indonesia.424 }
 		}
 	}
 
@@ -2381,7 +2381,7 @@ INS_category_pki_decisions = {
 			TAH = { exists = no }
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.23 }
+			country_event = { id = holhis_indonesia.425 }
 		}
 	}
 
@@ -2415,7 +2415,7 @@ INS_category_pki_decisions = {
 			GUM = { exists = no }
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.24 }
+			country_event = { id = holhis_indonesia.426 }
 		}
 	}
 
@@ -2449,7 +2449,7 @@ INS_category_pki_decisions = {
 			SOL = { exists = no }
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.25 }
+			country_event = { id = holhis_indonesia.427 }
 		}
 	}
 
@@ -2483,7 +2483,7 @@ INS_category_pki_decisions = {
 			SAM = { exists = no }
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.26 }
+			country_event = { id = holhis_indonesia.428 }
 		}
 	}
 
@@ -2517,7 +2517,7 @@ INS_category_pki_decisions = {
 			HAW = { exists = no }
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.27 }
+			country_event = { id = holhis_indonesia.429 }
 		}
 	}
 
@@ -2551,7 +2551,7 @@ INS_category_pki_decisions = {
 			FIJ = { exists = no }
 		}
 		remove_effect = {
-			country_event = { id = holhis_commies.28 }
+			country_event = { id = holhis_indonesia.430 }
 		}
 	}
 
@@ -10945,13 +10945,13 @@ INS_category_evacuation = {
 			if = {
 				limit = {
 					OR = {
-						INS_thomas_nayoan = {
+						MNH_thomas_najoan = {
 							has_character_flag = INS_imprisoned_flag
 						}
 						has_country_flag = INS_nayoan_alive
 					}
 				}
-				INS_thomas_nayoan = {
+				MNH_thomas_najoan = {
 					clr_character_flag = INS_imprisoned_flag
 					set_character_flag = INS_evacuated_flag
 				}
@@ -10967,7 +10967,7 @@ INS_category_evacuation = {
 				limit = {
 					has_country_flag = INS_nayoan_alive
 				}
-				INS_thomas_nayoan = {
+				MNH_thomas_najoan = {
 					clr_character_flag = INS_evacuated_flag
 					set_portraits = {
 						army = {
@@ -10980,10 +10980,10 @@ INS_category_evacuation = {
 						has_dlc = "La Resistance"
 					}
 					add_advisor_role = {
-						character = INS_thomas_nayoan
+						character = MNH_thomas_najoan
 						advisor = {
 							slot = political_advisor
-							idea_token = INS_thomas_nayoan
+							idea_token = MNH_thomas_najoan
 							traits = {
 								partisans_organizer
 							}
@@ -11214,9 +11214,9 @@ INS_category_netherlands_indies_intelligence_service = {
 		remove_effect = {
 			INJ = {
 				random_list = {
-					25 = { country_event = holhis_sabotage.1 }# sabotage - military
-					25 = { country_event = holhis_sabotage.2 }# sabotage - civilian
-					50 = { country_event = holhis_sabotage.3 }# sabotage - infrastructure
+					25 = { country_event = holhis_indonesia.801 }# sabotage - military
+					25 = { country_event = holhis_indonesia.802 }# sabotage - civilian
+					50 = { country_event = holhis_indonesia.803 }# sabotage - infrastructure
 				}
 			}
 		}
@@ -11394,7 +11394,7 @@ INS_category_civil_war_missions = {
 
 		timeout_effect = {
 			add_stability = 0.075
-			country_event = { id = holhis_roundtable.1 }
+			country_event = { id = holhis_indonesia.851 }
 		}
 	}
 }

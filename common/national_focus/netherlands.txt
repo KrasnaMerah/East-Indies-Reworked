@@ -5743,8 +5743,9 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 25
 			INS = {
-				HOL_conrad_helfrich = {
-					set_nationality = HOL
+				country_event = {
+					id = holhis_indonesia.709
+					hours = 6
 				}
 			}
 			if = {
@@ -9798,7 +9799,7 @@ focus_tree = {
 						is_puppet_of = HOL
 					}
 				}
-				country_event = { id = holhis_swpa.1 hours = 6 }
+				country_event = { id = holhis_indonesia.751 hours = 6 }
 			}
 		}
 	}

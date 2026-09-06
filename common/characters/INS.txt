@@ -2842,11 +2842,11 @@ characters = {
 		name = INS_samuel_ratulangi
 		portraits = {
 			army = {
-				small = GFX_idea_indonesia_sam_ratulangi
-				large = GFX_portrait_indonesia_sam_ratulangi_army
+				small = GFX_advisor_MNH_Ratulangi
+				large = GFX_portrait_MNH_Ratulangi_Army
 			}
 			civilian = {
-				large = GFX_portrait_indonesia_sam_ratulangi
+				large = GFX_portrait_MNH_Ratulangi
 			}
 		}
 		advisor = {
@@ -3414,26 +3414,6 @@ characters = {
 			ideology = marxism
 			traits = {
 				patriotic_socialist
-			}
-			expire = "1965.1.1.1"
-			id = -1
-		}
-	}
-
-	INS_thomas_nayoan = {
-		name = INS_thomas_nayoan
-		portraits = {
-			civilian = {
-				large = GFX_portrait_indonesia_thomas_nayoan
-			}
-			army = {
-				small = GFX_idea_indonesia_thomas_nayoan_jailed
-			}
-		}
-		country_leader = {
-			ideology = marxism
-			traits = {
-				freedom_fighter
 			}
 			expire = "1965.1.1.1"
 			id = -1

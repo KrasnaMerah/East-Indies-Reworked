@@ -8579,13 +8579,9 @@ form_majapahit_empire_category = {
 			OR = {
 				original_tag = KUT
 				original_tag = POK
-				AND = {
-					OR = {
-						original_tag = SAR
-						original_tag = SAB
-						original_tag = BRN
-					}
-				}
+				original_tag = SAR
+				original_tag = SAB
+				original_tag = BRN
 			}
 			has_dlc = "Waking the Tiger"
 		}
@@ -8948,16 +8944,22 @@ form_majapahit_empire_category = {
 		}
 
 		complete_effect = {
+			1021 = { add_core_of = ROOT }
+			1060 = { add_core_of = ROOT }
+			1061 = { add_core_of = ROOT }
+			1062 = { add_core_of = ROOT }
+			1063 = { add_core_of = ROOT }
+			1064 = { add_core_of = ROOT }
+			1065 = { add_core_of = ROOT }
+			336 = { add_core_of = ROOT }
+			1083 = { add_core_of = ROOT }
 			724 = {
 				add_core_of = ROOT
-				set_state_name = "Pattani"
+				set_state_name = MAL_STATE_724
 			}
 			set_province_name = {
 				id = 7236
-				name = "Singgora"
-			}
-			1083 = {
-				add_core_of = ROOT
+				name = MAL_VICTORY_POINTS_7236
 			}
 			if = {
 				limit = {
@@ -8965,11 +8967,11 @@ form_majapahit_empire_category = {
 				}
 				1084 = {
 					add_core_of = ROOT
-					set_state_name = "Tambralinga"
+					set_state_name = MAL_STATE_1084
 				}
 				set_province_name = {
 					id = 12201
-					name = "Ligor"
+					name = MAL_VICTORY_POINTS_12201
 				}
 				else = {
 					add_state_claim = 1084
@@ -8981,15 +8983,9 @@ form_majapahit_empire_category = {
 						OR = {
 							original_tag = MAL
 							original_tag = SNG
-							original_tag = ATJ
 							original_tag = SSI
 							original_tag = INS
-							original_tag = JVA
-							original_tag = KUT
-							original_tag = POK
 							original_tag = BRN
-							original_tag = SAR
-							original_tag = SAB
 						}
 					}
 				}
@@ -9024,8 +9020,8 @@ form_majapahit_empire_category = {
 				original_tag = WPG
 				original_tag = GOW
 				original_tag = MNH
+				original_tag = TML
 			}
-			has_dlc = "Waking the Tiger"
 		}
 
 		highlight_states = { 

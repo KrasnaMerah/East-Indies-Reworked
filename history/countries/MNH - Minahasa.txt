@@ -64,6 +64,7 @@ add_ideas = {
 	ASEAN_agrarian_society_1
 }
 
-recruit_character = INS_bernard_lapian
+recruit_character = MNH_bernard_lapian
+recruit_character = MNH_nani_wartabone
 
 

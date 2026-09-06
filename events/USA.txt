@@ -2034,7 +2034,7 @@ country_event = {
 						}
 					}
 					INS = {
-						country_event = { id = holhis_volksraad.9 days = 2 }
+						country_event = { id = holhis_indonesia.209 days = 2 }
 					}
 				}
 			}

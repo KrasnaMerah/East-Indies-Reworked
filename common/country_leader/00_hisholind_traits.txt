@@ -637,16 +637,6 @@ leader_traits = {
 		production_speed_dockyard_factor = 0.05
 		production_speed_fuel_silo_factor = 0.05
 	}
-	
-	jamu_advocate = { #Sardjito
-		sprite = 6
-		army_org_factor = 0.02
-		org_loss_when_moving = -0.01
-		land_reinforce_rate = 0.02
-		attrition = -0.01
-		
-		command_cap_increase = 15
-	}
 
 	##########################
 	# Other character traits #

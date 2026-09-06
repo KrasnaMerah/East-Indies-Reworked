@@ -3461,6 +3461,7 @@ on_actions = {
 					division_template = {
 						name = "Timorese Division"
 						priority = 1
+		    			template_counter = 87
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -3871,7 +3872,7 @@ on_actions = {
 							}
 						}
 					}
-					INS_thomas_nayoan = {
+					MNH_thomas_najoan = {
 						clr_character_flag = INS_imprisoned_flag
 						set_portraits = {
 							army = {
@@ -4068,7 +4069,7 @@ on_actions = {
 					INS_samuel_ratulangi = {
 						set_nationality = MNH
 					}
-					INS_thomas_nayoan = {
+					MNH_thomas_najoan = {
 						set_nationality = MNH
 					}
 					INS_hermann_rosenow = {
@@ -4393,6 +4394,7 @@ on_actions = {
 					division_template = {
 						name = "Javanese Division"
 						priority = 1
+		    			template_counter = 113
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -4427,6 +4429,7 @@ on_actions = {
 					division_template = {
 						name = "Aceh Division"
 						priority = 1
+		    			template_counter = 105
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -4486,6 +4489,7 @@ on_actions = {
 					division_template = {
 						name = "Sumatran Division"
 						priority = 1
+		    			template_counter = 66
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -4648,6 +4652,7 @@ on_actions = {
 					division_template = {
 						name = "Eastern Division"
 						priority = 1
+		    			template_counter = 70
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -4677,6 +4682,7 @@ on_actions = {
 					division_template = {
 						name = "Timorese Division"
 						priority = 1
+		    			template_counter = 26
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -4714,6 +4720,7 @@ on_actions = {
 					set_country_flag = INS_de_jonge_resigned
 					division_template = {
 						name = "Papuan Division"
+		    			template_counter = 117
 						priority = 1
 						division_names_group = INS_INF_01
 						regiments = {
@@ -4803,6 +4810,7 @@ on_actions = {
 					division_template = {
 						name = "Bornean Jungle Division"
 						priority = 1
+		    			template_counter = 99
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -4832,6 +4840,7 @@ on_actions = {
 					division_template = {
 						name = "Bornean Jungle Division"
 						priority = 1
+		    			template_counter = 103
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -4877,6 +4886,7 @@ on_actions = {
 					division_template = {
 						name = "Bornean Jungle Division"
 						priority = 1
+		    			template_counter = 93
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -4942,6 +4952,7 @@ on_actions = {
 					division_template = {
 						name = "Mollucan Division"
 						priority = 1
+		    			template_counter = 88
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -4981,6 +4992,7 @@ on_actions = {
 					division_template = {
 						name = "Mollucan Division"
 						priority = 1
+		    			template_counter = 102
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -5090,6 +5102,7 @@ on_actions = {
 					division_template = {
 						name = "Celebes Division"
 						priority = 1
+		    			template_counter = 82
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -5144,7 +5157,7 @@ on_actions = {
 					}
 					retire_ideology_leader = communism
 					promote_character = {
-						character = INS_thomas_nayoan
+						character = MNH_thomas_najoan
 					}
 					add_corps_commander_role = {
 						character = INS_samuel_ratulangi
@@ -5160,6 +5173,7 @@ on_actions = {
 					division_template = {
 						name = "Celebes Division"
 						priority = 1
+		    			template_counter = 78
 						division_names_group = INS_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -5399,7 +5413,7 @@ on_actions = {
 				}
 				INS = {
 					country_event = {
-						id = holhis_council.9
+						id = holhis_indonesia.259
 						days = 82
 						random_days = 15
 					}

@@ -19,42 +19,26 @@ default = {
 	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon}
 }
 
-INS_HOL = {
-	male = {
-		names = { 
-			Adriaan Albert Anthony Antonius Berend Bodo Carsten Christiaan Cornelis Dirk Ferdinand Freek Frits Gerard Godfried Govert Hendrik Henri Jacob Jacobus Jan "Jan Willem" Johan Johannes Laurens Mathias Matthijs Nicolaas Peter Petrus Philippus Pieter Quirinus Sijmen Theodorus Tjerk Willem
-		 }
-	}
-	
-	female = {
-		names = { Coba Corrie Frieda Hannie Helena Ina Jet Joke Miep Reina Truus }
-	}
-
-	surnames = { 
-		Boers "'t Mannetje" Best "Bischoff van Heemskerk" "de Visser" "den Hollander" "den Ouden" "Jacometti" "van den Bent" "van den Briel" "van den Hof" "van der Bijl" "van Helsdingen" "van Liempd" "van Setten" "van Voorst tot Voorst" "van Zinnicq Bergmann" "Wittert van Hoogland" Bosch Bruggink Bruinier Buijs Buurman Carstens "den Breejen" Elias Folmer Giesen Ham Harberts Hilberdink Hoogewerff Hoving Jaapies Janssen Jolles Kaak Kraak Krouwel Kuiper Landzaat Leegstra Lukkien Maas Migchelbrink Reijnierse Rijnders Roelofsen Sandberg Scherpenhuijzen Schippers Steen Tebrunsvelt Varwijk Verhoef Visscher Vos Winkelman
-	}
-}
-
 INS = {
 	male = {
-		names = { Joko Fauzi Prabowo Ali Soemarno Henk Widji Teuku Hadi Azwar Mustafa Zaini Abdul Anak Ida Dewa }
+		names = { Abdul Agung Agus Ali "Anak Agung" Andika Azwar Bambang Bima Bimo Budi Budiman Cahyo Dahlan Darmadi Darman Dewa Dipo Djoko Dono Edhie Edi Fauzi Gatot Hadi Handoko Handoyo Hartono Henk Ida Jiwahil Joko Jono Jumadi Kartono Karyono Kasman Kuncoro Margono Martono Misbach Misbakhun Mulyadi Mulyono Mustafa Paiman Paimin "Petrus Kanisius" Prabowo Pramono Poniman Rahmad Rahmadi Rasmadi Rudini Sakirman Santoso Sarjono Sigit Siswondo Siswono Subagyo Subianto Subroto Sucipto Sudarto Sudrajat Sugeng Sugito Sugiyo Suhario Sukiman Sukimin Sumargo Sumarno Supardi Suparno Suprapto Suratman Surendra Surono Suryadi Sutarto Sutrisno Suwandi Suwarno Suyanto Suyatno Tarsiman Taryono Teuku Tirto Waluyo Wibowo Widji Wiranto Wiratno Zaini }
 	}
 	female = {
-		names = { Diah Siti }
+		names = { Diah Kartini Maharani Maimunah Mulyani Rahayu Siti Sri Sulastri Yovita }
 	}
-	surnames = { Widodo Bowo Subianto Sadikin Sosroatmodjo Ngantung Permatasari Damono Wibowo Thukul Hartinah Gunawan Haryanto Suprianto Sabara Abubakar "Bagus Oka" "Bagus Mantra" Martha}
+	surnames = { Bowo Darmono Ngantung Nuryadi Sadikin Sosroatmodjo Subianto Suhartono Sukardi Permatasari Widodo Wibowo Thukul Gunawan Haryanto Suprianto Sabara Abubakar "Bagus Oka" "Bagus Mantra" }
 	callsigns = { }
 }
 
 JVA = {
 	male = {
-		names = { Abdul Ali Azwar Hadi Henk Joko Mustafa Prabowo Pramono Sumarno Subianto Subroto Wiji }
+		names = { Agus Andika Bambang Bima Bimo Budi Budiman Cahyo Cahyono Darmadi Darman Djoko Dono Edhie Edi Gatot Gunawan Hadi Handoko Handoyo Hartono Haryanto Jiwahil Joko Jono Jumadi Kartono Karyono Kasman Kuncoro Margono Martono Mulyadi Mulyono Paiman Paimin Prabowo Pramono Pranoto Poniman Putra Rahmad Rahmadi Rasmadi Rudini Sakirman Santoso Sarjono Setiawan Setiyanto Setiyono Sigit Siswondo Siswono Subagyo Subianto Subroto Sudarto Sudrajat Sugeng Sugiyo Suhario Sukiman Sukimin Sumargo Sumarno Suparno Suprapto Suratman Surendra Surono Sutarto Sutrisno Suwandi Suwarno Tarsiman Taryono Waluyo Wibowo Wiji Wiranto Wiratno }
 	}
 	female = {
-		names = { Diah Siti Sri Mulyani }
+		names = { Diah Kartini Mulyani Rahayu Sri Sulastri }
 		surnames = { Hartinah Permatasari }
 	}
-	surnames = { Bowo Darmono Djojohadikusumo Gunawan Haryanto Ngantung Sabara Sadikin Sastroamijoyo Singodimejo Sosroatmojo Suprianto Thukul Wibowo Widodo }
+	surnames = { Bowo Darmawan Darmono Djojohadikusumo "" Kartonegoro Kuncoroningrat "" Lelono Nurmantyo Parman "" Purnomo Riadi "" Riyadi Sabara Sadikin "" Sastroamijoyo Singodimejo "" Sosroatmojo Suprianto Suryadi Suryodiningrat Suyadi Thukul "" Utoyo Wibowo "" Widodo "" Yani }
 	callsigns = { "Kilat" "Elang" "Mohawk" "Raider" "Colibri" "Godham" "Liger" "Condor" "Martin" }
 }
 
@@ -82,24 +66,24 @@ BLI = {
 
 ATJ = {
 	male = {
-		names = { Abdullah Achmad Ali Amiruddin Azwar Daud Hadi Hasan Irwandi Jakfar Mustafa Nyak Said Tengku Teuku "Teuku Nyak" Zaini }
+		names = { Abdullah Achmad Ali Amiruddin Azwar Basri Daud Hadi Harun Hasan Irwandi Jakfar Khairul Maimun Mustafa Nyak Said Salim Tengku Teuku "Teuku Nyak" Zaini }
 	}
 	female = {
 		names = { Cut Ahya Ajie Meutia Dhien }
 	}
-	surnames = { Abubakar Agri "Ali Basyah" Beureu'eh Dzakaria Kamil Minimi Muchtar Nazar Umar Razak Sulaiman Sofyans Thayeb "di Tiro" Yusuf }
+	surnames = { Abubakar Agri "Ali Basyah" Beureu'eh Dzakaria Kamil Minimi Muchtar Nazar Umar Paloh Razak Rozaq Solaeman Sofyan Sofyans Sulaiman Thayeb Thayib "di Tiro" Yusuf }
 	callsigns = { "Elang" "Godham" "Liger" "Kilat" "Kolibri" "Kondor" "Martin" "Mohawk" "Raider" }
 }
 
 SSI = {
 	male = {
-		names = { Achmad Arcandra Bagir Daud Dzulkifli Hasan Hudarni Ibrahim Karim Mulyadi Muchtaruddin Najib Tahir Teuku Yulian Yusril }
+		names = { Achmad Arcandra Bagir Basri Chairul Chatib Daud Dzulkifli Ferdinan Hasan Herman Hudarni Ibrahim Karim Maruli Mulyadi Muchtaruddin Najib Tahir Teuku Yulian Yusril }
 	}
 	female = {
 		names = { Ayie Ahya Meutia Mufidah }
 	}
 	surnames = {
-		Batubara Chalim Damsyik Ginting Gultom Harahap Hassan Hutapea Hutagalung Kaban Kanedi Kesuma Lubis Lumban Mahendra Manan Manulang Mersyah "Mi'ad Saad" Nababan Nainggolan Napitupulu Nasution Paloh Sadino Situmorang Tambunan Tamsir Tarigan }
+		Batubara Chalim Damsyik Ginting Gultom Harahap Hassan Hutabarat Hutagalung Hutapea Kaban Kanedi Kesuma Lubis Lumban Lumbantobing Mahendra Manan Manulang Mersyah "Mi'ad Saad" Nababan Nainggolan Napitupulu Nasution Paloh Sadino Sibarani Simanjuntak Sitanggang Situmorang Tambunan Tamsir Tarigan Tobing }
 	callsigns = { "Elang" "Godham" "Liger" "Kilat" "Kolibri" "Kondor" "Martin" "Mohawk" "Raider" }
 }
 
@@ -108,7 +92,7 @@ POK = {
 		names = { Achmad Arcandra Awang Bagir Daud Dzulkifli Hasan Hudarni Ibrahim Karim Mulyadi Muchtaruddin Najib Tahir Teuku Yulian Yusril }
 	}
 	female = {
-		names = { Cut Ayie Ahya Meutia Dhien }
+		names = { Ayie Ahya Meutia }
 	}
 	surnames = {
 		"bin Chalim" "bin Damsyik" "bin Hassan" "bin Jaafar" Kanedi Kesuma Mahendra Mersyah Paloh Sadino Tamsir }
@@ -175,7 +159,7 @@ GOW = {
 		names = { Athirah }
 	}
 	surnames = {
-		Bawuo Gerung Gobel Kalla Kamaru Masdar Mudzakkar "Pong Babu" Rantetana Sorring Yasin }
+		Bawuo Gerung Gobel Kalla Kamaru Masdar Mudzakkar "Pong Babu" Rantetana Saelan Sorring Yasin }
 	callsigns = { "The Black Devil" "Djago" "Elang" "Godham" "Liger" "Kilat" "Kolibri" "Kondor" "Manguni" "Martin" "Mohawk" "Raider" }
 }
 
@@ -193,13 +177,13 @@ TNE = {
 
 MLK = {
 	male = {
-		names = { Bodewin Chris Frans "Gerrit Jacobus" Karel Johannes Jonas Matheos Marcus Peter Philo Richard Sebastian }
+		names = { Bodewin Chris Frans "Gerrit Jacobus" Johannes Jonas Julius Karel Matheos Marcus Peter Philo Richard Sebastian }
 	}
 	female = {
-		names = { Martha Monika Vina }
+		names = { Gervasia Jakomina Kalsum Kezia Maria Martha Martina Monika Vina }
 	}
 	surnames = {
-		Armaiyn Latuconsina Latuharhary Latuihamallo Latumahina Leimena Manusama Papilaya Pattimura Pelmelay Rehatta Ralahalu Sitanala Soumeru Soumokil Tahalea Talapessy Tiahahu Tuasalamony Tutuhatunewa Tutupoly Wattimena Yosan }
+		Anakotta Armaiyn Latuconsina Latuharhary Latuihamallo Latumahina Leimena Manusama Mapetung Metiaman Ngosiem Notanubun Papilaya Pattimura Patty Pelmelay Rehatta Ralahalu Sitanala Solissa Soumeru Soumokil Tahalea Tahija Talapessy Tiahahu Tuasalamony Tulalessy Tutuhatunewa Tutupoly Wattimena Yosan }
 	callsigns = { "The Black Devil" "Djago" "Elang" "Godham" "Kasuari" "Liger" "Kilat" "Kolibri" "Kondor" "Mandar" "Manguni" "Martin" "Mohawk" "Raider" }
 }
 

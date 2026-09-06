@@ -71,6 +71,11 @@ spriteTypes = {
 	}
 
 	SpriteType = { 
+		name = "GFX_focus_INS_Parindra"
+		texturefile = "gfx/interface/goals/focus_INS_Parindra.dds"
+	}
+
+	SpriteType = { 
 		name = "GFX_focus_INS_PKI"
 		texturefile = "gfx/interface/goals/focus_INS_PKI.dds"
 	}

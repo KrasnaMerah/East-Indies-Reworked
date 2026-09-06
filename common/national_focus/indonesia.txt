@@ -13,7 +13,6 @@
 ### search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 ### search_filters = { FOCUS_FILTER_HISTORICAL }
 ### search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
-#!gfx:interface\goals.gfx
 
 focus_tree = {
 	id = east_indies_focus
@@ -4830,7 +4829,7 @@ focus_tree = {
 			has_government = communism
 			NOT = {
 				has_country_leader = {
-					name = "Muso Munawar"
+					character = INS_hubertus_van_mook
 					ruling_only = yes
 				}
 			}
@@ -6614,7 +6613,7 @@ focus_tree = {
 				if = {
 					limit = {
 						has_country_leader = {
-							name = "Hendrikus Colijn"
+							character = HOL_hendrikus_colijn
 							ruling_only = yes
 						}
 					}
@@ -7408,7 +7407,7 @@ focus_tree = {
 					set_capital = { state = 673 }
 				}
 				INS = {
-					INS_thomas_nayoan = {
+					MNH_thomas_najoan = {
 						clr_character_flag = INS_imprisoned_flag
 						set_nationality = EIS
 					}
@@ -7523,7 +7522,7 @@ focus_tree = {
 						}
 					}
 					add_country_leader_role = {
-						character = INS_thomas_nayoan
+						character = MNH_thomas_najoan
 						promote_leader = yes
 						country_leader = {
 							ideology = marxism
@@ -7794,7 +7793,7 @@ focus_tree = {
 				save_event_target_as = lon_mandatory_demand_target
 			}
 			event_target:lon_mandatory_demand_target = {
-				country_event = { id = holhis_swpa.9 days = 1 }
+				country_event = { id = holhis_indonesia.759 days = 1 }
 				set_country_flag = has_been_asked_for_mandates_flag
 				custom_effect_tooltip = INS_compliant_opinion_tt
 			}
@@ -7857,7 +7856,7 @@ focus_tree = {
 						}
 					}	
 				}
-				country_event = { id = holhis_swpa.10 hours = 6 }
+				country_event = { id = holhis_indonesia.760 hours = 6 }
 				custom_effect_tooltip = INS_compliant_opinion_tt
 			}
 		}
@@ -8355,7 +8354,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_leader = {
-						name = "Tjarda van Starkenborgh"
+						character = INS_a_t_van_starkenborgh_stachouwer
 						ruling_only = yes
 					}
 				}
@@ -8474,7 +8473,7 @@ focus_tree = {
 				mission = INS_mission_japanese_aid
 				days = 240
 			}
-			country_event = { id = holhis_navair.7 days = 7 }
+			country_event = { id = holhis_indonesia.707 days = 7 }
 		}
 	}
 
@@ -8887,9 +8886,9 @@ focus_tree = {
 				}
 				HOL = {
 					OR = {
-						has_idea = HOL_wilhelmina
+						has_idea = HOL_wilhelmina_idea
 						has_country_leader = {
-							name = "Wilhelmina"
+							character = HOL_wilhelmina
 							ruling_only = yes
 						}
 					}
@@ -8930,14 +8929,14 @@ focus_tree = {
 					target = INS
 					autonomy_state = autonomy_free
 				}
-				INS = { country_event = { id = holhis_indonesia.210 days = 2 } }
+				INS = { country_event = { id = holhis_indonesia.021 days = 2 } }
 			}
 			if = { #HOL does not exist
 				limit = {
 					is_subject = no
 					HOL = { exists = no }
 				}	
-				INS = { country_event = { id = holhis_indonesia.210 days = 2 } }
+				INS = { country_event = { id = holhis_indonesia.021 days = 2 } }
 			}
 			if = { #HOL stayed historical - has been capitulated
 				limit = {
@@ -8947,7 +8946,7 @@ focus_tree = {
 						has_capitulated = yes
 					}
 				}
-				HOL = { country_event = { id = holhis_indonesia.210 hours = 6 } }
+				HOL = { country_event = { id = holhis_indonesia.21 hours = 6 } }
 			}
 			if = { #HOL stayed historical - has not been capitulated
 				limit = {
@@ -9745,7 +9744,7 @@ focus_tree = {
 						is_puppet_of = ENG
 					}
 				}
-				country_event = { id = holhis_swpa.1 hours = 6 }
+				country_event = { id = holhis_indonesia.751 hours = 6 }
 			}
 		}
 	}
@@ -9816,7 +9815,7 @@ focus_tree = {
 					USA = { NOT = { has_war_with = INS } }
 				}
 				USA = {
-					country_event = { id = holhis_swpa.4 hours = 6 }
+					country_event = { id = holhis_indonesia.754 hours = 6 }
 					custom_effect_tooltip = needs_approval
 					effect_tooltip = {
 						PHI = {
@@ -9853,7 +9852,7 @@ focus_tree = {
 					}	
 				}
 				PHI = {
-					country_event = { id = holhis_swpa.1 hours = 6 }
+					country_event = { id = holhis_indonesia.751 hours = 6 }
 					custom_effect_tooltip = needs_approval
 					effect_tooltip = {
 						PHI = {
@@ -9933,7 +9932,7 @@ focus_tree = {
 
 		completion_reward = {
 			RAJ = {
-				country_event = { id = holhis_swpa.1 hours = 6 }
+				country_event = { id = holhis_indonesia.751 hours = 6 }
 				custom_effect_tooltip = needs_approval
 				effect_tooltip = {
 					RAJ = {
@@ -10020,7 +10019,7 @@ focus_tree = {
 					}
 				}
 				POR = {
-					country_event = { id = holhis_swpa.6 days = 1 }
+					country_event = { id = holhis_indonesia.756 days = 1 }
 					custom_effect_tooltip = needs_approval
 					effect_tooltip = {
 						add_political_power = -50
@@ -10035,7 +10034,7 @@ focus_tree = {
 						has_war_with = SPR
 					}
 				}
-				SPR = { country_event = { id = holhis_swpa.6 days = 1 } }
+				SPR = { country_event = { id = holhis_indonesia.756 days = 1 } }
 			}
 		}
 	}
@@ -10417,7 +10416,7 @@ focus_tree = {
 					character = INS_hubertus_van_mook
 					value = yes
 				}
-				country_event = { id = holhis_nsb.5 hours = 8 }
+				country_event = { id = holhis_indonesia.605 hours = 8 }
 			}
 			set_cosmetic_tag = INS_DUTCH
 			
@@ -10463,7 +10462,7 @@ focus_tree = {
 						autonomy_state = autonomy_free
 					}
 					country_event = {
-						id = holhis_nsb.6
+						id = holhis_indonesia.606
 						days = 3
 					}
 				}
@@ -11505,7 +11504,7 @@ focus_tree = {
 				}
 			}
 			POR = {
-				country_event = { id = holhis_swpa.6 days = 1 }
+				country_event = { id = holhis_indonesia.756 days = 1 }
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = small_decrease
@@ -11741,7 +11740,7 @@ focus_tree = {
 					}
 				}
 				SAF = {
-					country_event = { id = holhis_nsb.11 hours = 6 }
+					country_event = { id = holhis_indonesia.612 hours = 6 }
 				}
 				else = {
 					add_state_claim = 275
@@ -12148,7 +12147,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_support_nationalists
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_INS_Parindra
 		prerequisite = { focus = INS_secret_weapon_production focus = INS_our_path_forward }
 		mutually_exclusive = { focus = INS_support_communists focus = INS_united_free_indonesia }
 		
@@ -12371,7 +12370,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			JAP = {
-				country_event = { id = holhis_volksraad.15 hours = 8 }
+				country_event = { id = holhis_indonesia.216 hours = 8 }
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = huge_increase
@@ -12463,7 +12462,7 @@ focus_tree = {
 					character = INS_hubertus_van_mook
 					value = yes
 				}
-				country_event = { id = holhis_volksraad.10 hours = 12 }
+				country_event = { id = holhis_indonesia.210 hours = 12 }
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -12483,7 +12482,7 @@ focus_tree = {
 						autonomy_state = autonomy_free
 					}
 					country_event = {
-						id = holhis_volksraad.11
+						id = holhis_indonesia.211
 						days = 3
 					}
 				}
@@ -12598,7 +12597,7 @@ focus_tree = {
 
 		completion_reward = {
 			SIA = {
-				country_event = { id = holhis_volksraad.13 hours = 6 }
+				country_event = { id = holhis_indonesia.214 hours = 6 }
 			}
 		}
 	}
@@ -13682,7 +13681,7 @@ focus_tree = {
 				has_government = democratic
 				NOT = {
 					has_country_leader = {
-						name = "Hendrikus Colijn"
+						character = HOL_hendrikus_colijn
 						ruling_only = yes
 					}
 				}
@@ -13960,7 +13959,7 @@ focus_tree = {
 		
 		bypass = {
 			has_country_leader = {
-				name = "Sukarno"
+				character = INS_sukarno
 				ruling_only = yes
 			}
 		}
@@ -14134,7 +14133,7 @@ focus_tree = {
 					}
 					promote_leader = yes
 				}
-				country_event = { id = holhis_nationalists.4 hours = 12 }
+				country_event = { id = holhis_indonesia.304 hours = 12 }
 			}
 			if = {
 				limit = {
@@ -14152,7 +14151,7 @@ focus_tree = {
 						autonomy_state = autonomy_free
 					}
 					country_event = {
-						id = holhis_nationalists.5
+						id = holhis_indonesia.305
 						days = 2
 					}
 				}
@@ -14192,7 +14191,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_leader = {
-						name = "Sukarno"
+						character = INS_sukarno
 						ruling_only = yes
 					}
 				}
@@ -14355,7 +14354,7 @@ focus_tree = {
 
 		bypass = {
 			has_country_leader = {
-				name = "Sukarno"
+				character = INS_sukarno
 				ruling_only = yes
 			}
 		}
@@ -14482,7 +14481,7 @@ focus_tree = {
 						has_country_leader_ideology = stalinism
 					}
 				}
-				country_event = { id = holhis_commies.104 hours = 8 }
+				country_event = { id = holhis_indonesia.445 hours = 8 }
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = large_increase
@@ -14529,7 +14528,7 @@ focus_tree = {
 						has_country_leader_ideology = leninism
 					}
 				}
-				country_event = { id = holhis_commies.101 hours = 8 }
+				country_event = { id = holhis_indonesia.442 hours = 8 }
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = small_increase
@@ -14591,7 +14590,7 @@ focus_tree = {
 					character = INS_hubertus_van_mook
 					value = yes
 				}
-				country_event = { id = holhis_commies.11 hours = 12 }
+				country_event = { id = holhis_indonesia.412 hours = 12 }
 				set_cosmetic_tag = INS_RED
 			}
 			if = {
@@ -14610,7 +14609,7 @@ focus_tree = {
 						autonomy_state = autonomy_free
 					}
 					country_event = {
-						id = holhis_commies.12
+						id = holhis_indonesia.413
 						days = 2
 					}
 					if = {
@@ -15103,7 +15102,7 @@ focus_tree = {
 						is_asean_state = yes
 					}
 				}
-				country_event = { id = holhis_commies.29 hours = 6 }
+				country_event = { id = holhis_indonesia.431 hours = 6 }
 			}
 		}
 	}
@@ -15353,7 +15352,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			country_event = { id = holhis_commies.2 }
+			country_event = { id = holhis_indonesia.402 }
 		}
 	}
 
@@ -15511,7 +15510,7 @@ focus_tree = {
 				673 = { add_core_of = MNH }
 				1053 = { add_core_of = MNH }
 				INS = {
-					INS_thomas_nayoan = {
+					MNH_thomas_najoan = {
 						clr_character_flag = INS_imprisoned_flag
 						set_nationality = MNH
 					}
@@ -15519,7 +15518,7 @@ focus_tree = {
 				MNH = {
 					set_capital = { state = 673 }
 					add_country_leader_role = {
-						character = INS_thomas_nayoan
+						character = MNH_thomas_najoan
 						promote_leader = yes
 						country_leader = {
 							ideology = marxism
@@ -15651,7 +15650,7 @@ focus_tree = {
 				num_of_factories > 35
 				has_country_flag = INS_accept_trotsky
 				has_country_leader = {
-					name = "Tan Malaka"
+					character = INS_tan_malaka
 					ruling_only = yes
 				}
 			}
@@ -15669,7 +15668,7 @@ focus_tree = {
 					}
 					NOT = {
 						has_country_leader = {
-							name = "Tan Malaka"
+							character = INS_tan_malaka
 							ruling_only = yes
 						}
 					}
@@ -15699,7 +15698,7 @@ focus_tree = {
 						has_country_flag = INS_accept_trotsky
 					}
 					has_country_leader = {
-						name = "Tan Malaka"
+						character = INS_tan_malaka
 						ruling_only = yes
 					}
 				}
@@ -15747,7 +15746,7 @@ focus_tree = {
 					}
 					NOT = {
 						has_country_leader = {
-							name = "Tan Malaka"
+							character = INS_tan_malaka
 							ruling_only = yes
 						}
 					}
@@ -15777,7 +15776,7 @@ focus_tree = {
 						has_country_flag = INS_accept_trotsky
 					}
 					has_country_leader = {
-						name = "Tan Malaka"
+						character = INS_tan_malaka
 						ruling_only = yes
 					}
 				}
@@ -15894,7 +15893,7 @@ focus_tree = {
 			hidden_effect = {
 				MAL = {
 					country_event = {
-						id = holhis_commies.60
+						id = holhis_indonesia.406
 						days = 7
 					}
 				}
@@ -15972,7 +15971,7 @@ focus_tree = {
 
 		completion_reward = {
 			SIA = {
-				country_event = { id = holhis_volksraad.13 hours = 6 }
+				country_event = { id = holhis_indonesia.214 hours = 6 }
 			}
 		}
 	}
@@ -16048,7 +16047,7 @@ focus_tree = {
 				}
 				FRA = {
 					country_event = {
-						id = holhis_commies.3
+						id = holhis_indonesia.403
 						days = 1
 					}
 				} 
@@ -16067,7 +16066,7 @@ focus_tree = {
 					}
 					JAP = {
 						country_event = {
-							id = holhis_commies.3
+							id = holhis_indonesia.403
 							days = 1
 						}
 					}
@@ -16751,7 +16750,7 @@ focus_tree = {
 
 		completion_reward = {
 			HOL = {
-				country_event = { id = holhis_navair.1 days = 1 }
+				country_event = { id = holhis_indonesia.701 days = 1 }
 				custom_effect_tooltip = needs_approval
 				effect_tooltip = {
 					set_technology = {
@@ -17765,7 +17764,7 @@ focus_tree = {
 
 		completion_reward = {
 			HOL = {
-				country_event = { id = holhis_navair.4 days = 1 }
+				country_event = { id = holhis_indonesia.704 days = 1 }
 				custom_effect_tooltip = needs_approval
 				effect_tooltip = {
 					send_equipment = {
@@ -18824,7 +18823,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_leader = {
-							name = "Hubertus van Mook"
+							character = INS_hubertus_van_mook
 							ruling_only = yes
 						}
 					}
@@ -19062,7 +19061,7 @@ focus_tree = {
 
 		available = {
 			has_country_leader = {
-				name = "Hubertus van Mook"
+				character = INS_hubertus_van_mook
 				ruling_only = yes
 			}
 			OR = {
@@ -19212,7 +19211,7 @@ focus_tree = {
 				limit = {
 					has_country_flag = INS_nayoan_alive
 				}
-				show_ideas_tooltip = INS_thomas_nayoan
+				show_ideas_tooltip = MNH_thomas_najoan
 			}
 			if = {
 				limit = {
@@ -19468,7 +19467,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_leader = {
-						name = "Hubertus van Mook"
+						character = INS_hubertus_van_mook
 						ruling_only = yes 
 					}
 				}
@@ -19521,7 +19520,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_leader = {
-						name = "Hubertus van Mook"
+						character = INS_hubertus_van_mook
 						ruling_only = yes 
 					}
 				}

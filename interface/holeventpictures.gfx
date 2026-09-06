@@ -51,8 +51,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_event_ins_independence_crowd"
-		texturefile = "gfx/event_pictures/event_ins_independence_crowd.dds"
+		name = "GFX_event_ins_independence_riots"
+		texturefile = "gfx/event_pictures/event_ins_independence_riots.dds"
 	}
 
 	spriteType = {

@@ -608,7 +608,7 @@ bookmarks = {
 			ideology = democratic
 			version = base_game
 			ideas = {
-				HOL_wilhelmina
+				HOL_wilhelmina_idea
 				HOL_shell_shocked_spectator_5
 				HOL_de_crisisjaren_5
 			}

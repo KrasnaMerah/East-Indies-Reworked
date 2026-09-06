@@ -841,12 +841,12 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_indonesia_thomas_nayoan"
+		name = "GFX_advisor_MNH_Thomas_Najoan"
 		texturefile = "gfx/ideas/INS/idea_ins_thomas_nayoan.dds"
 	}
 
 	spriteType = {
-		name = "GFX_idea_indonesia_thomas_nayoan_jailed"
+		name = "GFX_advisor_MNH_Thomas_Najoan_jailed"
 		texturefile = "gfx/ideas/INS/idea_ins_thomas_nayoan_jailed.dds"
 	}
 
@@ -1701,7 +1701,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_portrait_indonesia_thomas_nayoan"
+		name = "GFX_portrait_MNH_Thomas_Najoan"
 		texturefile = "gfx/leaders/INS/portrait_ins_thomas_nayoan.dds"
 	}
 

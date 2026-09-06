@@ -92,9 +92,11 @@ ideas = {
 			}
 		}
 
-		HOL_wilhelmina = {
+		HOL_wilhelmina_idea = {
 
 			picture = HOL_wilhelmina_ns
+			
+			name = HOL_wilhelmina
 			
 			allowed = {
 				original_tag = HOL

@@ -47,6 +47,78 @@ characters = {
 		}
 	}
 
+	INS_sam_ratulangi = {
+		name = INS_samuel_ratulangi
+		portraits = {
+			army = {
+				small = GFX_idea_indonesia_sam_ratulangi
+				large = GFX_portrait_indonesia_sam_ratulangi_army
+			}
+			civilian = {
+				large = GFX_portrait_indonesia_sam_ratulangi
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = {
+
+			}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = INS_samuel_ratulangi
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = MNH
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						tag = INS
+					}
+					NOT = {
+						has_government = fascism
+					}
+					OR = {
+						has_completed_focus = INS_indies_nation
+						has_completed_focus = INS_support_sutarjo
+					}
+				}
+				is_country_leader = no
+			}
+			visible = {
+				has_country_flag = INS_de_jonge_resigned
+			}
+			traits = {
+				minahasan_autonomist
+			}
+			on_add = {
+				if = {
+					limit = {
+						tag = INS
+					}
+					1056 = {
+						add_dynamic_modifier = {
+							modifier = INS_north_sulawesi_ratulangi_modifier
+						}
+					}
+				}
+			}
+			on_remove = {
+				1056 = {
+					remove_dynamic_modifier = {
+						modifier = INS_north_sulawesi_ratulangi_modifier
+					}
+				}
+			}
+			cost = 135
+		}
+	}
+
 	MNH_bernard_lapian = {
 		name = MNH_bernard_lapian
 		portraits = {
@@ -69,6 +141,70 @@ characters = {
 			}
 			traits = {
 				silent_workhorse
+			}
+		}
+	}
+
+	MNH_nani_wartabone = {
+		name = MNH_nani_wartabone
+		portraits = {
+			army = {
+				small = GFX_idea_indonesia_abikusno #placeholder
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MNH_nani_wartabone
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = MNH
+				}
+			}
+			available = {
+			}
+			visible = {
+			}
+			traits = {
+				nationalist_agitator
+			}
+		}
+	}
+
+	MNH_thomas_najoan = {
+		name = INS_thomas_najoan
+		portraits = {
+			civilian = {
+				large = GFX_portrait_MNH_Thomas_Najoan
+			}
+			army = {
+				small = GFX_advisor_MNH_Thomas_Najoan_jailed
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			traits = {
+				freedom_fighter
+			}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MNH_thomas_najoan
+			allowed = {
+				OR = {
+					original_tag = INS
+					original_tag = MNH
+				}
+			}
+			available = {
+				is_country_leader = no
+			}
+			visible = {
+			}
+			traits = {
+				communist_revolutionary
 			}
 		}
 	}

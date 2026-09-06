@@ -3840,7 +3840,7 @@ country_event = { # 82 - Second Indonesian Uprising - NSB Path - for Indies
 					INS_samuel_ratulangi = {
 						set_nationality = event_target:INA
 					}
-					INS_thomas_nayoan = {
+					MNH_thomas_najoan = {
 						set_nationality = event_target:INA
 					}
 					INS_sukawati = {
@@ -4062,7 +4062,7 @@ country_event = { # 84 - America embargus Japan
 				}
 			}
 			INS = {
-				country_event = { id = holhis_volksraad.9 days = 2 }
+				country_event = { id = holhis_indonesia.209 days = 2 }
 			}
 		}
 		ai_chance = {
@@ -4161,7 +4161,7 @@ country_event = { # 87 - Sent Furstner to the Indies
 	option = { #Ok
 		name = mtg_netherlands.87.a
 		INS = {
-			country_event = { id = holhis_navair.8 hours = 6 }
+			country_event = { id = holhis_indonesia.708 hours = 6 }
 		}
 		ai_chance = {
 			factor = 100
