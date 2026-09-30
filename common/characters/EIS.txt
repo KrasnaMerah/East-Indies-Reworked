@@ -16,9 +16,8 @@ characters = {
 			allowed = {
 				OR = {
 					original_tag = INS
-					tag = EIS
+					original_tag = EIS
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				has_completed_focus = INS_indies_nation
@@ -30,7 +29,7 @@ characters = {
 				has_completed_focus = INS_challenge_dutch_elitism
 				if = {
 					limit = {
-						tag = INS
+						original_tag = INS
 					}
 					NOT = {
 						has_completed_focus = INS_nusantara_accord
@@ -57,9 +56,8 @@ characters = {
 			allowed = {
 				OR = {
 					original_tag = INS
-					tag = EIS
+					original_tag = EIS
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				has_completed_focus = INS_reestablish_royal_houses
@@ -72,7 +70,7 @@ characters = {
 				has_completed_focus = INS_challenge_dutch_elitism
 				if = {
 					limit = {
-						tag = INS
+						original_tag = INS
 					}
 					NOT = {
 						has_completed_focus = INS_nusantara_accord

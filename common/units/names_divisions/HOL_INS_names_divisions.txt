@@ -390,7 +390,7 @@ INS_colonial_division = {
 	}
 }
 
-INS_colonial_garrison_division = {
+INS_city_garrison_division = {
 	name = "KNIL Territoriale Troepen"
  
 	for_countries = { HOL INS }
@@ -425,6 +425,56 @@ INS_colonial_garrison_division = {
 		14 = { "Stadswacht Menado" }
 		15 = { "Stadswacht Amboina" }
 		16 = { "Stadswacht Kupang" }
+ 
+		# Generic numbered fallback battalions
+		17 = { "%se Garnizoens-Bataljon" }
+		18 = { "%se Garnizoens-Bataljon" }
+		19 = { "%se Garnizoens-Bataljon" }
+		20 = { "%se Garnizoens-Bataljon" }
+		21 = { "%se Garnizoens-Bataljon" }
+		22 = { "%se Garnizoens-Bataljon" }
+		23 = { "%se Landstorm-Bataljon" }
+		24 = { "%se Landstorm-Bataljon" }
+		25 = { "%se Garnizoens-Bataljon" }
+		26 = { "%se Garnizoens-Bataljon" }
+	}
+}
+
+INS_village_garrison_division = {
+	name = "KNIL Landwacht Troepen"
+ 
+	for_countries = { HOL INS }
+ 
+	can_use = { always = yes }
+ 
+	division_types = { "infantry" }
+ 
+	fallback_name = "%se Garnizoens-Bataljon"
+ 
+	ordered = {
+		# Java — 4 most important garrison cities
+		1 = { "Landwacht Batavia" }
+		2 = { "Landwacht Bandoeng" }
+		3 = { "Landwacht Soerabaja" }
+		4 = { "Landwacht Semarang" }
+ 
+		# Sumatra
+		5 = { "Landwacht Medan" }
+		6 = { "Landwacht Padang" }
+		7 = { "Landwacht Palembang" }
+		8 = { "Landwacht Atjeh" }
+ 
+		# Borneo
+		9 = { "Landwacht Pontianak" }
+		10 = { "Landwacht Banjarmasin" }
+		11 = { "Landwacht Balikpapan" }
+		12 = { "Landwacht Tarakan" }
+ 
+		# Celebes and Eastern Islands
+		13 = { "Landwacht Makassar" }
+		14 = { "Landwacht Menado" }
+		15 = { "Landwacht Amboina" }
+		16 = { "Landwacht Kupang" }
  
 		# Generic numbered fallback battalions
 		17 = { "%se Garnizoens-Bataljon" }

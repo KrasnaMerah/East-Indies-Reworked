@@ -22,6 +22,8 @@
  INS_nsb_arrested_flag:0 "The §ONSB members§! has been arrested"
  INS_covdp_east_java_gov_flag:0 "§YCharles van der Plas§! has been chosen as governor of East Java"
  INS_naval_commitment:0 "Commit for Naval Rebuilding"
+ INS_raise_stadswacht:0 "Raise the Stadswacht"
+ INS_raise_landwacht:0 "Raise the Landwacht"
 
  INS_category_invite_foreign_investors:0 "Invite Foreign Investors"
  INS_category_invite_foreign_investors_desc:0 "Our land is rich, yet we are lacking modern industries. By granting resource concessions towards private enterprises and foreign governments, surely we can secure enough capitals to begin our industrialization."

@@ -130,8 +130,18 @@ characters = {
 					}
 			}
 			country_leader={
-				ideology=socialism
-				traits={ JUNO_minister_of_foreign_affairs }
+				ideology = socialism
+				traits = {
+					JUNO_minister_of_foreign_affairs
+				}
+			}
+			country_leader = {
+				ideology = leninism
+				traits = {
+					JUNO_minister_of_foreign_affairs
+				}
+				expire = "1965.1.1.1"
+				id = -1
 			}
 			name=SIA_pridi_banomyong
 			portraits={
@@ -160,6 +170,12 @@ characters = {
 			}
 			country_leader = {
 				ideology = socialism
+				traits = { financial_expert }
+				expire = "1948.1.1.12"
+				id = -1
+			}
+			country_leader = {
+				ideology = leninism
 				traits = { financial_expert }
 				expire = "1948.1.1.12"
 				id = -1

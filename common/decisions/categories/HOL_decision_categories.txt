@@ -8,7 +8,6 @@ HOL_obtain_foreign_colonial_investments = {
 	
 	allowed = {
 		original_tag = HOL
-		has_dlc = "Man the Guns"
 	}
 
 	visible = {
@@ -22,7 +21,6 @@ HOL_prepare_the_inundation_lines = {
 	
 	allowed = {
 		original_tag = HOL
-		has_dlc = "Man the Guns"
 	}
 
 	visible = {
@@ -36,7 +34,6 @@ HOL_war_on_pacifism = {
 	
 	allowed = {
 		original_tag = HOL
-		has_dlc = "Man the Guns"
 	}
 
 	visible = {
@@ -50,7 +47,6 @@ HOL_secret_staff_talks = {
 	
 	allowed = {
 		original_tag = HOL
-		has_dlc = "Man the Guns"
 	}
 
 	visible = {
@@ -65,7 +61,6 @@ HOL_gateway_to_europe_hol_category = {
 
 	allowed = {
 		original_tag = HOL
-		has_dlc = "Man the Guns"
 	}
 
 	picture = GFX_decision_cat_picture_gateway_to_europe
@@ -114,7 +109,6 @@ HOL_gateway_to_europe_ger_category = {
 
 	allowed = {
 		original_tag = GER
-		has_dlc = "Man the Guns"
 	}
 
 	picture = GFX_decision_cat_picture_gateway_to_europe
@@ -163,7 +157,6 @@ HOL_gateway_to_europe_eng_category = {
 
 	allowed = {
 		original_tag = ENG
-		has_dlc = "Man the Guns"
 	}
 
 	picture = GFX_decision_cat_picture_gateway_to_europe
@@ -213,7 +206,6 @@ HOL_request_allied_favors = {
 	
 	allowed = {
 		original_tag = HOL
-		has_dlc = "Man the Guns"
 	}
 
 	priority = {
@@ -231,7 +223,6 @@ HOL_bernhard = {
 	
 	allowed = {
 		original_tag = HOL
-		has_dlc = "Man the Guns"
 	}
 
 	priority = {
@@ -251,7 +242,6 @@ HOL_war_in_the_east = {
 	
 	allowed = {
 		original_tag = HOL
-		has_dlc = "Man the Guns"
 	}
 
 	priority = {

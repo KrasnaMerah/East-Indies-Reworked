@@ -9199,7 +9199,7 @@ form_majapahit_empire_category = {
 				factor = 0
 				NOT = {
 					has_country_leader = {
-						name = "Tan Malaka"
+						character = INS_tan_malaka
 						ruling_only = yes
 					}
 				}
@@ -9344,7 +9344,7 @@ form_majapahit_empire_category = {
 				factor = 0
 				NOT = {
 					has_country_leader = {
-						name = "Sukarno"
+						character = INS_sukarno
 						ruling_only = yes
 					}
 				}
@@ -9458,7 +9458,7 @@ form_majapahit_empire_category = {
 			original_tag = INS
 			has_cosmetic_tag = MAJ_UNIFIED
 			has_country_leader = {
-				name = "Tan Malaka"
+				character = INS_tan_malaka
 				ruling_only = yes
 			}
 			NOT = { has_global_flag = form_aslia_flag }
@@ -9597,7 +9597,7 @@ form_majapahit_empire_category = {
 				factor = 0
 				NOT = {
 					has_country_leader = {
-						name = "Tan Malaka"
+						character = INS_tan_malaka
 						ruling_only = yes
 					}
 				}

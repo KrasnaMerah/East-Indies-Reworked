@@ -46,16 +46,10 @@ characters = {
 					original_tag = KUT
 					original_tag = KLM
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
+				NOT = {
+					has_autonomy_state = autonomy_supervised_state
 				}
 				NOT = {
 					has_country_leader = {
@@ -89,16 +83,10 @@ characters = {
 					original_tag = KUT
 					original_tag = KLM
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
+				NOT = {
+					has_autonomy_state = autonomy_supervised_state
 				}
 			}
 			visible = {

@@ -131,19 +131,9 @@ characters = {
 				original_tag = HOL
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = HOL_unity_through_democracy 
-					}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					not = {
-						has_autonomy_state = autonomy_supervised_state
-					}
+				has_completed_focus = HOL_unity_through_democracy 
+				NOT = {
+					has_autonomy_state = autonomy_supervised_state
 				}
 			}
 			traits = {
@@ -152,8 +142,8 @@ characters = {
 			visible = {
 				NOT = {
 					has_country_leader = {
-						name = "Willem Schermerhorn"
-						ruling_only = yes 
+						character = HOL_willem_schermerhorn
+						ruling_only = yes
 					}
 				}
 			}
@@ -192,13 +182,8 @@ characters = {
 					original_tag = HOL
 				}
 				available = {
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						not = {
-							has_completed_focus = HOL_appoint_new_supreme_commander
-						}
+					NOT = {
+						has_completed_focus = HOL_appoint_new_supreme_commander
 					}
 				}
 				traits = {
@@ -535,7 +520,6 @@ characters = {
 			idea_token = HOL_hendrik_seyffardt
 			allowed = {
 				original_tag = HOL
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				has_government = fascism
@@ -564,12 +548,7 @@ characters = {
 				original_tag = HOL
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = HOL_appoint_new_supreme_commander
-				}
+				has_completed_focus = HOL_appoint_new_supreme_commander
 			}
 			traits = {
 				army_chief_defensive_2
@@ -666,19 +645,14 @@ characters = {
 				original_tag = HOL
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = HOL_legacy_of_the_de_zeven_provincien_mutiny
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
+				has_completed_focus = HOL_legacy_of_the_de_zeven_provincien_mutiny
+				NOT = {
+					has_autonomy_state = autonomy_supervised_state
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Saul de Groot"
-						ruling_only = yes 
+						character = HOL_saul_de_groot
+						ruling_only = yes
 					}
 				}
 			}
@@ -705,7 +679,6 @@ characters = {
 			idea_token = HOL_antonie_pannekoek
 			allowed = {
 				original_tag = HOL
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				has_government = communism 
@@ -728,7 +701,6 @@ characters = {
 			idea_token = HOL_walraven_van_hall
 			allowed = {
 				original_tag = HOL
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				has_capitulated = yes 
@@ -779,16 +751,15 @@ characters = {
 			slot = political_advisor
 			idea_token = HOL_anton_de_kom
 			allowed = {
-					original_tag = HOL
-					has_dlc = "Man the Guns"
-				}
-				available = {
-					has_government = communism 
-					has_completed_focus = HOL_decolonization 
-				}
-				traits = {
-					colonial_communist 
-				}
+				original_tag = HOL
+			}
+			available = {
+				has_government = communism 
+				has_completed_focus = HOL_decolonization 
+			}
+			traits = {
+				colonial_communist 
+			}
 		}
 		name = HOL_anton_de_kom
 		portraits = {
@@ -852,7 +823,6 @@ characters = {
 					original_tag = INS
 					original_tag = HOL
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				if = {
@@ -908,26 +878,16 @@ characters = {
 			idea_token = HOL_meinout_rost_van_tonningen
 			allowed = {
 					original_tag = HOL
+			}
+			available = {
+				has_completed_focus = HOL_volk_en_vaderland 
+				NOT = {
+					has_autonomy_state = autonomy_supervised_state
 				}
-				available = {
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						has_completed_focus = HOL_volk_en_vaderland 
-					}
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						not = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-				}
-				traits = {
-					fascist_demagogue 
-				}
+			}
+			traits = {
+				fascist_demagogue 
+			}
 		}
 		name = HOL_meinout_rost_van_tonningen
 		portraits = {
@@ -950,7 +910,6 @@ characters = {
 			idea_token = HOL_fanny_schoonheyt
 			allowed = {
 				original_tag = HOL
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				has_completed_focus = HOL_legacy_of_the_de_zeven_provincien_mutiny
@@ -1030,15 +989,11 @@ characters = {
 			idea_token = HOL_hendrikus_sneevliet
 			allowed = {
 				original_tag = HOL
-				has_dlc = "Man the Guns"
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = HOL_legacy_of_the_de_zeven_provincien_mutiny
-					NOT = { has_completed_focus = HOL_affirm_loyalty_to_moscow }
+				has_completed_focus = HOL_legacy_of_the_de_zeven_provincien_mutiny
+				NOT = {
+					has_completed_focus = HOL_affirm_loyalty_to_moscow
 				}
 			}
 			traits = {
@@ -1073,7 +1028,7 @@ characters = {
 					}
 				}
 				if = {
-					limit = { tag = HOL }
+					limit = { original_tag = HOL }
 					OR = {
 						has_completed_focus = HOL_lead_the_minor_democracies
 						AND = {
@@ -1083,7 +1038,7 @@ characters = {
 					}
 				}
 				if = {
-					limit = { tag = INS }
+					limit = { original_tag = INS }
 					has_character_flag = INS_de_kadt_accepted
 				}
 				NOT = {
@@ -1189,8 +1144,13 @@ characters = {
 				}
 			}
 			available = {
-				NOT = {
-					has_idea = HOL_abraham_vromans_chief
+				if = {
+					limit = {
+						original_tag = INS
+					}
+					NOT = {
+						has_idea = HOL_abraham_vromans_chief
+					}
 				}
 			}
 			traits = {

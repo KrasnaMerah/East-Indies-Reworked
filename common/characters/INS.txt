@@ -53,7 +53,6 @@ characters = {
 					original_tag = INS
 					original_tag = HOL
 				}
-				has_dlc = "Man the Guns"
 			}
 			traits = {
 				smooth_talking_charmer
@@ -106,13 +105,8 @@ characters = {
 					has_government = neutrality
 					has_government = democratic
 				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_idea = INS_group_stuwgroep
-					}
+				NOT = {
+					has_idea = INS_group_stuwgroep
 				}
 			}
 			visible = {
@@ -136,7 +130,6 @@ characters = {
 					original_tag = INS
 					original_tag = HOL
 				}
-				has_dlc = "Man the Guns"
 			}
 			traits = {
 				skilled_negotiator
@@ -214,7 +207,6 @@ characters = {
 					original_tag = INS
 					original_tag = HOL
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				if = {
@@ -351,7 +343,6 @@ characters = {
 					tag = ATJ
 					tag = SSI
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				if = {
@@ -429,19 +420,21 @@ characters = {
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = INS_tan_malaka
+			idea_token = INS_tan_malaka_minister
 			allowed = {
 				OR = {
 					original_tag = INS
 					tag = ATJ
 					tag = SSI
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				is_subject = no
 				NOT = {
 					has_government = fascism
+				}
+				NOT = {
+					has_idea = INS_tan_malaka_command
 				}
 				if = {
 					limit = {
@@ -470,6 +463,34 @@ characters = {
 			}
 			traits = {
 				marxist_philosopher
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = INS_tan_malaka_command
+			allowed = {
+				OR = {
+					original_tag = INS
+					tag = ATJ
+					tag = SSI
+				}
+			}
+			available = {
+				NOT = {
+					has_idea = INS_tan_malaka_minister
+				}
+				is_subject = no
+				NOT = {
+					has_government = fascism
+				}
+				has_defensive_war = yes
+			}
+			traits = {
+				army_guerilla_organizer_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 	}
@@ -502,7 +523,6 @@ characters = {
 					original_tag = INS
 					original_tag = JVA
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				is_subject = no
@@ -561,7 +581,6 @@ characters = {
 					tag = ATJ
 					tag = SSI
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				if = {
@@ -963,7 +982,6 @@ characters = {
 					original_tag = HOL #Palar starts here
 					original_tag = MNH
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				if = {
@@ -1083,7 +1101,6 @@ characters = {
 					original_tag = INS
 					original_tag = JVA
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				OR = {
@@ -1145,7 +1162,6 @@ characters = {
 					tag = ATJ
 					tag = SSI
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				NOT = {
@@ -1187,7 +1203,6 @@ characters = {
 					tag = ATJ
 					tag = SSI
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				NOT = {
@@ -1233,7 +1248,6 @@ characters = {
 			idea_token = INS_agus_salim
 			allowed = {
 				original_tag = INS
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				NOT = {
@@ -1336,7 +1350,6 @@ characters = {
 						original_tag = HOL
 						original_tag = JVA
 					}
-					has_dlc = "Man the Guns"
 				}
 				available = {
 					if = {
@@ -1410,7 +1423,6 @@ characters = {
 						original_tag = HOL
 						original_tag = JVA
 					}
-					has_dlc = "Man the Guns"
 				}
 				available = {
 					if = {
@@ -2081,7 +2093,6 @@ characters = {
 					original_tag = INS
 					original_tag = JVA
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				OR = {
@@ -2153,7 +2164,6 @@ characters = {
 			idea_token = INS_iwa_kusumasumantri
 			allowed = {
 				original_tag = INS
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				if = {
@@ -2478,7 +2488,6 @@ characters = {
 					original_tag = ATJ
 					original_tag = SSI
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				if = {
@@ -2541,7 +2550,6 @@ characters = {
 					original_tag = ATJ
 					original_tag = SSI
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				OR = {
@@ -2815,7 +2823,6 @@ characters = {
 					original_tag = INS
 					original_tag = HOL
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				NOT = {
@@ -3109,7 +3116,6 @@ characters = {
 			idea_token = INS_sukiman_wiryosanjoyo
 			allowed = {
 				original_tag = INS
-				has_dlc = "Man the Guns"
 			}
 			visible = {
 				has_country_flag = INS_de_jonge_resigned
@@ -3167,7 +3173,6 @@ characters = {
 					original_tag = INS
 					original_tag = JVA
 				}
-				has_dlc = "Man the Guns"
 			}
 			visible = {
 				if = {
@@ -3240,7 +3245,6 @@ characters = {
 					original_tag = ATJ
 					original_tag = SSI
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				if = {
@@ -3335,7 +3339,6 @@ characters = {
 			idea_token = INS_sk_trimurti
 			allowed = {
 				original_tag = INS
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				NOT = {
@@ -3372,7 +3375,6 @@ characters = {
 					original_tag = ATJ
 					original_tag = SSI
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				if = {
@@ -3753,7 +3755,6 @@ characters = {
 			idea_token = INS_group_partai_sarekat_islam
 			allowed = {
 				original_tag = INS
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				OR = {
@@ -3804,7 +3805,6 @@ characters = {
 			idea_token = INS_group_stuwgroep
 			allowed = {
 				original_tag = INS
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				OR = {

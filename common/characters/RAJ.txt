@@ -125,19 +125,9 @@ characters={
 					original_tag = RAJ
 				}
 				available = {
-					if = {
-						limit = {
-							has_dlc = "Together for Victory"
-						}
-						has_completed_focus = RAJ_all_india_forward_bloc 
-					}
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
+					has_completed_focus = RAJ_all_india_forward_bloc
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
 					}
 				}
 				traits = {
@@ -1745,13 +1735,8 @@ characters={
 				else = {
 					has_completed_focus = RAJ_a_congress_resurgent
 				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
+				NOT = {
+					has_autonomy_state = autonomy_supervised_state
 				}
 			}
 			traits = {
@@ -1768,8 +1753,8 @@ characters={
 		}		
 	}
 
-	RAJ_karam_singh_mann={
-		name=RAJ_karam_singh_mann
+	RAJ_karam_singh_mann = {
+		name = RAJ_karam_singh_mann
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_india_2"
@@ -1782,19 +1767,9 @@ characters={
 				original_tag = RAJ
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = RAJ_all_india_forward_bloc 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
+				has_completed_focus = RAJ_all_india_forward_bloc 
+				NOT = {
+					has_autonomy_state = autonomy_supervised_state
 				}
 			}
 			traits = {

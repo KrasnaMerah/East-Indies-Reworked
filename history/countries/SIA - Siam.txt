@@ -26,7 +26,6 @@ if = {
 		NOT = { has_dlc = "Thunder at Our Gates" }
 	}
 	recruit_character = SIA_nangklao_chichalerm
-	recruit_character = SIA_chao_phonphayuhasena
 	recruit_character = SIA_nangklao_suriyawongse
 	recruit_character = SIA_manphya_khanphialong
 	recruit_character = SIA_luang_phibunsongkhram #This is Phibun

@@ -637,6 +637,37 @@ leader_traits = {
 		production_speed_dockyard_factor = 0.05
 		production_speed_fuel_silo_factor = 0.05
 	}
+	
+	jamu_advocate = { #Sardjito
+		sprite = 6
+		army_strength_factor = 0.02
+		org_loss_at_low_org_factor = -0.1
+		land_reinforce_rate = 0.02
+		attrition = -0.01
+		casualty_trickleback = 0.01
+		
+		command_cap_increase = 10
+	}
+
+	justice_official = { #Nicolaas Blom
+		sprite = 13
+		random = no
+
+		political_power_factor = 0.05
+		improve_relations_maintain_cost_factor = -0.4
+		resistance_decay = 0.025
+	}
+
+	german_planter = { #Hewel
+		sprite = 10
+		random = no
+
+		fascism_acceptance = 65
+		fascism_drift = 0.07
+		neutrality_drift = 0.03
+		consumer_goods_expected_value = -0.05
+		supply_consumption_factor = -0.02
+	}
 
 	##########################
 	# Other character traits #
@@ -706,15 +737,6 @@ leader_traits = {
 		political_power_factor = 0.15
 	}
 
-	justice_official = {
-		sprite = 13
-		random = no
-
-		political_power_factor = 0.05
-		improve_relations_maintain_cost_factor = -0.4
-		resistance_decay = 0.025
-	}
-
 	socialist_democrat = {
 		sprite = 13
 
@@ -762,17 +784,6 @@ leader_traits = {
 		sprite = 10
 
 		global_building_slots_factor = 0.1
-	}
-
-	german_planter = { #Hewel
-		sprite = 10
-		random = no
-
-		fascism_acceptance = 65
-		fascism_drift = 0.07
-		neutrality_drift = 0.03
-		consumer_goods_expected_value = -0.05
-		supply_consumption_factor = -0.02
 	}
 
 	italophile = {

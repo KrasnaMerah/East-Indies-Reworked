@@ -4848,6 +4848,8 @@ focus_tree = {
 			set_global_flag = trotsky_in_indonesia
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = INS_leon_trotsky
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_corps_commander_role = {
 				character = INS_lev_trotsky
 				traits = { INS_loyalty_to_indonesia media_personality organisational_leader }
@@ -5414,38 +5416,33 @@ focus_tree = {
 				category = land_doctrine
 			}
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_corps_commander_role = {
-				character = INS_bakkers
-				traits = { INS_loyalty_to_indonesia }
-				skill = 1
-				attack_skill = 1
-				defense_skill = 2
-				planning_skill = 1
-				logistics_skill = 1
-				legacy_id = -1
-			}
-			hidden_effect = {
-				INS_bakkers = {
-					set_character_flag = INS_appointed_general_flag
-				}
-			}
 			if = {
 				limit = {
-					has_dlc = "Man the Guns"
+					has_character = INS_bakkers
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_corps_commander_role = {
-					character = INS_hendrik_uhl
-					traits = { INS_loyalty_to_netherlands }
+					character = INS_bakkers
+					traits = { INS_loyalty_to_indonesia }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 2
 					planning_skill = 1
-					logistics_skill = 2
+					logistics_skill = 1
 					legacy_id = -1
 				}
+				hidden_effect = {
+					INS_bakkers = {
+						set_character_flag = INS_appointed_general_flag
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_character = INS_hendrik_uhl
+				}
 				add_corps_commander_role = {
-					character = INS_van_rees
+					character = INS_hendrik_uhl
 					traits = { INS_loyalty_to_netherlands }
 					skill = 1
 					attack_skill = 1
@@ -5458,20 +5455,37 @@ focus_tree = {
 					INS_hendrik_uhl = {
 						set_character_flag = INS_appointed_general_flag
 					}
+				}
+			}
+			if = {
+				limit = {
+					has_character = INS_van_rees
+				}
+				add_corps_commander_role = {
+					character = INS_van_rees
+					traits = { INS_loyalty_to_netherlands }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+					legacy_id = -1
+				}
+				hidden_effect = {
 					INS_van_rees = {
 						set_character_flag = INS_appointed_general_flag
 					}
 				}
 			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
+
 			if = {
 				limit = {
+					has_character = INS_didi_kartasasmita
 					NOT = {
 						has_country_flag = INS_didi_general
 					}
 				}
-				set_country_flag = INS_didi_general
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_corps_commander_role = {
 					character = INS_didi_kartasasmita
 					traits = { INS_loyalty_to_indonesia jungle_rat }
@@ -5494,6 +5508,7 @@ focus_tree = {
 					}
 				}
 				hidden_effect = {
+					set_country_flag = INS_didi_general
 					INS_didi_kartasasmita = {
 						set_character_flag = INS_appointed_general_flag
 					}
@@ -5666,7 +5681,7 @@ focus_tree = {
 				}
 				add_corps_commander_role = {
 					character = INS_hein_ter_poorten
-					traits = { }
+					traits = { INS_loyalty_to_netherlands }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 1
@@ -5676,7 +5691,7 @@ focus_tree = {
 				}
 				add_corps_commander_role = {
 					character = INS_elshout
-					traits = { }
+					traits = { INS_loyalty_to_netherlands }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 1
@@ -5686,7 +5701,7 @@ focus_tree = {
 				}
 				add_corps_commander_role = {
 					character = INS_ilgen
-					traits = { }
+					traits = { INS_loyalty_to_netherlands }
 					skill = 1
 					attack_skill = 1
 					defense_skill = 2
@@ -6216,13 +6231,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = -50
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				add_autonomy_ratio = {
-					value = -0.05
-				}
+			add_autonomy_ratio = {
+				value = -0.05
 			}
 			add_manpower = 14000
 			
@@ -6601,12 +6611,7 @@ focus_tree = {
 			custom_effect_tooltip = INS_stuwgroep_available_tt
 			show_ideas_tooltip = INS_hubertus_van_mook
 			show_ideas_tooltip = INS_jan_jonkman
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				show_ideas_tooltip = INS_charles_van_der_plas
-			}
+			show_ideas_tooltip = INS_charles_van_der_plas
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			HOL = {
@@ -6753,7 +6758,6 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = INS_train_indonesian_officers
-					has_dlc = "Man the Guns"
 					NOT = {
 						has_country_flag = INS_mangkunegara_vii_passed
 					}
@@ -7116,12 +7120,7 @@ focus_tree = {
 			show_ideas_tooltip = INS_samuel_ratulangi
 			show_ideas_tooltip = INS_oto_iskandar_di_nata
 			show_ideas_tooltip = INS_nicodemus_palar_indonesia
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				show_ideas_tooltip = INS_abdulkadir_wijoyoatmojo
-			}
+			show_ideas_tooltip = INS_abdulkadir_wijoyoatmojo
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = INS_nip_available_tt
@@ -7243,7 +7242,6 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						has_dlc = "Man the Guns"
 						is_subject_of = HOL
 					}
 					HOL = {
@@ -7434,54 +7432,26 @@ focus_tree = {
 				release = MLK
 				release = WPG
 			}
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				set_autonomy = {
-					target = EIS
-					autonomous_state = autonomy_supervised_state
-				}
-				set_autonomy = {
-					target = MLK
-					autonomous_state = autonomy_supervised_state
-				}
-				set_autonomy = {
-					target = WPG
-					autonomous_state = autonomy_supervised_state
-				}
-				EIS = {
-					add_ideas = INS_nusantara_accord_supervised
-				}
-				MLK = {
-					add_ideas = INS_nusantara_accord_supervised
-				}
-				WPG = {
-					add_ideas = INS_nusantara_accord_supervised
-				}
-				else = {
-					set_autonomy = {
-						target = EIS
-						autonomous_state = autonomy_dominion
-					}
-					set_autonomy = {
-						target = MLK
-						autonomous_state = autonomy_dominion
-					}
-					set_autonomy = {
-						target = WPG
-						autonomous_state = autonomy_dominion
-					}
-					EIS = {
-						add_ideas = INS_nusantara_accord_puppet
-					}
-					MLK = {
-						add_ideas = INS_nusantara_accord_puppet
-					}
-					WPG = {
-						add_ideas = INS_nusantara_accord_puppet
-					}
-				}
+			set_autonomy = {
+				target = EIS
+				autonomous_state = autonomy_supervised_state
+			}
+			set_autonomy = {
+				target = MLK
+				autonomous_state = autonomy_supervised_state
+			}
+			set_autonomy = {
+				target = WPG
+				autonomous_state = autonomy_supervised_state
+			}
+			EIS = {
+				add_ideas = INS_nusantara_accord_supervised
+			}
+			MLK = {
+				add_ideas = INS_nusantara_accord_supervised
+			}
+			WPG = {
+				add_ideas = INS_nusantara_accord_supervised
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -16440,16 +16410,8 @@ focus_tree = {
 
 		available = {
 			is_subject_of = HOL
-			if = {
-				limit = { has_dlc = "Man the Guns" }
-				HOL = {
-					has_completed_focus = HOL_legacy_of_the_de_zeven_provincien_mutiny
-				}
-				else = {
-					HOL = {
-						has_idea_with_trait = communist_revolutionary
-					}
-				}
+			HOL = {
+				has_completed_focus = HOL_legacy_of_the_de_zeven_provincien_mutiny
 			}
 		}
 

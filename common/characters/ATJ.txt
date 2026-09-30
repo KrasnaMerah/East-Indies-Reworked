@@ -129,7 +129,6 @@ characters = {
 					original_tag = INS
 					original_tag = ATJ
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				NOT = {
@@ -258,7 +257,6 @@ characters = {
 					original_tag = INS
 					tag = ATJ
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				is_subject = no

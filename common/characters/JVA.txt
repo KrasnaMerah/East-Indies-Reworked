@@ -20,7 +20,6 @@ characters = {
 					original_tag = INS
 					original_tag = JVA
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				OR = {
@@ -84,7 +83,6 @@ characters = {
 					original_tag = INS
 					original_tag = JVA
 				}
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				NOT = {

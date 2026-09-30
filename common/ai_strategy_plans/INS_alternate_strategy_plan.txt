@@ -150,7 +150,6 @@ INS_colony_exile = {
 
 	allowed = {
 		original_tag = INS
-		has_dlc = "Man the Guns"
 	}
 
 	enable = {

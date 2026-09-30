@@ -45,9 +45,9 @@ division_template={
 		infantry={ x=2 y=2 }
 		infantry={ x=2 y=3 }
 	}
-    support = {
-        recon={x=0 y=0}
-    }
+	support = {
+		recon={x=0 y=0}
+	}
 }
 division_template={
 	name="KNIL Garrison Division"
@@ -58,246 +58,246 @@ division_template={
 		infantry={ x=1 y=0 }
 		infantry={ x=1 y=1 }
 	}
-    template_counter=99
-    ingame_set_template_counter=yes
+	template_counter=99
+	ingame_set_template_counter=yes
 }
 
 
 units = {
 	######## LAND OOB ########
 	##### Indonesian High Command #####
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 1
-        }
-        location = 7421
-        division_template = "KNIL Field Division"
-        start_experience_factor = 0.25
-        start_equipment_factor = 1.0
-    }
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 2
-        }
-        location = 7642
-        division_template = "KNIL Field Division"
-        start_experience_factor = 0.25
-        start_equipment_factor = 1.0
-    }
+	division= { #Batavia
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7381
+		division_template = "KNIL Field Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+	division= { #Yogyakarta - Should be at Magelang
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 13406
+		division_template = "KNIL Field Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
 
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 3
-        }
-        location = 13403
-        division_template = "KNIL Field Division"
-        start_experience_factor = 0.25
-        start_equipment_factor = 1.0
-    }
+	division= { #Malang
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 10479
+		division_template = "KNIL Field Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
 
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 4
-        }
-        location = 4652
-        division_template = "KNIL Field Division"
-        start_experience_factor = 0.25
-        start_equipment_factor = 1.0
-    }
+	division= { #Medan
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 4652
+		division_template = "KNIL Field Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
 
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 5
-        }
-        location = 10263
-        division_template = "KNIL Field Division"
-        start_experience_factor = 0.25
-        start_equipment_factor = 1.0
-    }
-
-
+	division= { #Makassar
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 10263
+		division_template = "KNIL Field Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
 
 
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 1
-        }
-        location = 7381
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 2
-        }
-        location = 7421
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 3
-        }
-        location = 13403
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 4
-        }
-        location = 13405
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 5
-        }
-        location = 4652
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 6
-        }
-        location = 10382
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 7
-        }
-        location = 12268
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 8
-        }
-        location = 13398
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 9
-        }
-        location = 1316
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 10
-        }
-        location = 7296
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 11
-        }
-        location = 12225
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 12
-        }
-        location = 1404
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 13
-        }
-        location = 10263
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 14
-        }
-        location = 10153
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 15
-        }
-        location = 1574
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
-    
-    division= {
-        division_name = { 
-            is_name_ordered = yes
-            name_order = 16
-        }
-        location = 1355
-        division_template = "KNIL Garrison Division"
-        start_experience_factor = 0.05
-        start_equipment_factor = 0.85
-    }
+
+
+	division= { #Batavia
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7381
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+
+	division= { #Bandung
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7421
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Surabaya
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 13403
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Semarang
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 13405
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Medan
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 4652
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Padang
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 10382
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Palembang
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 12268
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Kutaraja
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 13398
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Pontianak
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 1316
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Banjarmasin
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 7296
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Balikpapan
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 12225
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Tarakan
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 1404
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Makassar
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 10263
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Menado
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 10153
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Amboina
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 1574
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
+	
+	division= { #Kupang
+		division_name = { 
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 1355
+		division_template = "KNIL Garrison Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.85
+	}
 
 }
 
@@ -318,18 +318,18 @@ instant_effect = {
 		requested_factories = 2
 		progress = 0.1
 		efficiency = 50
-        industrial_manufacturer = mio:INS_artillerie_inrichtingen_pyrotechnische_organization
+		industrial_manufacturer = mio:INS_artillerie_inrichtingen_pyrotechnische_organization
 	}
 
-    add_equipment_production = {
-        equipment = {
-            type = convoy_1
-            creator = "INS"
-        }
-        requested_factories = 1
-        progress = 0.1
-        efficiency = 50
-    }
+	add_equipment_production = {
+		equipment = {
+			type = convoy_1
+			creator = "INS"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
 
 }
 

@@ -6323,6 +6323,7 @@ country_event = { #Nationalists 6 - End of the Revolution
 		add_stability = 0.05
 		add_popularity = { ideology = fascism popularity = -0.05 }
 		delete_unit_template_and_units = { division_template = "Indonesian Militias" }
+		INS_nationalize_cities_effect = yes
 	}
 
 	# Integrate the Militias
@@ -6331,6 +6332,7 @@ country_event = { #Nationalists 6 - End of the Revolution
 		add_political_power = 75
 		add_popularity = { ideology = fascism popularity = 0.05 }
 		set_division_template_lock = { division_template = "Indonesian Militias" is_locked = no }
+		INS_nationalize_cities_effect = yes
 	}
 }
 
@@ -7946,6 +7948,7 @@ country_event = { #Commies 13 - End of the Revolution
 		add_stability = 0.05
 		add_popularity = { ideology = communism popularity = -0.05 }
 		delete_unit_template_and_units = { division_template = "Indonesian Militias" }
+		INS_nationalize_cities_effect = yes
 	}
 
 	# Integrate the Militias
@@ -7954,6 +7957,7 @@ country_event = { #Commies 13 - End of the Revolution
 		add_political_power = 75
 		add_popularity = { ideology = communism popularity = 0.05 }
 		set_division_template_lock = { division_template = "Indonesian Militias" is_locked = no }
+		INS_nationalize_cities_effect = yes
 	}
 }
 
@@ -12351,6 +12355,7 @@ country_event = { #NSB 7 - Crackdown successful
 					}
 				}
 				add_core_of = DFS
+				add_resistance = 10
 				start_resistance = yes
 			}
 		}
@@ -13771,6 +13776,7 @@ country_event = { #Volksraad 12 - End of the Revolution
 		add_stability = 0.05
 		add_popularity = { ideology = fascism popularity = -0.05 }
 		delete_unit_template_and_units = { division_template = "Indonesian Militias" }
+		INS_nationalize_cities_effect = yes
 	}
 
 	# Integrate the Militias
@@ -13779,6 +13785,7 @@ country_event = { #Volksraad 12 - End of the Revolution
 		add_political_power = 75
 		add_popularity = { ideology = fascism popularity = 0.05 }
 		set_division_template_lock = { division_template = "Indonesian Militias" is_locked = no }
+		INS_nationalize_cities_effect = yes
 	}
 }
 

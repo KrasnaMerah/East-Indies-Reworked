@@ -100,13 +100,7 @@ form_united_netherlands_category = {
 	picture = GFX_decision_cat_generic_united_netherlands
 
 	allowed = {
-		OR = {
-			has_dlc = "Waking the Tiger"
-			AND = {
-				has_dlc = "Man the Guns"
-				tag = HOL
-			}
-		}
+		has_dlc = "Waking the Tiger"
 	}
 }
 
@@ -150,10 +144,7 @@ form_european_union_category = {
 	picture = GFX_decision_cat_generic_european_union
 
 	allowed = {
-		OR = {
-			has_dlc = "Waking the Tiger"
-			has_dlc = "Man the Guns"
-		}
+		has_dlc = "Waking the Tiger"
 	}
 }
 
