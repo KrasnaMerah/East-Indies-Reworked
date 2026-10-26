@@ -1048,6 +1048,25 @@ ideas = {
 			}
 		}
 
+		INS_small_industries_permitted = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				neutrality_drift = 0.03
+			}
+		}
+
 		INS_reappropriation_idea = {
 			allowed = {
 				always = no

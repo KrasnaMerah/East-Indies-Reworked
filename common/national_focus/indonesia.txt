@@ -12258,13 +12258,21 @@ focus_tree = {
 
 		completion_reward = {
 			add_autonomy_ratio = {
-				value = 0.3
+				value = 0.1
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			swap_ideas = {
-				remove_idea = INS_nationalism_reemergence_2
-				add_idea = INS_nationalism_covert
+			if = {
+				limit = {
+					has_idea = INS_princely_states_normal
+				}
+				swap_ideas = {
+					remove_idea = INS_princely_states_normal
+					add_idea = INS_princely_states_placated
+				}
+			}
+			else = {
+				add_stability = 0.05
 			}
 		}
 	}
@@ -12324,12 +12332,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = INS_surya_wirawan
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			swap_ideas = {
-				remove_idea = INS_nationalism_reemergence_2
-				add_idea = INS_nationalism_rally
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			add_autonomy_ratio = {
+				value = 0.1
 			}
 		}
 	}
@@ -12647,101 +12656,23 @@ focus_tree = {
 		}
 
 		bypass = {
-			is_subject = no
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			set_country_flag = INS_becomes_parindra_flag
-			set_politics = {
-				ruling_party = democratic
-				last_election = "1936.01.01"
-				election_frequency = 48
-				elections_allowed = yes
-			}
-			hidden_effect = {
-				retire_character = INS_meyer_ranneft
-				set_can_be_fired_in_advisor_role = {
-					character = INS_cornelis_bussche 
-					value = yes
-				}
-				set_can_be_fired_in_advisor_role = {
-					character = INS_frans_visman 
-					value = yes
-				}
-				set_can_be_fired_in_advisor_role = {
-					character = INS_henricus_spit 
-					value = yes
-				}
-				set_can_be_fired_in_advisor_role = {
-					character = INS_jan_jonkman 
-					value = yes
-				}
-				set_can_be_fired_in_advisor_role = {
-					character = INS_hubertus_van_mook
-					value = yes
-				}
-				country_event = { id = holhis_indonesia.210 hours = 12 }
-			}
+			army_experience = 25
+			add_war_support = 0.05
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
-					is_subject = yes
+					NOT = { has_idea = INS_surya_wirawan }
 				}
-				every_other_country = {
-					limit = {
-						NOT = {
-							original_tag = INS
-						}
-						has_subject = INS
-					}
-					set_autonomy = {
-						target = INS
-						autonomy_state = autonomy_free
-					}
-					country_event = {
-						id = holhis_indonesia.211
-						days = 3
-					}
-				}
+				add_ideas = INS_surya_wirawan
 			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			set_cosmetic_tag = INS
-			if = {
-				limit = {
-					has_idea = INS_nationalism_rally
-				}
-				remove_ideas = INS_nationalism_rally
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			if = {
-				limit = {
-					has_idea = INS_nationalism_covert
-				}
-				remove_ideas = INS_nationalism_covert
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			if = {
-				limit = {
-					NOT = { has_idea = INS_independence_mess }
-				}
-				add_ideas = INS_independence_mess
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
+			else = {
+				army_experience = 15
 			}
 		}
 	}
@@ -12763,101 +12694,20 @@ focus_tree = {
 		}
 
 		bypass = {
-			is_subject = no
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			set_country_flag = INS_becomes_parindra_flag
-			set_politics = {
-				ruling_party = democratic
-				last_election = "1936.01.01"
-				election_frequency = 48
-				elections_allowed = yes
-			}
-			hidden_effect = {
-				retire_character = INS_meyer_ranneft
-				set_can_be_fired_in_advisor_role = {
-					character = INS_cornelis_bussche 
-					value = yes
-				}
-				set_can_be_fired_in_advisor_role = {
-					character = INS_frans_visman 
-					value = yes
-				}
-				set_can_be_fired_in_advisor_role = {
-					character = INS_henricus_spit 
-					value = yes
-				}
-				set_can_be_fired_in_advisor_role = {
-					character = INS_jan_jonkman 
-					value = yes
-				}
-				set_can_be_fired_in_advisor_role = {
-					character = INS_hubertus_van_mook
-					value = yes
-				}
-				country_event = { id = holhis_indonesia.210 hours = 12 }
-			}
+			add_stability = 0.1
+			add_political_power = 50
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			if = {
-				limit = {
-					is_subject = yes
-				}
-				every_other_country = {
-					limit = {
-						NOT = {
-							original_tag = INS
-						}
-						has_subject = INS
-					}
-					set_autonomy = {
-						target = INS
-						autonomy_state = autonomy_free
-					}
-					country_event = {
-						id = holhis_indonesia.211
-						days = 3
-					}
-				}
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			set_cosmetic_tag = INS
-			if = {
-				limit = {
-					has_idea = INS_nationalism_rally
-				}
-				remove_ideas = INS_nationalism_rally
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			if = {
-				limit = {
-					has_idea = INS_nationalism_covert
-				}
-				remove_ideas = INS_nationalism_covert
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			if = {
-				limit = {
-					NOT = { has_idea = INS_independence_mess }
-				}
-				add_ideas = INS_independence_mess
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
+			add_tech_bonus = {
+				name = INS_the_pandhita_ascends
+				bonus = 0.5
+				uses = 2
+				category = industry
 			}
 		}
 	}
@@ -15731,11 +15581,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = -0.1
+			add_stability = 0.05
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = {
-				idea = INS_means_production_seized
+				idea = INS_small_industries_permitted
 				days = 365
 			}
 		}
@@ -16053,18 +15903,26 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = INS_economic_aid
+			add_political_power = 50
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = INS_mutual_aid_tt
-			every_other_country = {
+			if = {
 				limit = {
-					is_in_faction_with = INS
-					is_faction_leader = yes
+					SOV = {
+						exists = yes
+						has_government = communism
+					}
 				}
-				set_country_flag = INS_resources_exchange_program
-				give_resource_rights = {
-					state = 974
+				SOV = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = medium_increase
+					}
 				}
 			}
 		}
@@ -16087,20 +15945,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = INS_economic_aid
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = INS_mutual_aid_tt
-			every_other_country = {
-				limit = {
-					is_in_faction_with = INS
-					is_faction_leader = yes
-				}
-				set_country_flag = INS_resources_exchange_program
-				give_resource_rights = {
-					state = 974
-				}
-			}
+			add_war_support = 0.1
+			add_stability = -0.05
+			army_experience = 10
 		}
 	}
 
