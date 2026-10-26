@@ -12279,7 +12279,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_convince_partindo
-		icon = GFX_goal_INS_PNI
+		icon = GFX_focus_INS_PNI
 		prerequisite = { focus = INS_support_nationalists }
 		mutually_exclusive = { focus = INS_convince_princes }
 
@@ -12312,7 +12312,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_reunify_pppki
-		icon = GFX_goal_generic_citizens
+		icon = GFX_focus_chi_united_front
 		prerequisite = { focus = INS_convince_partindo }
 
 		relative_position_id = INS_convince_partindo
@@ -12345,7 +12345,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_utilize_syarikat_indonesia
-		icon = GFX_goal_generic_education
+		icon = GFX_focus_chi_collaboration_with_the_japanese
 		prerequisite = { focus = INS_convince_partindo focus = INS_convince_princes }
 		mutually_exclusive = { focus = INS_befriend_stuwgroep }
 
@@ -12426,7 +12426,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_befriend_stuwgroep
-		icon = GFX_goal_INS_support_van_mook
+		icon = GFX_focus_INS_support_van_mook
 		prerequisite = { focus = INS_convince_partindo focus = INS_convince_princes }
 		mutually_exclusive = { focus = INS_utilize_syarikat_indonesia }
 
@@ -12526,7 +12526,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_expel_the_colonials
-		icon = GFX_goal_INS_merdeka_atau_mati
+		icon = GFX_focus_INS_merdeka_atau_mati
 		prerequisite = { focus = INS_utilize_syarikat_indonesia focus = INS_befriend_stuwgroep }
 
 		relative_position_id = INS_utilize_syarikat_indonesia
@@ -12641,7 +12641,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_the_satria_remains
-		icon = GFX_goal_INS_merdeka_atau_mati
+		icon = GFX_focus_generic_voting
 		prerequisite = { focus = INS_expel_the_colonials }
 		mutually_exclusive = { focus = INS_the_pandhita_ascends }
 
@@ -12694,7 +12694,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_the_pandhita_ascends
-		icon = GFX_goal_INS_merdeka_atau_mati
+		icon = GFX_focus_generic_university_3
 		prerequisite = { focus = INS_expel_the_colonials }
 		mutually_exclusive = { focus = INS_the_satria_remains }
 
@@ -13185,7 +13185,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_claims_in_the_indian
-		icon = GFX_goal_generic_indian_ocean
+		icon = GFX_goal_demand_sudetenland
 		prerequisite = { focus = INS_avenge_chola_invasion }
 		prerequisite = { focus = INS_JAP_naval_cooperation }
 
@@ -15602,7 +15602,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_seize_means_production
-		icon = GFX_goal_generic_dictatorship_of_proletariat
+		icon = GFX_focus_prc_agrarian_socialism
 		prerequisite = { focus = INS_break_the_chains }
 		
 		relative_position_id = INS_break_the_chains
@@ -15629,7 +15629,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_permit_small_industries
-		icon = GFX_goal_generic_communist_industries
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = INS_break_the_chains }
 		
 		relative_position_id = INS_break_the_chains
@@ -15708,7 +15708,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_one_people_one_state 
-		icon = GFX_goal_INS_indonesia_stands
+		icon = GFX_focus_indonesia_stands
 		prerequisite = { focus = INS_seize_means_production  focus = INS_permit_small_industries }
 		prerequisite = { focus = INS_reappropriation }
 		prerequisite = { focus = INS_question_religion }
@@ -15801,7 +15801,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_multi_state
-		icon = GFX_goal_generic_east_indies
+		icon = GFX_focus_generic_east_indies
 		prerequisite = { focus = INS_seize_means_production focus = INS_permit_small_industries }
 		prerequisite = { focus = INS_reappropriation }
 		prerequisite = { focus = INS_question_religion }
@@ -15951,7 +15951,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_complete_the_bolshevikization
-		icon = GFX_goal_generic_communism
+		icon = GFX_goal_support_communism
 		prerequisite = { focus = INS_break_the_chains }
 		
 		relative_position_id = INS_break_the_chains
@@ -15993,7 +15993,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_maintain_bakuninist_tendencies
-		icon = GFX_goal_spread_communism
+		icon = GFX_focus_INS_laskar_rakjat
 		prerequisite = { focus = INS_break_the_chains }
 		
 		relative_position_id = INS_break_the_chains
