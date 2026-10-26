@@ -117,6 +117,8 @@ INS_revolution_at_home_1_desc:0 "The closure of Volksraad by reactionary forces 
 INS_revolution_at_home_2_desc:0 "Our revolutionary cells has interconnected with several nationalist organizations and disgraced nobles to extend our reach in Sulawesi and Kalimantan as a part of our mutual struggle against the Dutch!"
 INS_revolution_at_home_3_desc:0 "Our revolutionary cells has spread far enough to reach even the largest cities in the Western Indonesia to gather support from both the dismayed factory workers and humble farmers in the villages."
 INS_means_production_seized:0 "Foreign Assets Seized"
+INS_workers_control:0 "Workers' Control"
+INS_workers_control_desc:0 "The factories, plantations and harbours are run by the unions and councils of those who work them, not by a ministry in the capital."
 INS_small_industries_permitted:0 "Small Industries Permitted"
 INS_small_industries_permitted_desc:0 "The workshops, warungs and home industries remain in the hands of those who work them, while the state holds the plantations, mines and heavy industries."
 INS_economic_aid:0 "Economic Aid"

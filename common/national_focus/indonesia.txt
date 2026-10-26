@@ -12714,6 +12714,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 			add_stability = 0.1
 			add_political_power = 50
 			
@@ -16008,9 +16012,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_war_support = 0.1
 			add_stability = -0.05
-			army_experience = 10
+			add_war_support = 0.05
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_timed_idea = {
+				idea = INS_workers_control
+				days = 365
+			}
 		}
 	}
 
