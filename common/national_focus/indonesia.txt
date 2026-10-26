@@ -13545,6 +13545,44 @@ focus_tree = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					979 = {
+						CONTROLLER = {
+							NOT = {
+								OR = {
+									tag = ROOT
+									is_subject_of = ROOT
+									is_in_faction_with = ROOT
+								}
+							}
+						}
+					}
+				}
+				979 = {
+					CONTROLLER = {
+						ROOT = {
+							create_wargoal = {
+								target = PREV
+								type = take_state_focus
+								expire = 0
+								generator = { 979 }
+							}
+							add_ai_strategy = {
+								type = conquer
+								id = PREV
+								value = 200
+							}
+						}
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = INS_secure_eastern_indonesia
+				bonus = 1.0
+				uses = 1
+				category = tp_tech
+			}
 		}
 	}
 
