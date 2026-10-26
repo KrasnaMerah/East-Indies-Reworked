@@ -314,11 +314,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 7603;4175;impassable;-1;-1;-1;-1;-1;;shan hills
 2061;4175;impassable;-1;-1;-1;-1;-1;;shan hills
 7909;4568;impassable;-1;-1;-1;-1;-1;;shan hills
-7909;10776;impassable;-1;-1;-1;-1;-1;;shan hills
-7400;10413;impassable;-1;-1;-1;-1;-1;;shan hills
-4210;10413;impassable;-1;-1;-1;-1;-1;;shan hills
-4210;5009;impassable;-1;-1;-1;-1;-1;;shan hills
-4210;7976;impassable;-1;-1;-1;-1;-1;;shan hills
 4210;10863;impassable;-1;-1;-1;-1;-1;;shan hills
 4210;1170;impassable;-1;-1;-1;-1;-1;;shan hills
 4210;2061;impassable;-1;-1;-1;-1;-1;;shan hills
