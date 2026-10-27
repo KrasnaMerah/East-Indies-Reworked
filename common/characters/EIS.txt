@@ -128,6 +128,26 @@ characters = {
 			available = {
 				
 			}
+			on_add = {
+				if = {
+					limit = {
+						has_country_flag = INS_swapraja_joined
+						1052 = { is_owned_by = ROOT }
+					}
+					1052 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_bali
+						}
+					}
+				}
+			}
+			on_remove = {
+				1052 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_bali
+					}
+				}
+			}
 			traits = {
 				INS_paramount_of_bali
 			}

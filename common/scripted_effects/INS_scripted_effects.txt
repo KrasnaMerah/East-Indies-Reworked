@@ -1638,6 +1638,36 @@ indonesia_transfer_POK = {
 	}
 }
 
+indonesia_transfer_KUT = {
+	if = {
+		limit = {
+			country_exists = KUT
+		}
+		KUT = {
+			KUT_ali_muhammad_parikesit = {
+				set_nationality = INS
+				remove_country_leader_role = { #we just want the advisor. if we want them as a leader, we can do that manually after
+					ideology = despotism
+				}
+				save_global_event_target_as = KUT_ali_muhammad_parikesit
+			}
+		}
+	}
+	else = {
+		every_possible_country = {
+			limit = {
+				has_character = KUT_ali_muhammad_parikesit
+			}
+			random_character = {
+				limit = {
+					is_character = KUT_ali_muhammad_parikesit
+				}
+				set_nationality = INS
+				save_global_event_target_as = KUT_ali_muhammad_parikesit
+			}
+		}
+	}
+}
 indonesia_transfer_TNE = {
 	if = {
 		limit = {

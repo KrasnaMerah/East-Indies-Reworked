@@ -12289,6 +12289,27 @@ focus_tree = {
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = INS_outer_lands_produce
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = INS_swapraja_joined_tt
+			set_country_flag = INS_swapraja_joined
+			hidden_effect = {
+				indonesia_princely_advisors_effect_no_atjeh = yes
+				indonesia_transfer_KUT = yes
+				recruit_character = INS_lorenzo_iii
+				recruit_character = INS_thomas_ximenes_da_silva
+				recruit_character = INS_alexander_baroek
+				recruit_character = INS_pius_rasi_wangge
+				recruit_character = INS_hendrick_arnold_toroh
+				recruit_character = INS_saul_we_tanya
+			}
+			if = {
+				limit = {
+					NOT = { has_completed_focus = INS_convince_outer_princes }
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = INS_swapraja_not_joined_tt
+			}
 		}
 	}
 
@@ -12598,6 +12619,14 @@ focus_tree = {
 				country_event = { id = holhis_indonesia.210 hours = 12 }
 			}
 			
+			if = {
+				limit = {
+					is_subject = yes
+					NOT = { has_completed_focus = INS_convince_outer_princes }
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = INS_dutch_secure_outer_lands_tt
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
@@ -12609,6 +12638,45 @@ focus_tree = {
 							original_tag = INS
 						}
 						has_subject = INS
+					}
+					if = {
+						limit = {
+							ROOT = {
+								NOT = { has_completed_focus = INS_convince_outer_princes }
+							}
+						}
+						hidden_effect = {
+							if = { #East Sumatra
+								limit = {
+									1049 = { is_owned_by = ROOT }
+								}
+								transfer_state = 1049
+							}
+							if = { #Bali and Lombok
+								limit = {
+									1052 = { is_owned_by = ROOT }
+								}
+								transfer_state = 1052
+							}
+							if = { #Nusa Tenggara
+								limit = {
+									667 = { is_owned_by = ROOT }
+								}
+								transfer_state = 667
+							}
+							if = { #Dutch Timor
+								limit = {
+									1054 = { is_owned_by = ROOT }
+								}
+								transfer_state = 1054
+							}
+							if = { #West Kalimantan
+								limit = {
+									334 = { is_owned_by = ROOT }
+								}
+								transfer_state = 334
+							}
+						}
 					}
 					set_autonomy = {
 						target = INS

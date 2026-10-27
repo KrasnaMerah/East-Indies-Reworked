@@ -20,6 +20,45 @@ characters = {
 			expire="1953.3.1.1"
 			id=-1
 		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			idea_token = KLM_mohammad_yusuf_alqadri
+			allowed = {
+				original_tag = INS
+			}
+			visible = {
+				has_country_flag = INS_swapraja_joined
+				is_country_leader = no
+			}
+			available = {
+			}
+			on_add = {
+				if = {
+					limit = {
+						334 = { is_owned_by = ROOT }
+					}
+					334 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_pontianak
+						}
+					}
+				}
+			}
+			on_remove = {
+				334 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_pontianak
+					}
+				}
+			}
+			traits = {
+				captain_of_industry
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 
 	KLM_hamid_mohammad_alqadri = {
