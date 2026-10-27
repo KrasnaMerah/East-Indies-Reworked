@@ -14706,10 +14706,7 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			OR = {
-				has_completed_focus = INS_convince_princes
-				has_country_flag = INS_swapraja_joined
-			}
+			has_country_flag = INS_swapraja_joined
 		}
 		available = {
 			has_country_flag = INS_swapraja_joined
@@ -14737,10 +14734,7 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			OR = {
-				has_completed_focus = INS_convince_princes
-				has_country_flag = INS_swapraja_joined
-			}
+			has_country_flag = INS_swapraja_joined
 		}
 		available = {
 			has_country_flag = INS_swapraja_joined
@@ -14768,10 +14762,7 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			OR = {
-				has_completed_focus = INS_convince_princes
-				has_country_flag = INS_swapraja_joined
-			}
+			has_country_flag = INS_swapraja_joined
 		}
 		available = {
 			has_country_flag = INS_swapraja_joined
@@ -14799,10 +14790,7 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			OR = {
-				has_completed_focus = INS_convince_princes
-				has_country_flag = INS_swapraja_joined
-			}
+			has_country_flag = INS_swapraja_joined
 		}
 		available = {
 			has_country_flag = INS_swapraja_joined
@@ -14830,10 +14818,7 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			OR = {
-				has_completed_focus = INS_convince_princes
-				has_country_flag = INS_swapraja_joined
-			}
+			has_country_flag = INS_swapraja_joined
 		}
 		available = {
 			has_country_flag = INS_swapraja_joined
@@ -14864,10 +14849,7 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			OR = {
-				has_completed_focus = INS_convince_princes
-				has_country_flag = INS_swapraja_joined
-			}
+			has_country_flag = INS_swapraja_joined
 		}
 		available = {
 			has_country_flag = INS_swapraja_joined
@@ -14899,10 +14881,7 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			OR = {
-				has_completed_focus = INS_convince_princes
-				has_country_flag = INS_swapraja_joined
-			}
+			has_country_flag = INS_swapraja_joined
 		}
 		available = {
 			has_country_flag = INS_swapraja_joined
@@ -14934,10 +14913,7 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			OR = {
-				has_completed_focus = INS_convince_princes
-				has_country_flag = INS_swapraja_joined
-			}
+			has_country_flag = INS_swapraja_joined
 		}
 		available = {
 			has_country_flag = INS_swapraja_joined
@@ -14965,10 +14941,7 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			OR = {
-				has_completed_focus = INS_convince_princes
-				has_country_flag = INS_swapraja_joined
-			}
+			has_country_flag = INS_swapraja_joined
 		}
 		available = {
 			has_country_flag = INS_swapraja_joined
@@ -14996,10 +14969,7 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			OR = {
-				has_completed_focus = INS_convince_princes
-				has_country_flag = INS_swapraja_joined
-			}
+			has_country_flag = INS_swapraja_joined
 		}
 		available = {
 			has_country_flag = INS_swapraja_joined
@@ -15027,10 +14997,7 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			OR = {
-				has_completed_focus = INS_convince_princes
-				has_country_flag = INS_swapraja_joined
-			}
+			has_country_flag = INS_swapraja_joined
 		}
 		available = {
 			has_country_flag = INS_swapraja_joined

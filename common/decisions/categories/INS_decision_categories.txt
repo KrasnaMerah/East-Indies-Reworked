@@ -519,10 +519,7 @@ INS_swapraja_cat = {
 	}
 
 	visible = {
-		OR = {
-			has_completed_focus = INS_convince_princes
-			has_country_flag = INS_swapraja_joined
-		}
+		has_country_flag = INS_swapraja_joined
 	}
 
 }
