@@ -17551,7 +17551,23 @@ country_event = { #871 - The Swapraja reaffirm their old allegiances
 		name = holhis_indonesia.871.a
 		set_country_flag = INS_swapraja_sided_dutch
 		custom_effect_tooltip = INS_swapraja_reaffirm_tt
-		# Where we hold the princes' lands, our overlord at independence (saved by Expel the Colonialists) takes them and our cores there are lost
+		# Our cores on the princes' lands are lost wherever they are
+		1049 = { #East Sumatra
+			remove_core_of = ROOT
+		}
+		1052 = { #Bali and Lombok
+			remove_core_of = ROOT
+		}
+		667 = { #Nusa Tenggara
+			remove_core_of = ROOT
+		}
+		1054 = { #Dutch Timor
+			remove_core_of = ROOT
+		}
+		334 = { #West Kalimantan
+			remove_core_of = ROOT
+		}
+		# Where we hold the princes' lands, our overlord at independence (saved by Expel the Colonialists) takes them
 		if = {
 			limit = {
 				has_country_flag = INS_swapraja_sided_dutch
@@ -17563,9 +17579,6 @@ country_event = { #871 - The Swapraja reaffirm their old allegiances
 				event_target:INS_swapraja_old_overlord = {
 					transfer_state = 1049
 				}
-				1049 = {
-					remove_core_of = ROOT
-				}
 			}
 			if = { #Bali and Lombok
 				limit = {
@@ -17573,9 +17586,6 @@ country_event = { #871 - The Swapraja reaffirm their old allegiances
 				}
 				event_target:INS_swapraja_old_overlord = {
 					transfer_state = 1052
-				}
-				1052 = {
-					remove_core_of = ROOT
 				}
 			}
 			if = { #Nusa Tenggara
@@ -17585,9 +17595,6 @@ country_event = { #871 - The Swapraja reaffirm their old allegiances
 				event_target:INS_swapraja_old_overlord = {
 					transfer_state = 667
 				}
-				667 = {
-					remove_core_of = ROOT
-				}
 			}
 			if = { #Dutch Timor
 				limit = {
@@ -17596,9 +17603,6 @@ country_event = { #871 - The Swapraja reaffirm their old allegiances
 				event_target:INS_swapraja_old_overlord = {
 					transfer_state = 1054
 				}
-				1054 = {
-					remove_core_of = ROOT
-				}
 			}
 			if = { #West Kalimantan
 				limit = {
@@ -17606,9 +17610,6 @@ country_event = { #871 - The Swapraja reaffirm their old allegiances
 				}
 				event_target:INS_swapraja_old_overlord = {
 					transfer_state = 334
-				}
-				334 = {
-					remove_core_of = ROOT
 				}
 			}
 		}
