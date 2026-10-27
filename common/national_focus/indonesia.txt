@@ -12615,6 +12615,133 @@ focus_tree = {
 					country_event = { id = holhis_indonesia.871 }
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = INS_swapraja_joined
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = INS_swapraja_levies_tt
+				hidden_effect = {
+					division_template = {
+						name = "Laskar Swapraja"
+						priority = 1
+						division_names_group = INS_INF_02
+						regiments = {
+							irregular_infantry = { x = 0 y = 0 }
+							irregular_infantry = { x = 0 y = 1 }
+							irregular_infantry = { x = 1 y = 0 }
+							irregular_infantry = { x = 1 y = 1 }
+						}
+					}
+					division_template = {
+						name = "Laskar Swapraja Berkuda"
+						priority = 1
+						division_names_group = INS_INF_02
+						regiments = {
+							irregular_infantry = { x = 0 y = 0 }
+							irregular_infantry = { x = 0 y = 1 }
+							irregular_infantry = { x = 1 y = 0 }
+							cavalry = { x = 1 y = 1 }
+						}
+					}
+					1049 = { #East Sumatra
+						if = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							create_unit = {
+								division = "division_template = \"Laskar Swapraja\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = ROOT
+							}
+							create_unit = {
+								division = "division_template = \"Laskar Swapraja\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = ROOT
+							}
+						}
+					}
+					667 = { #Nusa Tenggara
+						if = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							create_unit = {
+								division = "division_template = \"Laskar Swapraja Berkuda\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = ROOT
+							}
+							create_unit = {
+								division = "division_template = \"Laskar Swapraja Berkuda\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = ROOT
+							}
+						}
+					}
+					1052 = { #Bali and Lombok
+						if = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							create_unit = {
+								division = "division_template = \"Laskar Swapraja\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = ROOT
+							}
+						}
+					}
+					1054 = { #Dutch Timor
+						if = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							create_unit = {
+								division = "division_template = \"Laskar Swapraja Berkuda\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = ROOT
+							}
+						}
+					}
+					334 = { #West Kalimantan
+						if = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							create_unit = {
+								division = "division_template = \"Laskar Swapraja\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = ROOT
+							}
+						}
+					}
+					1055 = { #East Kalimantan
+						if = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							create_unit = {
+								division = "division_template = \"Laskar Swapraja\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = ROOT
+							}
+						}
+					}
+					673 = { #Southern Sulawesi
+						if = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							create_unit = {
+								division = "division_template = \"Laskar Swapraja\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = ROOT
+							}
+						}
+					}
+					1082 = { #North Moluccas
+						if = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							create_unit = {
+								division = "division_template = \"Laskar Swapraja\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = ROOT
+							}
+						}
+					}
+				}
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {

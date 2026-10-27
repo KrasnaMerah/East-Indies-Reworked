@@ -17586,6 +17586,97 @@ country_event = { #871 - The Swapraja side with the Netherlands
 				}
 			}
 		}
+		if = {
+			limit = {
+				country_exists = HOL
+			}
+			custom_effect_tooltip = INS_swapraja_dutch_levies_tt
+			hidden_effect = {
+				HOL = {
+					division_template = {
+						name = "Swapraja Levies"
+						priority = 1
+						division_names_group = HOL_INF_01
+						regiments = {
+							irregular_infantry = { x = 0 y = 0 }
+							irregular_infantry = { x = 0 y = 1 }
+							irregular_infantry = { x = 1 y = 0 }
+							irregular_infantry = { x = 1 y = 1 }
+						}
+					}
+					division_template = {
+						name = "Swapraja Mounted Levies"
+						priority = 1
+						division_names_group = HOL_INF_01
+						regiments = {
+							irregular_infantry = { x = 0 y = 0 }
+							irregular_infantry = { x = 0 y = 1 }
+							irregular_infantry = { x = 1 y = 0 }
+							cavalry = { x = 1 y = 1 }
+						}
+					}
+					1049 = { #East Sumatra
+						if = {
+							limit = {
+								is_owned_by = HOL
+							}
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = HOL
+							}
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = HOL
+							}
+						}
+					}
+					1052 = { #Bali and Lombok
+						if = {
+							limit = {
+								is_owned_by = HOL
+							}
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = HOL
+							}
+						}
+					}
+					667 = { #Nusa Tenggara
+						if = {
+							limit = {
+								is_owned_by = HOL
+							}
+							create_unit = {
+								division = "division_template = \"Swapraja Mounted Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = HOL
+							}
+						}
+					}
+					1054 = { #Dutch Timor
+						if = {
+							limit = {
+								is_owned_by = HOL
+							}
+							create_unit = {
+								division = "division_template = \"Swapraja Mounted Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = HOL
+							}
+						}
+					}
+					334 = { #West Kalimantan
+						if = {
+							limit = {
+								is_owned_by = HOL
+							}
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = HOL
+							}
+						}
+					}
+				}
+			}
+		}
 		set_country_flag = INS_swapraja_sided_dutch
 		custom_effect_tooltip = INS_swapraja_loyal_tt
 		hidden_effect = {
