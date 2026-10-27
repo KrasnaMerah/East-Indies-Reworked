@@ -1638,77 +1638,88 @@ indonesia_transfer_POK = {
 	}
 }
 
-indonesia_swapraja_lesser_sunda_to_INS = { #Moves the Lesser Sunda rulers from EIS to Indonesia at the revolution
-	every_possible_country = {
+indonesia_swapraja_lesser_sunda_to_INS = { #At the revolution, the Lesser Sunda rulers the movement won over join Indonesia
+	if = {
 		limit = {
-			has_character = INS_lorenzo_iii
+			has_country_flag = INS_swapraja_convinced_flores
 		}
-		random_character = {
+		every_possible_country = {
 			limit = {
-				is_character = INS_lorenzo_iii
+				has_character = INS_lorenzo_iii
 			}
-			set_nationality = INS
+			random_character = {
+				limit = {
+					is_character = INS_lorenzo_iii
+				}
+				set_nationality = INS
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_thomas_ximenes_da_silva
+			}
+			random_character = {
+				limit = {
+					is_character = INS_thomas_ximenes_da_silva
+				}
+				set_nationality = INS
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_alexander_baroek
+			}
+			random_character = {
+				limit = {
+					is_character = INS_alexander_baroek
+				}
+				set_nationality = INS
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_pius_rasi_wangge
+			}
+			random_character = {
+				limit = {
+					is_character = INS_pius_rasi_wangge
+				}
+				set_nationality = INS
+			}
 		}
 	}
-	every_possible_country = {
+	if = {
 		limit = {
-			has_character = INS_thomas_ximenes_da_silva
+			has_country_flag = INS_swapraja_convinced_timor
 		}
-		random_character = {
+		every_possible_country = {
 			limit = {
-				is_character = INS_thomas_ximenes_da_silva
+				has_character = INS_hendrick_arnold_toroh
 			}
-			set_nationality = INS
+			random_character = {
+				limit = {
+					is_character = INS_hendrick_arnold_toroh
+				}
+				set_nationality = INS
+			}
 		}
-	}
-	every_possible_country = {
-		limit = {
-			has_character = INS_alexander_baroek
-		}
-		random_character = {
+		every_possible_country = {
 			limit = {
-				is_character = INS_alexander_baroek
+				has_character = INS_saul_we_tanya
 			}
-			set_nationality = INS
-		}
-	}
-	every_possible_country = {
-		limit = {
-			has_character = INS_pius_rasi_wangge
-		}
-		random_character = {
-			limit = {
-				is_character = INS_pius_rasi_wangge
+			random_character = {
+				limit = {
+					is_character = INS_saul_we_tanya
+				}
+				set_nationality = INS
 			}
-			set_nationality = INS
-		}
-	}
-	every_possible_country = {
-		limit = {
-			has_character = INS_hendrick_arnold_toroh
-		}
-		random_character = {
-			limit = {
-				is_character = INS_hendrick_arnold_toroh
-			}
-			set_nationality = INS
-		}
-	}
-	every_possible_country = {
-		limit = {
-			has_character = INS_saul_we_tanya
-		}
-		random_character = {
-			limit = {
-				is_character = INS_saul_we_tanya
-			}
-			set_nationality = INS
 		}
 	}
 }
-indonesia_swapraja_lesser_sunda_to_overlords = { #When the princes side against us, each Lesser Sunda ruler joins whoever holds his state; if we still hold it, he stays with EIS
+indonesia_swapraja_lesser_sunda_to_overlords = { #Lesser Sunda rulers not won over join whoever holds their state; if we still hold it, they stay with EIS
 	if = {
 		limit = {
+			NOT = { INS = { has_country_flag = INS_swapraja_convinced_flores } }
 			667 = {
 				NOT = { is_owned_by = INS }
 			}
@@ -1765,6 +1776,7 @@ indonesia_swapraja_lesser_sunda_to_overlords = { #When the princes side against 
 	}
 	if = {
 		limit = {
+			NOT = { INS = { has_country_flag = INS_swapraja_convinced_timor } }
 			1054 = {
 				NOT = { is_owned_by = INS }
 			}

@@ -12279,8 +12279,55 @@ focus_tree = {
 			custom_effect_tooltip = INS_swapraja_joined_tt
 			set_country_flag = INS_swapraja_joined
 			hidden_effect = {
-				indonesia_princely_advisors_effect_no_atjeh = yes
-				indonesia_transfer_KUT = yes
+				# Only princes whose lands are still part of the Indies can be won over
+				if = { #Siak
+					limit = {
+						1049 = { is_owned_by = ROOT }
+					}
+					indonesia_transfer_SSI = yes
+				}
+				if = { #Bali
+					limit = {
+						1052 = { is_owned_by = ROOT }
+					}
+					indonesia_transfer_BLI = yes
+				}
+				if = { #Pontianak
+					limit = {
+						334 = { is_owned_by = ROOT }
+					}
+					indonesia_transfer_POK = yes
+				}
+				if = { #Gowa
+					limit = {
+						673 = { is_owned_by = ROOT }
+					}
+					indonesia_transfer_GOW = yes
+				}
+				if = { #Ternate
+					limit = {
+						1082 = { is_owned_by = ROOT }
+					}
+					indonesia_transfer_TNE = yes
+				}
+				if = { #Kutai
+					limit = {
+						1055 = { is_owned_by = ROOT }
+					}
+					indonesia_transfer_KUT = yes
+				}
+				if = { #Larantuka, Sikka, Manggarai and Lio, who come over at the revolution
+					limit = {
+						667 = { is_owned_by = ROOT }
+					}
+					set_country_flag = INS_swapraja_convinced_flores
+				}
+				if = { #Amarasi and Savu, who come over at the revolution
+					limit = {
+						1054 = { is_owned_by = ROOT }
+					}
+					set_country_flag = INS_swapraja_convinced_timor
+				}
 			}
 			if = {
 				limit = {
@@ -12621,6 +12668,7 @@ focus_tree = {
 				custom_effect_tooltip = INS_swapraja_levies_tt
 				hidden_effect = {
 					indonesia_swapraja_lesser_sunda_to_INS = yes
+					indonesia_swapraja_lesser_sunda_to_overlords = yes
 					division_template = {
 						name = "Laskar Swapraja"
 						priority = 1
