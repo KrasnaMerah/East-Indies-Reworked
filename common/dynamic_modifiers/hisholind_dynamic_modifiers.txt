@@ -269,13 +269,15 @@ MAL_tuanku_sembilan_modifier = { #State Modifier
 	local_supplies = 0.01
 }
 
-#	Swapraja rulers serving as advisors after Convince the Outer Princes; each applies to his own region while hired
+#	Swapraja rulers serving as advisors after Convince the Outer Princes; each applies to his own region while hired.
+#	Every modifier is worth 3 points: 1 point = +5% recruitable population, +10% local resources, +5% building slots,
+#	+5% construction speed, +0.05 local supplies, +5% compliance gain, -5% resistance target, +10% defence or +0.05 org regain
 INS_swapraja_siak = { #State Modifier
 	enable = { always = yes }
 
 	icon = GFX_modifier_basic_development
 
-	local_resources_factor = 0.15
+	local_resources_factor = 0.2
 	resistance_target = -0.05
 }
 INS_swapraja_bali = { #State Modifier
@@ -293,6 +295,7 @@ INS_swapraja_pontianak = { #State Modifier
 
 	local_resources_factor = 0.1
 	state_production_speed_buildings_factor = 0.05
+	local_building_slots_factor = 0.05
 }
 INS_swapraja_gowa = { #State Modifier
 	enable = { always = yes }
@@ -316,6 +319,7 @@ INS_swapraja_kutai = { #State Modifier
 	icon = GFX_modifier_basic_development
 
 	local_resources_factor = 0.2
+	state_production_speed_buildings_factor = 0.05
 }
 INS_swapraja_larantuka = { #State Modifier
 	enable = { always = yes }
@@ -341,6 +345,7 @@ INS_swapraja_manggarai = { #State Modifier
 
 	recruitable_population_factor = 0.05
 	army_defence_factor = 0.1
+	local_org_regain = 0.05
 }
 INS_swapraja_lio = { #State Modifier
 	enable = { always = yes }
@@ -349,6 +354,7 @@ INS_swapraja_lio = { #State Modifier
 
 	compliance_gain = 0.05
 	local_supplies = 0.05
+	resistance_target = -0.05
 }
 INS_swapraja_amarasi = { #State Modifier
 	enable = { always = yes }
@@ -356,7 +362,8 @@ INS_swapraja_amarasi = { #State Modifier
 	icon = GFX_modifier_basic_development
 
 	local_supplies = 0.05
-	recruitable_population_factor = 0.03
+	recruitable_population_factor = 0.05
+	local_resources_factor = 0.1
 }
 INS_swapraja_savu = { #State Modifier
 	enable = { always = yes }
@@ -365,4 +372,5 @@ INS_swapraja_savu = { #State Modifier
 
 	compliance_gain = 0.05
 	resistance_target = -0.05
+	recruitable_population_factor = 0.05
 }
