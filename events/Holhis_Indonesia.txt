@@ -17539,33 +17539,33 @@ country_event = { #Acquire trains
 	}
 }
 
-country_event = { #855 - The Swapraja side with the Netherlands
-	id = holhis_indonesia.855
-	title = holhis_indonesia.855.t
-	desc = holhis_indonesia.855.d
+country_event = { #871 - The Swapraja side with the Netherlands
+	id = holhis_indonesia.871
+	title = holhis_indonesia.871.t
+	desc = holhis_indonesia.871.d
 	picture = GFX_report_event_generic_sign_treaty
 
 	is_triggered_only = yes
 
 	option = {
-		name = holhis_indonesia.855.a
+		name = holhis_indonesia.871.a
 		custom_effect_tooltip = INS_swapraja_secured_tt
 		hidden_effect = {
-			country_event = { id = holhis_indonesia.856 days = 10 }
+			country_event = { id = holhis_indonesia.872 days = 10 }
 		}
 	}
 }
 
-country_event = { #856 - The Dutch secure the outer princely lands
-	id = holhis_indonesia.856
-	title = holhis_indonesia.856.t
-	desc = holhis_indonesia.856.d
+country_event = { #872 - The Dutch secure the outer princely lands
+	id = holhis_indonesia.872
+	title = holhis_indonesia.872.t
+	desc = holhis_indonesia.872.d
 	picture = GFX_report_event_ger_civil_war
 
 	is_triggered_only = yes
 
 	option = {
-		name = holhis_indonesia.856.a
+		name = holhis_indonesia.872.a
 		if = {
 			limit = {
 				country_exists = HOL
@@ -17680,10 +17680,10 @@ country_event = { #856 - The Dutch secure the outer princely lands
 	}
 }
 
-country_event = { #857 - The Sultanates of the East Coast Fall
-	id = holhis_indonesia.857
-	title = holhis_indonesia.857.t
-	desc = holhis_indonesia.857.d
+country_event = { #873 - The Sultanates of the East Coast Fall
+	id = holhis_indonesia.873
+	title = holhis_indonesia.873.t
+	desc = holhis_indonesia.873.d
 	picture = GFX_report_event_chinese_soldiers_fighting
 
 	fire_only_once = yes
@@ -17700,15 +17700,15 @@ country_event = { #857 - The Sultanates of the East Coast Fall
 	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = holhis_indonesia.857.a
+		name = holhis_indonesia.873.a
 		custom_effect_tooltip = INS_swapraja_fallen_tt
 	}
 }
 
-country_event = { #858 - The Rajas of Bali Fall
-	id = holhis_indonesia.858
-	title = holhis_indonesia.858.t
-	desc = holhis_indonesia.858.d
+country_event = { #874 - The Rajas of Bali Fall
+	id = holhis_indonesia.874
+	title = holhis_indonesia.874.t
+	desc = holhis_indonesia.874.d
 	picture = GFX_report_event_chinese_soldiers_fighting
 
 	fire_only_once = yes
@@ -17725,15 +17725,15 @@ country_event = { #858 - The Rajas of Bali Fall
 	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = holhis_indonesia.858.a
+		name = holhis_indonesia.874.a
 		custom_effect_tooltip = INS_swapraja_fallen_tt
 	}
 }
 
-country_event = { #859 - The Rajas of the Lesser Sundas Fall
-	id = holhis_indonesia.859
-	title = holhis_indonesia.859.t
-	desc = holhis_indonesia.859.d
+country_event = { #875 - The Rajas of the Lesser Sundas Fall
+	id = holhis_indonesia.875
+	title = holhis_indonesia.875.t
+	desc = holhis_indonesia.875.d
 	picture = GFX_report_event_chinese_soldiers_fighting
 
 	fire_only_once = yes
@@ -17750,15 +17750,15 @@ country_event = { #859 - The Rajas of the Lesser Sundas Fall
 	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = holhis_indonesia.859.a
+		name = holhis_indonesia.875.a
 		custom_effect_tooltip = INS_swapraja_fallen_tt
 	}
 }
 
-country_event = { #860 - The Rajas of Timor Fall
-	id = holhis_indonesia.860
-	title = holhis_indonesia.860.t
-	desc = holhis_indonesia.860.d
+country_event = { #876 - The Rajas of Timor Fall
+	id = holhis_indonesia.876
+	title = holhis_indonesia.876.t
+	desc = holhis_indonesia.876.d
 	picture = GFX_report_event_chinese_soldiers_fighting
 
 	fire_only_once = yes
@@ -17775,15 +17775,15 @@ country_event = { #860 - The Rajas of Timor Fall
 	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = holhis_indonesia.860.a
+		name = holhis_indonesia.876.a
 		custom_effect_tooltip = INS_swapraja_fallen_tt
 	}
 }
 
-country_event = { #861 - The Sultanates of West Borneo Fall
-	id = holhis_indonesia.861
-	title = holhis_indonesia.861.t
-	desc = holhis_indonesia.861.d
+country_event = { #877 - The Sultanates of West Borneo Fall
+	id = holhis_indonesia.877
+	title = holhis_indonesia.877.t
+	desc = holhis_indonesia.877.d
 	picture = GFX_report_event_chinese_soldiers_fighting
 
 	fire_only_once = yes
@@ -17800,7 +17800,7 @@ country_event = { #861 - The Sultanates of West Borneo Fall
 	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = holhis_indonesia.861.a
+		name = holhis_indonesia.877.a
 		custom_effect_tooltip = INS_swapraja_fallen_tt
 	}
 }
