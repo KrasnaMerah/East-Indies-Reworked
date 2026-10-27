@@ -475,12 +475,12 @@ INS_swapraja_ende_market_dec = { #State Modifier
 	state_production_speed_buildings_factor = 0.05
 }
 
-#	Swapraja that sided with the Dutch: core-like benefits for the Netherlands while it holds the state, lost when anyone else takes it
+#	Swapraja that refused Indonesia: core-like benefits for whoever holds the state, lost when Indonesia takes it
 INS_swapraja_loyal_east_sumatra = { #State Modifier
 	enable = { always = yes }
 	remove_trigger = {
 		ROOT = {
-			NOT = { is_owned_by = HOL }
+			is_owned_by = INS
 		}
 	}
 
@@ -494,7 +494,7 @@ INS_swapraja_loyal_bali = { #State Modifier
 	enable = { always = yes }
 	remove_trigger = {
 		ROOT = {
-			NOT = { is_owned_by = HOL }
+			is_owned_by = INS
 		}
 	}
 
@@ -508,7 +508,7 @@ INS_swapraja_loyal_nusa_tenggara = { #State Modifier
 	enable = { always = yes }
 	remove_trigger = {
 		ROOT = {
-			NOT = { is_owned_by = HOL }
+			is_owned_by = INS
 		}
 	}
 
@@ -522,7 +522,7 @@ INS_swapraja_loyal_timor = { #State Modifier
 	enable = { always = yes }
 	remove_trigger = {
 		ROOT = {
-			NOT = { is_owned_by = HOL }
+			is_owned_by = INS
 		}
 	}
 
@@ -536,7 +536,7 @@ INS_swapraja_loyal_west_kalimantan = { #State Modifier
 	enable = { always = yes }
 	remove_trigger = {
 		ROOT = {
-			NOT = { is_owned_by = HOL }
+			is_owned_by = INS
 		}
 	}
 

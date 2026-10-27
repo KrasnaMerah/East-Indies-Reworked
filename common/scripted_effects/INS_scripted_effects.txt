@@ -1706,71 +1706,95 @@ indonesia_swapraja_lesser_sunda_to_INS = { #Moves the Lesser Sunda rulers from E
 		}
 	}
 }
-indonesia_swapraja_lesser_sunda_to_HOL = { #Moves the Lesser Sunda rulers from EIS to the Netherlands when they side with the Dutch
-	every_possible_country = {
+indonesia_swapraja_lesser_sunda_to_overlords = { #When the princes side against us, each Lesser Sunda ruler joins whoever holds his state; if we still hold it, he stays with EIS
+	if = {
 		limit = {
-			has_character = INS_lorenzo_iii
-		}
-		random_character = {
-			limit = {
-				is_character = INS_lorenzo_iii
+			667 = {
+				NOT = { is_owned_by = INS }
 			}
-			set_nationality = HOL
+		}
+		667 = {
+			owner = {
+				save_event_target_as = INS_swapraja_flores_overlord
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_lorenzo_iii
+			}
+			random_character = {
+				limit = {
+					is_character = INS_lorenzo_iii
+				}
+				set_nationality = event_target:INS_swapraja_flores_overlord
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_thomas_ximenes_da_silva
+			}
+			random_character = {
+				limit = {
+					is_character = INS_thomas_ximenes_da_silva
+				}
+				set_nationality = event_target:INS_swapraja_flores_overlord
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_alexander_baroek
+			}
+			random_character = {
+				limit = {
+					is_character = INS_alexander_baroek
+				}
+				set_nationality = event_target:INS_swapraja_flores_overlord
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_pius_rasi_wangge
+			}
+			random_character = {
+				limit = {
+					is_character = INS_pius_rasi_wangge
+				}
+				set_nationality = event_target:INS_swapraja_flores_overlord
+			}
 		}
 	}
-	every_possible_country = {
+	if = {
 		limit = {
-			has_character = INS_thomas_ximenes_da_silva
-		}
-		random_character = {
-			limit = {
-				is_character = INS_thomas_ximenes_da_silva
+			1054 = {
+				NOT = { is_owned_by = INS }
 			}
-			set_nationality = HOL
 		}
-	}
-	every_possible_country = {
-		limit = {
-			has_character = INS_alexander_baroek
-		}
-		random_character = {
-			limit = {
-				is_character = INS_alexander_baroek
+		1054 = {
+			owner = {
+				save_event_target_as = INS_swapraja_timor_overlord
 			}
-			set_nationality = HOL
 		}
-	}
-	every_possible_country = {
-		limit = {
-			has_character = INS_pius_rasi_wangge
-		}
-		random_character = {
+		every_possible_country = {
 			limit = {
-				is_character = INS_pius_rasi_wangge
+				has_character = INS_hendrick_arnold_toroh
 			}
-			set_nationality = HOL
+			random_character = {
+				limit = {
+					is_character = INS_hendrick_arnold_toroh
+				}
+				set_nationality = event_target:INS_swapraja_timor_overlord
+			}
 		}
-	}
-	every_possible_country = {
-		limit = {
-			has_character = INS_hendrick_arnold_toroh
-		}
-		random_character = {
+		every_possible_country = {
 			limit = {
-				is_character = INS_hendrick_arnold_toroh
+				has_character = INS_saul_we_tanya
 			}
-			set_nationality = HOL
-		}
-	}
-	every_possible_country = {
-		limit = {
-			has_character = INS_saul_we_tanya
-		}
-		random_character = {
-			limit = {
-				is_character = INS_saul_we_tanya
+			random_character = {
+				limit = {
+					is_character = INS_saul_we_tanya
+				}
+				set_nationality = event_target:INS_swapraja_timor_overlord
 			}
-			set_nationality = HOL
 		}
 	}
 }

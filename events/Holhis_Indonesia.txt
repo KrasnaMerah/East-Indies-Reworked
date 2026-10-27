@@ -17539,7 +17539,7 @@ country_event = { #Acquire trains
 	}
 }
 
-country_event = { #871 - The Swapraja side with the Netherlands
+country_event = { #871 - The Swapraja reaffirm their old allegiances
 	id = holhis_indonesia.871
 	title = holhis_indonesia.871.t
 	desc = holhis_indonesia.871.d
@@ -17549,215 +17549,303 @@ country_event = { #871 - The Swapraja side with the Netherlands
 
 	option = {
 		name = holhis_indonesia.871.a
+		set_country_flag = INS_swapraja_sided_dutch
+		custom_effect_tooltip = INS_swapraja_reaffirm_tt
+		# Where we hold the princes' lands, our overlord at independence (saved by Expel the Colonialists) takes them and our cores there are lost
 		if = {
 			limit = {
-				country_exists = HOL
+				has_country_flag = INS_swapraja_sided_dutch
 			}
-			HOL = {
-				if = { #East Sumatra
-					limit = {
-						1049 = { is_owned_by = ROOT }
-					}
+			if = { #East Sumatra
+				limit = {
+					1049 = { is_owned_by = ROOT }
+				}
+				event_target:INS_swapraja_old_overlord = {
 					transfer_state = 1049
 				}
-				if = { #Bali and Lombok
-					limit = {
-						1052 = { is_owned_by = ROOT }
-					}
+				1049 = {
+					remove_core_of = ROOT
+				}
+			}
+			if = { #Bali and Lombok
+				limit = {
+					1052 = { is_owned_by = ROOT }
+				}
+				event_target:INS_swapraja_old_overlord = {
 					transfer_state = 1052
 				}
-				if = { #Nusa Tenggara
-					limit = {
-						667 = { is_owned_by = ROOT }
-					}
+				1052 = {
+					remove_core_of = ROOT
+				}
+			}
+			if = { #Nusa Tenggara
+				limit = {
+					667 = { is_owned_by = ROOT }
+				}
+				event_target:INS_swapraja_old_overlord = {
 					transfer_state = 667
 				}
-				if = { #Dutch Timor
-					limit = {
-						1054 = { is_owned_by = ROOT }
-					}
+				667 = {
+					remove_core_of = ROOT
+				}
+			}
+			if = { #Dutch Timor
+				limit = {
+					1054 = { is_owned_by = ROOT }
+				}
+				event_target:INS_swapraja_old_overlord = {
 					transfer_state = 1054
 				}
-				if = { #West Kalimantan
-					limit = {
-						334 = { is_owned_by = ROOT }
-					}
+				1054 = {
+					remove_core_of = ROOT
+				}
+			}
+			if = { #West Kalimantan
+				limit = {
+					334 = { is_owned_by = ROOT }
+				}
+				event_target:INS_swapraja_old_overlord = {
 					transfer_state = 334
 				}
-			}
-		}
-		if = {
-			limit = {
-				country_exists = HOL
-			}
-			custom_effect_tooltip = INS_swapraja_dutch_levies_tt
-			hidden_effect = {
-				HOL = {
-					division_template = {
-						name = "Swapraja Levies"
-						priority = 1
-						division_names_group = HOL_INF_01
-						regiments = {
-							irregular_infantry = { x = 0 y = 0 }
-							irregular_infantry = { x = 0 y = 1 }
-							irregular_infantry = { x = 1 y = 0 }
-							irregular_infantry = { x = 1 y = 1 }
-						}
-					}
-					division_template = {
-						name = "Swapraja Mounted Levies"
-						priority = 1
-						division_names_group = HOL_INF_01
-						regiments = {
-							irregular_infantry = { x = 0 y = 0 }
-							irregular_infantry = { x = 0 y = 1 }
-							irregular_infantry = { x = 1 y = 0 }
-							cavalry = { x = 1 y = 1 }
-						}
-					}
-					1049 = { #East Sumatra
-						if = {
-							limit = {
-								is_owned_by = HOL
-							}
-							create_unit = {
-								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
-								owner = HOL
-							}
-							create_unit = {
-								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
-								owner = HOL
-							}
-						}
-					}
-					1052 = { #Bali and Lombok
-						if = {
-							limit = {
-								is_owned_by = HOL
-							}
-							create_unit = {
-								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
-								owner = HOL
-							}
-						}
-					}
-					667 = { #Nusa Tenggara
-						if = {
-							limit = {
-								is_owned_by = HOL
-							}
-							create_unit = {
-								division = "division_template = \"Swapraja Mounted Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
-								owner = HOL
-							}
-						}
-					}
-					1054 = { #Dutch Timor
-						if = {
-							limit = {
-								is_owned_by = HOL
-							}
-							create_unit = {
-								division = "division_template = \"Swapraja Mounted Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
-								owner = HOL
-							}
-						}
-					}
-					334 = { #West Kalimantan
-						if = {
-							limit = {
-								is_owned_by = HOL
-							}
-							create_unit = {
-								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
-								owner = HOL
-							}
-						}
-					}
+				334 = {
+					remove_core_of = ROOT
 				}
 			}
 		}
-		if = {
-			limit = {
-				country_exists = HOL
-			}
-			hidden_effect = {
-				indonesia_swapraja_lesser_sunda_to_HOL = yes
-			}
-		}
-		set_country_flag = INS_swapraja_sided_dutch
-		custom_effect_tooltip = INS_swapraja_loyal_tt
+		# Whoever now holds each state gets its princes' loyalty and levies
 		hidden_effect = {
-			1049 = {
+			1049 = { #East Sumatra
 				if = {
 					limit = {
-						is_owned_by = HOL
+						NOT = { is_owned_by = ROOT }
 					}
 					add_dynamic_modifier = {
 						modifier = INS_swapraja_loyal_east_sumatra
 					}
 					set_state_flag = INS_swapraja_loyal_to_crown
+					owner = {
+						if = {
+							limit = {
+								NOT = { has_country_flag = INS_swapraja_levy_templates }
+							}
+							division_template = {
+								name = "Swapraja Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									irregular_infantry = { x = 1 y = 1 }
+								}
+							}
+							division_template = {
+								name = "Swapraja Mounted Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									cavalry = { x = 1 y = 1 }
+								}
+							}
+							set_country_flag = INS_swapraja_levy_templates
+						}
+						1049 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+						1049 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+					}
 				}
 			}
-			1052 = {
+			1052 = { #Bali and Lombok
 				if = {
 					limit = {
-						is_owned_by = HOL
+						NOT = { is_owned_by = ROOT }
 					}
 					add_dynamic_modifier = {
 						modifier = INS_swapraja_loyal_bali
 					}
 					set_state_flag = INS_swapraja_loyal_to_crown
+					owner = {
+						if = {
+							limit = {
+								NOT = { has_country_flag = INS_swapraja_levy_templates }
+							}
+							division_template = {
+								name = "Swapraja Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									irregular_infantry = { x = 1 y = 1 }
+								}
+							}
+							division_template = {
+								name = "Swapraja Mounted Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									cavalry = { x = 1 y = 1 }
+								}
+							}
+							set_country_flag = INS_swapraja_levy_templates
+						}
+						1052 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+					}
 				}
 			}
-			667 = {
+			667 = { #Nusa Tenggara
 				if = {
 					limit = {
-						is_owned_by = HOL
+						NOT = { is_owned_by = ROOT }
 					}
 					add_dynamic_modifier = {
 						modifier = INS_swapraja_loyal_nusa_tenggara
 					}
 					set_state_flag = INS_swapraja_loyal_to_crown
+					owner = {
+						if = {
+							limit = {
+								NOT = { has_country_flag = INS_swapraja_levy_templates }
+							}
+							division_template = {
+								name = "Swapraja Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									irregular_infantry = { x = 1 y = 1 }
+								}
+							}
+							division_template = {
+								name = "Swapraja Mounted Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									cavalry = { x = 1 y = 1 }
+								}
+							}
+							set_country_flag = INS_swapraja_levy_templates
+						}
+						667 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Mounted Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+					}
 				}
 			}
-			1054 = {
+			1054 = { #Dutch Timor
 				if = {
 					limit = {
-						is_owned_by = HOL
+						NOT = { is_owned_by = ROOT }
 					}
 					add_dynamic_modifier = {
 						modifier = INS_swapraja_loyal_timor
 					}
 					set_state_flag = INS_swapraja_loyal_to_crown
+					owner = {
+						if = {
+							limit = {
+								NOT = { has_country_flag = INS_swapraja_levy_templates }
+							}
+							division_template = {
+								name = "Swapraja Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									irregular_infantry = { x = 1 y = 1 }
+								}
+							}
+							division_template = {
+								name = "Swapraja Mounted Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									cavalry = { x = 1 y = 1 }
+								}
+							}
+							set_country_flag = INS_swapraja_levy_templates
+						}
+						1054 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Mounted Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+					}
 				}
 			}
-			334 = {
+			334 = { #West Kalimantan
 				if = {
 					limit = {
-						is_owned_by = HOL
+						NOT = { is_owned_by = ROOT }
 					}
 					add_dynamic_modifier = {
 						modifier = INS_swapraja_loyal_west_kalimantan
 					}
 					set_state_flag = INS_swapraja_loyal_to_crown
+					owner = {
+						if = {
+							limit = {
+								NOT = { has_country_flag = INS_swapraja_levy_templates }
+							}
+							division_template = {
+								name = "Swapraja Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									irregular_infantry = { x = 1 y = 1 }
+								}
+							}
+							division_template = {
+								name = "Swapraja Mounted Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									cavalry = { x = 1 y = 1 }
+								}
+							}
+							set_country_flag = INS_swapraja_levy_templates
+						}
+						334 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+					}
 				}
 			}
-		}
-		1049 = { #East Sumatra
-			remove_core_of = ROOT
-		}
-		1052 = { #Bali and Lombok
-			remove_core_of = ROOT
-		}
-		667 = { #Nusa Tenggara
-			remove_core_of = ROOT
-		}
-		1054 = { #Dutch Timor
-			remove_core_of = ROOT
-		}
-		334 = { #West Kalimantan
-			remove_core_of = ROOT
+			indonesia_swapraja_lesser_sunda_to_overlords = yes
 		}
 	}
 }

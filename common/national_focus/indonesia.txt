@@ -12606,6 +12606,9 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				custom_effect_tooltip = INS_dutch_secure_outer_lands_tt
 				hidden_effect = {
+					overlord = {
+						save_global_event_target_as = INS_swapraja_old_overlord
+					}
 					country_event = { id = holhis_indonesia.871 }
 				}
 			}
