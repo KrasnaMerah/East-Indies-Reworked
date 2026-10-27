@@ -12612,7 +12612,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				custom_effect_tooltip = INS_dutch_secure_outer_lands_tt
 				hidden_effect = {
-					country_event = { id = holhis_indonesia.871 days = 1 }
+					country_event = { id = holhis_indonesia.871 }
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt

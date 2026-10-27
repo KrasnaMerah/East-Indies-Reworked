@@ -17549,23 +17549,6 @@ country_event = { #871 - The Swapraja side with the Netherlands
 
 	option = {
 		name = holhis_indonesia.871.a
-		custom_effect_tooltip = INS_swapraja_secured_tt
-		hidden_effect = {
-			country_event = { id = holhis_indonesia.872 days = 10 }
-		}
-	}
-}
-
-country_event = { #872 - The Dutch secure the outer princely lands
-	id = holhis_indonesia.872
-	title = holhis_indonesia.872.t
-	desc = holhis_indonesia.872.d
-	picture = GFX_report_event_ger_civil_war
-
-	is_triggered_only = yes
-
-	option = {
-		name = holhis_indonesia.872.a
 		if = {
 			limit = {
 				country_exists = HOL
