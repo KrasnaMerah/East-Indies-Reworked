@@ -12274,21 +12274,6 @@ focus_tree = {
 			else = {
 				add_stability = 0.05
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			1049 = { #Deli, Serdang, Asahan and Siak
-				add_resource = {
-					type = rubber
-					amount = 24
-				}
-			}
-			1055 = { #Kutai
-				add_resource = {
-					type = oil
-					amount = 10
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = INS_outer_lands_produce
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = INS_swapraja_joined_tt

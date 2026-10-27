@@ -374,3 +374,103 @@ INS_swapraja_savu = { #State Modifier
 	resistance_target = -0.05
 	recruitable_population_factor = 0.05
 }
+
+#	Timed state modifiers from the Swapraja decisions, 2 years each
+INS_swapraja_fisheries_larantuka_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_supplies = 0.1
+	recruitable_population_factor = 0.05
+	compliance_gain = 0.05
+}
+INS_swapraja_fisheries_ternate_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_supplies = 0.1
+	local_building_slots_factor = 0.05
+	compliance_gain = 0.05
+}
+INS_swapraja_copra_sikka_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_building_slots_factor = 0.1
+	state_production_speed_buildings_factor = 0.05
+	local_resources_factor = 0.1
+}
+INS_swapraja_coffee_manggarai_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_resources_factor = 0.1
+	state_production_speed_buildings_factor = 0.1
+	local_building_slots_factor = 0.05
+}
+INS_swapraja_horses_timor_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	recruitable_population_factor = 0.05
+	local_org_regain = 0.1
+	local_supplies = 0.05
+}
+INS_swapraja_plantations_east_sumatra_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_resources_factor = 0.2
+	state_production_speed_buildings_factor = 0.1
+}
+INS_swapraja_oil_kutai_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_resources_factor = 0.2
+	state_production_speed_buildings_factor = 0.1
+}
+INS_swapraja_kapuas_trade_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_resources_factor = 0.1
+	state_production_speed_buildings_factor = 0.1
+	local_building_slots_factor = 0.05
+}
+INS_swapraja_bali_subak_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_supplies = 0.1
+	recruitable_population_factor = 0.05
+	compliance_gain = 0.05
+}
+INS_swapraja_makassar_shipping_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_building_slots_factor = 0.1
+	local_supplies = 0.05
+	state_production_speed_buildings_factor = 0.05
+}
+INS_swapraja_ende_market_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	compliance_gain = 0.05
+	local_building_slots_factor = 0.05
+	local_resources_factor = 0.1
+	state_production_speed_buildings_factor = 0.05
+}
