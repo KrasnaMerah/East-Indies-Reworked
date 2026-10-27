@@ -1107,6 +1107,27 @@ ideas = {
 			}
 		}
 
+		INS_outer_lands_produce = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = bul_tobacco_exports
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				trade_opinion_factor = 0.1
+				supply_consumption_factor = -0.05
+				army_speed_factor = 0.03
+			}
+		}
+
 		INS_reappropriation_idea = {
 			allowed = {
 				always = no
