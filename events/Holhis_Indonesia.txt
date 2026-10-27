@@ -17639,16 +17639,6 @@ country_event = { #871 - The Swapraja reaffirm their old allegiances
 									irregular_infantry = { x = 1 y = 1 }
 								}
 							}
-							division_template = {
-								name = "Swapraja Mounted Levies"
-								priority = 1
-								regiments = {
-									irregular_infantry = { x = 0 y = 0 }
-									irregular_infantry = { x = 0 y = 1 }
-									irregular_infantry = { x = 1 y = 0 }
-									cavalry = { x = 1 y = 1 }
-								}
-							}
 							set_country_flag = INS_swapraja_levy_templates
 						}
 						1049 = {
@@ -17690,16 +17680,6 @@ country_event = { #871 - The Swapraja reaffirm their old allegiances
 									irregular_infantry = { x = 1 y = 1 }
 								}
 							}
-							division_template = {
-								name = "Swapraja Mounted Levies"
-								priority = 1
-								regiments = {
-									irregular_infantry = { x = 0 y = 0 }
-									irregular_infantry = { x = 0 y = 1 }
-									irregular_infantry = { x = 1 y = 0 }
-									cavalry = { x = 1 y = 1 }
-								}
-							}
 							set_country_flag = INS_swapraja_levy_templates
 						}
 						1052 = {
@@ -17735,21 +17715,11 @@ country_event = { #871 - The Swapraja reaffirm their old allegiances
 									irregular_infantry = { x = 1 y = 1 }
 								}
 							}
-							division_template = {
-								name = "Swapraja Mounted Levies"
-								priority = 1
-								regiments = {
-									irregular_infantry = { x = 0 y = 0 }
-									irregular_infantry = { x = 0 y = 1 }
-									irregular_infantry = { x = 1 y = 0 }
-									cavalry = { x = 1 y = 1 }
-								}
-							}
 							set_country_flag = INS_swapraja_levy_templates
 						}
 						667 = {
 							create_unit = {
-								division = "division_template = \"Swapraja Mounted Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
 								owner = PREV
 							}
 						}
@@ -17780,21 +17750,11 @@ country_event = { #871 - The Swapraja reaffirm their old allegiances
 									irregular_infantry = { x = 1 y = 1 }
 								}
 							}
-							division_template = {
-								name = "Swapraja Mounted Levies"
-								priority = 1
-								regiments = {
-									irregular_infantry = { x = 0 y = 0 }
-									irregular_infantry = { x = 0 y = 1 }
-									irregular_infantry = { x = 1 y = 0 }
-									cavalry = { x = 1 y = 1 }
-								}
-							}
 							set_country_flag = INS_swapraja_levy_templates
 						}
 						1054 = {
 							create_unit = {
-								division = "division_template = \"Swapraja Mounted Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
 								owner = PREV
 							}
 						}
@@ -17823,16 +17783,6 @@ country_event = { #871 - The Swapraja reaffirm their old allegiances
 									irregular_infantry = { x = 0 y = 1 }
 									irregular_infantry = { x = 1 y = 0 }
 									irregular_infantry = { x = 1 y = 1 }
-								}
-							}
-							division_template = {
-								name = "Swapraja Mounted Levies"
-								priority = 1
-								regiments = {
-									irregular_infantry = { x = 0 y = 0 }
-									irregular_infantry = { x = 0 y = 1 }
-									irregular_infantry = { x = 1 y = 0 }
-									cavalry = { x = 1 y = 1 }
 								}
 							}
 							set_country_flag = INS_swapraja_levy_templates
