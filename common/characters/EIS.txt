@@ -34,6 +34,7 @@ characters = {
 					NOT = {
 						has_completed_focus = INS_nusantara_accord
 					}
+					has_country_flag = INS_swapraja_joined
 				}
 			}
 			traits = {
@@ -75,6 +76,7 @@ characters = {
 					NOT = {
 						has_completed_focus = INS_nusantara_accord
 					}
+					has_country_flag = INS_swapraja_joined
 				}
 				date > 1946.7.24
 			}
@@ -124,6 +126,12 @@ characters = {
 					}
 				}
 				is_country_leader = no
+				if = {
+					limit = {
+						tag = INS
+					}
+					has_country_flag = INS_swapraja_joined
+				}
 			}
 			available = {
 				
@@ -131,7 +139,7 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_country_flag = INS_swapraja_joined
+						INS = { has_country_flag = INS_swapraja_joined }
 						1052 = { is_owned_by = ROOT }
 					}
 					1052 = {
@@ -168,10 +176,18 @@ characters = {
 			cost = 150
 			idea_token = INS_lorenzo_iii
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = EIS
+				}
 			}
 			visible = {
-				has_country_flag = INS_swapraja_joined
+				if = {
+					limit = {
+						tag = INS
+					}
+					has_country_flag = INS_swapraja_joined
+				}
 			}
 			available = {
 			}
@@ -214,10 +230,18 @@ characters = {
 			cost = 150
 			idea_token = INS_thomas_ximenes_da_silva
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = EIS
+				}
 			}
 			visible = {
-				has_country_flag = INS_swapraja_joined
+				if = {
+					limit = {
+						tag = INS
+					}
+					has_country_flag = INS_swapraja_joined
+				}
 			}
 			available = {
 			}
@@ -260,10 +284,18 @@ characters = {
 			cost = 150
 			idea_token = INS_alexander_baroek
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = EIS
+				}
 			}
 			visible = {
-				has_country_flag = INS_swapraja_joined
+				if = {
+					limit = {
+						tag = INS
+					}
+					has_country_flag = INS_swapraja_joined
+				}
 			}
 			available = {
 			}
@@ -306,10 +338,18 @@ characters = {
 			cost = 150
 			idea_token = INS_pius_rasi_wangge
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = EIS
+				}
 			}
 			visible = {
-				has_country_flag = INS_swapraja_joined
+				if = {
+					limit = {
+						tag = INS
+					}
+					has_country_flag = INS_swapraja_joined
+				}
 			}
 			available = {
 			}
@@ -352,10 +392,18 @@ characters = {
 			cost = 150
 			idea_token = INS_hendrick_arnold_toroh
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = EIS
+				}
 			}
 			visible = {
-				has_country_flag = INS_swapraja_joined
+				if = {
+					limit = {
+						tag = INS
+					}
+					has_country_flag = INS_swapraja_joined
+				}
 			}
 			available = {
 			}
@@ -398,10 +446,18 @@ characters = {
 			cost = 150
 			idea_token = INS_saul_we_tanya
 			allowed = {
-				original_tag = INS
+				OR = {
+					original_tag = INS
+					original_tag = EIS
+				}
 			}
 			visible = {
-				has_country_flag = INS_swapraja_joined
+				if = {
+					limit = {
+						tag = INS
+					}
+					has_country_flag = INS_swapraja_joined
+				}
 			}
 			available = {
 			}

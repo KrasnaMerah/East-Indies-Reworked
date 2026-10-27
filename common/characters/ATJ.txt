@@ -95,12 +95,12 @@ characters = {
 				is_country_leader = no
 			}
 			available = {
-				
+				is_country_leader = no
 			}
 			on_add = {
 				if = {
 					limit = {
-						has_country_flag = INS_swapraja_joined
+						INS = { has_country_flag = INS_swapraja_joined }
 						1049 = { is_owned_by = ROOT }
 					}
 					1049 = {

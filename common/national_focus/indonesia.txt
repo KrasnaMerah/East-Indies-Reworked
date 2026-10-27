@@ -13521,7 +13521,7 @@ focus_tree = {
 		id = INS_secure_eastern_indonesia
 		icon = GFX_focus_ins_wallacea_sahul
 		prerequisite = { focus = INS_liberate_malaya }
-		mutually_exclusive = { focus = INS_claims_in_the_indian }
+		mutually_exclusive = { focus = INS_avenge_chola_invasion }
 
 		relative_position_id = INS_liberate_malaya
 		x = 1
@@ -13826,7 +13826,7 @@ focus_tree = {
 	focus = {
 		id = INS_exploit_resources
 		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = INS_claims_in_the_indian focus = INS_secure_eastern_indonesia }
+		prerequisite = { focus = INS_avenge_chola_invasion focus = INS_secure_eastern_indonesia }
 
 		relative_position_id = INS_liberate_malaya
 		x = 0

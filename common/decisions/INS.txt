@@ -46,6 +46,52 @@ debug_decisions = {
 		}
 	}
 
+	INS_switch_to_ATJ = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = ATJ
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			ATJ = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_SSI = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = SSI
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			SSI = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
 	INS_switch_to_JVA = {
 
 		allowed = {
@@ -64,6 +110,213 @@ debug_decisions = {
 
 		complete_effect = {
 			JVA = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_EIS = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = EIS
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			EIS = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_TML = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = TML
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			TML = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_POK = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = POK
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			POK = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_KUT = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = KUT
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			KUT = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_MNH = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = MNH
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			MNH = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_GOW = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = GOW
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			GOW = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_MLK = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = MLK
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			MLK = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_TNE = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = TNE
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			TNE = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_WPG = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = WPG
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			WPG = {
 				change_tag_from = ROOT
 			}
 		}
@@ -758,7 +1011,7 @@ INS_category_volksraad = {
 						name_order = 1
 					}
 					division_template = \"KNIL Stadswacht\"
-					start_experience_factor = 0.7" 
+					start_experience_factor = 0.7
 					start_equipment_factor = 0.01
 					owner = ROOT
 					count = 1
@@ -816,7 +1069,7 @@ INS_category_volksraad = {
 						name_order = 1
 					}
 					division_template = \"KNIL Landwacht\"
-					start_experience_factor = 0.7" 
+					start_experience_factor = 0.7 
 					start_equipment_factor = 0.01
 					owner = ROOT
 					count = 1
