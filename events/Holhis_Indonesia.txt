@@ -17538,3 +17538,85 @@ country_event = { #Acquire trains
 		}
 	}
 }
+
+country_event = { #855 - The Swapraja side with the Netherlands
+	id = holhis_indonesia.855
+	title = holhis_indonesia.855.t
+	desc = holhis_indonesia.855.d
+	picture = GFX_report_event_generic_sign_treaty
+
+	is_triggered_only = yes
+
+	option = {
+		name = holhis_indonesia.855.a
+		custom_effect_tooltip = INS_swapraja_secured_tt
+		hidden_effect = {
+			country_event = { id = holhis_indonesia.856 days = 10 }
+		}
+	}
+}
+
+country_event = { #856 - The Dutch secure the outer princely lands
+	id = holhis_indonesia.856
+	title = holhis_indonesia.856.t
+	desc = holhis_indonesia.856.d
+	picture = GFX_report_event_ger_civil_war
+
+	is_triggered_only = yes
+
+	option = {
+		name = holhis_indonesia.856.a
+		if = {
+			limit = {
+				country_exists = HOL
+			}
+			HOL = {
+				if = { #East Sumatra
+					limit = {
+						1049 = { is_owned_by = ROOT }
+					}
+					transfer_state = 1049
+				}
+				if = { #Bali and Lombok
+					limit = {
+						1052 = { is_owned_by = ROOT }
+					}
+					transfer_state = 1052
+				}
+				if = { #Nusa Tenggara
+					limit = {
+						667 = { is_owned_by = ROOT }
+					}
+					transfer_state = 667
+				}
+				if = { #Dutch Timor
+					limit = {
+						1054 = { is_owned_by = ROOT }
+					}
+					transfer_state = 1054
+				}
+				if = { #West Kalimantan
+					limit = {
+						334 = { is_owned_by = ROOT }
+					}
+					transfer_state = 334
+				}
+			}
+		}
+		1049 = { #East Sumatra
+			remove_core_of = ROOT
+		}
+		1052 = { #Bali and Lombok
+			remove_core_of = ROOT
+		}
+		667 = { #Nusa Tenggara
+			remove_core_of = ROOT
+		}
+		1054 = { #Dutch Timor
+			remove_core_of = ROOT
+		}
+		334 = { #West Kalimantan
+			remove_core_of = ROOT
+		}
+	}
+}

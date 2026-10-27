@@ -12611,6 +12611,9 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				custom_effect_tooltip = INS_dutch_secure_outer_lands_tt
+				hidden_effect = {
+					country_event = { id = holhis_indonesia.855 days = 1 }
+				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -12623,45 +12626,6 @@ focus_tree = {
 							original_tag = INS
 						}
 						has_subject = INS
-					}
-					if = {
-						limit = {
-							ROOT = {
-								NOT = { has_completed_focus = INS_convince_outer_princes }
-							}
-						}
-						hidden_effect = {
-							if = { #East Sumatra
-								limit = {
-									1049 = { is_owned_by = ROOT }
-								}
-								transfer_state = 1049
-							}
-							if = { #Bali and Lombok
-								limit = {
-									1052 = { is_owned_by = ROOT }
-								}
-								transfer_state = 1052
-							}
-							if = { #Nusa Tenggara
-								limit = {
-									667 = { is_owned_by = ROOT }
-								}
-								transfer_state = 667
-							}
-							if = { #Dutch Timor
-								limit = {
-									1054 = { is_owned_by = ROOT }
-								}
-								transfer_state = 1054
-							}
-							if = { #West Kalimantan
-								limit = {
-									334 = { is_owned_by = ROOT }
-								}
-								transfer_state = 334
-							}
-						}
 					}
 					set_autonomy = {
 						target = INS
