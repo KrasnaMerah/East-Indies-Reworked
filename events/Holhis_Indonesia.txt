@@ -17677,6 +17677,14 @@ country_event = { #871 - The Swapraja side with the Netherlands
 				}
 			}
 		}
+		if = {
+			limit = {
+				country_exists = HOL
+			}
+			hidden_effect = {
+				indonesia_swapraja_lesser_sunda_to_HOL = yes
+			}
+		}
 		set_country_flag = INS_swapraja_sided_dutch
 		custom_effect_tooltip = INS_swapraja_loyal_tt
 		hidden_effect = {

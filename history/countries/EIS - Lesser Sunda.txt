@@ -1,5 +1,12 @@
 ﻿capital = 1052 #Bali
 
+recruit_character = INS_lorenzo_iii
+recruit_character = INS_thomas_ximenes_da_silva
+recruit_character = INS_alexander_baroek
+recruit_character = INS_pius_rasi_wangge
+recruit_character = INS_hendrick_arnold_toroh
+recruit_character = INS_saul_we_tanya
+
 set_research_slots = 2
 
 set_stability = 0.6

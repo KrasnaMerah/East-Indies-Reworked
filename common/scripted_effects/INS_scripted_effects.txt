@@ -1638,6 +1638,142 @@ indonesia_transfer_POK = {
 	}
 }
 
+indonesia_swapraja_lesser_sunda_to_INS = { #Moves the Lesser Sunda rulers from EIS to Indonesia at the revolution
+	every_possible_country = {
+		limit = {
+			has_character = INS_lorenzo_iii
+		}
+		random_character = {
+			limit = {
+				is_character = INS_lorenzo_iii
+			}
+			set_nationality = INS
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = INS_thomas_ximenes_da_silva
+		}
+		random_character = {
+			limit = {
+				is_character = INS_thomas_ximenes_da_silva
+			}
+			set_nationality = INS
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = INS_alexander_baroek
+		}
+		random_character = {
+			limit = {
+				is_character = INS_alexander_baroek
+			}
+			set_nationality = INS
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = INS_pius_rasi_wangge
+		}
+		random_character = {
+			limit = {
+				is_character = INS_pius_rasi_wangge
+			}
+			set_nationality = INS
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = INS_hendrick_arnold_toroh
+		}
+		random_character = {
+			limit = {
+				is_character = INS_hendrick_arnold_toroh
+			}
+			set_nationality = INS
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = INS_saul_we_tanya
+		}
+		random_character = {
+			limit = {
+				is_character = INS_saul_we_tanya
+			}
+			set_nationality = INS
+		}
+	}
+}
+indonesia_swapraja_lesser_sunda_to_HOL = { #Moves the Lesser Sunda rulers from EIS to the Netherlands when they side with the Dutch
+	every_possible_country = {
+		limit = {
+			has_character = INS_lorenzo_iii
+		}
+		random_character = {
+			limit = {
+				is_character = INS_lorenzo_iii
+			}
+			set_nationality = HOL
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = INS_thomas_ximenes_da_silva
+		}
+		random_character = {
+			limit = {
+				is_character = INS_thomas_ximenes_da_silva
+			}
+			set_nationality = HOL
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = INS_alexander_baroek
+		}
+		random_character = {
+			limit = {
+				is_character = INS_alexander_baroek
+			}
+			set_nationality = HOL
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = INS_pius_rasi_wangge
+		}
+		random_character = {
+			limit = {
+				is_character = INS_pius_rasi_wangge
+			}
+			set_nationality = HOL
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = INS_hendrick_arnold_toroh
+		}
+		random_character = {
+			limit = {
+				is_character = INS_hendrick_arnold_toroh
+			}
+			set_nationality = HOL
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = INS_saul_we_tanya
+		}
+		random_character = {
+			limit = {
+				is_character = INS_saul_we_tanya
+			}
+			set_nationality = HOL
+		}
+	}
+}
 indonesia_transfer_KUT = {
 	if = {
 		limit = {

@@ -12281,12 +12281,6 @@ focus_tree = {
 			hidden_effect = {
 				indonesia_princely_advisors_effect_no_atjeh = yes
 				indonesia_transfer_KUT = yes
-				recruit_character = INS_lorenzo_iii
-				recruit_character = INS_thomas_ximenes_da_silva
-				recruit_character = INS_alexander_baroek
-				recruit_character = INS_pius_rasi_wangge
-				recruit_character = INS_hendrick_arnold_toroh
-				recruit_character = INS_saul_we_tanya
 			}
 			if = {
 				limit = {
@@ -12620,8 +12614,10 @@ focus_tree = {
 					has_country_flag = INS_swapraja_joined
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = INS_swapraja_rajas_join_tt
 				custom_effect_tooltip = INS_swapraja_levies_tt
 				hidden_effect = {
+					indonesia_swapraja_lesser_sunda_to_INS = yes
 					division_template = {
 						name = "Laskar Swapraja"
 						priority = 1

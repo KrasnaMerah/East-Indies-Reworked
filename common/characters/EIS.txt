@@ -153,4 +153,283 @@ characters = {
 			}
 		}
 	}
+
+	# Swapraja rulers of the Lesser Sundas. They start with EIS and move to Indonesia or the Netherlands at the revolution,
+	# depending on whether Convince the Outer Princes was completed
+	INS_lorenzo_iii = {
+		name = INS_lorenzo_iii
+		portraits = {
+			civilian = {
+				large = GFX_portrait_unknown
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			idea_token = INS_lorenzo_iii
+			allowed = {
+				original_tag = INS
+			}
+			visible = {
+				has_country_flag = INS_swapraja_joined
+			}
+			available = {
+			}
+			on_add = {
+				if = {
+					limit = {
+						667 = { is_owned_by = ROOT }
+					}
+					667 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_larantuka
+						}
+					}
+				}
+			}
+			on_remove = {
+				667 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_larantuka
+					}
+				}
+			}
+			traits = {
+				compassionate_gentleman
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	INS_thomas_ximenes_da_silva = {
+		name = INS_thomas_ximenes_da_silva
+		portraits = {
+			civilian = {
+				large = GFX_portrait_unknown
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			idea_token = INS_thomas_ximenes_da_silva
+			allowed = {
+				original_tag = INS
+			}
+			visible = {
+				has_country_flag = INS_swapraja_joined
+			}
+			available = {
+			}
+			on_add = {
+				if = {
+					limit = {
+						667 = { is_owned_by = ROOT }
+					}
+					667 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_sikka
+						}
+					}
+				}
+			}
+			on_remove = {
+				667 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_sikka
+					}
+				}
+			}
+			traits = {
+				silent_workhorse
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	INS_alexander_baroek = {
+		name = INS_alexander_baroek
+		portraits = {
+			civilian = {
+				large = GFX_portrait_unknown
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			idea_token = INS_alexander_baroek
+			allowed = {
+				original_tag = INS
+			}
+			visible = {
+				has_country_flag = INS_swapraja_joined
+			}
+			available = {
+			}
+			on_add = {
+				if = {
+					limit = {
+						667 = { is_owned_by = ROOT }
+					}
+					667 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_manggarai
+						}
+					}
+				}
+			}
+			on_remove = {
+				667 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_manggarai
+					}
+				}
+			}
+			traits = {
+				war_industrialist
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	INS_pius_rasi_wangge = {
+		name = INS_pius_rasi_wangge
+		portraits = {
+			civilian = {
+				large = GFX_portrait_unknown
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			idea_token = INS_pius_rasi_wangge
+			allowed = {
+				original_tag = INS
+			}
+			visible = {
+				has_country_flag = INS_swapraja_joined
+			}
+			available = {
+			}
+			on_add = {
+				if = {
+					limit = {
+						667 = { is_owned_by = ROOT }
+					}
+					667 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_lio
+						}
+					}
+				}
+			}
+			on_remove = {
+				667 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_lio
+					}
+				}
+			}
+			traits = {
+				financial_expert
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	INS_hendrick_arnold_toroh = {
+		name = INS_hendrick_arnold_toroh
+		portraits = {
+			civilian = {
+				large = GFX_portrait_unknown
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			idea_token = INS_hendrick_arnold_toroh
+			allowed = {
+				original_tag = INS
+			}
+			visible = {
+				has_country_flag = INS_swapraja_joined
+			}
+			available = {
+			}
+			on_add = {
+				if = {
+					limit = {
+						1054 = { is_owned_by = ROOT }
+					}
+					1054 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_amarasi
+						}
+					}
+				}
+			}
+			on_remove = {
+				1054 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_amarasi
+					}
+				}
+			}
+			traits = {
+				captain_of_industry
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	INS_saul_we_tanya = {
+		name = INS_saul_we_tanya
+		portraits = {
+			civilian = {
+				large = GFX_portrait_unknown
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			idea_token = INS_saul_we_tanya
+			allowed = {
+				original_tag = INS
+			}
+			visible = {
+				has_country_flag = INS_swapraja_joined
+			}
+			available = {
+			}
+			on_add = {
+				if = {
+					limit = {
+						1054 = { is_owned_by = ROOT }
+					}
+					1054 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_savu
+						}
+					}
+				}
+			}
+			on_remove = {
+				1054 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_savu
+					}
+				}
+			}
+			traits = {
+				democratic_reformer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 }
