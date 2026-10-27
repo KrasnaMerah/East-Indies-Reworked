@@ -14706,9 +14706,13 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_completed_focus = INS_convince_princes
+				has_country_flag = INS_swapraja_joined
+			}
 		}
 		available = {
+			has_country_flag = INS_swapraja_joined
 			has_idea = INS_lorenzo_iii
 			667 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -14733,9 +14737,13 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_completed_focus = INS_convince_princes
+				has_country_flag = INS_swapraja_joined
+			}
 		}
 		available = {
+			has_country_flag = INS_swapraja_joined
 			has_idea = INS_iskandar_sjah
 			1082 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -14760,9 +14768,13 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_completed_focus = INS_convince_princes
+				has_country_flag = INS_swapraja_joined
+			}
 		}
 		available = {
+			has_country_flag = INS_swapraja_joined
 			has_idea = INS_thomas_ximenes_da_silva
 			667 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -14787,9 +14799,13 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_completed_focus = INS_convince_princes
+				has_country_flag = INS_swapraja_joined
+			}
 		}
 		available = {
+			has_country_flag = INS_swapraja_joined
 			has_idea = INS_alexander_baroek
 			667 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -14814,9 +14830,13 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_completed_focus = INS_convince_princes
+				has_country_flag = INS_swapraja_joined
+			}
 		}
 		available = {
+			has_country_flag = INS_swapraja_joined
 			OR = {
 				has_idea = INS_hendrick_arnold_toroh
 				has_idea = INS_saul_we_tanya
@@ -14844,9 +14864,13 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_completed_focus = INS_convince_princes
+				has_country_flag = INS_swapraja_joined
+			}
 		}
 		available = {
+			has_country_flag = INS_swapraja_joined
 			has_idea = INS_syarif_kasim
 			1049 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -14875,9 +14899,13 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_completed_focus = INS_convince_princes
+				has_country_flag = INS_swapraja_joined
+			}
 		}
 		available = {
+			has_country_flag = INS_swapraja_joined
 			has_idea = KUT_ali_muhammad_parikesit
 			1055 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -14906,9 +14934,13 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_completed_focus = INS_convince_princes
+				has_country_flag = INS_swapraja_joined
+			}
 		}
 		available = {
+			has_country_flag = INS_swapraja_joined
 			has_idea = KLM_mohammad_yusuf_alqadri
 			334 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -14933,9 +14965,13 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_completed_focus = INS_convince_princes
+				has_country_flag = INS_swapraja_joined
+			}
 		}
 		available = {
+			has_country_flag = INS_swapraja_joined
 			has_idea = INS_dewa_geg
 			1052 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -14960,9 +14996,13 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_completed_focus = INS_convince_princes
+				has_country_flag = INS_swapraja_joined
+			}
 		}
 		available = {
+			has_country_flag = INS_swapraja_joined
 			has_idea = INS_sultan_muhibuddin
 			673 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -14987,9 +15027,13 @@ INS_swapraja_cat = {
 			original_tag = INS
 		}
 		visible = {
-			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_completed_focus = INS_convince_princes
+				has_country_flag = INS_swapraja_joined
+			}
 		}
 		available = {
+			has_country_flag = INS_swapraja_joined
 			has_idea = INS_pius_rasi_wangge
 			667 = { is_owned_and_controlled_by = ROOT }
 		}
