@@ -373,6 +373,8 @@ INS_swapraja_joined_tt:0 "§GIf this focus is completed before the revolution, t
 INS_swapraja_not_joined_tt:0 "§RIf this focus is not completed before the revolution fires, the princes will side with the Netherlands. Soon after, the Dutch will secure§! §Y[1049.GetName]§!, §Y[1052.GetName]§!, §Y[667.GetName]§!, §Y[1054.GetName]§! §Rand§! §Y[334.GetName]§!§R, and our cores on them will be lost.§!"
 INS_dutch_secure_outer_lands_tt:0 "§RThe princes of the Swapraja did not join us and will side with the Netherlands. Soon after, the Dutch will secure§! §Y[1049.GetName]§!, §Y[1052.GetName]§!, §Y[667.GetName]§!, §Y[1054.GetName]§! §Rand§! §Y[334.GetName]§!§R, and our cores on them will be lost.§!"
 INS_swapraja_secured_tt:0 "§RIn 10 days, the Dutch will secure§! §Y[1049.GetName]§!, §Y[1052.GetName]§!, §Y[667.GetName]§!, §Y[1054.GetName]§! §Rand§! §Y[334.GetName]§!§R, and our cores on them will be lost.§!"
+INS_swapraja_loyal_tt:0 "While the Netherlands holds these states, their loyal rulers give it §Ycore-like benefits§! there: §G+50%§! non-core manpower, §G+0.1§! local supplies and §G+10%§! defence. The benefits end as soon as anyone else takes the state."
+INS_swapraja_fallen_tt:0 "The loyal rulers have fallen with the Dutch. Their benefits are gone, and this state stays §Rnon-core§! for us."
 INS_convince_partindo:0 "Convince ex-Partindo Members"
 INS_convince_partindo_desc:0 "With the Partindo dissolved by its own leaders in 1936, its former members are left without a home. Many of them remain loyal to the radical ideas of Sukarno, but with the right promises they could be brought into our ranks."
 INS_reunify_pppki:0 "Reunify the PPPKI"

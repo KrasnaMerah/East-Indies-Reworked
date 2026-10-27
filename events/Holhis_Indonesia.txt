@@ -17603,6 +17603,65 @@ country_event = { #856 - The Dutch secure the outer princely lands
 				}
 			}
 		}
+		set_country_flag = INS_swapraja_sided_dutch
+		custom_effect_tooltip = INS_swapraja_loyal_tt
+		hidden_effect = {
+			1049 = {
+				if = {
+					limit = {
+						is_owned_by = HOL
+					}
+					add_dynamic_modifier = {
+						modifier = INS_swapraja_loyal_east_sumatra
+					}
+					set_state_flag = INS_swapraja_loyal_to_crown
+				}
+			}
+			1052 = {
+				if = {
+					limit = {
+						is_owned_by = HOL
+					}
+					add_dynamic_modifier = {
+						modifier = INS_swapraja_loyal_bali
+					}
+					set_state_flag = INS_swapraja_loyal_to_crown
+				}
+			}
+			667 = {
+				if = {
+					limit = {
+						is_owned_by = HOL
+					}
+					add_dynamic_modifier = {
+						modifier = INS_swapraja_loyal_nusa_tenggara
+					}
+					set_state_flag = INS_swapraja_loyal_to_crown
+				}
+			}
+			1054 = {
+				if = {
+					limit = {
+						is_owned_by = HOL
+					}
+					add_dynamic_modifier = {
+						modifier = INS_swapraja_loyal_timor
+					}
+					set_state_flag = INS_swapraja_loyal_to_crown
+				}
+			}
+			334 = {
+				if = {
+					limit = {
+						is_owned_by = HOL
+					}
+					add_dynamic_modifier = {
+						modifier = INS_swapraja_loyal_west_kalimantan
+					}
+					set_state_flag = INS_swapraja_loyal_to_crown
+				}
+			}
+		}
 		1049 = { #East Sumatra
 			remove_core_of = ROOT
 		}
@@ -17618,5 +17677,130 @@ country_event = { #856 - The Dutch secure the outer princely lands
 		334 = { #West Kalimantan
 			remove_core_of = ROOT
 		}
+	}
+}
+
+country_event = { #857 - The Sultanates of the East Coast Fall
+	id = holhis_indonesia.857
+	title = holhis_indonesia.857.t
+	desc = holhis_indonesia.857.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = INS
+		has_country_flag = INS_swapraja_sided_dutch
+		1049 = {
+			is_owned_by = ROOT
+			has_state_flag = INS_swapraja_loyal_to_crown
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = holhis_indonesia.857.a
+		custom_effect_tooltip = INS_swapraja_fallen_tt
+	}
+}
+
+country_event = { #858 - The Rajas of Bali Fall
+	id = holhis_indonesia.858
+	title = holhis_indonesia.858.t
+	desc = holhis_indonesia.858.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = INS
+		has_country_flag = INS_swapraja_sided_dutch
+		1052 = {
+			is_owned_by = ROOT
+			has_state_flag = INS_swapraja_loyal_to_crown
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = holhis_indonesia.858.a
+		custom_effect_tooltip = INS_swapraja_fallen_tt
+	}
+}
+
+country_event = { #859 - The Rajas of the Lesser Sundas Fall
+	id = holhis_indonesia.859
+	title = holhis_indonesia.859.t
+	desc = holhis_indonesia.859.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = INS
+		has_country_flag = INS_swapraja_sided_dutch
+		667 = {
+			is_owned_by = ROOT
+			has_state_flag = INS_swapraja_loyal_to_crown
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = holhis_indonesia.859.a
+		custom_effect_tooltip = INS_swapraja_fallen_tt
+	}
+}
+
+country_event = { #860 - The Rajas of Timor Fall
+	id = holhis_indonesia.860
+	title = holhis_indonesia.860.t
+	desc = holhis_indonesia.860.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = INS
+		has_country_flag = INS_swapraja_sided_dutch
+		1054 = {
+			is_owned_by = ROOT
+			has_state_flag = INS_swapraja_loyal_to_crown
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = holhis_indonesia.860.a
+		custom_effect_tooltip = INS_swapraja_fallen_tt
+	}
+}
+
+country_event = { #861 - The Sultanates of West Borneo Fall
+	id = holhis_indonesia.861
+	title = holhis_indonesia.861.t
+	desc = holhis_indonesia.861.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = INS
+		has_country_flag = INS_swapraja_sided_dutch
+		334 = {
+			is_owned_by = ROOT
+			has_state_flag = INS_swapraja_loyal_to_crown
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = holhis_indonesia.861.a
+		custom_effect_tooltip = INS_swapraja_fallen_tt
 	}
 }
