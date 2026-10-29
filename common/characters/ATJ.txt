@@ -95,7 +95,27 @@ characters = {
 				is_country_leader = no
 			}
 			available = {
-				
+				is_country_leader = no
+			}
+			on_add = {
+				if = {
+					limit = {
+						INS = { has_country_flag = INS_swapraja_joined }
+						1049 = { is_owned_by = ROOT }
+					}
+					1049 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_siak
+						}
+					}
+				}
+			}
+			on_remove = {
+				1049 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_siak
+					}
+				}
 			}
 			traits = {
 				INS_the_sultan_schoolmaster_of_siak

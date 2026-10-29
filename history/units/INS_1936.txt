@@ -52,6 +52,7 @@ division_template={
 division_template={
 	name="KNIL Garrison Division"
 	division_names_group = INS_colonial_garrison_division
+	
 	regiments={
 		infantry={ x=0 y=0 }
 		infantry={ x=0 y=1 }

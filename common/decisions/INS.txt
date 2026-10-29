@@ -46,6 +46,52 @@ debug_decisions = {
 		}
 	}
 
+	INS_switch_to_ATJ = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = ATJ
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			ATJ = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_SSI = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = SSI
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			SSI = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
 	INS_switch_to_JVA = {
 
 		allowed = {
@@ -64,6 +110,213 @@ debug_decisions = {
 
 		complete_effect = {
 			JVA = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_EIS = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = EIS
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			EIS = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_TML = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = TML
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			TML = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_POK = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = POK
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			POK = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_KUT = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = KUT
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			KUT = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_MNH = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = MNH
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			MNH = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_GOW = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = GOW
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			GOW = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_MLK = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = MLK
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			MLK = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_TNE = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = TNE
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			TNE = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	INS_switch_to_WPG = {
+
+		allowed = {
+			OR = {
+				is_asean_state = yes
+				original_tag = HOL
+			}
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			country_exists = WPG
+			date < 1936.01.07
+		}
+
+		complete_effect = {
+			WPG = {
 				change_tag_from = ROOT
 			}
 		}
@@ -707,6 +960,123 @@ INS_category_volksraad = {
 		}
 
 		fire_only_once = yes
+	}
+
+	INS_raise_stadswacht = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = INS
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		visible = {
+			NOT = {
+				has_completed_focus = INS_discourage_democratic_reforms
+			}
+			not = { has_country_flag = INS_stadswacht_raised }
+		}
+		
+		custom_cost_trigger = {
+			command_power > 25
+			has_political_power > 25
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -25
+				set_country_flag = INS_stadswacht_raised
+			}
+			division_template = {
+				name = "KNIL Stadswacht"
+				priority = 1
+				division_names_group = INS_city_garrison_division
+				regiments = {
+					infantry={ x=0 y=0 }
+					infantry={ x=0 y=1 }
+					infantry={ x=1 y=0 }
+					infantry={ x=1 y=1 }
+				}
+			}
+			1058 = {
+				create_unit = {
+					division_name = { 
+						is_name_ordered = yes
+						name_order = 1
+					}
+					division_template = \"KNIL Stadswacht\"
+					start_experience_factor = 0.7
+					start_equipment_factor = 0.01
+					owner = ROOT
+					count = 1
+					prioritize_location = 7381
+				}
+			}
+		}
+	}
+
+	INS_raise_landwacht = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = INS
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		visible = {
+			NOT = {
+				has_completed_focus = INS_discourage_democratic_reforms
+			}
+			not = { has_country_flag = INS_landwacht_raised }
+		}
+
+		custom_cost_trigger = {
+			command_power > 25
+			has_political_power > 25
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -25
+				set_country_flag = INS_landwacht_raised
+			}
+			division_template = {
+				name = "KNIL Landwacht"
+				priority = 1
+				division_names_group = INS_village_garrison_division
+				regiments = {
+					infantry={ x=0 y=0 }
+					infantry={ x=0 y=1 }
+					infantry={ x=1 y=0 }
+				}
+			}
+			1086 = {
+				create_unit = {
+					division_name = { 
+						is_name_ordered = yes
+						name_order = 1
+					}
+					division_template = \"KNIL Landwacht\"
+					start_experience_factor = 0.7 
+					start_equipment_factor = 0.01
+					owner = ROOT
+					count = 1
+					prioritize_location = 13406
+				}
+			}
+		}
 	}
 }
 
@@ -14580,4 +14950,326 @@ INS_limited_wars_cat = {
 			}
 		}
     }
+}
+
+INS_swapraja_cat = {
+	INS_swapraja_fisheries_larantuka = {
+		icon = GFX_decision_generic_naval
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_country_flag = INS_swapraja_joined
+		}
+		available = {
+			has_country_flag = INS_swapraja_joined
+			has_idea = INS_lorenzo_iii
+			667 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			667 = {
+				add_dynamic_modifier = {
+					modifier = INS_swapraja_fisheries_larantuka_dec
+					days = 730
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	INS_swapraja_fisheries_ternate = {
+		icon = GFX_decision_generic_naval
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_country_flag = INS_swapraja_joined
+		}
+		available = {
+			has_country_flag = INS_swapraja_joined
+			has_idea = INS_iskandar_sjah
+			1082 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			1082 = {
+				add_dynamic_modifier = {
+					modifier = INS_swapraja_fisheries_ternate_dec
+					days = 730
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	INS_swapraja_copra_sikka = {
+		icon = GFX_decision_generic_industry
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_country_flag = INS_swapraja_joined
+		}
+		available = {
+			has_country_flag = INS_swapraja_joined
+			has_idea = INS_thomas_ximenes_da_silva
+			667 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			667 = {
+				add_dynamic_modifier = {
+					modifier = INS_swapraja_copra_sikka_dec
+					days = 730
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	INS_swapraja_coffee_manggarai = {
+		icon = GFX_decision_generic_industry
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_country_flag = INS_swapraja_joined
+		}
+		available = {
+			has_country_flag = INS_swapraja_joined
+			has_idea = INS_alexander_baroek
+			667 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			667 = {
+				add_dynamic_modifier = {
+					modifier = INS_swapraja_coffee_manggarai_dec
+					days = 730
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	INS_swapraja_horses_timor = {
+		icon = GFX_decision_generic_operation
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_country_flag = INS_swapraja_joined
+		}
+		available = {
+			has_country_flag = INS_swapraja_joined
+			OR = {
+				has_idea = INS_hendrick_arnold_toroh
+				has_idea = INS_saul_we_tanya
+			}
+			1054 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			1054 = {
+				add_dynamic_modifier = {
+					modifier = INS_swapraja_horses_timor_dec
+					days = 730
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	INS_swapraja_plantations_east_sumatra = {
+		icon = GFX_decision_rubber
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_country_flag = INS_swapraja_joined
+		}
+		available = {
+			has_country_flag = INS_swapraja_joined
+			has_idea = INS_syarif_kasim
+			1049 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			1049 = {
+				add_resource = {
+					type = rubber
+					amount = 24
+				}
+				add_dynamic_modifier = {
+					modifier = INS_swapraja_plantations_east_sumatra_dec
+					days = 730
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	INS_swapraja_oil_kutai = {
+		icon = GFX_decision_oil
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_country_flag = INS_swapraja_joined
+		}
+		available = {
+			has_country_flag = INS_swapraja_joined
+			has_idea = KUT_ali_muhammad_parikesit
+			1055 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			1055 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+				add_dynamic_modifier = {
+					modifier = INS_swapraja_oil_kutai_dec
+					days = 730
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	INS_swapraja_kapuas_trade = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_country_flag = INS_swapraja_joined
+		}
+		available = {
+			has_country_flag = INS_swapraja_joined
+			has_idea = KLM_mohammad_yusuf_alqadri
+			334 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			334 = {
+				add_dynamic_modifier = {
+					modifier = INS_swapraja_kapuas_trade_dec
+					days = 730
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	INS_swapraja_bali_subak = {
+		icon = GFX_decision_generic_welfare
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_country_flag = INS_swapraja_joined
+		}
+		available = {
+			has_country_flag = INS_swapraja_joined
+			has_idea = INS_dewa_geg
+			1052 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			1052 = {
+				add_dynamic_modifier = {
+					modifier = INS_swapraja_bali_subak_dec
+					days = 730
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	INS_swapraja_makassar_shipping = {
+		icon = GFX_decision_generic_naval
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_country_flag = INS_swapraja_joined
+		}
+		available = {
+			has_country_flag = INS_swapraja_joined
+			has_idea = INS_sultan_muhibuddin
+			673 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			673 = {
+				add_dynamic_modifier = {
+					modifier = INS_swapraja_makassar_shipping_dec
+					days = 730
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	INS_swapraja_ende_market = {
+		icon = GFX_decision_generic_civil_support
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_country_flag = INS_swapraja_joined
+		}
+		available = {
+			has_country_flag = INS_swapraja_joined
+			has_idea = INS_pius_rasi_wangge
+			667 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			667 = {
+				add_dynamic_modifier = {
+					modifier = INS_swapraja_ende_market_dec
+					days = 730
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
 }

@@ -268,3 +268,281 @@ MAL_tuanku_sembilan_modifier = { #State Modifier
 	army_defence_factor = 0.4
 	local_supplies = 0.01
 }
+
+#	Swapraja rulers serving as advisors after Convince the Outer Princes; each applies to his own region while hired.
+#	Every modifier is worth 6 points: 1 point = +5% recruitable population, +10% local resources, +5% building slots,
+#	+5% construction speed, +0.05 local supplies, +5% compliance gain, -5% resistance target, +10% defence or +0.05 org regain
+INS_swapraja_siak = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_resources_factor = 0.4
+	resistance_target = -0.1
+}
+INS_swapraja_bali = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_supplies = 0.2
+	compliance_gain = 0.1
+}
+INS_swapraja_pontianak = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_resources_factor = 0.2
+	state_production_speed_buildings_factor = 0.1
+	local_building_slots_factor = 0.1
+}
+INS_swapraja_gowa = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_building_slots_factor = 0.2
+	army_defence_factor = 0.2
+}
+INS_swapraja_ternate = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_supplies = 0.1
+	local_building_slots_factor = 0.2
+}
+INS_swapraja_kutai = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_resources_factor = 0.4
+	state_production_speed_buildings_factor = 0.1
+}
+INS_swapraja_larantuka = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	recruitable_population_factor = 0.1
+	local_org_regain = 0.1
+	local_supplies = 0.1
+}
+INS_swapraja_sikka = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_building_slots_factor = 0.2
+	state_production_speed_buildings_factor = 0.1
+}
+INS_swapraja_manggarai = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	recruitable_population_factor = 0.1
+	army_defence_factor = 0.2
+	local_org_regain = 0.1
+}
+INS_swapraja_lio = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	compliance_gain = 0.1
+	local_supplies = 0.1
+	resistance_target = -0.1
+}
+INS_swapraja_amarasi = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_supplies = 0.1
+	recruitable_population_factor = 0.1
+	local_resources_factor = 0.2
+}
+INS_swapraja_savu = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	compliance_gain = 0.1
+	resistance_target = -0.1
+	recruitable_population_factor = 0.1
+}
+
+#	Timed state modifiers from the Swapraja decisions, 2 years each
+INS_swapraja_fisheries_larantuka_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_supplies = 0.1
+	recruitable_population_factor = 0.05
+	compliance_gain = 0.05
+}
+INS_swapraja_fisheries_ternate_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_supplies = 0.1
+	local_building_slots_factor = 0.05
+	compliance_gain = 0.05
+}
+INS_swapraja_copra_sikka_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_building_slots_factor = 0.1
+	state_production_speed_buildings_factor = 0.05
+	local_resources_factor = 0.1
+}
+INS_swapraja_coffee_manggarai_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_resources_factor = 0.1
+	state_production_speed_buildings_factor = 0.1
+	local_building_slots_factor = 0.05
+}
+INS_swapraja_horses_timor_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	recruitable_population_factor = 0.05
+	local_org_regain = 0.1
+	local_supplies = 0.05
+}
+INS_swapraja_plantations_east_sumatra_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_resources_factor = 0.2
+	state_production_speed_buildings_factor = 0.1
+}
+INS_swapraja_oil_kutai_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_resources_factor = 0.2
+	state_production_speed_buildings_factor = 0.1
+}
+INS_swapraja_kapuas_trade_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_resources_factor = 0.1
+	state_production_speed_buildings_factor = 0.1
+	local_building_slots_factor = 0.05
+}
+INS_swapraja_bali_subak_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_supplies = 0.1
+	recruitable_population_factor = 0.05
+	compliance_gain = 0.05
+}
+INS_swapraja_makassar_shipping_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	local_building_slots_factor = 0.1
+	local_supplies = 0.05
+	state_production_speed_buildings_factor = 0.05
+}
+INS_swapraja_ende_market_dec = { #State Modifier
+	enable = { always = yes }
+
+	icon = GFX_modifier_basic_development
+
+	compliance_gain = 0.05
+	local_building_slots_factor = 0.05
+	local_resources_factor = 0.1
+	state_production_speed_buildings_factor = 0.05
+}
+
+#	Swapraja that refused Indonesia: core-like benefits for whoever holds the state, lost when Indonesia takes it
+INS_swapraja_loyal_east_sumatra = { #State Modifier
+	enable = { always = yes }
+	remove_trigger = {
+		ROOT = {
+			is_owned_by = INS
+		}
+	}
+
+	icon = GFX_modifier_basic_development
+
+	local_non_core_manpower = 0.5
+	local_supplies = 0.1
+	army_defence_factor = 0.1
+}
+INS_swapraja_loyal_bali = { #State Modifier
+	enable = { always = yes }
+	remove_trigger = {
+		ROOT = {
+			is_owned_by = INS
+		}
+	}
+
+	icon = GFX_modifier_basic_development
+
+	local_non_core_manpower = 0.5
+	local_supplies = 0.1
+	army_defence_factor = 0.1
+}
+INS_swapraja_loyal_nusa_tenggara = { #State Modifier
+	enable = { always = yes }
+	remove_trigger = {
+		ROOT = {
+			is_owned_by = INS
+		}
+	}
+
+	icon = GFX_modifier_basic_development
+
+	local_non_core_manpower = 0.5
+	local_supplies = 0.1
+	army_defence_factor = 0.1
+}
+INS_swapraja_loyal_timor = { #State Modifier
+	enable = { always = yes }
+	remove_trigger = {
+		ROOT = {
+			is_owned_by = INS
+		}
+	}
+
+	icon = GFX_modifier_basic_development
+
+	local_non_core_manpower = 0.5
+	local_supplies = 0.1
+	army_defence_factor = 0.1
+}
+INS_swapraja_loyal_west_kalimantan = { #State Modifier
+	enable = { always = yes }
+	remove_trigger = {
+		ROOT = {
+			is_owned_by = INS
+		}
+	}
+
+	icon = GFX_modifier_basic_development
+
+	local_non_core_manpower = 0.5
+	local_supplies = 0.1
+	army_defence_factor = 0.1
+}

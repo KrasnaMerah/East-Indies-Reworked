@@ -20,6 +20,45 @@ characters = {
 			expire="1953.3.1.1"
 			id=-1
 		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			idea_token = KUT_ali_muhammad_parikesit
+			allowed = {
+				original_tag = INS
+			}
+			visible = {
+				has_country_flag = INS_swapraja_joined
+				is_country_leader = no
+			}
+			available = {
+			}
+			on_add = {
+				if = {
+					limit = {
+						1055 = { is_owned_by = ROOT }
+					}
+					1055 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_kutai
+						}
+					}
+				}
+			}
+			on_remove = {
+				1055 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_kutai
+					}
+				}
+			}
+			traits = {
+				financial_expert
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 
 	KUT_mohammad_noor = {

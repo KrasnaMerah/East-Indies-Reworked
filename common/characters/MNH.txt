@@ -39,7 +39,27 @@ characters = {
 				is_country_leader = no
 			}
 			available = {
-				
+				is_country_leader = no
+			}
+			on_add = {
+				if = {
+					limit = {
+						INS = { has_country_flag = INS_swapraja_joined }
+						673 = { is_owned_by = ROOT }
+					}
+					673 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_gowa
+						}
+					}
+				}
+			}
+			on_remove = {
+				673 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_gowa
+					}
+				}
 			}
 			traits = {
 				INS_sombaya_of_gowa

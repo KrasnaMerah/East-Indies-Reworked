@@ -198,7 +198,27 @@ characters = {
 				is_country_leader = no
 			}
 			available = {
-				
+				is_country_leader = no
+			}
+			on_add = {
+				if = {
+					limit = {
+						INS = { has_country_flag = INS_swapraja_joined }
+						1082 = { is_owned_by = ROOT }
+					}
+					1082 = {
+						add_dynamic_modifier = {
+							modifier = INS_swapraja_ternate
+						}
+					}
+				}
+			}
+			on_remove = {
+				1082 = {
+					remove_dynamic_modifier = {
+						modifier = INS_swapraja_ternate
+					}
+				}
 			}
 			traits = {
 				INS_the_four_mountains_of_ternate

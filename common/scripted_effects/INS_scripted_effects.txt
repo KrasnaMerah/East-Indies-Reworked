@@ -1638,6 +1638,208 @@ indonesia_transfer_POK = {
 	}
 }
 
+indonesia_swapraja_lesser_sunda_to_INS = { #At the revolution, the Lesser Sunda rulers the movement won over join Indonesia
+	if = {
+		limit = {
+			has_country_flag = INS_swapraja_convinced_flores
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_lorenzo_iii
+			}
+			random_character = {
+				limit = {
+					is_character = INS_lorenzo_iii
+				}
+				set_nationality = INS
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_thomas_ximenes_da_silva
+			}
+			random_character = {
+				limit = {
+					is_character = INS_thomas_ximenes_da_silva
+				}
+				set_nationality = INS
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_alexander_baroek
+			}
+			random_character = {
+				limit = {
+					is_character = INS_alexander_baroek
+				}
+				set_nationality = INS
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_pius_rasi_wangge
+			}
+			random_character = {
+				limit = {
+					is_character = INS_pius_rasi_wangge
+				}
+				set_nationality = INS
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = INS_swapraja_convinced_timor
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_hendrick_arnold_toroh
+			}
+			random_character = {
+				limit = {
+					is_character = INS_hendrick_arnold_toroh
+				}
+				set_nationality = INS
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_saul_we_tanya
+			}
+			random_character = {
+				limit = {
+					is_character = INS_saul_we_tanya
+				}
+				set_nationality = INS
+			}
+		}
+	}
+}
+indonesia_swapraja_lesser_sunda_to_overlords = { #Lesser Sunda rulers not won over join whoever holds their state; if we still hold it, they stay with EIS
+	if = {
+		limit = {
+			NOT = { INS = { has_country_flag = INS_swapraja_convinced_flores } }
+			667 = {
+				NOT = { is_owned_by = INS }
+			}
+		}
+		667 = {
+			owner = {
+				save_event_target_as = INS_swapraja_flores_overlord
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_lorenzo_iii
+			}
+			random_character = {
+				limit = {
+					is_character = INS_lorenzo_iii
+				}
+				set_nationality = event_target:INS_swapraja_flores_overlord
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_thomas_ximenes_da_silva
+			}
+			random_character = {
+				limit = {
+					is_character = INS_thomas_ximenes_da_silva
+				}
+				set_nationality = event_target:INS_swapraja_flores_overlord
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_alexander_baroek
+			}
+			random_character = {
+				limit = {
+					is_character = INS_alexander_baroek
+				}
+				set_nationality = event_target:INS_swapraja_flores_overlord
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_pius_rasi_wangge
+			}
+			random_character = {
+				limit = {
+					is_character = INS_pius_rasi_wangge
+				}
+				set_nationality = event_target:INS_swapraja_flores_overlord
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = { INS = { has_country_flag = INS_swapraja_convinced_timor } }
+			1054 = {
+				NOT = { is_owned_by = INS }
+			}
+		}
+		1054 = {
+			owner = {
+				save_event_target_as = INS_swapraja_timor_overlord
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_hendrick_arnold_toroh
+			}
+			random_character = {
+				limit = {
+					is_character = INS_hendrick_arnold_toroh
+				}
+				set_nationality = event_target:INS_swapraja_timor_overlord
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = INS_saul_we_tanya
+			}
+			random_character = {
+				limit = {
+					is_character = INS_saul_we_tanya
+				}
+				set_nationality = event_target:INS_swapraja_timor_overlord
+			}
+		}
+	}
+}
+indonesia_transfer_KUT = {
+	if = {
+		limit = {
+			country_exists = KUT
+		}
+		KUT = {
+			KUT_ali_muhammad_parikesit = {
+				set_nationality = INS
+				remove_country_leader_role = { #we just want the advisor. if we want them as a leader, we can do that manually after
+					ideology = despotism
+				}
+				save_global_event_target_as = KUT_ali_muhammad_parikesit
+			}
+		}
+	}
+	else = {
+		every_possible_country = {
+			limit = {
+				has_character = KUT_ali_muhammad_parikesit
+			}
+			random_character = {
+				limit = {
+					is_character = KUT_ali_muhammad_parikesit
+				}
+				set_nationality = INS
+				save_global_event_target_as = KUT_ali_muhammad_parikesit
+			}
+		}
+	}
+}
 indonesia_transfer_TNE = {
 	if = {
 		limit = {

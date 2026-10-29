@@ -17538,3 +17538,390 @@ country_event = { #Acquire trains
 		}
 	}
 }
+
+country_event = { #871 - The Swapraja reaffirm their old allegiances
+	id = holhis_indonesia.871
+	title = holhis_indonesia.871.t
+	desc = holhis_indonesia.871.d
+	picture = GFX_report_event_generic_sign_treaty
+
+	is_triggered_only = yes
+
+	option = {
+		name = holhis_indonesia.871.a
+		set_country_flag = INS_swapraja_sided_dutch
+		custom_effect_tooltip = INS_swapraja_reaffirm_tt
+		# Our cores on the princes' lands are lost wherever they are
+		1049 = { #East Sumatra
+			remove_core_of = ROOT
+		}
+		1052 = { #Bali and Lombok
+			remove_core_of = ROOT
+		}
+		667 = { #Nusa Tenggara
+			remove_core_of = ROOT
+		}
+		1054 = { #Dutch Timor
+			remove_core_of = ROOT
+		}
+		334 = { #West Kalimantan
+			remove_core_of = ROOT
+		}
+		# Where we hold the princes' lands, our overlord at independence (saved by Expel the Colonialists) takes them
+		if = {
+			limit = {
+				has_country_flag = INS_swapraja_sided_dutch
+			}
+			if = { #East Sumatra
+				limit = {
+					1049 = { is_owned_by = ROOT }
+				}
+				event_target:INS_swapraja_old_overlord = {
+					transfer_state = 1049
+				}
+			}
+			if = { #Bali and Lombok
+				limit = {
+					1052 = { is_owned_by = ROOT }
+				}
+				event_target:INS_swapraja_old_overlord = {
+					transfer_state = 1052
+				}
+			}
+			if = { #Nusa Tenggara
+				limit = {
+					667 = { is_owned_by = ROOT }
+				}
+				event_target:INS_swapraja_old_overlord = {
+					transfer_state = 667
+				}
+			}
+			if = { #Dutch Timor
+				limit = {
+					1054 = { is_owned_by = ROOT }
+				}
+				event_target:INS_swapraja_old_overlord = {
+					transfer_state = 1054
+				}
+			}
+			if = { #West Kalimantan
+				limit = {
+					334 = { is_owned_by = ROOT }
+				}
+				event_target:INS_swapraja_old_overlord = {
+					transfer_state = 334
+				}
+			}
+		}
+		# Whoever now holds each state gets its princes' loyalty and levies
+		hidden_effect = {
+			1049 = { #East Sumatra
+				if = {
+					limit = {
+						NOT = { is_owned_by = ROOT }
+					}
+					add_dynamic_modifier = {
+						modifier = INS_swapraja_loyal_east_sumatra
+					}
+					set_state_flag = INS_swapraja_loyal_to_crown
+					owner = {
+						if = {
+							limit = {
+								NOT = { has_country_flag = INS_swapraja_levy_templates }
+							}
+							division_template = {
+								name = "Swapraja Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									irregular_infantry = { x = 1 y = 1 }
+								}
+							}
+							set_country_flag = INS_swapraja_levy_templates
+						}
+						1049 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+						1049 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+					}
+				}
+			}
+			1052 = { #Bali and Lombok
+				if = {
+					limit = {
+						NOT = { is_owned_by = ROOT }
+					}
+					add_dynamic_modifier = {
+						modifier = INS_swapraja_loyal_bali
+					}
+					set_state_flag = INS_swapraja_loyal_to_crown
+					owner = {
+						if = {
+							limit = {
+								NOT = { has_country_flag = INS_swapraja_levy_templates }
+							}
+							division_template = {
+								name = "Swapraja Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									irregular_infantry = { x = 1 y = 1 }
+								}
+							}
+							set_country_flag = INS_swapraja_levy_templates
+						}
+						1052 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+					}
+				}
+			}
+			667 = { #Nusa Tenggara
+				if = {
+					limit = {
+						NOT = { is_owned_by = ROOT }
+					}
+					add_dynamic_modifier = {
+						modifier = INS_swapraja_loyal_nusa_tenggara
+					}
+					set_state_flag = INS_swapraja_loyal_to_crown
+					owner = {
+						if = {
+							limit = {
+								NOT = { has_country_flag = INS_swapraja_levy_templates }
+							}
+							division_template = {
+								name = "Swapraja Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									irregular_infantry = { x = 1 y = 1 }
+								}
+							}
+							set_country_flag = INS_swapraja_levy_templates
+						}
+						667 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+					}
+				}
+			}
+			1054 = { #Dutch Timor
+				if = {
+					limit = {
+						NOT = { is_owned_by = ROOT }
+					}
+					add_dynamic_modifier = {
+						modifier = INS_swapraja_loyal_timor
+					}
+					set_state_flag = INS_swapraja_loyal_to_crown
+					owner = {
+						if = {
+							limit = {
+								NOT = { has_country_flag = INS_swapraja_levy_templates }
+							}
+							division_template = {
+								name = "Swapraja Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									irregular_infantry = { x = 1 y = 1 }
+								}
+							}
+							set_country_flag = INS_swapraja_levy_templates
+						}
+						1054 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+					}
+				}
+			}
+			334 = { #West Kalimantan
+				if = {
+					limit = {
+						NOT = { is_owned_by = ROOT }
+					}
+					add_dynamic_modifier = {
+						modifier = INS_swapraja_loyal_west_kalimantan
+					}
+					set_state_flag = INS_swapraja_loyal_to_crown
+					owner = {
+						if = {
+							limit = {
+								NOT = { has_country_flag = INS_swapraja_levy_templates }
+							}
+							division_template = {
+								name = "Swapraja Levies"
+								priority = 1
+								regiments = {
+									irregular_infantry = { x = 0 y = 0 }
+									irregular_infantry = { x = 0 y = 1 }
+									irregular_infantry = { x = 1 y = 0 }
+									irregular_infantry = { x = 1 y = 1 }
+								}
+							}
+							set_country_flag = INS_swapraja_levy_templates
+						}
+						334 = {
+							create_unit = {
+								division = "division_template = \"Swapraja Levies\" start_experience_factor = 0.1 start_equipment_factor = 0.4"
+								owner = PREV
+							}
+						}
+					}
+				}
+			}
+			indonesia_swapraja_lesser_sunda_to_overlords = yes
+		}
+	}
+}
+
+country_event = { #873 - The Sultanates of the East Coast Fall
+	id = holhis_indonesia.873
+	title = holhis_indonesia.873.t
+	desc = holhis_indonesia.873.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = INS
+		has_country_flag = INS_swapraja_sided_dutch
+		1049 = {
+			is_owned_by = ROOT
+			has_state_flag = INS_swapraja_loyal_to_crown
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = holhis_indonesia.873.a
+		custom_effect_tooltip = INS_swapraja_fallen_tt
+	}
+}
+
+country_event = { #874 - The Rajas of Bali Fall
+	id = holhis_indonesia.874
+	title = holhis_indonesia.874.t
+	desc = holhis_indonesia.874.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = INS
+		has_country_flag = INS_swapraja_sided_dutch
+		1052 = {
+			is_owned_by = ROOT
+			has_state_flag = INS_swapraja_loyal_to_crown
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = holhis_indonesia.874.a
+		custom_effect_tooltip = INS_swapraja_fallen_tt
+	}
+}
+
+country_event = { #875 - The Rajas of the Lesser Sundas Fall
+	id = holhis_indonesia.875
+	title = holhis_indonesia.875.t
+	desc = holhis_indonesia.875.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = INS
+		has_country_flag = INS_swapraja_sided_dutch
+		667 = {
+			is_owned_by = ROOT
+			has_state_flag = INS_swapraja_loyal_to_crown
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = holhis_indonesia.875.a
+		custom_effect_tooltip = INS_swapraja_fallen_tt
+	}
+}
+
+country_event = { #876 - The Rajas of Timor Fall
+	id = holhis_indonesia.876
+	title = holhis_indonesia.876.t
+	desc = holhis_indonesia.876.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = INS
+		has_country_flag = INS_swapraja_sided_dutch
+		1054 = {
+			is_owned_by = ROOT
+			has_state_flag = INS_swapraja_loyal_to_crown
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = holhis_indonesia.876.a
+		custom_effect_tooltip = INS_swapraja_fallen_tt
+	}
+}
+
+country_event = { #877 - The Sultanates of West Borneo Fall
+	id = holhis_indonesia.877
+	title = holhis_indonesia.877.t
+	desc = holhis_indonesia.877.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = INS
+		has_country_flag = INS_swapraja_sided_dutch
+		334 = {
+			is_owned_by = ROOT
+			has_state_flag = INS_swapraja_loyal_to_crown
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = holhis_indonesia.877.a
+		custom_effect_tooltip = INS_swapraja_fallen_tt
+	}
+}
